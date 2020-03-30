@@ -7,14 +7,16 @@
   <body>
     <header class="header">
 
-      <nav class="header__nav main-nav">
-        <a href="index.html" class="main-nav__logo logo">
-          <img class="logo__image" src="img/logo.png" width="100" height="19" alt="Логотип компании «Погнали»">
-        </a>
+      <a href="index.html" class="header__logo logo">
+        <img class="logo__image" src="img/logo.png" width="100" height="19" alt="Логотип компании «Погнали»">
+      </a>
 
-        <button class="main-nav__menu-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <button class="header__menu-toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+
+      <nav class="header__nav main-nav">
 
         <div class="main-nav__wrapper">
 
@@ -64,7 +66,7 @@
         <h2 class="visually-hidden">Список попутчиков</h2>
         <ul class="companions__list">
           <li class="companions__item">
-            <article class="companions__traveler traveler">
+            <article class="companions__traveler traveler traveler--info">
 
               <a href="#" class="traveler__photo">
                 <img class="traveler__photo-image" src="img/traveler1.jpg" width="70" height="70" alt="Фотография путешественницы Тани Фирсовой">
@@ -75,46 +77,53 @@
 
               <div class="traveler__likes traveler__likes--active">1,5 M</div>
 
-              <p class="traveler__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <p class="traveler__hashtags hashtags">
+                <a href="" class="hashtags__link">#ЗОЖ</a>
+                <a href="" class="hashtags__link">#ПП</a>
+                <a href="" class="hashtags__link">#Фитнес</a>
+                <a href="" class="hashtags__link">#пляж</a>
+                <a href="" class="hashtags__link">#авокадо</a>
+                <a href="" class="hashtags__link"> #смузи</a>
+              </p>
 
-              <section class="traveler__countries">
-                <p class="traveler__countries-title">хочет посетить:</p>
-                <ul class="traveler__countries-list countries-list">
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--srilanka"></span>
-                    <span class="countries-list__country">Шри-ланка</span>
+              <section class="traveler__countries countries countries--list">
+                <p class="countries__title">хочет посетить:</p>
+                <ul class="countries__list">
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">Шри-ланка</span>
                   </li>
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--thailand"></span>
-                    <span class="countries-list__country">Таиланд</span>
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">Таиланд</span>
                   </li>
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--seychelles"></span>
-                    <span class="countries-list__country">Сейшелы</span>
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">Сейшелы</span>
                   </li>
                 </ul>
               </section>
 
               <div class="traveler__columns">
-                <section class="traveler__transport">
-                  <p class="traveler__transport-title">транспорт:</p>
-                  <ul class="traveler__transport-list transport-list">
-                    <li class="transport-list__item transport-list__item--flight transport-list__item--active">
-                      <span class="transport-list__type tooltip">Авиаперелет</span>
+                <section class="traveler__transport transport">
+                  <p class="transport__title">транспорт:</p>
+                  <ul class="transport__list">
+                    <li class="transport__item transport__item--flight transport__item--active">
+                      <span class="transport__type tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--auto">
-                      <span class="transport-list__type tooltip">Автотранспорт</span>
+                    <li class="transport__item transport__item--auto">
+                      <span class="transport__type tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--bike">
-                      <span class="transport-list__type tooltip">Велосипед</span>
+                    <li class="transport__item transport__item--bike">
+                      <span class="transport__type tooltip">Велосипед</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--foot">
-                      <span class="transport-list__type tooltip">Пешком</span>
+                    <li class="transport__item transport__item--foot">
+                      <span class="transport__type tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>
 
-                <section class="traveler__level level">
+                <section class="traveler__level level level--theme-light">
                   <span class="level__caption">левел:</span>
                   <span class="level__number">99</span>
                 </section>
@@ -126,7 +135,7 @@
           </li>
 
           <li class="companions__item">
-            <article class="companions__traveler traveler">
+            <article class="companions__traveler traveler traveler--info">
 
               <a href="#" class="traveler__photo">
                 <img class="traveler__photo-image" src="img/traveler2.jpg" width="70" height="70" alt="Фотография путешественника Пети Демина">
@@ -137,42 +146,48 @@
 
               <div class="traveler__likes">1500</div>
 
-              <p class="traveler__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+              <p class="traveler__hashtags hashtags">
+                <a href="" class="hashtags__link">#бургер</a>
+                <a href="" class="hashtags__link">#бар</a>
+                <a href="" class="hashtags__link">#футбол</a>
+                <a href="" class="hashtags__link">#концерт</a>
+                <a href="" class="hashtags__link">#крафт</a>
+              </p>
 
-              <section class="traveler__countries">
-                <p class="traveler__countries-title">хочет посетить:</p>
-                <ul class="traveler__countries-list countries-list">
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--belgium"></span>
-                    <span class="countries-list__country">Бельгия</span>
+              <section class="traveler__countries countries countries--list">
+                <p class="countries__title">хочет посетить:</p>
+                <ul class="countries__list">
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">Бельгия</span>
                   </li>
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--сzech"></span>
-                    <span class="countries-list__country">Чехия</span>
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">Чехия</span>
                   </li>
                 </ul>
               </section>
 
               <div class="traveler__columns">
-                <section class="traveler__transport">
+                <section class="traveler__transport transport">
                   <p class="traveler__transport-title">транспорт:</p>
-                  <ul class="traveler__transport-list transport-list">
-                    <li class="transport-list__item transport-list__item--flight transport-list__item--active">
-                      <span class="transport-list__type tooltip">Авиаперелет</span>
+                  <ul class="transport__list">
+                    <li class="transport__item transport__item--flight transport__item--active">
+                      <span class="transport__type tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--auto transport-list__item--active">
-                      <span class="transport-list__type tooltip">Автотранспорт</span>
+                    <li class="transport__item transport__item--auto transport__item--active">
+                      <span class="transport__type tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--bike">
-                      <span class="transport-list__type tooltip">Велосипед</span>
+                    <li class="transport__item transport__item--bike">
+                      <span class="transport__type tooltip">Велосипед</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--foot transport-list__item--active">
-                      <span class="transport-list__type tooltip">Пешком</span>
+                    <li class="transport__item transport__item--foot transport__item--active">
+                      <span class="transport__type tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>
 
-                <section class="traveler__level level">
+                <section class="traveler__level level level--theme-light">
                   <span class="level__caption">левел:</span>
                   <span class="level__number">80</span>
                 </section>
@@ -184,7 +199,7 @@
           </li>
 
           <li class="companions__item">
-            <article class="companions__traveler traveler">
+            <article class="companions__traveler traveler traveler--info">
 
               <a href="#" class="traveler__photo">
                 <img class="traveler__photo-image" src="img/traveler3.jpg" width="70" height="70" alt="Фотография путешественника Марка Смолова">
@@ -195,46 +210,52 @@
 
               <div class="traveler__likes">170</div>
 
-              <p class="traveler__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+              <p class="traveler__hashtags hashtags">
+                <a href="" class="hashtags__link">#рэп</a>
+                <a href="" class="hashtags__link"> #тату</a>
+                <a href="" class="hashtags__link">#хайпбист</a>
+                <a href="" class="hashtags__link">#кроссовки</a>
+                <a href="" class="hashtags__link">#суприм</a>
+              </p>
 
-              <section class="traveler__countries">
-                <p class="traveler__countries-title">хочет посетить:</p>
-                <ul class="traveler__countries-list countries-list">
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--usa"></span>
-                    <span class="countries-list__country">США</span>
+              <section class="traveler__countries countries countries--list">
+                <p class="countries__title">хочет посетить:</p>
+                <ul class="countries__list">
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">США</span>
                   </li>
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--australia"></span>
-                    <span class="countries-list__country">Австралия</span>
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">Австралия</span>
                   </li>
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--dominican"></span>
-                    <span class="countries-list__country">Доминикана</span>
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">Доминикана</span>
                   </li>
                 </ul>
               </section>
 
               <div class="traveler__columns">
-                <section class="traveler__transport">
+                <section class="traveler__transport transport">
                   <p class="traveler__transport-title">транспорт:</p>
-                  <ul class="traveler__transport-list transport-list">
-                    <li class="transport-list__item transport-list__item--flight transport-list__item--active">
-                      <span class="transport-list__type tooltip">Авиаперелет</span>
+                  <ul class="transport__list">
+                    <li class="transport__item transport__item--flight transport__item--active">
+                      <span class="transport__type tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--auto">
-                      <span class="transport-list__type tooltip">Автотранспорт</span>
+                    <li class="transport__item transport__item--auto">
+                      <span class="transport__type tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--bike">
-                      <span class="transport-list__type tooltip">Велосипед</span>
+                    <li class="transport__item transport__item--bike">
+                      <span class="transport__type tooltip">Велосипед</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--foot transport-list__item--active">
-                      <span class="transport-list__type tooltip">Пешком</span>
+                    <li class="transport__item transport__item--foot transport__item--active">
+                      <span class="transport__type tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>
 
-                <section class="traveler__level level">
+                <section class="traveler__level level level--theme-light">
                   <span class="level__caption">левел:</span>
                   <span class="level__number">25</span>
                 </section>
@@ -246,7 +267,7 @@
           </li>
 
           <li class="companions__item">
-            <article class="companions__traveler traveler">
+            <article class="companions__traveler traveler traveler--info">
 
               <a href="#" class="traveler__photo">
                 <img class="traveler__photo-image" src="img/traveler2.jpg" width="70" height="70" alt="Фотография путешественника Ларисы Роговой">
@@ -257,42 +278,47 @@
 
               <div class="traveler__likes">23</div>
 
-              <p class="traveler__hashtags">#образование #карьера #учеба #линкедин</p>
+              <p class="traveler__hashtags hashtags">
+                <a href="" class="hashtags__link">#образование</a>
+                <a href="" class="hashtags__link">#карьера</a>
+                <a href="" class="hashtags__link">#учеба</a>
+                <a href="" class="hashtags__link">#линкедин</a>
+              </p>
 
-              <section class="traveler__countries">
-                <p class="traveler__countries-title">хочет посетить:</p>
-                <ul class="traveler__countries-list countries-list">
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--britain"></span>
-                    <span class="countries-list__country">Великобритания</span>
+              <section class="traveler__countries countries countries--list">
+                <p class="countries__title">хочет посетить:</p>
+                <ul class="countries__list">
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">Великобритания</span>
                   </li>
-                  <li class="countries-list__item">
-                    <span class="countries-list__flag flag flag--germany"></span>
-                    <span class="countries-list__country">Германия</span>
+                  <li class="countries__item">
+                    <span class="countries__flag flag"></span>
+                    <span class="countries__country">Германия</span>
                   </li>
                 </ul>
               </section>
 
               <div class="traveler__columns">
-                <section class="traveler__transport">
+                <section class="traveler__transport transport">
                   <p class="traveler__transport-title">транспорт:</p>
-                  <ul class="traveler__transport-list transport-list">
-                    <li class="transport-list__item transport-list__item--flight transport-list__item--active">
-                      <span class="transport-list__type tooltip">Авиаперелет</span>
+                  <ul class="transport__list">
+                    <li class="transport__item transport__item--flight transport__item--active">
+                      <span class="transport__type tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--auto transport-list__item--active">
-                      <span class="transport-list__type tooltip">Автотранспорт</span>
+                    <li class="transport__item transport__item--auto transport__item--active">
+                      <span class="transport__type tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--bike">
-                      <span class="transport-list__type tooltip">Велосипед</span>
+                    <li class="transport__item transport__item--bike">
+                      <span class="transport__type tooltip">Велосипед</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--foot">
-                      <span class="transport-list__type tooltip">Пешком</span>
+                    <li class="transport__item transport__item--foot">
+                      <span class="transport__type tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>
 
-                <section class="traveler__level level">
+                <section class="traveler__level level level--theme-light">
                   <span class="level__caption">левел:</span>
                   <span class="level__number">50</span>
                 </section>
@@ -304,12 +330,14 @@
           </li>
         </ul>
 
-        <a href="#" class="companions__more">Показать еще</a>
+        <section class="companions__pagination pagination">
+          <a href="#" class="pagination__more">Показать еще</a>
 
-        <div class="companions__nav-pages">
-          <a href="#" class="companions__page-link companions__page-link--prew">Показать следующую страницу</a>
-          <a href="#" class="companions__page-link companions__page-link--next">Показать предыдущую страницу</a>
-        </div>
+          <div class="pagination__nav">
+            <a href="#" class="pagination__link pagination__link--prew">Показать следующую страницу</a>
+            <a href="#" class="pagination__link pagination__link--next">Показать предыдущую страницу</a>
+          </div>
+        </section>
 
       </section>
 

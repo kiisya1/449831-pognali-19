@@ -7,14 +7,15 @@
   <body>
     <header class="header">
 
-      <nav class="header__nav main-nav">
-        <a class="main-nav__logo logo">
-          <img class="logo__image" src="img/logo.png" width="100" height="19" alt="Логотип компании «Погнали»">
-        </a>
+      <a class="header__logo logo">
+        <img class="logo__image" src="img/logo.png" width="100" height="19" alt="Логотип компании «Погнали»">
+      </a>
 
-        <button class="main-nav__menu-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <button class="header__menu-toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+      <nav class="header__nav main-nav">
 
         <div class="main-nav__wrapper">
 
@@ -104,39 +105,51 @@
         <ul class="directions__list">
 
           <li class="directions__item">
-            <img class="directions__image" src="img/thailand.jpg" width="270" height="110" alt="Острова Таиланда">
-            <div class="directions__about">
-              <div class="directions__discription">
-                <span class="directions__flag flag flag--thailand"></span>
-                <a href="#" class="directions__title">Таиланд</a>
-                <p class="directions__subtitle">Джунгли зовут!</p>
+            <article class="directions__direction direction">
+              <img class="direction__image" src="img/thailand.jpg" width="270" height="110" alt="Острова Таиланда">
+              <div class="direction__about">
+                <div class="direction__discription">
+                  <span class="direction__flag flag"></span>
+                  <h3 class="direction__title">
+                    <a href="#" class="direction__link">Таиланд</a>
+                  </h3>
+                  <p class="direction__subtitle">Джунгли зовут!</p>
+                </div>
+                <p class="direction__users">18321</p>
               </div>
-              <p class="directions__users">18321</p>
-            </div>
+            </article>
           </li>
 
           <li class="directions__item">
-            <img class="directions__image" src="img/france.jpg" width="270" height="110" alt="Французские улочки">
-            <div class="directions__about">
-              <div class="directions__discription">
-                <span class="directions__flag flag flag--france"></span>
-                <a href="#" class="directions__title">Франция</a>
-                <p class="directions__subtitle">Трэ бьен, манифик!</p>
+            <article class="directions__direction direction">
+              <img class="direction__image" src="img/france.jpg" width="270" height="110" alt="Французские улочки">
+              <div class="direction__about">
+                <div class="direction__discription">
+                  <span class="direction__flag flag"></span>
+                  <h3 class="direction__title">
+                    <a href="#" class="direction__link">Франция</a>
+                  </h3>
+                  <p class="direction__subtitle">Трэ бьен, манифик!</p>
+                </div>
+                <p class="direction__users">12518</p>
               </div>
-              <p class="directions__users">12518</p>
-            </div>
+            </article>
           </li>
 
           <li class="directions__item">
-            <img class="directions__image" src="img/сzech.jpg" width="270" height="110" alt="Прага">
-            <div class="directions__about">
-              <div class="directions__discription">
-                <span class="directions__flag flag flag--сzech"></span>
-                <a href="#" class="directions__title">Чехия</a>
-                <p class="directions__subtitle">Закоулки старой Европы</p>
+            <article class="directions__direction direction">
+              <img class="direction__image" src="img/сzech.jpg" width="270" height="110" alt="Прага">
+              <div class="direction__about">
+                <div class="direction__discription">
+                  <span class="direction__flag flag"></span>
+                  <h3 class="direction__title">
+                    <a href="#" class="direction__link">Чехия</a>
+                  </h3>
+                  <p class="direction__subtitle">Закоулки старой Европы</p>
+                </div>
+                <p class="direction__users">5326</p>
               </div>
-              <p class="directions__users">5326</p>
-            </div>
+            </article>
           </li>
         </ul>
 
@@ -157,48 +170,56 @@
               </a>
 
               <div class="traveler__about">
+
                 <h3 class="traveler__name"><a href="#" class="traveler__link">Таня Фирсова</a></h3>
                 <span class="traveler__indicator traveler__indicator--not-available">Недоступен</span>
 
-                <p class="traveler__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <p class="traveler__hashtags hashtags">
+                  <a href="" class="hashtags__link">#ЗОЖ</a>
+                  <a href="" class="hashtags__link">#ПП</a>
+                  <a href="" class="hashtags__link">#Фитнес</a>
+                  <a href="" class="hashtags__link">#пляж</a>
+                  <a href="" class="hashtags__link">#авокадо</a>
+                  <a href="" class="hashtags__link"> #смузи</a>
+                </p>
 
-                <section class="traveler__countries traveler__countries--index">
-                  <ul class="traveler__countries-list countries-list countries-list--index">
-                    <li class="countries-list__item">
-                      <span class="countries-list__flag flag flag--srilanka"></span>
-                      <span class="countries-list__country tooltip">Шри-ланка</span>
+                <section class="traveler__countries countries countries--line">
+                  <ul class="countries__list">
+                    <li class="countries__item">
+                      <span class="countries__flag flag"></span>
+                      <span class="countries__country tooltip">Шри-ланка</span>
                     </li>
-                    <li class="countries-list__item">
-                      <span class="countries-list__flag flag flag--thailand"></span>
-                      <span class="countries-list__country tooltip">Таиланд</span>
+                    <li class="countries__item">
+                      <span class="countries__flag flag"></span>
+                      <span class="countries__country tooltip">Таиланд</span>
                     </li>
-                    <li class="countries-list__item">
-                      <span class="countries-list__flag flag flag--seychelles"></span>
-                      <span class="countries-list__country tooltip">Сейшелы</span>
+                    <li class="countries__item">
+                      <span class="countries__flag flag"></span>
+                      <span class="countries__country tooltip">Сейшелы</span>
                     </li>
                   </ul>
                 </section>
 
-                <section class="traveler__transport">
-                  <ul class="traveler__transport-list transport-list">
-                    <li class="transport-list__item transport-list__item--flight transport-list__item--active">
-                      <span class="transport-list__type tooltip">Авиаперелет</span>
+                <section class="traveler__transport transport">
+                  <ul class="transport__list">
+                    <li class="transport__item transport__item--flight transport__item--active">
+                      <span class="transport__type tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--auto">
-                      <span class="transport-list__type tooltip">Автотранспорт</span>
+                    <li class="transport__item transport__item--auto">
+                      <span class="transport__type tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--bike">
-                      <span class="transport-list__type tooltip">Велосипед</span>
+                    <li class="transport__item transport__item--bike">
+                      <span class="transport__type tooltip">Велосипед</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--foot">
-                      <span class="transport-list__type tooltip">Пешком</span>
+                    <li class="transport__item transport__item--foot">
+                      <span class="transport__type tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>
 
-                <div class="traveler__level level level--index">
+                <div class="traveler__level level level--theme-dark">
                   <span class="level__number">99</span>
-                  <span class="level__caption level__caption--index">level</span>
+                  <span class="level__caption">level</span>
                 </div>
               </div>
             </article>
@@ -212,44 +233,51 @@
               </a>
 
               <div class="traveler__about">
+
                 <h3 class="traveler__name"><a href="#" class="traveler__link">Петя Демин</a></h3>
                 <span class="traveler__indicator traveler__indicator--available">Доступен</span>
 
-                <p class="traveler__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+                <p class="traveler__hashtags hashtags">
+                  <a href="" class="hashtags__link">#бургер</a>
+                  <a href="" class="hashtags__link">#бар</a>
+                  <a href="" class="hashtags__link">#футбол</a>
+                  <a href="" class="hashtags__link">#концерт</a>
+                  <a href="" class="hashtags__link">#крафт</a>
+                </p>
 
-                <section class="traveler__countries traveler__countries--index">
-                  <ul class="traveler__countries-list countries-list countries-list--index">
-                    <li class="countries-list__item">
-                      <span class="countries-list__flag flag flag--belgium"></span>
-                      <span class="countries-list__country tooltip">Бельгия</span>
+                <section class="traveler__countries countries countries--line">
+                  <ul class="countries__list">
+                    <li class="countries__item">
+                      <span class="countries__flag flag"></span>
+                      <span class="countries__country tooltip">Бельгия</span>
                     </li>
-                    <li class="countries-list__item">
-                      <span class="countries-list__flag flag flag--сzech"></span>
-                      <span class="countries-list__country tooltip">Чехия</span>
+                    <li class="countries__item">
+                      <span class="countries__flag flag"></span>
+                      <span class="countries__country tooltip">Чехия</span>
                     </li>
                   </ul>
                 </section>
 
-                <section class="traveler__transport">
-                  <ul class="traveler__transport-list transport-list">
-                    <li class="transport-list__item transport-list__item--flight transport-list__item--active">
-                      <span class="transport-list__type tooltip">Авиаперелет</span>
+                <section class="traveler__transport transport">
+                  <ul class="transport__list">
+                    <li class="transport__item transport__item--flight transport__item--active">
+                      <span class="transport__type tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--auto transport-list__item--active">
-                      <span class="transport-list__type tooltip">Автотранспорт</span>
+                    <li class="transport__item transport__item--auto transport__item--active">
+                      <span class="transport__type tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--bike">
-                      <span class="transport-list__type tooltip">Велосипед</span>
+                    <li class="transport__item transport__item--bike">
+                      <span class="transport__type tooltip">Велосипед</span>
                     </li>
-                    <li class="transport-list__item transport-list__item--foot transport-list__item--active">
-                      <span class="transport-list__type tooltip">Пешком</span>
+                    <li class="transport__item transport__item--foot transport__item--active">
+                      <span class="transport__type tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>
 
-                <div class="traveler__level level level--index">
+                <div class="traveler__level level level level--theme-dark">
                   <span class="level__number">80</span>
-                  <span class="level__caption level__caption--index">level</span>
+                  <span class="level__caption">level</span>
                 </div>
               </div>
             </article>
