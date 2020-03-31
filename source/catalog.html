@@ -62,6 +62,306 @@
     <main>
       <h1 class="heading">Попутчики</h1>
 
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтрация по попутчикам</h2>
+
+        <section class="filter__regions">
+          <h3 class="filter__title filter__title--regions">Фильтрация по странам</h3>
+
+          <button class="filter__close filter__close--min" type="button">
+            <span class="visually-hidden">Cвернуть</span>
+          </button>
+
+            <ul class="filter__continents-list continents-list">
+              <li class="continents-list__item">
+                <label class="continents-list__continent">
+                  Европа
+                  <input class="visually-hidden continents-list__field" type="radio" name="continents" value="europe" checked>
+                </label>
+              </li>
+              <li class="continents-list__item">
+                <label class="continents-list__continent">
+                  Азия
+                  <input class="visually-hidden continents-list__field" type="radio" name="continents" value="asia">
+                </label>
+              </li>
+              <li class="continents-list__item">
+                <label class="continents-list__continent">
+                  Америка
+                  <input class="visually-hidden continents-list__field" type="radio" name="continents" value="america">
+                </label>
+              </li>
+              <li class="continents-list__item">
+                <label class="continents-list__continent">
+                  Острова
+                  <input class="visually-hidden continents-list__field" type="radio" name="continents" value="islands">
+                </label>
+              </li>
+            </ul>
+
+            <ul class="filter__letters-list letters-list">
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="a-field" value="a" checked>
+                <label class="letters-list__letter" for="a-field">а</label>
+
+                <ul class="letters-list__regions-list regions-list">
+                  <li class="regions-list__item">
+                    <a href="asia/australia" class="regions-list__link">Австралия</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="europe/austria" class="regions-list__link">Австрия</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="#" class="regions-list__link">Азербайджан</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="#" class="regions-list__link">Албания</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="#" class="regions-list__link">Алжир</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="#" class="regions-list__link">Ангола</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="#" class="regions-list__link">Андорра</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="#" class="regions-list__link">Антигуа и Барбуда</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="#" class="regions-list__link">Аргентина</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="#" class="regions-list__link">Армения</a>
+                  </li>
+                  <li class="regions-list__item">
+                    <a href="#" class="regions-list__link">Афганистан</a>
+                  </li>
+                </ul>
+
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="b-field" value="b">
+                <label class="letters-list__letter" for="b-field">б</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="v-field" value="v">
+                <label class="letters-list__letter" for="v-field">в</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="g-field" value="g">
+                <label class="letters-list__letter" for="g-field">г</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="d-field" value="d">
+                <label class="letters-list__letter" for="d-field">д</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="e-field" value="e">
+                <label class="letters-list__letter" for="e-field">е</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="z-field" value="z">
+                <label class="letters-list__letter" for="z-field">з</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="i-field" value="i">
+                <label class="letters-list__letter" for="i-field">и</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="k-field" value="k">
+                <label class="letters-list__letter" for="k-field">к</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="l-field" value="l">
+                <label class="letters-list__letter" for="l-field">л</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="m-field" value="m">
+                <label class="letters-list__letter" for="m-field">м</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="n-field" value="n">
+                <label class="letters-list__letter" for="n-field">н</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="o-field" value="o">
+                <label class="letters-list__letter" for="o-field">о</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="p-field" value="p">
+                <label class="letters-list__letter" for="p-field">п</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="r-field" value="r">
+                <label class="letters-list__letter" for="r-field">р</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="s-field" value="s">
+                <label class="letters-list__letter" for="s-field">с</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="t-field" value="t">
+                <label class="letters-list__letter" for="t-field">т</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="y-field" value="y">
+                <label class="letters-list__letter" for="y-field">у</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="f-field" value="f">
+                <label class="letters-list__letter" for="f-field">ф</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="h-field" value="h">
+                <label class="letters-list__letter" for="h-field">х</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="ch-field" value="ch">
+                <label class="letters-list__letter" for="ch-field">ч</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="sh-field" value="sh">
+                <label class="letters-list__letter" for="sh-field">ш</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="eh-field" value="eh">
+                <label class="letters-list__letter" for="eh-field">э</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="u-field" value="u">
+                <label class="letters-list__letter" for="u-field">ю</label>
+              </li>
+              <li class="letters-list__item">
+                <input class="visually-hidden letters-list__field" type="radio" name="letter" id="ya-field" value="ya">
+                <label class="letters-list__letter" for="ya-field">я</label>
+              </li>
+            </ul>
+
+          <button class="filter__close button button--theme-light" type="button">
+            <span class="filter__close-text">Cвернуть</span>
+          </button>
+
+        </section>
+
+        <section class="filter__features">
+          <h3 class="filter__title filter__title--features">Подберите идеального попутчика</h3>
+          <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
+
+            <fieldset class="filter__feature feature">
+              <legend class="feature__legend legend">Хобби</legend>
+              <ul class="feature__list">
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="hobby-sport" id="sport-field" checked>
+                  <label class="feature__label"  for="sport-field">Спортзал</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="hobby-hookah" id="hookah-field">
+                  <label class="feature__label"  for="hookah-field">Кальян</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="hobby-sofa" id="sofa-field">
+                  <label class="feature__label"  for="sofa-field">Диван</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filter__feature feature">
+              <legend class="feature__legend legend">Музыка</legend>
+              <ul class="feature__list">
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="music-rock" id="rock-field" checked>
+                  <label class="feature__label"  for="rock-field">Тяжелый рок</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="music-rap" id="rap-field">
+                  <label class="feature__label"  for="rap-field">Русский рэп</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="music-dance" id="dance-field">
+                  <label class="feature__label"  for="dance-field">Евроденс</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filter__feature feature">
+              <legend class="feature__legend legend">Еда</legend>
+              <ul class="feature__list">
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="food-meat" id="meat-field" checked>
+                  <label class="feature__label"  for="meat-field">Мясоед</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="food-pp" id="pp-field">
+                  <label class="feature__label"  for="pp-field">Сидит на ПП</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="food-vegan" id="vegan-field">
+                  <label class="feature__label"  for="vegan-field">Веган-сыроед</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filter__transport transport transport--interactive">
+              <legend class="filter__legend legend">Транспорт</legend>
+
+                <ul class="transport__list">
+                  <li class="transport__item">
+                    <input class="visually-hidden transport__checkbox" type="checkbox" name="flight" id="flight-field" checked>
+                    <label class="transport__label transport__label--flight transport__type tooltip" for="flight-field">Авиаперелет</label>
+                  </li>
+                  <li class="transport__item">
+                    <input class="visually-hidden transport__checkbox" type="checkbox" name="auto" id="auto-field" checked>
+                    <label class="transport__label transport__label--auto transport__type tooltip" for="auto-field">Автотранспорт</label>
+                  </li>
+                  <li class="transport__item">
+                    <input class="visually-hidden transport__checkbox" type="checkbox" name="bike" id="bike-field">
+                    <label class="transport__label transport__label--bike transport__type tooltip" for="bike-field">Велосипед</label>
+                  </li>
+                  <li class="transport__item">
+                    <input class="visually-hidden transport__checkbox" type="checkbox" name="foot" id="foot-field" checked>
+                    <label class="transport__label transport__label--foot transport__type tooltip" for="foot-field">Пешком</label>
+                  </li>
+                </ul>
+
+            </fieldset>
+
+            <fieldset class="filter__level">
+              <legend class="filter__legend legend">Левел</legend>
+
+              <div class="filter__range">
+
+                <div class="filter__price-controls">
+                 <label class="filter__price">
+                   <span class="visually-hidden">Введите минимальный уровень</span>
+                   <input class="filter__input" type="number" name="min-level" value="30" min="0" max="100">
+                  </label>
+                  <label class="filter__price">
+                    <span class="visually-hidden">Введите максимальный уровень</span>
+                    <input class="filter__input" type="number" name="max-level" value="100" min="0" max="100">
+                  </label>
+                </div>
+
+                <div class="filter__range-controls">
+                  <div class="filter__scale">
+                    <div class="filter__bar"></div>
+                  </div>
+                   <button class="filter__range-button filter__range-button--min" type="button" aria-label="Переместите ползунок, чтобы задать минимальный уровень"></button>
+                   <button class="filter__range-button filter__range-button--max" type="button" aria-label="Переместите ползунок, чтобы задать максимальный уровень"></button>
+                 </div>
+
+               </div>
+
+            </fieldset>
+
+            <button class="filter__button button button--theme-white" type="submit">Показать</button>
+
+          </form>
+        </section>
+
+      </section>
+
       <section class="companions">
         <h2 class="visually-hidden">Список попутчиков</h2>
         <ul class="companions__list">
@@ -69,7 +369,7 @@
             <article class="companions__traveler traveler traveler--info">
 
               <a href="#" class="traveler__photo">
-                <img class="traveler__photo-image" src="img/traveler1.jpg" width="70" height="70" alt="Фотография путешественницы Тани Фирсовой">
+                <img class="traveler__photo-image" src="img/traveler1.jpg" width="70" height="70" alt="Фотография путешественника Тани Фирсовой">
               </a>
 
               <h3 class="traveler__name"><a href="#" class="traveler__link">Таня Фирсова</a></h3>
@@ -331,6 +631,7 @@
         </ul>
 
         <section class="companions__pagination pagination">
+          <h2 class="visually-hidden">Пагинация</h2>
           <a href="#" class="pagination__more">Показать еще</a>
 
           <div class="pagination__nav">
