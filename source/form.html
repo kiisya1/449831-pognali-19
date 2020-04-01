@@ -61,7 +61,437 @@
     <main>
       <h1 class="heading">Направления</h1>
 
+      <form class="profile" action="https://echo.htmlacademy.ru" method="post">
 
+        <section class="profile__card">
+          <h2 class="visually-hidden">Настройки профиля</h2>
+
+          <div class="profile__columns">
+
+            <div class="profile__level level level--theme-light level--inside">
+              <span class="level__number">80</span>
+              <span class="level__caption">level</span>
+            </div>
+
+            <img class="profile__photo-image" src="img/traveler2.jpg" width="100" height="100" alt="Фотография путешественника Пети Демина">
+          </div>
+
+          <div class="profile__change-foto">
+            <label class="profile__change-button button button--theme-light">
+              Сменить фото
+              <input class="visually-hidden" type="file" name="foto">
+            </label>
+          </div>
+
+          <fieldset class="profile__fieldset">
+            <legend class="profile__legend">Тэги</legend>
+            <label class="visually-hidden" for="hashtags-field">Тэги</label>
+            <textarea class="profile__hashtags" name="hashtags" id="hashtags-field" rows="8" cols="80">
+              #бургер #бар #футбол #концерт #крафт
+            </textarea>
+          </fieldset>
+
+          <fieldset class="profile__fieldset transport transport--interactive">
+            <legend class="profile__legend">Транспорт</legend>
+
+              <ul class="transport__list">
+                <li class="transport__item">
+                  <input class="visually-hidden transport__checkbox" type="checkbox" name="flight" id="flight-field" checked>
+                  <label class="transport__label transport__type transport__type--flight tooltip" for="flight-field">Авиаперелет</label>
+                </li>
+                <li class="transport__item">
+                  <input class="visually-hidden transport__checkbox" type="checkbox" name="auto" id="auto-field" checked>
+                  <label class="transport__label transport__type transport__type--auto tooltip" for="auto-field">Автотранспорт</label>
+                </li>
+                <li class="transport__item">
+                  <input class="visually-hidden transport__checkbox" type="checkbox" name="bike" id="bike-field">
+                  <label class="transport__label transport__type transport__type--bike tooltip" for="bike-field">Велосипед</label>
+                </li>
+                <li class="transport__item">
+                  <input class="visually-hidden transport__checkbox" type="checkbox" name="foot" id="foot-field" checked>
+                  <label class="transport__label transport__type transport__type--foot tooltip" for="foot-field">Пешком</label>
+                </li>
+              </ul>
+
+          </fieldset>
+
+        </section>
+
+        <section class="profile__plans plans">
+          <h2 class="profile__title">Мои планы:</h2>
+          <ol class="plans__list">
+            <li class="plans__item">
+              <h3 class="plans__direction">Франция, Италия</h3>
+              <p class="plans__companions">3 попутчика</p>
+              <p class="plans__dates">26 мар — 29 мар</p>
+              <a href="#" class="plans__change-link">Изменить</a>
+            </li>
+            <li class="plans__item">
+              <h3 class="plans__direction">Таиланд, Индонезия</h3>
+              <p class="plans__companions">1 попутчик</p>
+              <p class="plans__dates">1 июл — 15 июл</p>
+              <a href="#" class="plans__change-link">Изменить</a>
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="profile__new-plan new-plan">
+          <h2 class="profile__title">Добавить план:</h2>
+
+          <div class="new-plan__steps-indication">
+            <button class="new-plan__indication new-plan__indication--active" type="button" aria-label="Первый шаг"></button>
+            <button class="new-plan__indication" type="button" aria-label="Второй шаг"></button>
+            <button class="new-plan__indication" type="button" aria-label="Третий шаг"></button>
+          </div>
+
+          <ol class="new-plan__steps steps">
+            <li class="steps__item">
+              <h3 class="steps__title" id="step1">Шаг 1. Даты пребывания</h3>
+              <p class="steps__discription">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку и&nbsp;ее&nbsp;предполагаемую длительность.</p>
+
+              <fieldset class="steps__fieldset">
+                <label class="steps__label" for="people-number">
+                  Ищу попутчиков:
+                  <span class="steps__units">Чел.</span>
+                </label>
+                <div class="steps__field">
+                  <button class="steps__control steps__control--minus" type="button" aria-label="Убавить 1 человека"></button>
+                  <input class="steps__input" type="number" name="people" min="1" id="people-number" value="2" required>
+                  <button class="steps__control steps__control--plus" type="button" aria-label="Добавить 1 человека"></button>
+                </div>
+              </fieldset>
+
+              <fieldset class="steps__fieldset">
+                <label class="steps__label" for="days-number">
+                  Длительность:
+                  <span class="steps__units">Дн.</span>
+                </label>
+                <div class="steps__field">
+                  <button class="steps__control steps__control--minus" type="button" aria-label="Убавить 1 день"></button>
+                  <input class="steps__input" type="number" name="days" min="1" id="days-number" value="2" required>
+                  <button class="steps__control steps__control--plus" type="button" aria-label="Добавить 1 день"></button>
+                </div>
+              </fieldset>
+
+              <fieldset class="steps__fieldset">
+                <input class="visually-hidden steps__checkbox" type="checkbox" name="children" id="isChildren" checked>
+                <label class="steps__label steps__label--checkbox" for="isChildren">Можно с детьми</label>
+              </fieldset>
+
+              <div class="steps__calendar calendar">
+                <div>
+                  <button class="calendar__month-control calendar__month-control--prev" type="button" aria-label="Открыть предыдущий месяц"></button>
+                  <p class="calendar__month">Март 2019</p>
+                  <button class="calendar__month-control calendar__month-control--next" type="button" aria-label="Открыть следующий месяц"></button>
+                </div>
+
+                <table class="calendar__table">
+                  <tr class="calendar__days-of-week">
+                    <th class="calendar__day-of-week">П</th>
+                    <th class="calendar__day-of-week">В</th>
+                    <th class="calendar__day-of-week">С</th>
+                    <th class="calendar__day-of-week">Ч</th>
+                    <th class="calendar__day-of-week">П</th>
+                    <th class="calendar__day-of-week calendar__day-of-week--off">С</th>
+                    <th class="calendar__day-of-week calendar__day-of-week--off">В</th>
+                  </tr>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">23</td>
+                    <td class="calendar__day calendar__day--disabled">24</td>
+                    <td class="calendar__day calendar__day--disabled">25</td>
+                    <td class="calendar__day calendar__day--disabled">26</td>
+                    <td class="calendar__day calendar__day--disabled">27</td>
+                    <td class="calendar__day calendar__day--disabled">28</td>
+                    <td class="calendar__day calendar__day--disabled">1</td>
+                  </tr>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">2</td>
+                    <td class="calendar__day calendar__day--disabled">3</td>
+                    <td class="calendar__day calendar__day--disabled">4</td>
+                    <td class="calendar__day calendar__day--disabled">5</td>
+                    <td class="calendar__day calendar__day--disabled">6</td>
+                    <td class="calendar__day calendar__day--disabled">7</td>
+                    <td class="calendar__day calendar__day--disabled">8</td>
+                  </tr>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">9</td>
+                    <td class="calendar__day calendar__day--disabled">10</td>
+                    <td class="calendar__day calendar__day--disabled">11</td>
+                    <td class="calendar__day calendar__day--disabled">12</td>
+                    <td class="calendar__day calendar__day--disabled">13</td>
+                    <td class="calendar__day calendar__day--disabled">14</td>
+                    <td class="calendar__day calendar__day--disabled">15</td>
+                  </tr>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">16</td>
+                    <td class="calendar__day calendar__day--disabled">17</td>
+                    <td class="calendar__day calendar__day--disabled">18</td>
+                    <td class="calendar__day calendar__day--disabled">19</td>
+                    <td class="calendar__day calendar__day--disabled">20</td>
+                    <td class="calendar__day calendar__day--disabled">21</td>
+                    <td class="calendar__day calendar__day--disabled">22</td>
+                  </tr>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">23</td>
+                    <td class="calendar__day calendar__day--disabled">24</td>
+                    <td class="calendar__day calendar__day--disabled">25</td>
+                    <td class="calendar__day calendar__day--selected calendar__day--active">26</td>
+                    <td class="calendar__day calendar__day--selected">27</td>
+                    <td class="calendar__day calendar__day--selected">28</td>
+                    <td class="calendar__day">29</td>
+                  </tr>
+                  <tr class="calendar__week">
+                    <td class="calendar__day">30</td>
+                    <td class="calendar__day">31</td>
+                    <td class="calendar__day">1</td>
+                    <td class="calendar__day">2</td>
+                    <td class="calendar__day">3</td>
+                    <td class="calendar__day">4</td>
+                    <td class="calendar__day">5</td>
+                  </tr>
+                </table>
+              </div>
+
+              <a href="#step2" class="steps__next-step button">Следующий шаг</a>
+            </li>
+
+            <li class="steps__item">
+              <h3 class="steps__title" id="step2">Шаг 2. Маршрут</h3>
+              <p class="steps__discription">Укажите страны, которые вы&nbsp;хотели посетить. Это может быть одна или сразу несколько.</p>
+
+              <ul class="steps__route">
+                <li class="steps__route-item">
+
+                  <div class="steps__destination">
+                    <label class="visually=hidden" for="destination-1">Пункт путешествия</label>
+                    <select class="steps__destination" name="destination-1" id="destination-1">
+                      <option selected>Босния и Герцеговина</option>
+                    </select>
+                    <span class="steps__flag flag"></span>
+
+                    <button class="steps__delete-destination" type="button">
+                      <span class="visually-hidden">Удалить из списка</span>
+                    </button>
+                  </div>
+
+                </li>
+
+                <li class="steps__route-item">
+
+                  <div class="steps__destination">
+                    <label class="visually=hidden" for="destination-2">Пункт путешествия</label>
+                    <select class="steps__destination" name="destination-2" id="destination-2">
+                      <option selected>Чехия</option>
+                    </select>
+                    <span class="steps__flag flag"></span>
+
+                    <button class="steps__delete-destination" type="button">
+                      <span class="visually-hidden">Удалить из списка</span>
+                    </button>
+                  </div>
+
+                </li>
+
+                <li class="steps__route-item">
+
+                  <div class="steps__destination steps__destination--clean">
+                    <label class="visually=hidden" for="destination-3">Пункт путешествия</label>
+                    <select class="steps__destination" name="destination-3" id="destination-3">
+                      <option>Выберите страну</option>
+                    </select>
+
+                    <button class="steps__delete-destination" type="button">
+                      <span class="visually-hidden">Удалить из списка</span>
+                    </button>
+                  </div>
+
+                  <section class="steps__select-modal">
+
+                    <button class="steps__close" type="button">
+                      <span class="visually-hidden">Cвернуть</span>
+                    </button>
+
+                    <ul class="steps__letters-list letters-list letters-list--theme-light">
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="a-field" value="a" checked>
+                        <label class="letters-list__letter" for="a-field">а</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="b-field" value="b">
+                        <label class="letters-list__letter" for="b-field">б</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="v-field" value="v">
+                        <label class="letters-list__letter" for="v-field">в</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="g-field" value="g">
+                        <label class="letters-list__letter" for="g-field">г</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="d-field" value="d">
+                        <label class="letters-list__letter" for="d-field">д</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="e-field" value="e">
+                        <label class="letters-list__letter" for="e-field">е</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="z-field" value="z">
+                        <label class="letters-list__letter" for="z-field">з</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="i-field" value="i">
+                        <label class="letters-list__letter" for="i-field">и</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="k-field" value="k">
+                        <label class="letters-list__letter" for="k-field">к</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="l-field" value="l">
+                        <label class="letters-list__letter" for="l-field">л</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="m-field" value="m">
+                        <label class="letters-list__letter" for="m-field">м</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="n-field" value="n">
+                        <label class="letters-list__letter" for="n-field">н</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="o-field" value="o">
+                        <label class="letters-list__letter" for="o-field">о</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="p-field" value="p">
+                        <label class="letters-list__letter" for="p-field">п</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="r-field" value="r">
+                        <label class="letters-list__letter" for="r-field">р</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="s-field" value="s">
+                        <label class="letters-list__letter" for="s-field">с</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="t-field" value="t">
+                        <label class="letters-list__letter" for="t-field">т</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="y-field" value="y">
+                        <label class="letters-list__letter" for="y-field">у</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="f-field" value="f">
+                        <label class="letters-list__letter" for="f-field">ф</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="h-field" value="h">
+                        <label class="letters-list__letter" for="h-field">х</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="ch-field" value="ch">
+                        <label class="letters-list__letter" for="ch-field">ч</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="sh-field" value="sh">
+                        <label class="letters-list__letter" for="sh-field">ш</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="eh-field" value="eh">
+                        <label class="letters-list__letter" for="eh-field">э</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="u-field" value="u">
+                        <label class="letters-list__letter" for="u-field">ю</label>
+                      </li>
+                      <li class="letters-list__item">
+                        <input class="visually-hidden letters-list__field" type="radio" name="letter" id="ya-field" value="ya">
+                        <label class="letters-list__letter" for="ya-field">я</label>
+                      </li>
+                    </ul>
+
+                    <ul class="steps__regions-list regions-list">
+                      <li class="regions-list__item">
+                        <a href="asia/australia" class="regions-list__link">Австралия</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="europe/austria" class="regions-list__link">Австрия</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Азербайджан</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Албания</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Алжир</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Ангола</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Андорра</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Антигуа и Барбуда</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Аргентина</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Армения</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Афганистан</a>
+                      </li>
+                    </ul>
+
+                  </section>
+                </li>
+
+                <li class="steps__route-item">
+                  <button class="steps__button-add" type="button">Добавить страну</button>
+                </li>
+              </ul>
+
+              <a href="#step3" class="steps__next-step button">Следующий шаг</a>
+              <a href="#step1" class="steps__prev-step">На шаг назад</a>
+            </li>
+
+            <li class="steps__item">
+              <h3 class="steps__title" id="step3">Шаг 3. Развлечения</h3>
+              <p class="steps__discription">Наконец, расскажите о&nbsp;своих планах времяпровождения. Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
+
+              <ul class="steps__travel-plan">
+                <li class="steps__country-plan">
+                  <label class="steps__country-name" for="country-plan-1">
+                    Босния и Герцеговина
+                    <span class="steps__flag flag"></span>
+                  </label>
+                  <textarea class="steps__plan-discription" name="plan-1" id="country-plan-1" rows="8" cols="80" placeholder="План действий" required></textarea>
+                </li>
+                <li class="steps__country-plan">
+                  <label class="steps__country-name" for="country-plan-2">
+                    Чехия
+                    <span class="steps__flag flag"></span>
+                  </label>
+                  <textarea class="steps__plan-discription" name="plan-2" id="country-plan-2" rows="8" cols="80" placeholder="План действий" required>
+                    Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.
+                  </textarea>
+                </li>
+              </ul>
+
+              <button  class="steps__button button" type="submit">Отправить</button>
+              <a href="#step2" class="steps__prev-step">На шаг назад</a>
+            </li>
+          </ol>
+        </section>
+      </form>
     </main>
 
     <footer class="footer">
