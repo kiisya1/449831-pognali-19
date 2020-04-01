@@ -68,7 +68,7 @@
         <section class="filter__regions">
           <h3 class="filter__title filter__title--regions">Фильтрация по странам</h3>
 
-          <button class="filter__close filter__close--min" type="button">
+          <button class="filter__close" type="button">
             <span class="visually-hidden">Cвернуть</span>
           </button>
 
@@ -103,43 +103,6 @@
               <li class="letters-list__item">
                 <input class="visually-hidden letters-list__field" type="radio" name="letter" id="a-field" value="a" checked>
                 <label class="letters-list__letter" for="a-field">а</label>
-
-                <ul class="letters-list__regions-list regions-list">
-                  <li class="regions-list__item">
-                    <a href="asia/australia" class="regions-list__link">Австралия</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="europe/austria" class="regions-list__link">Австрия</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="#" class="regions-list__link">Азербайджан</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="#" class="regions-list__link">Албания</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="#" class="regions-list__link">Алжир</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="#" class="regions-list__link">Ангола</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="#" class="regions-list__link">Андорра</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="#" class="regions-list__link">Антигуа и Барбуда</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="#" class="regions-list__link">Аргентина</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="#" class="regions-list__link">Армения</a>
-                  </li>
-                  <li class="regions-list__item">
-                    <a href="#" class="regions-list__link">Афганистан</a>
-                  </li>
-                </ul>
-
               </li>
               <li class="letters-list__item">
                 <input class="visually-hidden letters-list__field" type="radio" name="letter" id="b-field" value="b">
@@ -239,6 +202,42 @@
               </li>
             </ul>
 
+            <ul class="filter__regions-list regions-list">
+              <li class="regions-list__item">
+                <a href="asia/australia" class="regions-list__link">Австралия</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="europe/austria" class="regions-list__link">Австрия</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="#" class="regions-list__link">Азербайджан</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="#" class="regions-list__link">Албания</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="#" class="regions-list__link">Алжир</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="#" class="regions-list__link">Ангола</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="#" class="regions-list__link">Андорра</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="#" class="regions-list__link">Антигуа и Барбуда</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="#" class="regions-list__link">Аргентина</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="#" class="regions-list__link">Армения</a>
+              </li>
+              <li class="regions-list__item">
+                <a href="#" class="regions-list__link">Афганистан</a>
+              </li>
+            </ul>
+
           <button class="filter__close button button--theme-light" type="button">
             <span class="filter__close-text">Cвернуть</span>
           </button>
@@ -309,19 +308,19 @@
                 <ul class="transport__list">
                   <li class="transport__item">
                     <input class="visually-hidden transport__checkbox" type="checkbox" name="flight" id="flight-field" checked>
-                    <label class="transport__label transport__label--flight transport__type tooltip" for="flight-field">Авиаперелет</label>
+                    <label class="transport__label transport__type transport__type--flight tooltip" for="flight-field">Авиаперелет</label>
                   </li>
                   <li class="transport__item">
                     <input class="visually-hidden transport__checkbox" type="checkbox" name="auto" id="auto-field" checked>
-                    <label class="transport__label transport__label--auto transport__type tooltip" for="auto-field">Автотранспорт</label>
+                    <label class="transport__label transport__type transport__type--auto tooltip" for="auto-field">Автотранспорт</label>
                   </li>
                   <li class="transport__item">
                     <input class="visually-hidden transport__checkbox" type="checkbox" name="bike" id="bike-field">
-                    <label class="transport__label transport__label--bike transport__type tooltip" for="bike-field">Велосипед</label>
+                    <label class="transport__label transport__type transport__type--bike tooltip" for="bike-field">Велосипед</label>
                   </li>
                   <li class="transport__item">
                     <input class="visually-hidden transport__checkbox" type="checkbox" name="foot" id="foot-field" checked>
-                    <label class="transport__label transport__label--foot transport__type tooltip" for="foot-field">Пешком</label>
+                    <label class="transport__label transport__type transport__type--foot tooltip" for="foot-field">Пешком</label>
                   </li>
                 </ul>
 
@@ -332,25 +331,21 @@
 
               <div class="filter__range">
 
-                <div class="filter__price-controls">
-                  <label class="filter__price">
+                <div class="filter__controls">
+                  <label class="filter__mark">
                     <span class="visually-hidden">Введите минимальный уровень</span>
                     <input class="filter__input" type="number" name="min-level" value="30" min="0" max="100">
                   </label>
-                  <label class="filter__price">
+                  <label class="filter__mark">
                     <span class="visually-hidden">Введите максимальный уровень</span>
                     <input class="filter__input" type="number" name="max-level" value="100" min="0" max="100">
                   </label>
                 </div>
 
-                <div class="filter__range-controls">
-                  <div class="filter__scale">
-                    <div class="filter__bar"></div>
-                  </div>
-
+                <div class="filter__scale">
+                  <div class="filter__bar"></div>
                   <button class="filter__range-button filter__range-button--min" type="button" aria-label="Переместите ползунок, чтобы задать минимальный уровень"></button>
                   <button class="filter__range-button filter__range-button--max" type="button" aria-label="Переместите ползунок, чтобы задать максимальный уровень"></button>
-
                 </div>
               </div>
             </fieldset>
@@ -408,17 +403,17 @@
                 <section class="traveler__transport transport">
                   <p class="transport__title">транспорт:</p>
                   <ul class="transport__list">
-                    <li class="transport__item transport__item--flight transport__item--active">
-                      <span class="transport__type tooltip">Авиаперелет</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--flight transport__type--active tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport__item transport__item--auto">
-                      <span class="transport__type tooltip">Автотранспорт</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--auto tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport__item transport__item--bike">
-                      <span class="transport__type tooltip">Велосипед</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--bike tooltip">Велосипед</span>
                     </li>
-                    <li class="transport__item transport__item--foot">
-                      <span class="transport__type tooltip">Пешком</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--foot tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>
@@ -472,17 +467,17 @@
                 <section class="traveler__transport transport">
                   <p class="traveler__transport-title">транспорт:</p>
                   <ul class="transport__list">
-                    <li class="transport__item transport__item--flight transport__item--active">
-                      <span class="transport__type tooltip">Авиаперелет</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--flight transport__type--active tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport__item transport__item--auto transport__item--active">
-                      <span class="transport__type tooltip">Автотранспорт</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--auto transport__type--active tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport__item transport__item--bike">
-                      <span class="transport__type tooltip">Велосипед</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--bike tooltip">Велосипед</span>
                     </li>
-                    <li class="transport__item transport__item--foot transport__item--active">
-                      <span class="transport__type tooltip">Пешком</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--foot transport__type--active tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>
@@ -540,17 +535,17 @@
                 <section class="traveler__transport transport">
                   <p class="traveler__transport-title">транспорт:</p>
                   <ul class="transport__list">
-                    <li class="transport__item transport__item--flight transport__item--active">
-                      <span class="transport__type tooltip">Авиаперелет</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--flight transport__type--active tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport__item transport__item--auto">
-                      <span class="transport__type tooltip">Автотранспорт</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--auto tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport__item transport__item--bike">
-                      <span class="transport__type tooltip">Велосипед</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--bike tooltip">Велосипед</span>
                     </li>
-                    <li class="transport__item transport__item--foot transport__item--active">
-                      <span class="transport__type tooltip">Пешком</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--foot transport__type--active tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>
@@ -603,17 +598,17 @@
                 <section class="traveler__transport transport">
                   <p class="traveler__transport-title">транспорт:</p>
                   <ul class="transport__list">
-                    <li class="transport__item transport__item--flight transport__item--active">
-                      <span class="transport__type tooltip">Авиаперелет</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--flight transport__type--active tooltip">Авиаперелет</span>
                     </li>
-                    <li class="transport__item transport__item--auto transport__item--active">
-                      <span class="transport__type tooltip">Автотранспорт</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--auto transport__type--active tooltip">Автотранспорт</span>
                     </li>
-                    <li class="transport__item transport__item--bike">
-                      <span class="transport__type tooltip">Велосипед</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--bike tooltip">Велосипед</span>
                     </li>
-                    <li class="transport__item transport__item--foot">
-                      <span class="transport__type tooltip">Пешком</span>
+                    <li class="transport__item">
+                      <span class="transport__type transport__type--foot tooltip">Пешком</span>
                     </li>
                   </ul>
                 </section>

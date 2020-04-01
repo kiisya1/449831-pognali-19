@@ -97,19 +97,19 @@
               <ul class="transport__list">
                 <li class="transport__item">
                   <input class="visually-hidden transport__checkbox" type="checkbox" name="flight" id="flight-field" checked>
-                  <label class="transport__label transport__label--flight transport__type tooltip" for="flight-field">Авиаперелет</label>
+                  <label class="transport__label transport__type transport__type--flight tooltip" for="flight-field">Авиаперелет</label>
                 </li>
                 <li class="transport__item">
                   <input class="visually-hidden transport__checkbox" type="checkbox" name="auto" id="auto-field" checked>
-                  <label class="transport__label transport__label--auto transport__type tooltip" for="auto-field">Автотранспорт</label>
+                  <label class="transport__label transport__type transport__type--auto tooltip" for="auto-field">Автотранспорт</label>
                 </li>
                 <li class="transport__item">
                   <input class="visually-hidden transport__checkbox" type="checkbox" name="bike" id="bike-field">
-                  <label class="transport__label transport__label--bike transport__type tooltip" for="bike-field">Велосипед</label>
+                  <label class="transport__label transport__type transport__type--bike tooltip" for="bike-field">Велосипед</label>
                 </li>
                 <li class="transport__item">
                   <input class="visually-hidden transport__checkbox" type="checkbox" name="foot" id="foot-field" checked>
-                  <label class="transport__label transport__label--foot transport__type tooltip" for="foot-field">Пешком</label>
+                  <label class="transport__label transport__type transport__type--foot tooltip" for="foot-field">Пешком</label>
                 </li>
               </ul>
 
@@ -145,7 +145,7 @@
             <button class="new-plan__indication" type="button" aria-label="Третий шаг"></button>
           </div>
 
-          <ul class="new-plan__steps steps">
+          <ol class="new-plan__steps steps">
             <li class="steps__item">
               <h3 class="steps__title" id="step1">Шаг 1. Даты пребывания</h3>
               <p class="steps__discription">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку и&nbsp;ее&nbsp;предполагаемую длительность.</p>
@@ -179,76 +179,76 @@
                 <label class="steps__label steps__label--checkbox" for="isChildren">Можно с детьми</label>
               </fieldset>
 
-              <div class="steps__calendar">
+              <div class="steps__calendar calendar">
                 <div>
-                  <button class="steps__month-control steps__month-control--prev" type="button" aria-label="Открыть предыдущий месяц"></button>
-                  <p class="steps__month">Март 2019</p>
-                  <button class="steps__month-control steps__month-control--next" type="button" aria-label="Открыть следующий месяц"></button>
+                  <button class="calendar__month-control calendar__month-control--prev" type="button" aria-label="Открыть предыдущий месяц"></button>
+                  <p class="calendar__month">Март 2019</p>
+                  <button class="calendar__month-control calendar__month-control--next" type="button" aria-label="Открыть следующий месяц"></button>
                 </div>
 
-                <table class="steps__calendar-table">
-                  <tr class="steps__days-of-week">
-                    <th class="steps__day-of-week">П</th>
-                    <th class="steps__day-of-week">В</th>
-                    <th class="steps__day-of-week">С</th>
-                    <th class="steps__day-of-week">Ч</th>
-                    <th class="steps__day-of-week">П</th>
-                    <th class="steps__day-of-week steps__day-of-week--off">С</th>
-                    <th class="steps__day-of-week steps__day-of-week--off">В</th>
+                <table class="calendar__table">
+                  <tr class="calendar__days-of-week">
+                    <th class="calendar__day-of-week">П</th>
+                    <th class="calendar__day-of-week">В</th>
+                    <th class="calendar__day-of-week">С</th>
+                    <th class="calendar__day-of-week">Ч</th>
+                    <th class="calendar__day-of-week">П</th>
+                    <th class="calendar__day-of-week calendar__day-of-week--off">С</th>
+                    <th class="calendar__day-of-week calendar__day-of-week--off">В</th>
                   </tr>
-                  <tr class="steps__week">
-                    <td class="steps__day">23</td>
-                    <td class="steps__day">24</td>
-                    <td class="steps__day">25</td>
-                    <td class="steps__day">26</td>
-                    <td class="steps__day">27</td>
-                    <td class="steps__day">28</td>
-                    <td class="steps__day">1</td>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">23</td>
+                    <td class="calendar__day calendar__day--disabled">24</td>
+                    <td class="calendar__day calendar__day--disabled">25</td>
+                    <td class="calendar__day calendar__day--disabled">26</td>
+                    <td class="calendar__day calendar__day--disabled">27</td>
+                    <td class="calendar__day calendar__day--disabled">28</td>
+                    <td class="calendar__day calendar__day--disabled">1</td>
                   </tr>
-                  <tr class="steps__week">
-                    <td class="steps__day">2</td>
-                    <td class="steps__day">3</td>
-                    <td class="steps__day">4</td>
-                    <td class="steps__day">5</td>
-                    <td class="steps__day">6</td>
-                    <td class="steps__day">7</td>
-                    <td class="steps__day">8</td>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">2</td>
+                    <td class="calendar__day calendar__day--disabled">3</td>
+                    <td class="calendar__day calendar__day--disabled">4</td>
+                    <td class="calendar__day calendar__day--disabled">5</td>
+                    <td class="calendar__day calendar__day--disabled">6</td>
+                    <td class="calendar__day calendar__day--disabled">7</td>
+                    <td class="calendar__day calendar__day--disabled">8</td>
                   </tr>
-                  <tr class="steps__week">
-                    <td class="steps__day">9</td>
-                    <td class="steps__day">10</td>
-                    <td class="steps__day">11</td>
-                    <td class="steps__day">12</td>
-                    <td class="steps__day">13</td>
-                    <td class="steps__day">14</td>
-                    <td class="steps__day">15</td>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">9</td>
+                    <td class="calendar__day calendar__day--disabled">10</td>
+                    <td class="calendar__day calendar__day--disabled">11</td>
+                    <td class="calendar__day calendar__day--disabled">12</td>
+                    <td class="calendar__day calendar__day--disabled">13</td>
+                    <td class="calendar__day calendar__day--disabled">14</td>
+                    <td class="calendar__day calendar__day--disabled">15</td>
                   </tr>
-                  <tr class="steps__week">
-                    <td class="steps__day">16</td>
-                    <td class="steps__day">17</td>
-                    <td class="steps__day">18</td>
-                    <td class="steps__day">19</td>
-                    <td class="steps__day">20</td>
-                    <td class="steps__day">21</td>
-                    <td class="steps__day">22</td>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">16</td>
+                    <td class="calendar__day calendar__day--disabled">17</td>
+                    <td class="calendar__day calendar__day--disabled">18</td>
+                    <td class="calendar__day calendar__day--disabled">19</td>
+                    <td class="calendar__day calendar__day--disabled">20</td>
+                    <td class="calendar__day calendar__day--disabled">21</td>
+                    <td class="calendar__day calendar__day--disabled">22</td>
                   </tr>
-                  <tr class="steps__week">
-                    <td class="steps__day">23</td>
-                    <td class="steps__day">24</td>
-                    <td class="steps__day">25</td>
-                    <td class="steps__day steps__day--selected steps__day--active">26</td>
-                    <td class="steps__day steps__day--selected">27</td>
-                    <td class="steps__day steps__day--selected">28</td>
-                    <td class="steps__day steps__day--available">29</td>
+                  <tr class="calendar__week">
+                    <td class="calendar__day calendar__day--disabled">23</td>
+                    <td class="calendar__day calendar__day--disabled">24</td>
+                    <td class="calendar__day calendar__day--disabled">25</td>
+                    <td class="calendar__day calendar__day--selected calendar__day--active">26</td>
+                    <td class="calendar__day calendar__day--selected">27</td>
+                    <td class="calendar__day calendar__day--selected">28</td>
+                    <td class="calendar__day">29</td>
                   </tr>
-                  <tr class="steps__week">
-                    <td class="steps__day steps__day--available">30</td>
-                    <td class="steps__day steps__day--available">31</td>
-                    <td class="steps__day steps__day--available">1</td>
-                    <td class="steps__day steps__day--available">2</td>
-                    <td class="steps__day steps__day--available">3</td>
-                    <td class="steps__day steps__day--available">4</td>
-                    <td class="steps__day steps__day--available">5</td>
+                  <tr class="calendar__week">
+                    <td class="calendar__day">30</td>
+                    <td class="calendar__day">31</td>
+                    <td class="calendar__day">1</td>
+                    <td class="calendar__day">2</td>
+                    <td class="calendar__day">3</td>
+                    <td class="calendar__day">4</td>
+                    <td class="calendar__day">5</td>
                   </tr>
                 </table>
               </div>
@@ -260,37 +260,51 @@
               <h3 class="steps__title" id="step2">Шаг 2. Маршрут</h3>
               <p class="steps__discription">Укажите страны, которые вы&nbsp;хотели посетить. Это может быть одна или сразу несколько.</p>
 
-              <ul class="steps__countries">
-                <li class="steps__countries-item">
+              <ul class="steps__route">
+                <li class="steps__route-item">
 
-                  <button class="steps__button steps__button--selected" type="button">
-                    <span class="steps__selected">Босния и Герцеговина</span>
+                  <div class="steps__destination">
+                    <label class="visually=hidden" for="destination-1">Пункт путешествия</label>
+                    <select class="steps__destination" name="destination-1" id="destination-1" placeholder="Выберите страну">
+                      <option selected>Босния и Герцеговина</option>
+                    </select>
                     <span class="steps__flag flag"></span>
-                  </button>
 
-                    <button class="steps__delete-country" type="button">
+                    <button class="steps__delete-destination" type="button">
                       <span class="visually-hidden">Удалить из списка</span>
                     </button>
+                  </div>
+
                 </li>
 
-                <li class="steps__countries-item">
+                <li class="steps__route-item">
 
-                  <button class="steps__button steps__button--selected" type="button">
-                    <span class="steps__selected">Чехия</span>
+                  <div class="steps__destination">
+                    <label class="visually=hidden" for="destination-2">Пункт путешествия</label>
+                    <select class="steps__destination" name="destination-2" id="destination-2" placeholder="Выберите страну">
+                      <option selected>Чехия</option>
+                    </select>
                     <span class="steps__flag flag"></span>
-                  </button>
 
-                  <button class="steps__delete-country" type="button">
-                    <span class="visually-hidden">Удалить из списка</span>
-                  </button>
+                    <button class="steps__delete-destination" type="button">
+                      <span class="visually-hidden">Удалить из списка</span>
+                    </button>
+                  </div>
+
                 </li>
 
-                <li class="steps__countries-item">
-                  <button class="steps__button steps__button--select" type="button">Выберите страну</button>
+                <li class="steps__route-item">
 
-                  <button class="steps__delete-country" type="button">
-                    <span class="visually-hidden">Удалить из списка</span>
-                  </button>
+                  <div class="steps__destination steps__destination--clean">
+                    <label class="visually=hidden" for="destination-3">Пункт путешествия</label>
+                    <select class="steps__destination" name="destination-3" id="destination-3">
+                      <option>Выберите страну</option>
+                    </select>
+
+                    <button class="steps__delete-destination" type="button">
+                      <span class="visually-hidden">Удалить из списка</span>
+                    </button>
+                  </div>
 
                   <section class="steps__select-modal">
 
@@ -302,43 +316,6 @@
                       <li class="letters-list__item">
                         <input class="visually-hidden letters-list__field" type="radio" name="letter" id="a-field" value="a" checked>
                         <label class="letters-list__letter" for="a-field">а</label>
-
-                        <ul class="letters-list__regions-list regions-list">
-                          <li class="regions-list__item">
-                            <a href="asia/australia" class="regions-list__link">Австралия</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="europe/austria" class="regions-list__link">Австрия</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="#" class="regions-list__link">Азербайджан</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="#" class="regions-list__link">Албания</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="#" class="regions-list__link">Алжир</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="#" class="regions-list__link">Ангола</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="#" class="regions-list__link">Андорра</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="#" class="regions-list__link">Антигуа и Барбуда</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="#" class="regions-list__link">Аргентина</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="#" class="regions-list__link">Армения</a>
-                          </li>
-                          <li class="regions-list__item">
-                            <a href="#" class="regions-list__link">Афганистан</a>
-                          </li>
-                        </ul>
-
                       </li>
                       <li class="letters-list__item">
                         <input class="visually-hidden letters-list__field" type="radio" name="letter" id="b-field" value="b">
@@ -437,11 +414,48 @@
                         <label class="letters-list__letter" for="ya-field">я</label>
                       </li>
                     </ul>
+
+                    <ul class="steps__regions-list regions-list">
+                      <li class="regions-list__item">
+                        <a href="asia/australia" class="regions-list__link">Австралия</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="europe/austria" class="regions-list__link">Австрия</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Азербайджан</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Албания</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Алжир</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Ангола</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Андорра</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Антигуа и Барбуда</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Аргентина</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Армения</a>
+                      </li>
+                      <li class="regions-list__item">
+                        <a href="#" class="regions-list__link">Афганистан</a>
+                      </li>
+                    </ul>
+
                   </section>
                 </li>
 
-                <li class="steps__countries-item">
-                  <button class="steps__button steps__button--add" type="button">Добавить страну</button>
+                <li class="steps__route-item">
+                  <button class="steps__button-add" type="button">Добавить страну</button>
                 </li>
               </ul>
 
@@ -475,12 +489,8 @@
               <button  class="steps__button button" type="submit">Отправить</button>
               <a href="#step2" class="steps__prev-step">На шаг назад</a>
             </li>
-          </ul>
-
-
-
+          </ol>
         </section>
-
       </form>
     </main>
 
