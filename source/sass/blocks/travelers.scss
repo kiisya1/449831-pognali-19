@@ -1,0 +1,39 @@
+.travelers {
+  margin-top: -30px;
+  margin-bottom: 37px;
+
+  color: $color-light;
+
+  background-color: $color-dark-blue;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.travelers__container {
+  padding: 25px;
+  padding-top: 100px;
+
+  background-image: url("../img/smolov-back-desktop@1x.png"),
+    url("../img/rogovaya-back-mobile@1x.png"),
+    url("../img/blue-back.png");
+  background-repeat: no-repeat;
+  background-position: top 69px left 152px, top 341px left -10px, top 69px left -19px;
+}
+
+.travelers__list {
+  @include reset-list;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.travelers__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.travelers__button {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,147 @@
+.traveler {
+  position: relative;
+
+  color: $color-gray;
+  text-align: center;
+
+  background-color: $color-light;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &--info {
+    padding: 15px 0;
+
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: left;
+
+    border-radius: 20px;
+  }
+}
+
+.traveler__photo {
+  display: block;
+}
+
+.traveler__photo-image {
+  display: block;
+}
+
+.traveler__about {
+  padding: 25px;
+}
+
+.traveler__name {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-size: 21px;
+  line-height: 21px;
+  color: $dark-slate-blue;
+  font-weight: 700;
+}
+
+.traveler__link {
+  color: $dark-slate-blue;
+
+  &:hover,
+  &:focus {
+    color: rgba($dark-slate-blue, 0.7);
+  }
+
+  &:active {
+    color: rgba($dark-slate-blue, 0.3);
+  }
+}
+
+.traveler__indicator {
+  display: block;
+  width: 5px;
+  height: 5px;
+
+  font-size: 0;
+
+  background-color: #81e31e;
+  border-radius: 50%;
+
+  &--not-available {
+    background-color: #f97676;
+  }
+}
+
+.traveler__likes {
+  position: relative;
+
+  padding: 5px 0;
+  padding-left: 37px;
+
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-dark-purple;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 31px;
+    height: 31px;
+
+    background-color: $bg-gray;
+    border-radius: 50%;
+  }
+
+  &--active::after {
+    background-color: #f9eaea;
+  }
+}
+
+.traveler__hashtags {
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.traveler__block-title {
+  padding-left: 26px;
+}
+
+.traveler__call {
+  margin: 0 20px;
+  margin-bottom: 7px;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+
+.traveler--info .traveler__photo {
+  padding-left: 18px;
+  margin-bottom: 16px;
+  width: 70px;
+}
+
+.traveler--info .traveler__photo-image {
+  border-radius: 50%;
+}
+
+.traveler--info .traveler__name {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.traveler--info .traveler__hashtags {
+  padding-left: 26px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.traveler--info .traveler__countries {
+  margin-bottom: 24px;
+}
+
+.traveler--info .traveler__level {
+  margin-bottom: 14px;
+}

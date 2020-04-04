@@ -1,0 +1,36 @@
+.business-prices {
+  padding-top: 33px;
+
+  overflow: hidden;
+}
+
+.business-prices__container {
+  width: 220px;
+  padding: 0 25px;
+}
+
+.business-prices__close {
+  display: block;
+  width: 100%;
+  padding: 20px 23px 14px;
+
+  line-height: 24px;
+  color: $dark-slate-blue;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: #f3f4f8;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-gray;
+  }
+
+  &:active {
+    color: rgba($dark-slate-blue, 0.3);
+
+    background-color: $bg-gray;
+  }
+}

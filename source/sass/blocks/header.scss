@@ -1,0 +1,15 @@
+.header {
+  background-color: $color-dark-purple;
+
+  &--theme-light {
+    background-color: $color-light;
+  }
+}
+
+.header__container {
+  padding-top: 27px;
+}
+
+.header__nav {
+  margin-top: 55px;
+}

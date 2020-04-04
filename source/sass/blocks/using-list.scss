@@ -1,0 +1,30 @@
+.using-list {
+  @include reset-list;
+}
+
+.using-list__item {
+  padding: 22px 25px;
+  padding-right: 100px;
+
+  font-size: 18px;
+  line-height: 18px;
+  color: $color-dark-purple;
+  font-weight: 700;
+
+  background-color: $color-bright-orange;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &:nth-child(2n) {
+    background-color: $color-semi-orange;
+  }
+
+  &:nth-child(3n) {
+    background-color: $color-orange;
+  }
+
+  &:nth-child(4n) {
+    background-color: $color-yellow;
+    border-radius: 10px;
+  }
+}

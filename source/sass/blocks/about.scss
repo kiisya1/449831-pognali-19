@@ -1,0 +1,17 @@
+.about {
+  color: $color-light;
+
+  background-color: $color-dark-blue;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.about__container {
+  padding: 25px;
+  padding-bottom: 60px;
+  padding-right: 45px;
+  margin-bottom: 45px;
+}

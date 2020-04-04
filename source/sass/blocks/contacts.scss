@@ -1,0 +1,19 @@
+.contacts__link {
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 10px;
+  padding-left: 62px;
+
+  color: $color-dark-blue;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-dark-blue, 0.6);
+  }
+
+  &:active {
+    color: rgba($color-dark-blue, 0.3);
+  }
+}

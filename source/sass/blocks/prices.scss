@@ -1,0 +1,46 @@
+.prices {
+  padding-bottom: 25px;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.prices__title {
+  position: relative;
+
+  padding: 14px 25px;
+  padding-right: 143px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 99px;
+    height: 99px;
+    background-image: url("../img/rates@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.prices__business {
+  display: block;
+  padding: 0 25px;
+  margin-bottom: 13px;
+
+  line-height: 16px;
+  color: $color-dark-blue;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-dark-blue, 0.7);
+  }
+
+  &:active {
+    color: rgba($color-dark-blue, 0.3);
+  }
+}

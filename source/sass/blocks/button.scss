@@ -1,0 +1,52 @@
+.button {
+  display: inline-block;
+  padding: 7px 40px 3px;
+
+  font-family: $standart-font;
+  font-size: 17px;
+  line-height: 30px;
+  color: $color-dark-purple;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: bottom;
+
+  background-color: $color-yellow;
+  border: 0;
+  border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-orange;
+  }
+
+  &:active {
+    color: rgba($color-dark-purple, 0.3);
+
+    background-color: $color-orange;
+  }
+
+  &--arrow {
+    width: 270px;
+    padding: 22px 24px;
+    box-sizing: border-box;
+
+    font-size: 18px;
+    line-height: 18px;
+    color: $dark-slate-blue;
+    text-transform: none;
+    text-align: left;
+
+    border-radius: 10px;
+
+    &:active {
+      color: rgba($dark-slate-blue, 0.3);
+    }
+  }
+
+  &--large {
+    padding: 13px 70px 7px;
+
+    border-radius: 25px;
+  }
+}

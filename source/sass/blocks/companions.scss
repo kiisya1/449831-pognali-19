@@ -1,0 +1,16 @@
+.companions__list {
+  @include reset-list;
+  margin-bottom: 24px;
+}
+
+.companions__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.companions__pagination {
+  margin-bottom: 46px;
+}
