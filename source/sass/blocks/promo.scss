@@ -1,12 +1,12 @@
 .promo {
   padding: 25px 0;
 
-  color: $color-light;
+  color: $color--light;
 
-  background-color: $color-dark-purple;
+  background-color: $background-color--dark;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg"),
-    linear-gradient(to bottom, $color-dark-purple 73.5%, $color-dark-blue 73.5%);
+    linear-gradient(to bottom, $background-color--dark 73.5%, $background-color--darken 73.5%);
   background-repeat: no-repeat;
   background-position: top 240px center, top -60px center, top;
 }

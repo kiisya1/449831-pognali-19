@@ -11,7 +11,7 @@
   margin-top: -10px;
   padding: 25px;
   border-radius: 10px;
-  background-color: $color-light;
+  background-color: $background-color--light;
 }
 
 .direction__title {
@@ -21,20 +21,20 @@
 
   font-size: 21px;
   line-height: 21px;
-  color: $color-dark-purple;
-  font-weight: 700;
+  color: $link-color--dark;
+  font-weight: $font-bold;
 }
 
 .direction__link {
-  color: $color-dark-purple;
+  color: inherit;
 
   &:hover,
   &:focus {
-    color: rgba($color-dark-purple, 0.6);
+    color: rgba($link-color--dark, 0.6);
   }
 
   &:active {
-    color: rgba($color-dark-purple, 0.3);
+    color: rgba($link-color--dark, 0.3);
   }
 }
 
@@ -44,7 +44,7 @@
 
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
-  font-weight: 500;
+  font-weight: $font-medium;
 }
 
 .direction__users {
@@ -54,6 +54,6 @@
 
   line-height: 30px;
   color: rgba(68, 68, 68, 0.3);
-  font-weight: 500;
+  font-weight: $font-medium;
   text-align: right;
 }

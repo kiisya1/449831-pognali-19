@@ -8,23 +8,23 @@
 
   font-size: 18px;
   line-height: 18px;
-  color: $color-dark-purple;
-  font-weight: 700;
+  color: $color--darken;
+  font-weight: $font-bold;
 
-  background-color: $color-bright-orange;
+  background-color: $mango;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 
   &:nth-child(2n) {
-    background-color: $color-semi-orange;
+    background-color: $mango-light;
   }
 
   &:nth-child(3n) {
-    background-color: $color-orange;
+    background-color: $mango-lighten;
   }
 
   &:nth-child(4n) {
-    background-color: $color-yellow;
+    background-color: $gold;
     border-radius: 10px;
   }
 }

@@ -15,8 +15,8 @@
   padding: 20px 23px 14px;
 
   line-height: 24px;
-  color: $dark-slate-blue;
-  font-weight: 700;
+  color: $color--dark;
+  font-weight: $font-bold;
   text-transform: uppercase;
   text-align: center;
 
@@ -25,12 +25,12 @@
 
   &:hover,
   &:focus {
-    background-color: $bg-gray;
+    background-color: $background-color;
   }
 
   &:active {
-    color: rgba($dark-slate-blue, 0.3);
+    color: rgba($color--dark, 0.3);
 
-    background-color: $bg-gray;
+    background-color: $background-color;
   }
 }

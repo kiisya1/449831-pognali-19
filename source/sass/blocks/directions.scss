@@ -2,7 +2,7 @@
   position: relative;
   z-index: 2;
 
-  background-color: $bg-gray;
+  background-color: $background-color;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
@@ -36,7 +36,7 @@
 
       width: 100%;
       height: 91px;
-      background: linear-gradient(to bottom, rgba($bg-gray, 0), $bg-gray 80%);
+      background: linear-gradient(to bottom, rgba($background-color, 0), $background-color 80%);
     }
   }
 }

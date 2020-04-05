@@ -8,17 +8,17 @@
 
   font-size: 17px;
   line-height: 30px;
-  color: $dark-slate-blue;
-  font-weight: 700;
+  color: $link-color;
+  font-weight: $font-bold;
   text-transform: uppercase;
 
   &:hover,
   &:focus {
-    color: rgba($dark-slate-blue, 0.6);
+    color: $link-color--hover;
   }
 
   &:active {
-    color: rgba($dark-slate-blue, 0.3);
+    color: $link-color--active;
   }
 }
 
@@ -33,7 +33,7 @@
   margin-right: 1px;
   font-size: 0;
 
-  background-color: $color-light;
+  background-color: $background-color--light;
 
   &--prew {
     border-top-left-radius: 20px;

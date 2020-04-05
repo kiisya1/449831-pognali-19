@@ -5,25 +5,25 @@
   font-family: $standart-font;
   font-size: 17px;
   line-height: 30px;
-  color: $color-dark-purple;
-  font-weight: 700;
+  color: $btn-color;
+  font-weight: $font-bold;
   text-align: center;
   text-transform: uppercase;
   vertical-align: bottom;
 
-  background-color: $color-yellow;
+  background-color: $btn-background;
   border: 0;
   border-radius: 20px;
 
   &:hover,
   &:focus {
-    background-color: $color-orange;
+    background-color: $btn-background--hover;
   }
 
   &:active {
-    color: rgba($color-dark-purple, 0.3);
+    color: rgba($btn-color, 0.3);
 
-    background-color: $color-orange;
+    background-color: $btn-background--hover;
   }
 
   &--arrow {
@@ -33,14 +33,14 @@
 
     font-size: 18px;
     line-height: 18px;
-    color: $dark-slate-blue;
+    color: $btn-color--arrow;
     text-transform: none;
     text-align: left;
 
     border-radius: 10px;
 
     &:active {
-      color: rgba($dark-slate-blue, 0.3);
+      color: rgba($btn-color--arrow, 0.3);
     }
   }
 

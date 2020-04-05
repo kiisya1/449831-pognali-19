@@ -4,7 +4,7 @@
   width: 270px;
   box-sizing: border-box;
 
-  background-color: $color-light;
+  background-color: $background-color--light;
   border-radius: 20px;
-  box-shadow: 0 20px 50px 0 rgba($dark-slate-blue, 0.1);
+  box-shadow: 0 20px 50px 0 $box-shadow-color;
 }

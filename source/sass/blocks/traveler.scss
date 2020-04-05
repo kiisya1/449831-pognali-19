@@ -1,10 +1,10 @@
 .traveler {
   position: relative;
 
-  color: $color-gray;
+  color: $color--base;
   text-align: center;
 
-  background-color: $color-light;
+  background-color: $background-color--light;
   border-radius: 10px;
   overflow: hidden;
 
@@ -13,7 +13,7 @@
 
     font-size: 15px;
     line-height: 18px;
-    font-weight: 400;
+    font-weight: $font-normal;
     text-align: left;
 
     border-radius: 20px;
@@ -39,20 +39,20 @@
 
   font-size: 21px;
   line-height: 21px;
-  color: $dark-slate-blue;
-  font-weight: 700;
+  color: $link-color;
+  font-weight: $font-bold;
 }
 
 .traveler__link {
-  color: $dark-slate-blue;
+  color: $link-color;
 
   &:hover,
   &:focus {
-    color: rgba($dark-slate-blue, 0.7);
+    color: $link-color--hover-dark;
   }
 
   &:active {
-    color: rgba($dark-slate-blue, 0.3);
+    color: $link-color--active;
   }
 }
 
@@ -79,8 +79,8 @@
 
   font-size: 14px;
   line-height: 21px;
-  color: $color-dark-purple;
-  font-weight: 700;
+  color: $color--darken;
+  font-weight: $font-bold;
   text-transform: uppercase;
 
   &::after {
@@ -92,7 +92,7 @@
     width: 31px;
     height: 31px;
 
-    background-color: $bg-gray;
+    background-color: $background-color;
     border-radius: 50%;
   }
 

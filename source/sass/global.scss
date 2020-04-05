@@ -3,13 +3,13 @@ body {
   margin: 0;
 
   font-family: $standart-font;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: $font-size;
+  line-height: $line-height;
   text-align: left;
-  color: $color-gray;
-  font-weight: 300;
+  color: $color--base;
+  font-weight: $font-light;
 
-  background-color: $bg-gray;
+  background-color: $background-color;
 }
 
 a {
