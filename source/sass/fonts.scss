@@ -1,0 +1,41 @@
+/* Подключение шрифтов */
+
+@font-face {
+  font-family: "Blogger Sans";
+  src: local("BloggerSans-Light"),
+    local("Blogger Sans Light"),
+    url("../fonts/bloggersans-light.woff2") format("woff2"),
+    url("../fonts/bloggersans-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blogger Sans";
+  src: local("BloggerSans"),
+    local("Blogger Sans"),
+    url("../fonts/bloggersans.woff2") format("woff2"),
+    url("../fonts/bloggersans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blogger Sans";
+  src: local("BloggerSans-Medium"),
+    local("Blogger Sans Medium"),
+    url("../fonts/bloggersans-medium.woff2") format("woff2"),
+    url("../fonts/bloggersans-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blogger Sans";
+  src: local("BloggerSans-BoldItalic"),
+    local("BloggerSans Bold Italic"),
+    url("../fonts/bloggersans-bold.woff2") format("woff2"),
+    url("../fonts/bloggersans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}

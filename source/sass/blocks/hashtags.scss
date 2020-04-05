@@ -1,0 +1,17 @@
+.hashtags {
+  padding: 0;
+  width: 180px;
+}
+
+.hashtags__link {
+  color: $color--base;
+
+  &:hover,
+  &:focus {
+    color: rgba($color--base, 0.7);
+  }
+
+  &:active {
+    color: rgba($color--base, 0.3);
+  }
+}

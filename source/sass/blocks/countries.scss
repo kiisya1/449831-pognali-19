@@ -1,0 +1,21 @@
+.countries__list {
+  @include reset-list;
+}
+
+.countries--list .countries__list {
+  padding-left: 25px;
+}
+
+.countries__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.countries__country {
+  color: $color--dark;
+  font-weight: $font-medium;
+  text-transform: uppercase;
+}

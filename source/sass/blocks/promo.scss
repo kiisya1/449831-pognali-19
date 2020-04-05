@@ -1,0 +1,35 @@
+.promo {
+  padding: 25px 0;
+
+  color: $color--light;
+
+  background-color: $background-color--dark;
+  background-image: url("../img/traveller-illustration-mobile@1x.png"),
+    url("../img/globe-back-mobile@1x.jpg"),
+    linear-gradient(to bottom, $background-color--dark 73.5%, $background-color--darken 73.5%);
+  background-repeat: no-repeat;
+  background-position: top 240px center, top -60px center, top;
+}
+
+.promo__title {
+  width: 234px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 247px;
+
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.promo__wrapper {
+  margin-bottom: 5px;
+}
+
+.promo__blockquote {
+  margin-bottom: 30px;
+}
+
+.promo__using-list {
+  margin-bottom: 30px;
+}

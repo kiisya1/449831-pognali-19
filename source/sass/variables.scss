@@ -1,0 +1,73 @@
+/* Базовый шрифт */
+
+$standart-font: "Blogger Sans", "Verdana", sans-serif;
+$font-size: 16px;
+$line-height: 22px;
+
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+/* Основные цвета */
+
+$gray: #444444;
+$gray-light: #cccccc;
+
+$pale-gray: #edeff6;
+$pale-grey-dark: #e2e5f2;
+$pale-grey-darken: #dfe3f0;
+
+
+$white: #ffffff;
+
+$blue-light: #d4d9eb;
+
+$blue: #1d2e5b;
+$blue-dark: #161c35;
+$blue-darken: #192144;
+
+$mango: #ff8d30;
+$mango-light: #ffa530;
+$mango-lighten: #ffbd30;
+$gold: #ffd74b;
+
+/* Основные цвета фонов */
+
+$background-color: $pale-gray;
+$background-color--light: $white;
+$background-color--dark: $blue-dark;
+$background-color--darken: $blue-darken;
+$background-color--gold: $gold;
+
+/* Основные цвета текста */
+
+$color--base: $gray;
+$color--light: $white;
+$color--dark: $blue;
+$color--darken: $blue-dark;
+$color--darkest: $blue-darken;
+$color--title: $mango;
+
+/* Основные цвета ссылок */
+
+$link-color: $color--dark;
+$link-color--hover: rgba($color--dark, 0.6);
+$link-color--hover-dark: rgba($color--dark, 0.7);
+$link-color--active: rgba($color--dark, 0.3);
+
+$link-color--dark: $color--darken;
+$link-color--darken: $color--darkest;
+
+/* Основные цвета кнопок */
+
+$btn-background: $gold;
+$btn-background--hover: $mango-lighten;
+
+$btn-color: $color--darken;
+$btn-color--arrow: $color--dark;
+
+/* Цвет тени */
+
+$box-shadow-color: rgba($blue, 0.1);
+$box-shadow-color--dark: rgba(0, 0, 0, 0.08);

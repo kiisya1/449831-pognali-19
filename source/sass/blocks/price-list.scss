@@ -1,0 +1,39 @@
+.price-list {
+  @include reset-list;
+  position: relative;
+
+  padding: 0 25px;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+
+    width: 200px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.price-list__item {
+  position: relative;
+
+  padding: 14px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 200px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.price-list__price {
+  display: block;
+}

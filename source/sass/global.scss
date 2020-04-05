@@ -1,0 +1,22 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: $standart-font;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-align: left;
+  color: $color--base;
+  font-weight: $font-light;
+
+  background-color: $background-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

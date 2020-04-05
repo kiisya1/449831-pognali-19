@@ -1,0 +1,52 @@
+.button {
+  display: inline-block;
+  padding: 7px 40px 3px;
+
+  font-family: $standart-font;
+  font-size: 17px;
+  line-height: 30px;
+  color: $btn-color;
+  font-weight: $font-bold;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: bottom;
+
+  background-color: $btn-background;
+  border: 0;
+  border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-background--hover;
+  }
+
+  &:active {
+    color: rgba($btn-color, 0.3);
+
+    background-color: $btn-background--hover;
+  }
+
+  &--arrow {
+    width: 270px;
+    padding: 22px 24px;
+    box-sizing: border-box;
+
+    font-size: 18px;
+    line-height: 18px;
+    color: $btn-color--arrow;
+    text-transform: none;
+    text-align: left;
+
+    border-radius: 10px;
+
+    &:active {
+      color: rgba($btn-color--arrow, 0.3);
+    }
+  }
+
+  &--large {
+    padding: 13px 70px 7px;
+
+    border-radius: 25px;
+  }
+}

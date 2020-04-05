@@ -1,0 +1,147 @@
+.traveler {
+  position: relative;
+
+  color: $color--base;
+  text-align: center;
+
+  background-color: $background-color--light;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &--info {
+    padding: 15px 0;
+
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: $font-normal;
+    text-align: left;
+
+    border-radius: 20px;
+  }
+}
+
+.traveler__photo {
+  display: block;
+}
+
+.traveler__photo-image {
+  display: block;
+}
+
+.traveler__about {
+  padding: 25px;
+}
+
+.traveler__name {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-size: 21px;
+  line-height: 21px;
+  color: $link-color;
+  font-weight: $font-bold;
+}
+
+.traveler__link {
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: $link-color--hover-dark;
+  }
+
+  &:active {
+    color: $link-color--active;
+  }
+}
+
+.traveler__indicator {
+  display: block;
+  width: 5px;
+  height: 5px;
+
+  font-size: 0;
+
+  background-color: #81e31e;
+  border-radius: 50%;
+
+  &--not-available {
+    background-color: #f97676;
+  }
+}
+
+.traveler__likes {
+  position: relative;
+
+  padding: 5px 0;
+  padding-left: 37px;
+
+  font-size: 14px;
+  line-height: 21px;
+  color: $color--darken;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 31px;
+    height: 31px;
+
+    background-color: $background-color;
+    border-radius: 50%;
+  }
+
+  &--active::after {
+    background-color: #f9eaea;
+  }
+}
+
+.traveler__hashtags {
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.traveler__block-title {
+  padding-left: 26px;
+}
+
+.traveler__call {
+  margin: 0 20px;
+  margin-bottom: 7px;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+
+.traveler--info .traveler__photo {
+  padding-left: 18px;
+  margin-bottom: 16px;
+  width: 70px;
+}
+
+.traveler--info .traveler__photo-image {
+  border-radius: 50%;
+}
+
+.traveler--info .traveler__name {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.traveler--info .traveler__hashtags {
+  padding-left: 26px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.traveler--info .traveler__countries {
+  margin-bottom: 24px;
+}
+
+.traveler--info .traveler__level {
+  margin-bottom: 14px;
+}

@@ -1,0 +1,26 @@
+.menu-list {
+  @include reset-list;
+  padding-bottom: 25px;
+}
+
+.menu-list__item {
+  font-size: 30px;
+  line-height: 36px;
+  color: $link-color--darken;
+  font-weight: $font-medium;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.menu-list__link {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
