@@ -1,0 +1,52 @@
+.letters-list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: $color--dark;
+  font-weight: $font-medium;
+  letter-spacing: 1.4px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $background-color--light;
+}
+
+.letters-list__item {
+  display: flex;
+  justify-content: center;
+}
+
+.letters-list__letter {
+  position: relative;
+
+  margin-right: -1px;
+  margin-bottom: -1px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  width: 45px;
+  height: 42px;
+  box-sizing: border-box;
+
+  border: 1px solid $blue-cloudy;
+}
+
+.letters-list__item:nth-child(5n) .letters-list__letter {
+  width: 44px;
+}
+
+.letters-list__field:checked + .letters-list__letter {
+  z-index: 2;
+
+  color: $color--light;
+
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.letters-list__field:focus + .letters-list__letter {
+  outline: 5px auto -webkit-focus-ring-color;
+}

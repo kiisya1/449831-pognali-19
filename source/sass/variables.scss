@@ -18,10 +18,10 @@ $pale-gray: #edeff6;
 $pale-grey-dark: #e2e5f2;
 $pale-grey-darken: #dfe3f0;
 
-
 $white: #ffffff;
 
 $blue-light: #d4d9eb;
+$blue-cloudy: #cbced9;
 
 $blue: #1d2e5b;
 $blue-dark: #161c35;
@@ -32,6 +32,10 @@ $mango-light: #ffa530;
 $mango-lighten: #ffbd30;
 $gold: #ffd74b;
 
+$red: #ff0000;
+$red-orange: #ff5c23;
+$pink: #ffefef;
+
 /* Основные цвета фонов */
 
 $background-color: $pale-gray;
@@ -39,6 +43,7 @@ $background-color--light: $white;
 $background-color--dark: $blue-dark;
 $background-color--darken: $blue-darken;
 $background-color--gold: $gold;
+$background-color--error: $pink;
 
 /* Основные цвета текста */
 
@@ -48,6 +53,7 @@ $color--dark: $blue;
 $color--darken: $blue-dark;
 $color--darkest: $blue-darken;
 $color--title: $mango;
+$color--error: $red;
 
 /* Основные цвета ссылок */
 
@@ -59,10 +65,16 @@ $link-color--active: rgba($color--dark, 0.3);
 $link-color--dark: $color--darken;
 $link-color--darken: $color--darkest;
 
+$link-color--light: $gold;
+$link-color--light-hover: $mango;
+$link-color--light-active: rgba($mango, 0.3);
+
 /* Основные цвета кнопок */
 
 $btn-background: $gold;
 $btn-background--hover: $mango-lighten;
+$btn-background--light: #d6daed;
+$btn-background--light-hover: #c8cee8;
 
 $btn-color: $color--darken;
 $btn-color--arrow: $color--dark;
@@ -71,3 +83,17 @@ $btn-color--arrow: $color--dark;
 
 $box-shadow-color: rgba($blue, 0.1);
 $box-shadow-color--dark: rgba(0, 0, 0, 0.08);
+
+/* Цвет рамки */
+
+$border-color: $blue-cloudy;
+
+/* Свойства полей ввода */
+$input-color: $color--dark;
+$input-color--placeholder: rgba($color--base, 0.3);
+$input-color--error: $color--error;
+
+$input-border-color: $blue-cloudy;
+
+$input-background: $background-color--light;
+$input-background--error: $background-color--error;

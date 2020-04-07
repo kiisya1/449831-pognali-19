@@ -1,3 +1,7 @@
+.companions {
+  min-width: 320px;
+}
+
 .companions__list {
   @include reset-list;
   margin-bottom: 24px;

@@ -1,0 +1,78 @@
+.plans {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  min-width: 320px;
+
+  background-color: $pale-grey-darken;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.plans__list {
+  @include reset-list;
+  margin-bottom: 10px;
+}
+
+.plans__item {
+  padding: 25px;
+  padding-top: 24px;
+  margin-bottom: 10px;
+
+  background-color: $background-color--light;
+  border-radius: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.plans__direction {
+  padding: 0;
+  padding-left: 18px;
+  margin: 0;
+  margin-bottom: 21px;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: $color--dark;
+  font-weight: $font-bold;
+}
+
+.plans__companions,
+.plans__dates {
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+  color: $color--dark;
+  font-weight: $font-medium;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.plans__companions {
+  margin-bottom: 5px;
+}
+
+.plans__dates {
+  margin-bottom: 20px;
+}
+
+.plans__change-link {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: $font-medium;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.1);
+  }
+}

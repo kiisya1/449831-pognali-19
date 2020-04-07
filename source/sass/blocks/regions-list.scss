@@ -1,0 +1,17 @@
+.regions-list {
+  @include reset-list;
+}
+
+.regions-list__link {
+  color: inherit;
+  font-weight: $font-normal;
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+  }
+
+  &:active {
+    color: $link-color--active;
+  }
+}

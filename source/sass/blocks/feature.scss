@@ -1,0 +1,29 @@
+.feature {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.feature__list {
+  @include reset-list;
+  margin-bottom: 20px;
+
+  font-size: 15px;
+  line-height: 1;
+  font-weight: $font-normal;
+}
+
+.feature__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.feature__label {
+  padding-top: 2px;
+  padding-left: 27px;
+  padding-bottom: 1px;
+}

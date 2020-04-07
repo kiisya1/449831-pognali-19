@@ -1,7 +1,12 @@
 .heading {
+  position: relative;
+  z-index: 2;
+
+  min-width: 320px;
+
   background-color: $background-color--dark;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .heading__container {

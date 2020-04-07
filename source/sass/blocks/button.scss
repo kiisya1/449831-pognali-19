@@ -49,4 +49,40 @@
 
     border-radius: 25px;
   }
+
+  &--theme-light {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: $btn-background--light;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-background--light-hover;
+    }
+
+    &:active {
+      color: rgba($btn-color, 0.3);
+      background-color: $btn-background--light-hover;
+    }
+  }
+
+  &--theme-white {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: $background-color--light;
+
+    &:hover,
+    &:focus {
+      background-color: $background-color--light;
+      box-shadow: 0 2px 10px 0 $box-shadow-color--dark;
+    }
+
+    &:active {
+      color: rgba($color--darken, 0.3);
+
+      background-color: #f3c72b;
+    }
+  }
 }
