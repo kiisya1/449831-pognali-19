@@ -1,8 +1,16 @@
 .prices {
-  padding-bottom: 25px;
+  position: relative;
+  z-index: 2;
 
+  min-width: 320px;
+
+  background-color: $background-color;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+.prices__container {
+  padding-bottom: 25px;
 }
 
 .prices__title {

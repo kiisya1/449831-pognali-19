@@ -1,4 +1,16 @@
 .level {
+  &--inside {
+    width: 100px;
+    height: 100px;
+    padding: 17px;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border: 3px solid $mango;
+    border-radius: 50%;
+  }
+
   &--theme-dark {
     position: absolute;
     top: 16px;
@@ -63,4 +75,42 @@
 
   border: 3px solid $mango;
   border-radius: 50%;
+}
+
+
+.level--inside .level__number {
+  position: relative;
+
+  padding: 0;
+  padding-bottom: 2px;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+
+  font-size: 38px;
+  line-height: 38px;
+  color: $color--darken;
+  font-weight: $font-bold;
+
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+
+    width: 49px;
+    height: 2px;
+    background-color: #cbced9;
+
+    transform: translateX(-50%);
+  }
+}
+
+.level--inside .level__caption {
+  display: block;
+  font-size: 18px;
+  font-weight: $font-normal;
 }

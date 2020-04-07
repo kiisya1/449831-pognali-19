@@ -1,0 +1,90 @@
+.registration {
+  margin-top: -30px;
+  min-width: 320px;
+
+  color: $color--light;
+  text-align: center;
+
+  background-color: $background-color--darken;
+}
+
+.registration__container {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.registration__discription {
+  width: 200px;
+}
+
+.registration__login-link {
+  color: $link-color--light;
+
+  &:hover,
+  &:focus {
+    color: $link-color--light-hover;
+  }
+
+  &:active {
+    color: $link-color--light-active;
+  }
+}
+
+.registration__form {
+  display: flex;
+  padding: 12px 0;
+}
+
+.registration__field {
+  padding: 22px 24px;
+  padding-right: 72px;
+  width: 100%;
+  height: 62px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 18px;
+  color: $color--base;
+  font-weight: $font-bold;
+  text-align: left;
+
+  background-color: $input-background;
+  border: 4px solid transparent;
+  border-radius: 10px;
+
+  &::placeholder {
+    color: $input-color--placeholder;
+  }
+
+  &:hover {
+    background-color: $background-color;
+
+    &::placeholder {
+      color: rgba($color--base, 0.5);
+    }
+  }
+
+  &:focus {
+    color: $color--light;
+
+    background-color: transparent;
+    border-color: $white;
+  }
+
+  &--invalid {
+    color: $input-color--error;
+    background-color: $input-background--error;
+  }
+}
+
+.registration__button {
+  margin-left: -60px;
+  padding: 0;
+  width: 60px;
+  height: 62px;
+
+  font-size: 0;
+
+  border-radius: 10px;
+}

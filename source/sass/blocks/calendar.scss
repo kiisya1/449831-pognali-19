@@ -1,0 +1,73 @@
+.calendar__months {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 12px;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.calendar__month-control {
+  width: 9px;
+  height: 18px;
+
+  background-color: lightblue;
+  border: none;
+}
+
+.calendar__month {
+  padding: 0;
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 20px;
+  color: $color--dark;
+  font-weight: $font-bold;
+  text-align: center;
+}
+
+.calendar__table {
+  width: 100%;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: $font-normal;
+  text-align: center;
+
+  border-collapse: collapse;
+}
+
+.calendar__day-of-week {
+  padding-bottom: 12px;
+
+  font: inherit;
+
+  &--off {
+    color: $red-orange;
+  }
+}
+
+.calendar__day {
+  padding-top: 7px;
+  padding-bottom: 5px;
+
+  background-color: $background-color;
+  border: 1px solid $border-color;
+
+  &--disabled {
+    color: rgba($color--base, 0.3);
+    background-color: $background-color--light;
+  }
+
+  &--selected {
+    color: $color--light;
+    background-color: $blue;
+  }
+
+  &--active {
+    border: 2px solid $red-orange;
+  }
+}
