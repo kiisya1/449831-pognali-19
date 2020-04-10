@@ -34,3 +34,43 @@
     background-color: $background-color;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .business-prices {
+    padding-top: 52px;
+  }
+
+  .business-prices__container {
+    padding: 0 92px;
+    width: 506px;
+  }
+
+  .business-prices__title {
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .business-prices__list {
+    &::after {
+      left: 0;
+
+      width: 506px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .business-prices__container {
+    padding: 0 60px;
+    width: 630px;
+  }
+
+  .business-prices__list {
+    width: 630px;
+
+    &::after {
+      width: 630px;
+    }
+  }
+}

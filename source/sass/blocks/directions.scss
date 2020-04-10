@@ -45,6 +45,39 @@
 
 .directions__button {
   display: block;
-  margin: 0 auto;
+  margin: 0;
   margin-bottom: 5px;
+}
+
+@media (min-width: $tablet-width) {
+  .directions__container {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .directions__discription {
+    width: 340px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .directions__container {
+    padding-left: 112px;
+    padding-right: 215px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .directions__title,
+  .directions__discription {
+    width: 335px;
+    box-sizing: border-box;
+  }
+
+  .directions__list {
+    order: 1;
+    align-self: flex-start;
+    margin-top: -270px;
+  }
 }

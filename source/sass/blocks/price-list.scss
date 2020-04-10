@@ -37,3 +37,61 @@
 .price-list__price {
   display: block;
 }
+
+@media (min-width: $tablet-width) {
+  .price-list {
+    padding: 0;
+
+    &::after {
+      left: 92px;
+
+      width: 562px;
+    }
+  }
+
+  .price-list__item {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 92px;
+    padding-right: 34px;
+
+    &::after {
+      left: 92px;
+
+      width: 562px;
+    }
+
+    &--business {
+      padding-left: 0;
+      padding-right: 0;
+
+      &::after {
+        left: 0;
+
+        width: 506px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price-list {
+    width: 940px;
+
+    &::after {
+      width: 813px;
+    }
+
+    .price-list__item {
+      &::after {
+        width: 813px;
+      }
+
+      &--business {
+        &::after {
+          width: 630px;
+        }
+      }
+    }
+  }
+}

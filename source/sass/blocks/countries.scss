@@ -19,3 +19,20 @@
   font-weight: $font-medium;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .countries--list .countries__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .countries--list .countries__item {
+    padding-left: 47px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .countries--list .countries__list {
+    flex-direction: column;
+  }
+}

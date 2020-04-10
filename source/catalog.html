@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Погнали: попутчики</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -18,45 +20,47 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
+        <ul class="header__user-list user-list">
+          <li class="user-list__item">
+            <a href="login.html" class="user-list__link button">Авторизация</a>
+          </li>
+        </ul>
+
         <nav class="header__nav main-nav main-nav--close">
+          <ul class="main-nav__list menu-list">
+            <li class="menu-list__item">
+              <a href="#" class="menu-list__link">О сервисе</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="form.html" class="menu-list__link">Направления</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link">Попутчики</a>
+            </li>
+          </ul>
 
-          <div class="main-nav__wrapper">
+          <ul class="main-nav__list main-nav__list--user user-list">
+            <li class="user-list__item">
+              <a href="login.html" class="user-list__link button">Авторизация</a>
+            </li>
+          </ul>
 
-            <ul class="main-nav__list menu-list">
-              <li class="menu-list__item">
-                <a href="#" class="menu-list__link">О сервисе</a>
-              </li>
-              <li class="menu-list__item">
-                <a href="form.html" class="menu-list__link">Направления</a>
-              </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link">Попутчики</a>
-              </li>
-            </ul>
-
-            <ul class="main-nav__list user-list">
-              <li class="user-list__item">
-                <a href="login.html" class="user-list__link button">Авторизация</a>
-              </li>
-            </ul>
-
-            <div class="main-nav__contacts contacts">
-              <a href="tel:88005558628" class="contacts__link contacts__link--tel">8&nbsp;800&nbsp;555-86-28</a>
-              <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
-            </div>
-
-            <ul class="main-nav__socials-list socials-list">
-              <li class="socials-list__item">
-                <a href="#" class="socials-list__link socials-list__link--fb">Facebook</a>
-              </li>
-              <li class="socials-list__item">
-                <a href="#" class="socials-list__link socials-list__link--vk">Вконтакте</a>
-              </li>
-              <li class="socials-list__item">
-                <a href="#" class="socials-list__link socials-list__link--inst">Instagram</a>
-              </li>
-            </ul>
+          <div class="main-nav__contacts contacts">
+            <a href="tel:88005558628" class="contacts__link contacts__link--tel">8&nbsp;800&nbsp;555-86-28</a>
+            <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
           </div>
+
+          <ul class="main-nav__socials-list socials-list">
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--fb">Facebook</a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--vk">Вконтакте</a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--inst">Instagram</a>
+            </li>
+          </ul>
 
         </nav>
       </div>
@@ -66,6 +70,7 @@
       <section class="heading">
         <div class="heading__container container">
           <h1 class="heading__title">Попутчики</h1>
+          <a href="#" class="heading__link">На главную</a>
         </div>
       </section>
 
@@ -372,24 +377,28 @@
                   <img class="traveler__photo-image" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фотография путешественника Тани Фирсовой">
                 </a>
 
-                <h3 class="traveler__name">
-                  <a href="#" class="traveler__link">Таня Фирсова</a>
-                  <span class="traveler__indicator traveler__indicator--not-available">
-                    <span class="visually-hidden">Недоступен</span>
-                  </span>
-                </h3>
+                <div class="traveler__desc">
+                  <h3 class="traveler__name">
+                    <a href="#" class="traveler__link">Таня Фирсова</a>
+                    <span class="traveler__indicator traveler__indicator--not-available">
+                      <span class="visually-hidden">Недоступен</span>
+                    </span>
+                  </h3>
 
+                  <p class="traveler__hashtags hashtags">
+                    <a href="" class="hashtags__link">#ЗОЖ</a>
+                    <a href="" class="hashtags__link">#ПП</a>
+                    <a href="" class="hashtags__link">#Фитнес</a>
+                    <a href="" class="hashtags__link">#пляж</a>
+                    <a href="" class="hashtags__link">#авокадо</a>
+                    <a href="" class="hashtags__link"> #смузи</a>
+                  </p>
 
-                <div class="traveler__likes traveler__likes--active">1,5 M</div>
+                  <a href="#" class="traveler__call button">Позвать!</a>
 
-                <p class="traveler__hashtags hashtags">
-                  <a href="" class="hashtags__link">#ЗОЖ</a>
-                  <a href="" class="hashtags__link">#ПП</a>
-                  <a href="" class="hashtags__link">#Фитнес</a>
-                  <a href="" class="hashtags__link">#пляж</a>
-                  <a href="" class="hashtags__link">#авокадо</a>
-                  <a href="" class="hashtags__link"> #смузи</a>
-                </p>
+                  <div class="traveler__likes traveler__likes--active">1,5 M</div>
+
+                </div>
 
                 <section class="traveler__countries countries countries--list">
                   <p class="traveler__block-title countries__title">хочет посетить:</p>
@@ -434,8 +443,6 @@
                   </section>
                 </div>
 
-                <a href="#" class="traveler__call button">Позвать!</a>
-
               </article>
             </li>
 
@@ -446,23 +453,27 @@
                   <img class="traveler__photo-image" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фотография путешественника Пети Демина">
                 </a>
 
-                <h3 class="traveler__name">
-                  <a href="#" class="traveler__link">Петя Демин</a>
-                  <span class="traveler__indicator traveler__indicator--not-available">
-                    <span class="visually-hidden">Недоступен</span>
-                  </span>
-                </h3>
+                <div class="traveler__desc">
+                  <h3 class="traveler__name">
+                    <a href="#" class="traveler__link">Петя Демин</a>
+                    <span class="traveler__indicator traveler__indicator--not-available">
+                      <span class="visually-hidden">Недоступен</span>
+                    </span>
+                  </h3>
 
+                  <p class="traveler__hashtags hashtags">
+                    <a href="" class="hashtags__link">#бургер</a>
+                    <a href="" class="hashtags__link">#бар</a>
+                    <a href="" class="hashtags__link">#футбол</a>
+                    <a href="" class="hashtags__link">#концерт</a>
+                    <a href="" class="hashtags__link">#крафт</a>
+                  </p>
 
-                <div class="traveler__likes">1500</div>
+                  <a href="#" class="traveler__call button">Позвать!</a>
 
-                <p class="traveler__hashtags hashtags">
-                  <a href="" class="hashtags__link">#бургер</a>
-                  <a href="" class="hashtags__link">#бар</a>
-                  <a href="" class="hashtags__link">#футбол</a>
-                  <a href="" class="hashtags__link">#концерт</a>
-                  <a href="" class="hashtags__link">#крафт</a>
-                </p>
+                  <div class="traveler__likes">1500</div>
+
+                </div>
 
                 <section class="traveler__countries countries countries--list">
                   <p class="traveler__block-title countries__title">хочет посетить:</p>
@@ -503,8 +514,6 @@
                   </section>
                 </div>
 
-                <a href="#" class="traveler__call button">Позвать!</a>
-
               </article>
             </li>
 
@@ -515,23 +524,27 @@
                   <img class="traveler__photo-image" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фотография путешественника Марка Смолова">
                 </a>
 
-                <h3 class="traveler__name">
-                  <a href="#" class="traveler__link">Марк Смолов</a>
-                  <span class="traveler__indicator traveler__indicator--not-available">
-                    <span class="visually-hidden">Недоступен</span>
-                  </span>
-                </h3>
+                <div class="traveler__desc">
+                  <h3 class="traveler__name">
+                    <a href="#" class="traveler__link">Марк Смолов</a>
+                    <span class="traveler__indicator traveler__indicator--not-available">
+                      <span class="visually-hidden">Недоступен</span>
+                    </span>
+                  </h3>
 
+                  <p class="traveler__hashtags hashtags">
+                    <a href="" class="hashtags__link">#рэп</a>
+                    <a href="" class="hashtags__link"> #тату</a>
+                    <a href="" class="hashtags__link">#хайпбист</a>
+                    <a href="" class="hashtags__link">#кроссовки</a>
+                    <a href="" class="hashtags__link">#суприм</a>
+                  </p>
 
-                <div class="traveler__likes">170</div>
+                  <a href="#" class="traveler__call button">Позвать!</a>
 
-                <p class="traveler__hashtags hashtags">
-                  <a href="" class="hashtags__link">#рэп</a>
-                  <a href="" class="hashtags__link"> #тату</a>
-                  <a href="" class="hashtags__link">#хайпбист</a>
-                  <a href="" class="hashtags__link">#кроссовки</a>
-                  <a href="" class="hashtags__link">#суприм</a>
-                </p>
+                  <div class="traveler__likes">170</div>
+
+                </div>
 
                 <section class="traveler__countries countries countries--list">
                   <p class="traveler__block-title countries__title">хочет посетить:</p>
@@ -576,8 +589,6 @@
                   </section>
                 </div>
 
-                <a href="#" class="traveler__call button">Позвать!</a>
-
               </article>
             </li>
 
@@ -588,22 +599,26 @@
                   <img class="traveler__photo-image" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фотография путешественника Ларисы Роговой">
                 </a>
 
-                <h3 class="traveler__name">
-                  <a href="#" class="traveler__link">Лариса Роговая</a>
-                  <span class="traveler__indicator">
-                    <span class="visually-hidden">Доступен</span>
-                  </span>
-                </h3>
+                <div class="traveler__desc">
+                  <h3 class="traveler__name">
+                    <a href="#" class="traveler__link">Лариса Роговая</a>
+                    <span class="traveler__indicator">
+                      <span class="visually-hidden">Доступен</span>
+                    </span>
+                  </h3>
 
+                  <p class="traveler__hashtags hashtags">
+                    <a href="" class="hashtags__link">#образование</a>
+                    <a href="" class="hashtags__link">#карьера</a>
+                    <a href="" class="hashtags__link">#учеба</a>
+                    <a href="" class="hashtags__link">#линкедин</a>
+                  </p>
 
-                <div class="traveler__likes">23</div>
+                  <a href="#" class="traveler__call button">Позвать!</a>
 
-                <p class="traveler__hashtags hashtags">
-                  <a href="" class="hashtags__link">#образование</a>
-                  <a href="" class="hashtags__link">#карьера</a>
-                  <a href="" class="hashtags__link">#учеба</a>
-                  <a href="" class="hashtags__link">#линкедин</a>
-                </p>
+                  <div class="traveler__likes">23</div>
+
+                </div>
 
                 <section class="traveler__countries countries countries--list">
                   <p class="traveler__block-title countries__title">хочет посетить:</p>
@@ -644,8 +659,6 @@
                   </section>
                 </div>
 
-                <a href="#" class="traveler__call button">Позвать!</a>
-
               </article>
             </li>
           </ul>
@@ -655,6 +668,20 @@
             <a href="#" class="pagination__more">Показать еще</a>
 
             <div class="pagination__nav">
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a class="pagination__page-link pagination__page-link--current">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="" class="pagination__page-link">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="" class="pagination__page-link">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="" class="pagination__page-link">4</a>
+                </li>
+              </ul>
               <a href="#" class="pagination__link pagination__link--prew">
                 <span class="visually-hidden">Показать следующую страницу</span>
               </a>

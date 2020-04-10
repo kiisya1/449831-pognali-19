@@ -28,3 +28,32 @@
     border-radius: 10px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .using-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .using-list__item {
+    width: 344px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .using-list__item {
+    width: 315px;
+    box-sizing: border-box;
+
+    &:nth-child(2n),
+    &:nth-child(3n) {
+      width: 345px;
+    }
+
+    &:nth-child(4n) {
+      width: 315px;
+    }
+  }
+}

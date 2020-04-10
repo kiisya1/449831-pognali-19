@@ -88,3 +88,32 @@
 
   border-radius: 10px;
 }
+
+@media (min-width: $tablet-width) {
+  .registration__container {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .registration__discription {
+    width: 606px;
+    padding-left: 25px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .registration__container {
+    padding-left: 112px;
+    padding-right: 114px;
+  }
+
+  .registration__button {
+    width: 324px;
+    box-sizing: border-box;
+
+    font-size: 24px;
+    text-transform: none;
+  }
+}

@@ -1,4 +1,6 @@
 .profile {
+  position: relative;
+
   padding-top: 22px;
   min-width: 320px;
 }
@@ -10,6 +12,7 @@
 .profile__columns {
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
@@ -123,4 +126,28 @@
   background-color: $blue-light;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+}
+
+@media (min-width: $desktop-width) {
+  .profile__columns {
+    position: absolute;
+    z-index: 10;
+    top: -190px;
+    right: 155px;
+
+    align-items: center;
+    justify-content: space-between;
+    width: 330px;
+    height: 190px;
+  }
+
+  .profile__change-foto {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 155px;
+
+    width: 190px;
+    height: 47px;
+  }
 }

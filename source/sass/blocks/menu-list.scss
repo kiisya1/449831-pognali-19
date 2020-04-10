@@ -24,3 +24,27 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .menu-list__item {
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 98px;
+    padding: 0;
+    width: 640px;
+    min-height: 52px;
+  }
+
+  .menu-list__item {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

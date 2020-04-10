@@ -1,5 +1,12 @@
 .socials-list {
   @include reset-list;
+  display: flex;
 
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .socials-list {
+    text-align: left;
+  }
 }

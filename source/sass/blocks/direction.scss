@@ -57,3 +57,21 @@
   font-weight: $font-medium;
   text-align: right;
 }
+
+@media (min-width: $tablet-width) {
+  .direction {
+    width: 100%;
+    display: flex;
+  }
+
+  .direction__image {
+    order: 1;
+    width: 186px;
+  }
+
+  .direction__about {
+    margin-top: 0;
+    width: 432px;
+    box-sizing: border-box;
+  }
+}

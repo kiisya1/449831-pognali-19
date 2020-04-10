@@ -38,3 +38,33 @@
     border-radius: 2.4px;
   }
 }
+
+.heading__link {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .heading__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 77px;
+    padding-right: 75px;
+  }
+
+  .heading__link {
+    display: block;
+    padding-right: 61px;
+
+    color: $color--light;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .heading__container {
+    padding-left: 110px;
+    padding-right: 103;
+  }
+}

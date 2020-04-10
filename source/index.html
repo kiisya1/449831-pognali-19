@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -18,6 +20,12 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
+        <ul class="header__user-list user-list">
+          <li class="user-list__item">
+            <a href="login.html" class="user-list__link button">Авторизация</a>
+          </li>
+        </ul>
+
         <nav class="header__nav main-nav">
           <ul class="main-nav__list menu-list">
             <li class="menu-list__item">
@@ -31,7 +39,7 @@
             </li>
           </ul>
 
-          <ul class="main-nav__list user-list">
+          <ul class="main-nav__list main-nav__list--user user-list">
             <li class="user-list__item">
               <a href="login.html" class="user-list__link button button--large">Авторизация</a>
             </li>
@@ -99,6 +107,8 @@
           <h2 class="about__title title">О сервисе</h2>
           <p class="about__discription text-discription">Любое путешествие веселее с&nbsp;попутчиками, которые на&nbsp;одной волне с&nbsp;тобой! Делитесь своими идеями путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.</p>
           <p class="about__discription text-discription text-discription--bold">А&nbsp;если найдете кого-то близкого по&nbsp;духу&nbsp;&mdash; скорее зовите в&nbsp;совместный трип!</p>
+
+          <a href="#" class="about__button button button--arrow">Подробнее</a>
         </div>
       </section>
 
@@ -165,7 +175,7 @@
         <div class="travelers__container container">
           <h2 class="travelers__title title">Попутчики</h2>
           <p class="travelers__discription text-discription">Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный отдых. Одному нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.</p>
-          <p class="travelers__discription text-discription text-discription--bold">Теперь можно легко найти единомышленников!</p>
+          <p class="travelers__discription travelers__discription--bold text-discription text-discription--bold">Теперь можно легко найти единомышленников!</p>
 
           <ul class="travelers__list">
             <li class="travelers__item">
@@ -358,13 +368,14 @@
         </div>
 
         <div class="contact-us__map">
+          <img class="contact-us__map-image" src="img/map.jpg" width="1440" height="750" alt="Мы находимся по адресу г. Санкт-Петербург, ул. Большая Конюшенная, 19/8">
           <!-- Тут будет карта -->
         </div>
       </section>
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer--overlay">
       <div class="footer__container container">
         <a class="footer__logo logo">
           <img class="logo__image" src="img/logo-mobile-blue@1x.png" width="96" height="15" alt="Логотип компании «Погнали»">
@@ -395,19 +406,19 @@
       <div class="business-prices__container">
         <h2 class="business-prices__title title">Бизнес-тарифы</h2>
         <ul class="business-prices__list price-list">
-          <li class="price-list__item">
+          <li class="price-list__item price-list__item--business">
             Реклама у блоггера
             <span class="price-list__price">300 000 руб./пост</span>
           </li>
-          <li class="price-list__item">
+          <li class="price-list__item price-list__item--business">
             Накрутка подписчиков
             <span class="price-list__price">от 1 руб./шт.</span>
           </li>
-          <li class="price-list__item">
+          <li class="price-list__item price-list__item--business">
             Лайки от ботов
             <span class="price-list__price">от 20 коп./лайк</span>
           </li>
-          <li class="price-list__item">
+          <li class="price-list__item price-list__item--business">
             Ваш продакт-плейсмент
             <span class="price-list__price">Индивидуально</span>
           </li>

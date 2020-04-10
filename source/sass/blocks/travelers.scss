@@ -38,3 +38,55 @@
 .travelers__button {
   margin-bottom: 5px;
 }
+
+@media (min-width: $tablet-width) {
+  .travelers__container {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .travelers__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .travelers__item {
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelers__container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 112px;
+  }
+
+  .travelers__title {
+    width: 210px;
+  }
+
+  .travelers__discription {
+    width: 430px;
+
+    &--bold {
+      width: 260px;
+    }
+  }
+
+  .travelers__button {
+    width: 280px;
+  }
+
+  .travelers__list {
+    order: 1;
+    align-self: flex-end;
+    margin-top: -270px;
+    width: 630px;
+  }
+
+  .directions__button {
+    margin-right: 60px;
+  }
+}
