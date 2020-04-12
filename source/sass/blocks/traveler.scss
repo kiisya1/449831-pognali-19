@@ -11,7 +11,7 @@
   overflow: hidden;
 
   &--info {
-    padding: 15px 0;
+    padding: 15px 18px;
 
     font-size: 15px;
     line-height: 18px;
@@ -107,7 +107,7 @@
 }
 
 .traveler__block-title {
-  padding-left: 26px;
+  padding-left: 8px;
 }
 
 .traveler__call {
@@ -122,7 +122,6 @@
 }
 
 .traveler--info .traveler__photo {
-  padding-left: 18px;
   margin-bottom: 16px;
   width: 70px;
 }
@@ -137,7 +136,7 @@
 }
 
 .traveler--info .traveler__hashtags {
-  padding-left: 26px;
+  padding-left: 8px;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -147,6 +146,7 @@
 }
 
 .traveler--info .traveler__columns {
+  display: flex;
   margin-bottom: 50px;
 }
 
@@ -169,7 +169,6 @@
 
   .traveler--info .traveler__photo {
     width: 190px;
-    height: 190px;
   }
 
   .traveler--info .traveler__countries {
@@ -179,6 +178,7 @@
 
   .traveler--info .traveler__columns {
     order: 4;
+    flex-direction: column;
     margin-left: auto;
   }
 
@@ -206,7 +206,6 @@
 
   .traveler--info .traveler__photo {
     width: 285px;
-    height: 285px;
   }
 
   .traveler--info .traveler__desc {
@@ -215,17 +214,15 @@
 
   .traveler--info .traveler__countries {
     order: 4;
-    width: 276px;
     padding-bottom: 100px;
+    width: 276px;
+    min-height: 100px;
   }
 
   .traveler--info .traveler__columns {
-    position: absolute;
-    top: 150px;
-    right: 0;
-
-    display: flex;
+    flex-direction: row;
     order: 5;
+    margin-top: -100px;
     width: 276px;
   }
 }

@@ -11,6 +11,8 @@
 }
 
 .travelers__container {
+  display: flex;
+  flex-direction: column;
   padding: 25px;
   padding-top: 100px;
 
@@ -25,6 +27,7 @@
   @include reset-list;
   margin-top: 60px;
   margin-bottom: 20px;
+  order: 4;
 }
 
 .travelers__item {
@@ -37,6 +40,7 @@
 
 .travelers__button {
   margin-bottom: 5px;
+  order: 5;
 }
 
 @media (min-width: $tablet-width) {
@@ -47,19 +51,29 @@
 
   .travelers__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .travelers__item {
     display: flex;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    margin-right: 48px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .travelers__container {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    overflow: hidden;
     padding-left: 112px;
   }
 
@@ -80,13 +94,16 @@
   }
 
   .travelers__list {
-    order: 1;
-    align-self: flex-end;
-    margin-top: -270px;
+    float: right;
+    margin-top: 0;
     width: 630px;
   }
 
-  .directions__button {
+  .travelers__item {
     margin-right: 60px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 }

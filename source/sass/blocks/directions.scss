@@ -10,6 +10,8 @@
 }
 
 .directions__container {
+  display: flex;
+  flex-direction: column;
   padding: 25px;
 }
 
@@ -19,6 +21,7 @@
 
 .directions__list {
   @include reset-list;
+  order: 4;
   margin-bottom: 25px;
 }
 
@@ -45,6 +48,7 @@
 
 .directions__button {
   display: block;
+  order: 5;
   margin: 0;
   margin-bottom: 5px;
 }
@@ -62,22 +66,30 @@
 
 @media (min-width: $desktop-width) {
   .directions__container {
+    display: block;
+    overflow: hidden;
     padding-left: 112px;
-    padding-right: 215px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    padding-right: 112px;
   }
 
-  .directions__title,
+  .directions__title {
+    width: 100%;
+  }
+
   .directions__discription {
-    width: 335px;
+    padding-right: 100px;
+    width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
   }
 
   .directions__list {
-    order: 1;
-    align-self: flex-start;
-    margin-top: -270px;
+    float: left;
+    width: 560px;
+    margin-right: 174px;
+  }
+
+  .directions__button {
+    display: inline-block;
   }
 }
