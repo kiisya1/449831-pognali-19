@@ -17,3 +17,26 @@
   padding-right: 45px;
   margin-bottom: 45px;
 }
+
+.about__button {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about__container {
+    padding-left: 75px;
+    padding-right: 368px;
+  }
+
+  .about__button {
+    display: block;
+    width: 274px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__container {
+    padding-left: 112px;
+    padding-right: 645px;
+  }
+}

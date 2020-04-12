@@ -27,7 +27,7 @@
   }
 
   &--arrow {
-    width: 270px;
+    width: 100%;
     padding: 22px 24px;
     box-sizing: border-box;
 
@@ -83,6 +83,18 @@
       color: rgba($color--darken, 0.3);
 
       background-color: #f3c72b;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    &--large {
+      padding: 7px 40px 3px;
+    }
+
+    &--arrow {
+      width: 274px;
     }
   }
 }

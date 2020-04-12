@@ -83,3 +83,62 @@
     color: rgba($color--light, 0.3);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .contacts__container {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .contacts__discription {
+    width: 600px;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts--theme-dark .contacts__links,
+  .contacts__direction {
+    width: 100%;
+  }
+
+  .contacts__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding-left: 114px;
+    padding-right: 114px;
+  }
+
+  .contacts__links .contacts__container {
+    justify-content: center;
+  }
+
+  .contacts__discription {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contacts--theme-dark .contacts__link {
+    width: 428px;
+    box-sizing: border-box;
+  }
+
+  .contacts__address {
+    width: 552px;
+    box-sizing: border-box;
+  }
+
+  .contacts__map-link {
+    width: 324px;
+    margin-left: 148px;
+  }
+}

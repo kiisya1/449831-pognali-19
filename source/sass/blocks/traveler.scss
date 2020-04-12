@@ -1,6 +1,8 @@
 .traveler {
   position: relative;
 
+  width: 270px;
+
   color: $color--base;
   text-align: center;
 
@@ -9,7 +11,7 @@
   overflow: hidden;
 
   &--info {
-    padding: 15px 0;
+    padding: 15px 18px;
 
     font-size: 15px;
     line-height: 18px;
@@ -105,10 +107,14 @@
 }
 
 .traveler__block-title {
-  padding-left: 26px;
+  padding-left: 8px;
 }
 
 .traveler__call {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+
   margin: 0 20px;
   margin-bottom: 7px;
   width: calc(100% - 40px);
@@ -116,7 +122,6 @@
 }
 
 .traveler--info .traveler__photo {
-  padding-left: 18px;
   margin-bottom: 16px;
   width: 70px;
 }
@@ -131,7 +136,7 @@
 }
 
 .traveler--info .traveler__hashtags {
-  padding-left: 26px;
+  padding-left: 8px;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -140,6 +145,84 @@
   margin-bottom: 24px;
 }
 
+.traveler--info .traveler__columns {
+  display: flex;
+  margin-bottom: 50px;
+}
+
 .traveler--info .traveler__level {
   margin-bottom: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .traveler {
+    width: 285px;
+
+    &--info {
+      width: 688px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  .traveler--info .traveler__photo {
+    width: 190px;
+  }
+
+  .traveler--info .traveler__countries {
+    order: 5;
+    width: 100%;
+  }
+
+  .traveler--info .traveler__columns {
+    order: 4;
+    flex-direction: column;
+    margin-left: auto;
+  }
+
+  .traveler--info .traveler__call {
+    position: static;
+
+    display: inline-block;
+    margin-bottom: 0;
+    width: 148px;
+
+    vertical-align: middle;
+  }
+
+  .traveler--info .traveler__likes {
+    display: inline-block;
+
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .traveler--info {
+    width: 950px;
+  }
+
+  .traveler--info .traveler__photo {
+    width: 285px;
+  }
+
+  .traveler--info .traveler__desc {
+    width: 342px;
+  }
+
+  .traveler--info .traveler__countries {
+    order: 4;
+    padding-bottom: 100px;
+    width: 276px;
+    min-height: 100px;
+  }
+
+  .traveler--info .traveler__columns {
+    flex-direction: row;
+    order: 5;
+    margin-top: -100px;
+    width: 276px;
+  }
 }

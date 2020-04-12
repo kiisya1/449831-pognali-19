@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Погнали: направления</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -17,45 +19,47 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
+        <ul class="header__user-list user-list">
+          <li class="user-list__item">
+            <a href="login.html" class="user-list__link button">Авторизация</a>
+          </li>
+        </ul>
+
         <nav class="header__nav main-nav main-nav--close">
+          <ul class="main-nav__list menu-list">
+            <li class="menu-list__item">
+              <a href="#" class="menu-list__link">О сервисе</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link">Направления</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="catalog.html" class="menu-list__link">Попутчики</a>
+            </li>
+          </ul>
 
-          <div class="main-nav__wrapper">
+          <ul class="main-nav__list main-nav__list--user user-list">
+            <li class="user-list__item">
+              <a href="login.html" class="user-list__link button">Авторизация</a>
+            </li>
+          </ul>
 
-            <ul class="main-nav__list menu-list">
-              <li class="menu-list__item">
-                <a href="#" class="menu-list__link">О сервисе</a>
-              </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link">Направления</a>
-              </li>
-              <li class="menu-list__item">
-                <a href="catalog.html" class="menu-list__link">Попутчики</a>
-              </li>
-            </ul>
-
-            <ul class="main-nav__list user-list">
-              <li class="user-list__item">
-                <a href="login.html" class="user-list__link button">Авторизация</a>
-              </li>
-            </ul>
-
-            <div class="main-nav__contacts contacts">
-              <a href="tel:88005558628" class="contacts__link contacts__link--tel">8&nbsp;800&nbsp;555-86-28</a>
-              <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
-            </div>
-
-            <ul class="main-nav__socials-list socials-list">
-              <li class="socials-list__item">
-                <a href="#" class="socials-list__link socials-list__link--fb">Facebook</a>
-              </li>
-              <li class="socials-list__item">
-                <a href="#" class="socials-list__link socials-list__link--vk">Вконтакте</a>
-              </li>
-              <li class="socials-list__item">
-                <a href="#" class="socials-list__link socials-list__link--inst">Instagram</a>
-              </li>
-            </ul>
+          <div class="main-nav__contacts contacts">
+            <a href="tel:88005558628" class="contacts__link contacts__link--tel">8&nbsp;800&nbsp;555-86-28</a>
+            <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
           </div>
+
+          <ul class="main-nav__socials-list socials-list">
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--fb">Facebook</a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--vk">Вконтакте</a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--inst">Instagram</a>
+            </li>
+          </ul>
 
         </nav>
       </div>

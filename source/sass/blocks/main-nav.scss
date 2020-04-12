@@ -10,9 +10,58 @@
 }
 
 .main-nav__list {
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 
 .main-nav__contacts {
   margin-bottom: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    padding-left: 56px;
+
+    &--close {
+      display: none;
+    }
+  }
+
+  .main-nav__list--user {
+    display: none;
+  }
+
+  .main-nav__socials-list {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    display: flex;
+    padding: 0;
+
+    &--close {
+      background-color: $background-color--dark;
+      color: $color--light;
+    }
+  }
+
+  .main-nav__list {
+    margin-bottom: 0;
+  }
+
+  .main-nav__list--user {
+    display: flex;
+    order: 1;
+    width: 190px;
+  }
+
+  .main-nav__contacts {
+    width: 156px;
+    margin-bottom: 0;
+  }
+
+  .main-nav__socials-list {
+    display: none;
+  }
 }

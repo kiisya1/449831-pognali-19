@@ -52,3 +52,22 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .prices__title {
+    padding-right: 25px;
+
+    text-align: center;
+  }
+
+  .prices__business {
+    padding-left: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .prices__container {
+    padding-left: 112px;
+    padding-right: 114px;
+  }
+}

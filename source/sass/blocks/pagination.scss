@@ -26,6 +26,10 @@
   display: flex;
 }
 
+.pagination__list {
+  display: none;
+}
+
 .pagination__link {
   display: block;
   width: 134px;
@@ -42,5 +46,34 @@
   &--next {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pagination__nav {
+    align-items: center;
+    justify-content: flex-end;
+
+    background-color: $background-color--light;
+  }
+
+  .pagination__list {
+    @include reset-list;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-right: auto;
+  }
+
+  .pagination__link {
+    width: 50px;
+
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    width: 950px;
   }
 }

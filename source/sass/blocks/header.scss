@@ -12,6 +12,49 @@
   padding-top: 27px;
 }
 
+.header__user-list {
+  display: none;
+}
+
 .header__nav {
   margin-top: 55px;
+}
+
+@media (min-width: $tablet-width) {
+  .header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+
+  .header__user-list {
+    display: flex;
+    padding-bottom: 0;
+    width: 188px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__container {
+    padding-top: 47px;
+    justify-content: flex-start;
+  }
+
+  .header__logo {
+    margin-right: 36px;
+  }
+
+  .header__menu-toggle {
+    display: none;
+  }
+
+  .header__user-list {
+    display: none;
+  }
+
+  .header__nav {
+    width: 1084px;
+    margin-top: 0;
+  }
 }

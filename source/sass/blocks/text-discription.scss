@@ -11,3 +11,24 @@
     font-weight: $font-bold;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .text-discription {
+    padding-left: 0;
+    max-width: 430px;
+
+    &--bold {
+      width: 265px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .text-discription {
+    max-width: 620px;
+
+    &--bold {
+      width: 440px;
+    }
+  }
+}
