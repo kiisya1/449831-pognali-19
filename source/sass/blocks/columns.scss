@@ -1,0 +1,9 @@
+@media (min-width: $desktop-width) {
+  .columns {
+    display: flex;
+    padding: 0 40px;
+    margin: 0 auto;
+    width: $desktop-width;
+    box-sizing: border-box;
+  }
+}

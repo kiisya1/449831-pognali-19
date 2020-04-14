@@ -76,31 +76,30 @@
 
         <section class="profile__card">
           <h2 class="visually-hidden">Настройки профиля</h2>
-          <div class="profile__container container">
-            <div class="profile__columns">
+          <div class="profile__container profile__container--card container">
 
-              <div class="profile__level level level--theme-light level--inside">
-                <span class="level__number">80</span>
-                <span class="level__caption">level</span>
-              </div>
-
-              <img class="profile__photo-image" src="img/photo-account-mob@1x.jpg" width="100" height="100" alt="Фотография путешественника Пети Демина">
+            <div class="profile__level level level--theme-light level--inside">
+              <span class="level__number">80</span>
+              <span class="level__caption">level</span>
             </div>
+
+            <img class="profile__photo-image" src="img/photo-account-mob@1x.jpg" width="100" height="100" alt="Фотография путешественника Пети Демина">
 
             <div class="profile__change-foto">
               <label class="profile__change-button button button--theme-light">
-                Сменить фото
+                <span class="profile__change-desc">Сменить</span>
+                фото
                 <input class="visually-hidden" type="file" name="foto">
               </label>
             </div>
 
             <div class="profile__hashtags">
-              <label class="profile__legend profile__legend--absolute" for="hashtags-field">Тэги</label>
+              <label class="profile__legend" for="hashtags-field">Тэги</label>
               <textarea class="profile__fieldset profile__fieldset--hashtags " name="hashtags" id="hashtags-field" rows="2" cols="40" placeholder="Коротко о себе в виде 5-8 хештэгов" required>#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
 
-            <fieldset class="profile__fieldset transport transport--interactive">
-              <legend class="profile__legend">Транспорт</legend>
+            <div class="profile__fieldset transport transport--interactive">
+              <p class="profile__legend">Транспорт</p>
 
               <ul class="transport__list">
                 <li class="transport__item">
@@ -121,7 +120,7 @@
                 </li>
 
               </ul>
-            </fieldset>
+            </div>
           </div>
         </section>
 
@@ -150,9 +149,15 @@
             <h2 class="profile__title">Добавить план:</h2>
 
             <div class="profile__steps-indication">
-              <button class="profile__indicator profile__indicator--active" type="button" aria-label="Первый шаг"></button>
-              <button class="profile__indicator" type="button" aria-label="Второй шаг"></button>
-              <button class="profile__indicator" type="button" aria-label="Третий шаг"></button>
+              <button class="profile__indicator profile__indicator--active" type="button" aria-label="Первый шаг">
+                <span class="profile__indicator-text">Даты</span>
+              </button>
+              <button class="profile__indicator" type="button" aria-label="Второй шаг">
+                <span class="profile__indicator-text">Маршрут</span>
+              </button>
+              <button class="profile__indicator" type="button" aria-label="Третий шаг">
+                <span class="profile__indicator-text">Развлечения</span>
+              </button>
             </div>
 
             <ol class="profile__steps steps">
@@ -163,34 +168,36 @@
                 </h3>
                 <p class="steps__discription">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку и&nbsp;ее&nbsp;предполагаемую длительность.</p>
 
-                <fieldset class="steps__fieldset">
-                  <label class="steps__label" for="people-number">
-                    Ищу попутчиков:
+                <div class="steps__wrapper">
+                  <div class="steps__fieldset">
+                    <label class="steps__label" for="people-number">
+                      Ищу попутчиков:
+                    </label>
                     <span class="steps__units">Чел.</span>
-                  </label>
-                  <div class="steps__field">
-                    <button class="steps__control steps__control--minus" type="button" aria-label="Убавить 1 человека"></button>
-                    <input class="steps__input" type="number" name="people" min="1" id="people-number" value="2" required>
-                    <button class="steps__control steps__control--plus" type="button" aria-label="Добавить 1 человека"></button>
+                    <div class="steps__field">
+                      <button class="steps__control steps__control--minus" type="button" aria-label="Убавить 1 человека"></button>
+                      <input class="steps__input" type="number" name="people" min="1" id="people-number" value="2" required>
+                      <button class="steps__control steps__control--plus" type="button" aria-label="Добавить 1 человека"></button>
+                    </div>
                   </div>
-                </fieldset>
 
-                <fieldset class="steps__fieldset">
-                  <label class="steps__label" for="days-number">
-                    Длительность:
+                  <div class="steps__fieldset steps__fieldset--last">
+                    <label class="steps__label" for="days-number">
+                      Длительность:
+                    </label>
                     <span class="steps__units">Дн.</span>
-                  </label>
-                  <div class="steps__field">
-                    <button class="steps__control steps__control--minus" type="button" aria-label="Убавить 1 день"></button>
-                    <input class="steps__input" type="number" name="days" min="1" id="days-number" value="2" required>
-                    <button class="steps__control steps__control--plus" type="button" aria-label="Добавить 1 день"></button>
+                    <div class="steps__field">
+                      <button class="steps__control steps__control--minus" type="button" aria-label="Убавить 1 день"></button>
+                      <input class="steps__input" type="number" name="days" min="1" id="days-number" value="2" required>
+                      <button class="steps__control steps__control--plus" type="button" aria-label="Добавить 1 день"></button>
+                    </div>
                   </div>
-                </fieldset>
 
-                <fieldset class="steps__fieldset">
-                  <input class="visually-hidden steps__checkbox" type="checkbox" name="children" id="isChildren" checked>
-                  <label class="steps__label steps__label--checkbox" for="isChildren">Можно с детьми</label>
-                </fieldset>
+                  <div class="steps__fieldset steps__fieldset--checkbox">
+                    <input class="visually-hidden steps__checkbox" type="checkbox" name="children" id="isChildren" checked>
+                    <label class="steps__label steps__label--checkbox" for="isChildren">Можно с детьми</label>
+                  </div>
+                </div>
 
                 <div class="steps__calendar calendar">
                   <div class="calendar__months">
@@ -328,10 +335,47 @@
                         <span class="visually-hidden">Cвернуть</span>
                       </button>
 
-                      <ul class="steps__letters-list letters-list letters-list--theme-light">
+                      <ul class="steps__letters-list letters-list letters-list--modal">
                         <li class="letters-list__item">
                           <input class="visually-hidden letters-list__field" type="radio" name="letter" id="a-field" value="a" checked>
                           <label class="letters-list__letter" for="a-field">а</label>
+
+                          <ul class="letters-list__regions-list regions-list">
+                            <li class="regions-list__item">
+                              <a href="asia/australia" class="regions-list__link">Австралия</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="europe/austria" class="regions-list__link">Австрия</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="#" class="regions-list__link">Азербайджан</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="#" class="regions-list__link">Албания</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="#" class="regions-list__link">Алжир</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="#" class="regions-list__link">Ангола</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="#" class="regions-list__link">Андорра</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="#" class="regions-list__link">Антигуа и Барбуда</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="#" class="regions-list__link">Аргентина</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="#" class="regions-list__link">Армения</a>
+                            </li>
+                            <li class="regions-list__item">
+                              <a href="#" class="regions-list__link">Афганистан</a>
+                            </li>
+                          </ul>
+
                         </li>
                         <li class="letters-list__item">
                           <input class="visually-hidden letters-list__field" type="radio" name="letter" id="b-field" value="b">
@@ -431,42 +475,6 @@
                         </li>
                       </ul>
 
-                      <ul class="steps__regions-list regions-list">
-                        <li class="regions-list__item">
-                          <a href="asia/australia" class="regions-list__link">Австралия</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="europe/austria" class="regions-list__link">Австрия</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="#" class="regions-list__link">Азербайджан</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="#" class="regions-list__link">Албания</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="#" class="regions-list__link">Алжир</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="#" class="regions-list__link">Ангола</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="#" class="regions-list__link">Андорра</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="#" class="regions-list__link">Антигуа и Барбуда</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="#" class="regions-list__link">Аргентина</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="#" class="regions-list__link">Армения</a>
-                        </li>
-                        <li class="regions-list__item">
-                          <a href="#" class="regions-list__link">Афганистан</a>
-                        </li>
-                      </ul>
-
                     </section>
                   </li>
 
@@ -475,8 +483,11 @@
                   </li>
                 </ul>
 
-                <a href="#step3" class="steps__next-step button">Следующий шаг</a>
-                <a href="#step1" class="steps__prev-step">На шаг назад</a>
+                <div class="steps__nav">
+                  <a href="#step3" class="steps__next-step button">Следующий шаг</a>
+                  <a href="#step1" class="steps__prev-step">На шаг назад</a>
+                </div>
+
               </li>
 
               <li class="steps__item">
@@ -492,19 +503,22 @@
                       Босния и Герцеговина
                       <span class="steps__flag flag"></span>
                     </label>
-                    <textarea class="steps__plan-discription" name="plan-1" id="country-plan-1" rows="8" cols="80" placeholder="План действий" required></textarea>
+                    <textarea class="steps__plan-discription" name="plan-1" id="country-plan-1" rows="4" cols="80" placeholder="План действий" required></textarea>
                   </li>
-                  <li class="steps__country-plan steps__country-plan--error">
+                  <li class="steps__country-plan">
                     <label class="steps__country-name" for="country-plan-2">
                       Чехия
                       <span class="steps__flag flag"></span>
                     </label>
-                    <textarea class="steps__plan-discription steps__plan-discription--error" name="plan-2" id="country-plan-2" rows="8" cols="80" placeholder="План действий" required>Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.</textarea>
+                    <textarea class="steps__plan-discription" name="plan-2" id="country-plan-2" rows="4" cols="80" placeholder="План действий" required>Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.</textarea>
                   </li>
                 </ul>
 
-                <button  class="steps__button button" type="submit">Отправить</button>
-                <a href="#step2" class="steps__prev-step">На шаг назад</a>
+                <div class="steps__nav">
+                  <button  class="steps__button button" type="submit">Отправить</button>
+                  <a href="#step2" class="steps__prev-step">На шаг назад</a>
+                </div>
+
               </li>
             </ol>
           </div>

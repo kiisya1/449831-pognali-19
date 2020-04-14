@@ -16,9 +16,9 @@
 
 .steps__title {
   padding: 0;
-  padding-left: 5px;
   margin: 0;
   margin-bottom: 18px;
+  margin-left: 5px;
 
   font-size: 20px;
   line-height: 20px;
@@ -32,23 +32,25 @@
 }
 
 .steps__discription {
-  padding: 0 5px;
+  padding: 0;
   margin: 0;
+  margin-left: 5px;
   margin-bottom: 22px;
 }
 
 .steps__fieldset {
-  padding: 0 5px;
-  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding: 0;
+  margin: 0 5px;
   margin-bottom: 21px;
 
   border: 0;
 }
 
 .steps__label {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin-bottom: 8px;
 
   line-height: 16px;
@@ -75,10 +77,11 @@
 
 .steps__field {
   position: relative;
+  width: 100%;
 }
 
 .steps__input {
-  width: 220px;
+  width: 100%;
   height: 43px;
   padding: 16px 28px 10px;
   box-sizing: border-box;
@@ -132,7 +135,7 @@
 }
 
 .steps__calendar {
-  padding: 0 5px;
+  margin: 0 5px;
   margin-bottom: 22px;
 }
 
@@ -167,7 +170,7 @@
 
 .steps__route {
   @include reset-list;
-  padding: 0 5px;
+  margin: 0 5px;
   margin-bottom: 25px;
 }
 
@@ -220,16 +223,6 @@
   width: 100%;
 }
 
-.steps__regions-list {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 17px 20px;
-
-  border: 1px solid $border-color;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
 .steps__button-add {
   width: 100%;
   height: 42px;
@@ -264,7 +257,7 @@
 
 .steps__travel-plan {
   @include reset-list;
-  padding: 0 5px;
+  margin: 0 5px;
   margin-bottom: 22px;
 }
 
@@ -345,5 +338,158 @@
 
   &--error {
     border-color: #f47e7e;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .steps__item {
+    padding-top: 48px;
+    padding-bottom: 50px;
+    padding-left: 43px;
+    padding-right: 42px;
+    margin-bottom: 40px;
+  }
+
+  .steps__title {
+    margin-left: 0;
+  }
+
+  .steps__discription {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .steps__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .steps__fieldset {
+    margin: 0 1px;
+    margin-bottom: 25px;
+
+    &--last {
+      order: 2;
+    }
+  }
+
+  .steps__calendar {
+    margin-left: 1px;
+    margin-right: 2px;
+  }
+
+  .steps__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .steps__next-step,
+  .steps__button {
+    width: 285px;
+  }
+
+  .steps__route {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .steps__select,
+  .steps__button-add,
+  .steps__destination--clean .steps__select {
+    width: 369px;
+  }
+
+  .steps__select-modal {
+    width: 575px;
+  }
+
+  .steps__travel-plan {
+    margin-left: 2px;
+    margin-right: 0;
+  }
+
+  .steps__plan-discription {
+    width: 499px;
+    min-height: 142px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__item {
+    padding: 100px 160px;
+    margin-bottom: 45px;
+  }
+
+  .steps__number,
+  .steps__name {
+    display: inline-block;
+  }
+
+  .steps__discription {
+    width: 576px;
+  }
+
+  .steps__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .steps__fieldset {
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 490px;
+
+    &--checkbox {
+      margin-right: 3px;
+      width: 260px;
+      justify-content: flex-end;
+      text-align: right;
+    }
+  }
+
+  .steps__label {
+    width: 190px;
+    margin-right: 30px;
+  }
+
+  .steps__field {
+    width: 181px;
+    margin-right: 36px;
+  }
+
+  .steps__units {
+    order: 2;
+  }
+
+  .steps__calendar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .steps__nav {
+    margin-right: 3px;
+  }
+
+  .steps__select,
+  .steps__button-add,
+  .steps__destination--clean .steps__select {
+    width: 730px;
+  }
+
+  .steps__select-modal {
+    width: 730px;
+  }
+
+  .steps__travel-plan {
+    margin-left: 0;
+  }
+
+  .steps__plan-discription {
+    width: 730px;
   }
 }

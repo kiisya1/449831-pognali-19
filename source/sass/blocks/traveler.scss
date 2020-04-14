@@ -12,6 +12,7 @@
 
   &--info {
     padding: 15px 18px;
+    box-sizing: border-box;
 
     font-size: 15px;
     line-height: 18px;
@@ -107,7 +108,7 @@
 }
 
 .traveler__block-title {
-  padding-left: 8px;
+  margin-left: 8px;
 }
 
 .traveler__call {
@@ -136,9 +137,9 @@
 }
 
 .traveler--info .traveler__hashtags {
-  padding-left: 8px;
   margin: 0;
   margin-bottom: 20px;
+  margin-left: 8px;
 }
 
 .traveler--info .traveler__countries {
@@ -159,11 +160,13 @@
     width: 285px;
 
     &--info {
-      width: 688px;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
       justify-content: flex-start;
+
+      width: 688px;
+      box-sizing: border-box;
     }
   }
 
@@ -201,6 +204,7 @@
 
 @media (min-width: $desktop-width) {
   .traveler--info {
+    padding: 0;
     width: 950px;
   }
 

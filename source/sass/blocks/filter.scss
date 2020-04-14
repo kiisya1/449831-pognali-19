@@ -3,17 +3,6 @@
   min-width: 320px;
 }
 
-.filter__regions {
-  margin-top: -20px;
-  margin-bottom: 27px;
-  padding-top: 40px;
-  padding-bottom: 27px;
-
-  background-color: $pale-grey-dark;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
 .filter__title {
   margin: 0;
   margin-bottom: 20px;
@@ -24,35 +13,6 @@
   line-height: 22.5px;
   color: $color--dark;
   font-weight: $font-bold;
-
-  &--regions {
-    margin-bottom: 35px;
-    padding-left: 27px;
-
-    font-size: 16px;
-    line-height: 22px;
-    color: $color--darkest;
-    text-transform: uppercase;
-  }
-}
-
-.filter__continents-list {
-  margin-left: 25px;
-  margin-bottom: 25px;
-}
-
-.filter__letters-list {
-  margin-left: 25px;
-  margin-bottom: 25px;
-}
-
-.filter__regions-list {
-  margin-left: 25px;
-  margin-bottom: 40px;
-}
-
-.filter__close-text {
-  padding-left: 24px;
 }
 
 .filter__form {
@@ -123,4 +83,54 @@
 .filter__input::-webkit-outer-spin-button,
 .filter__input::-webkit-inner-spin-button {
   appearance: none;
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+  .filter__title {
+    width: 100%;
+  }
+
+  .filter__form {
+    padding: 35px;
+  }
+
+  .filter__feature {
+    margin: 0;
+  }
+
+  .filter__transport {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+  }
+
+  .filter__level {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    margin-bottom: 73px;
+  }
+
+  .filter__range {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+  }
+
+  .filter__controls {
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    order: 2;
+    min-width: 285px;
+  }
+
+  .filter__container {
+    padding-right: 0;
+    padding-left: 0;
+    width: 285px;
+  }
 }

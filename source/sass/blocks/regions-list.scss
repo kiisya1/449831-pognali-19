@@ -2,9 +2,16 @@
   @include reset-list;
 }
 
+.regions-list__item {
+  text-align: left;
+}
+
 .regions-list__link {
-  color: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color--base;
   font-weight: $font-normal;
+  text-transform: none;
 
   &:hover,
   &:focus {

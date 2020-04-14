@@ -18,3 +18,12 @@
 .companions__pagination {
   margin-bottom: 46px;
 }
+
+@media (min-width: $desktop-width) {
+  .companions__container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 85px;
+    width: 950px;
+  }
+}

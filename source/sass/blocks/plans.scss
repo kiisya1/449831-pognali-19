@@ -76,3 +76,42 @@
     color: rgba(0, 0, 0, 0.1);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .plans__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 33px;
+    padding-right: 36px;
+    padding-bottom: 18px;
+  }
+
+  .plans__direction {
+    width: 100%;
+    padding-left: 0;
+    margin-left: 3px;
+  }
+
+  .plans__dates,
+  .plans__companions {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plans__item {
+    padding-left: 44px;
+    padding-right: 42px;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    margin-bottom: 15px;
+  }
+
+  .plans__direction {
+    width: 566px;
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+}
