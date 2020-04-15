@@ -757,118 +757,115 @@
       </section>
 
       <div class="columns">
-        <section class="filter">
-          <div class="filter__container container">
+        <section class="filter container">
+          <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
+            <h2 class="filter__title">Подберите идеального попутчика</h2>
 
-            <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
-              <h2 class="filter__title">Подберите идеального попутчика</h2>
+            <div class="filter__feature feature">
+              <p class="feature__legend legend">Хобби</p>
+              <ul class="feature__list">
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="hobby-sport" id="sport-field" checked>
+                  <label class="feature__label"  for="sport-field">Спортзал</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="hobby-hookah" id="hookah-field">
+                  <label class="feature__label"  for="hookah-field">Кальян</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="hobby-sofa" id="sofa-field">
+                  <label class="feature__label"  for="sofa-field">Диван</label>
+                </li>
+              </ul>
+            </div>
 
-              <div class="filter__feature feature">
-                <p class="feature__legend legend">Хобби</p>
-                <ul class="feature__list">
-                  <li class="feature__item">
-                    <input class="visually-hidden feature__checkbox" type="checkbox" name="hobby-sport" id="sport-field" checked>
-                    <label class="feature__label"  for="sport-field">Спортзал</label>
+            <div class="filter__feature feature">
+              <p class="feature__legend legend">Музыка</p>
+              <ul class="feature__list">
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="music-rock" id="rock-field" checked>
+                  <label class="feature__label"  for="rock-field">Тяжелый рок</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="music-rap" id="rap-field">
+                  <label class="feature__label"  for="rap-field">Русский рэп</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="music-dance" id="dance-field">
+                  <label class="feature__label"  for="dance-field">Евроденс</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="filter__feature feature">
+              <p class="feature__legend legend">Еда</p>
+              <ul class="feature__list">
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="food-meat" id="meat-field" checked>
+                  <label class="feature__label"  for="meat-field">Мясоед</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="food-pp" id="pp-field">
+                  <label class="feature__label"  for="pp-field">Сидит на ПП</label>
+                </li>
+                <li class="feature__item">
+                  <input class="visually-hidden feature__checkbox" type="checkbox" name="food-vegan" id="vegan-field">
+                  <label class="feature__label"  for="vegan-field">Веган-сыроед</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="filter__transport transport transport--interactive">
+              <p class="filter__legend legend">Транспорт</p>
+
+                <ul class="transport__list">
+                  <li class="transport__item">
+                    <input class="visually-hidden transport__checkbox" type="checkbox" name="flight" id="flight-field" checked>
+                    <label class="transport__label transport__type transport__type--flight tooltip" for="flight-field">Авиаперелет</label>
                   </li>
-                  <li class="feature__item">
-                    <input class="visually-hidden feature__checkbox" type="checkbox" name="hobby-hookah" id="hookah-field">
-                    <label class="feature__label"  for="hookah-field">Кальян</label>
+                  <li class="transport__item">
+                    <input class="visually-hidden transport__checkbox" type="checkbox" name="auto" id="auto-field" checked>
+                    <label class="transport__label transport__type transport__type--auto tooltip" for="auto-field">Автотранспорт</label>
                   </li>
-                  <li class="feature__item">
-                    <input class="visually-hidden feature__checkbox" type="checkbox" name="hobby-sofa" id="sofa-field">
-                    <label class="feature__label"  for="sofa-field">Диван</label>
+                  <li class="transport__item">
+                    <input class="visually-hidden transport__checkbox" type="checkbox" name="bike" id="bike-field">
+                    <label class="transport__label transport__type transport__type--bike tooltip" for="bike-field">Велосипед</label>
+                  </li>
+                  <li class="transport__item">
+                    <input class="visually-hidden transport__checkbox" type="checkbox" name="foot" id="foot-field" checked>
+                    <label class="transport__label transport__type transport__type--foot tooltip" for="foot-field">Пешком</label>
                   </li>
                 </ul>
-              </div>
 
-              <div class="filter__feature feature">
-                <p class="feature__legend legend">Музыка</p>
-                <ul class="feature__list">
-                  <li class="feature__item">
-                    <input class="visually-hidden feature__checkbox" type="checkbox" name="music-rock" id="rock-field" checked>
-                    <label class="feature__label"  for="rock-field">Тяжелый рок</label>
-                  </li>
-                  <li class="feature__item">
-                    <input class="visually-hidden feature__checkbox" type="checkbox" name="music-rap" id="rap-field">
-                    <label class="feature__label"  for="rap-field">Русский рэп</label>
-                  </li>
-                  <li class="feature__item">
-                    <input class="visually-hidden feature__checkbox" type="checkbox" name="music-dance" id="dance-field">
-                    <label class="feature__label"  for="dance-field">Евроденс</label>
-                  </li>
-                </ul>
-              </div>
+            </div>
 
-              <div class="filter__feature feature">
-                <p class="feature__legend legend">Еда</p>
-                <ul class="feature__list">
-                  <li class="feature__item">
-                    <input class="visually-hidden feature__checkbox" type="checkbox" name="food-meat" id="meat-field" checked>
-                    <label class="feature__label"  for="meat-field">Мясоед</label>
-                  </li>
-                  <li class="feature__item">
-                    <input class="visually-hidden feature__checkbox" type="checkbox" name="food-pp" id="pp-field">
-                    <label class="feature__label"  for="pp-field">Сидит на ПП</label>
-                  </li>
-                  <li class="feature__item">
-                    <input class="visually-hidden feature__checkbox" type="checkbox" name="food-vegan" id="vegan-field">
-                    <label class="feature__label"  for="vegan-field">Веган-сыроед</label>
-                  </li>
-                </ul>
-              </div>
+            <div class="filter__level">
+              <p class="filter__legend legend">Левел</p>
 
-              <div class="filter__transport transport transport--interactive">
-                <p class="filter__legend legend">Транспорт</p>
+              <div class="filter__range">
 
-                  <ul class="transport__list">
-                    <li class="transport__item">
-                      <input class="visually-hidden transport__checkbox" type="checkbox" name="flight" id="flight-field" checked>
-                      <label class="transport__label transport__type transport__type--flight tooltip" for="flight-field">Авиаперелет</label>
-                    </li>
-                    <li class="transport__item">
-                      <input class="visually-hidden transport__checkbox" type="checkbox" name="auto" id="auto-field" checked>
-                      <label class="transport__label transport__type transport__type--auto tooltip" for="auto-field">Автотранспорт</label>
-                    </li>
-                    <li class="transport__item">
-                      <input class="visually-hidden transport__checkbox" type="checkbox" name="bike" id="bike-field">
-                      <label class="transport__label transport__type transport__type--bike tooltip" for="bike-field">Велосипед</label>
-                    </li>
-                    <li class="transport__item">
-                      <input class="visually-hidden transport__checkbox" type="checkbox" name="foot" id="foot-field" checked>
-                      <label class="transport__label transport__type transport__type--foot tooltip" for="foot-field">Пешком</label>
-                    </li>
-                  </ul>
+                <div class="filter__controls">
+                  <label class="filter__mark">
+                    <span class="visually-hidden">Введите минимальный уровень</span>
+                    <input class="filter__input filter__input--min" type="number" name="min-level" value="30" min="0" max="100">
+                  </label>
+                  <label class="filter__mark">
+                    <span class="visually-hidden">Введите максимальный уровень</span>
+                    <input class="filter__input filter__input--max" type="number" name="max-level" value="100" min="0" max="100">
+                  </label>
+                </div>
 
-              </div>
-
-              <div class="filter__level">
-                <p class="filter__legend legend">Левел</p>
-
-                <div class="filter__range">
-
-                  <div class="filter__controls">
-                    <label class="filter__mark">
-                      <span class="visually-hidden">Введите минимальный уровень</span>
-                      <input class="filter__input filter__input--min" type="number" name="min-level" value="30" min="0" max="100">
-                    </label>
-                    <label class="filter__mark">
-                      <span class="visually-hidden">Введите максимальный уровень</span>
-                      <input class="filter__input filter__input--max" type="number" name="max-level" value="100" min="0" max="100">
-                    </label>
-                  </div>
-
-                  <div class="filter__scale">
-                    <div class="filter__bar"></div>
-                    <button class="filter__range-button filter__range-button--min" type="button" aria-label="Переместите ползунок, чтобы задать минимальный уровень"></button>
-                    <button class="filter__range-button filter__range-button--max" type="button" aria-label="Переместите ползунок, чтобы задать максимальный уровень"></button>
-                  </div>
+                <div class="filter__scale">
+                  <div class="filter__bar"></div>
+                  <button class="filter__range-button filter__range-button--min" type="button" aria-label="Переместите ползунок, чтобы задать минимальный уровень"></button>
+                  <button class="filter__range-button filter__range-button--max" type="button" aria-label="Переместите ползунок, чтобы задать максимальный уровень"></button>
                 </div>
               </div>
+            </div>
 
-              <button class="filter__button button button--theme-white" type="submit">Показать</button>
+            <button class="filter__button button button--theme-white" type="submit">Показать</button>
 
-            </form>
-          </div>
+          </form>
         </section>
 
         <section class="companions">

@@ -125,12 +125,9 @@
 @media (min-width: $desktop-width) {
   .filter {
     order: 2;
-    min-width: 285px;
-  }
-
-  .filter__container {
     padding-right: 0;
     padding-left: 0;
+    min-width: 285px;
     width: 285px;
   }
 }

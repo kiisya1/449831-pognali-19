@@ -421,6 +421,15 @@
     margin-bottom: 45px;
   }
 
+  .steps__header {
+    display: flex;
+  }
+
+  .steps__heading {
+    width: 580px;
+    margin-right: 196px;
+  }
+
   .steps__number,
   .steps__name {
     display: inline-block;

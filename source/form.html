@@ -94,8 +94,8 @@
             </div>
 
             <div class="profile__hashtags">
-              <label class="profile__legend" for="hashtags-field">Тэги</label>
-              <textarea class="profile__fieldset profile__fieldset--hashtags " name="hashtags" id="hashtags-field" rows="2" cols="40" placeholder="Коротко о себе в виде 5-8 хештэгов" required>#бургер #бар #футбол #концерт #крафт</textarea>
+              <label class="profile__legend profile__legend--label" for="hashtags-field">Тэги</label>
+              <textarea class="profile__fieldset profile__fieldset--hashtags" name="hashtags" id="hashtags-field" placeholder="Коротко о себе в виде 5-8 хештэгов" required>#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
 
             <div class="profile__fieldset transport transport--interactive">
@@ -148,25 +148,35 @@
           <div class="profile__container container">
             <h2 class="profile__title">Добавить план:</h2>
 
-            <div class="profile__steps-indication">
-              <button class="profile__indicator profile__indicator--active" type="button" aria-label="Первый шаг">
-                <span class="profile__indicator-text">Даты</span>
-              </button>
-              <button class="profile__indicator" type="button" aria-label="Второй шаг">
-                <span class="profile__indicator-text">Маршрут</span>
-              </button>
-              <button class="profile__indicator" type="button" aria-label="Третий шаг">
-                <span class="profile__indicator-text">Развлечения</span>
-              </button>
+            <div class="profile__steps-indication profile__steps-indication--global">
+              <button class="profile__indicator profile__indicator--active" type="button" aria-label="Первый шаг"></button>
+              <button class="profile__indicator" type="button" aria-label="Второй шаг"></button>
+              <button class="profile__indicator" type="button" aria-label="Третий шаг"></button>
             </div>
 
             <ol class="profile__steps steps">
               <li class="steps__item">
-                <h3 class="steps__title" id="step1">
-                  <span class="steps__number">Шаг 1.</span>
-                  <span class="steps__name">Даты пребывания</span>
-                </h3>
-                <p class="steps__discription">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку и&nbsp;ее&nbsp;предполагаемую длительность.</p>
+                <header class="steps__header">
+                  <div class="steps__heading">
+                    <h3 class="steps__title" id="step1">
+                      <span class="steps__number">Шаг 1.</span>
+                      <span class="steps__name">Даты пребывания</span>
+                    </h3>
+                    <p class="steps__discription">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку и&nbsp;ее&nbsp;предполагаемую длительность.</p>
+                  </div>
+
+                  <div class="profile__steps-indication">
+                    <button class="profile__indicator profile__indicator--active" type="button" aria-label="Первый шаг">
+                      <span class="profile__indicator-text">Даты</span>
+                    </button>
+                    <button class="profile__indicator" type="button" aria-label="Второй шаг">
+                      <span class="profile__indicator-text">Маршрут</span>
+                    </button>
+                    <button class="profile__indicator" type="button" aria-label="Третий шаг">
+                      <span class="profile__indicator-text">Развлечения</span>
+                    </button>
+                  </div>
+                </header>
 
                 <div class="steps__wrapper">
                   <div class="steps__fieldset">
@@ -277,11 +287,27 @@
               </li>
 
               <li class="steps__item">
-                <h3 class="steps__title" id="step2">
-                  <span class="steps__number">Шаг 2.</span>
-                  <span class="steps__name">Маршрут</span>
-                </h3>
-                <p class="steps__discription">Укажите страны, которые вы&nbsp;хотели посетить. Это может быть одна или сразу несколько.</p>
+                <header class="steps__header">
+                  <div class="steps__heading">
+                    <h3 class="steps__title" id="step2">
+                      <span class="steps__number">Шаг 2.</span>
+                      <span class="steps__name">Маршрут</span>
+                    </h3>
+                    <p class="steps__discription">Укажите страны, которые вы&nbsp;хотели посетить. Это может быть одна или сразу несколько.</p>
+                  </div>
+
+                  <div class="profile__steps-indication">
+                    <button class="profile__indicator" type="button" aria-label="Первый шаг">
+                      <span class="profile__indicator-text">Даты</span>
+                    </button>
+                    <button class="profile__indicator profile__indicator--active" type="button" aria-label="Второй шаг">
+                      <span class="profile__indicator-text">Маршрут</span>
+                    </button>
+                    <button class="profile__indicator" type="button" aria-label="Третий шаг">
+                      <span class="profile__indicator-text">Развлечения</span>
+                    </button>
+                  </div>
+                </header>
 
                 <ul class="steps__route">
                   <li class="steps__route-item">
@@ -380,6 +406,7 @@
                         <li class="letters-list__item">
                           <input class="visually-hidden letters-list__field" type="radio" name="letter" id="b-field" value="b">
                           <label class="letters-list__letter" for="b-field">б</label>
+                          <!-- Пример вставки списка стран выше(см букву "а")-->
                         </li>
                         <li class="letters-list__item">
                           <input class="visually-hidden letters-list__field" type="radio" name="letter" id="v-field" value="v">
@@ -491,11 +518,27 @@
               </li>
 
               <li class="steps__item">
-                <h3 class="steps__title" id="step3">
-                  <span class="steps__number">Шаг 3.</span>
-                  <span class="steps__name">Развлечения</span>
-                </h3>
-                <p class="steps__discription">Наконец, расскажите о&nbsp;своих планах времяпровождения. Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
+                <header class="steps__header">
+                  <div class="steps__heading">
+                    <h3 class="steps__title" id="step3">
+                      <span class="steps__number">Шаг 3.</span>
+                      <span class="steps__name">Развлечения</span>
+                    </h3>
+                    <p class="steps__discription">Наконец, расскажите о&nbsp;своих планах времяпровождения. Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
+                  </div>
+
+                  <div class="profile__steps-indication">
+                    <button class="profile__indicator" type="button" aria-label="Первый шаг">
+                      <span class="profile__indicator-text">Даты</span>
+                    </button>
+                    <button class="profile__indicator" type="button" aria-label="Второй шаг">
+                      <span class="profile__indicator-text">Маршрут</span>
+                    </button>
+                    <button class="profile__indicator  profile__indicator--active" type="button" aria-label="Третий шаг">
+                      <span class="profile__indicator-text">Развлечения</span>
+                    </button>
+                  </div>
+                </header>
 
                 <ul class="steps__travel-plan">
                   <li class="steps__country-plan">
