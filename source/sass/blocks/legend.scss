@@ -2,6 +2,7 @@
   position: relative;
 
   display: block;
+  margin: 0;
   padding-top: 14px;
   padding-bottom: 14px;
 
@@ -19,5 +20,15 @@
     width: 220px;
     height: 1px;
     background-color: #f3c72b;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+  .legend {
+    width: 105px;
+
+    &::before {
+      width: 618px;
+    }
   }
 }

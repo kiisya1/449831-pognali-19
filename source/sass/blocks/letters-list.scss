@@ -1,7 +1,10 @@
 .letters-list {
+  position: relative;
+
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 280px;
   width: 220px;
 
   font-size: 14px;
@@ -12,12 +15,16 @@
   text-align: center;
   text-transform: uppercase;
 
-  background-color: $background-color--light;
+  &--modal {
+    padding-bottom: 278px;
+  }
 }
 
 .letters-list__item {
   display: flex;
   justify-content: center;
+
+  background-color: $background-color--light;
 }
 
 .letters-list__letter {
@@ -49,4 +56,142 @@
 
 .letters-list__field:focus + .letters-list__letter {
   outline: 5px auto -webkit-focus-ring-color;
+}
+
+.letters-list__regions-list {
+  position: absolute;
+  top: 230px;
+  left: 0;
+
+  display: none;
+  width: 220px;
+  height: 250px;
+
+  overflow: auto;
+}
+
+.letters-list__field:checked ~ .letters-list__regions-list {
+  display: block;
+}
+
+.letters-list--modal .letters-list__regions-list {
+  top: 205px;
+
+  padding: 17px 20px;
+  width: 100%;
+  height: 278px;
+  box-sizing: border-box;
+
+  border: 1px solid $border-color;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .letters-list {
+    padding-bottom: 0;
+    padding-right: 256px;
+
+    &--modal {
+      padding-bottom: 96px;
+      padding-right: 286px;
+      box-sizing: border-box;
+    }
+  }
+
+  .letters-list__regions-list {
+    top: 0;
+    left: 446px;
+  }
+
+  .letters-list--modal .letters-list__regions-list {
+    top: -17px;
+    left: 367px;
+
+    width: 155px;
+    box-sizing: content-box;
+    padding: 17px 26px;
+
+    border: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 206px;
+
+      width: 1px;
+      height: 100%;
+      background-color: rgba(#d6d9e6, 0.5);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .letters-list {
+    padding-right: 0;
+    width: 100%;
+
+    &--modal {
+      padding-bottom: 34px;
+      padding-right: 340px;
+      width: 730px;
+    }
+  }
+
+  .letters-list__item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 254px;
+
+    background-color: inherit;
+
+    &:nth-child(2n) {
+      width: 252px;
+    }
+
+    &:nth-child(3n),
+    &:nth-child(4n) {
+      width: 250px;
+    }
+
+    &:nth-child(5n) {
+      width: 205px;
+    }
+  }
+
+  .letters-list__letter {
+    margin-bottom: 50px;
+  }
+
+  .letters-list__regions-list {
+    position: static;
+
+    margin-bottom: 56px;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  .letters-list--modal .letters-list__item {
+    justify-content: center;
+    width: 60px;
+    margin-bottom: 15px;
+  }
+
+  .letters-list--modal .letters-list__letter {
+    margin-bottom: 0;
+  }
+
+  .letters-list--modal .letters-list__regions-list {
+    position: absolute;
+    top: -17px;
+    left: 462px;
+
+    padding: 17px 26px;
+    margin-bottom: 0;
+    width: 155px;
+    box-sizing: content-box;
+  }
 }
