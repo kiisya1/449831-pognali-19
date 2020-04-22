@@ -1,8 +1,11 @@
 .using-list {
   @include reset-list;
+
+  counter-reset: steps;
 }
 
 .using-list__item {
+  position: relative;
   padding: 22px 25px;
   padding-right: 100px;
 
@@ -14,6 +17,20 @@
   background-color: $mango;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+  counter-increment: steps;
+
+  &::after {
+    content: counter(steps);
+    position: absolute;
+    top: 22px;
+    right: 21px;
+
+    min-width: 10px;
+
+    color: $color--light;
+    text-align: center;
+  }
 
   &:nth-child(2n) {
     background-color: $mango-light;
@@ -27,6 +44,14 @@
     background-color: $gold;
     border-radius: 10px;
   }
+
+  &:not(:first-child) {
+    margin-top: -10px;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 32px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -38,22 +63,108 @@
 
   .using-list__item {
     width: 344px;
+    padding-top: 31px;
+    padding-bottom: 60px;
+    padding-left: 34px;
+    padding-right: 112px;
     box-sizing: border-box;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+
+    &::after {
+      top: auto;
+      bottom: 28px;
+      left: 34px;
+
+      text-align: left;
+    }
+
+    &:nth-child(2n) {
+      margin-left: -20px;
+
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    &:nth-child(2n+1) {
+      width: 364px;
+      padding-right: 132px;
+    }
+
+    &:nth-child(n+3) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 20px;
+    }
+
+    &:nth-child(2n+4) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 20px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 60px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .using-list__item {
-    width: 315px;
+    padding-top: 29px;
+    padding-bottom: 30px;
+    padding-left: 31px;
+    width: 335px;
     box-sizing: border-box;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    &::after {
+      top: 29px;
+      bottom: auto;
+      left: auto;
+      right: 53px;
+
+      text-align: left;
+    }
+
+    &:nth-child(2n+1) {
+      width: 335px;
+      border-top-left-radius: 20px;
+    }
 
     &:nth-child(2n),
     &:nth-child(3n) {
-      width: 345px;
+      width: 365px;
+      border-top-right-radius: 0;
     }
 
     &:nth-child(4n) {
       width: 315px;
+      border-radius: 20px;
+
+      &::after {
+        right: 33px;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-left: -20px;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 30px;
+      padding-right: 132px;
     }
   }
 }

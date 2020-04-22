@@ -1,7 +1,183 @@
+.transport {
+  width: 120px;
+  margin: 0 auto;
+
+  &--circles {
+    position: relative;
+
+    width: 140px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -18px;
+
+      width: 270px;
+      height: 1px;
+
+      background-color: $background-color;
+    }
+  }
+}
+
+.transport__title {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
 .transport__list {
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
+}
+
+.transport__item {
+  margin-right: 17px;
+
+  &:nth-child(4n+2) {
+    margin-right: 13px;
+  }
+
+  &:nth-child(4n+3) {
+    margin-right: 10px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.transport__type {
+  display: block;
+  opacity: 0.15;
+
+  &--active {
+    fill: $blue;
+    opacity: 1;
+  }
+}
+
+.transport--circles .transport__list {
   margin-left: 7px;
+}
+
+.transport--circles .transport__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 0;
+  width: 33px;
+  height: 32px;
+
+  background-color: $background-color;
+  border-radius: 50%;
+}
+
+.transport--circles .transport__type {
+  &--flight {
+    width: 14px;
+    height: 16px;
+  }
+
+  &--auto {
+    width: 13px;
+    height: 16px;
+  }
+
+  &--bike {
+    width: 19px;
+    height: 17px;
+  }
+
+  &--foot {
+    width: 15px;
+    height: 17px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .transport--circles {
+    width: 60px;
+    margin-right: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .transport__title {
+    display: none;
+  }
+
+  .transport--circles .transport__list {
+    margin-left: 0;
+  }
+
+  .transport--circles .transport__item {
+    margin-bottom: 12px;
+    height: 21px;
+
+    background-color: transparent;
+
+    &:nth-child(4n+2) {
+      margin-bottom: 9px;
+    }
+
+    &:nth-child(4n+3) {
+      margin-bottom: 13px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .transport--circles .transport__type {
+    width: 24px;
+    height: 21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .transport--circles {
+    margin-right: 52px;
+    width: 120px;
+  }
+
+  .transport--circles .transport__list {
+    justify-content: flex-start;
+  }
+
+  .transport--circles .transport__item {
+    justify-content: flex-start;
+    margin-bottom: 0;
+    margin-right: 17px;
+    width: auto;
+
+    background-color: transparent;
+
+    &:nth-child(4n+2) {
+      margin-right: 13px;
+      margin-bottom: 0;
+    }
+
+    &:nth-child(4n+3) {
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .transport--circles .transport__type {
+    width: auto;
+    height: 21px;
+  }
 }

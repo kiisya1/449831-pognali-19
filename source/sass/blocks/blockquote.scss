@@ -1,7 +1,6 @@
 .blockquote {
   width: 155px;
   padding: 0;
-  padding-left: 25px;
   margin: 0;
 }
 
@@ -16,5 +15,16 @@
 }
 
 @media (min-width: $tablet-width) {
-  width: 265px;
+  .blockquote {
+    width: 265px;
+  }
+
+  .blockquote__content {
+    margin-bottom: 50px;
+  }
+
+  .blockquote__author {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

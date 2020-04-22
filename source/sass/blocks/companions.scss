@@ -16,7 +16,21 @@
 }
 
 .companions__pagination {
-  margin-bottom: 46px;
+  margin-bottom: 76px;
+}
+
+@media (min-width: $tablet-width) {
+  .companions__list {
+    margin-bottom: 40px;
+  }
+
+  .companions__item {
+    margin-bottom: 40px;
+  }
+
+  .companions__pagination {
+    margin-bottom: 122px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -25,5 +39,17 @@
     padding-right: 0;
     margin-right: 85px;
     width: 950px;
+  }
+
+  .companions__list {
+    margin-bottom: 62px;
+  }
+
+  .companions__item {
+    margin-bottom: 30px;
+  }
+
+  .companions__pagination {
+    margin-bottom: 137px;
   }
 }

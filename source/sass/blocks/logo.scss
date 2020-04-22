@@ -1,16 +1,51 @@
 .logo {
   display: block;
   width: 100px;
+
+  &--blue {
+    width: 97px;
+    height: 15px;
+
+    background-image: url("../img/logo-mobile-blue@1x.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 96px;
+  }
+}
+
+.logo__image {
+  display: block;
+}
+
+.logo--blue .logo__image {
+  position: relative;
+  z-index: -1;
 }
 
 @media (min-width: $tablet-width) {
   .logo {
     width: 166px;
+
+    &--blue {
+      width: 164px;
+      height: 42px;
+      background-position: center left;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .logo {
     width: 200px;
+
+    &--blue {
+      width: 200px;
+      height: 52px;
+      background: none;
+    }
+  }
+
+  .logo--blue .logo__image {
+    z-index: 1;
   }
 }

@@ -1,6 +1,6 @@
 .button {
   display: inline-block;
-  padding: 7px 40px 3px;
+  padding: 7px 39px 3px;
 
   font-family: $standart-font;
   font-size: 17px;
@@ -27,8 +27,13 @@
   }
 
   &--arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     width: 100%;
     padding: 22px 24px;
+    padding-right: 23px;
     box-sizing: border-box;
 
     font-size: 18px;
@@ -85,12 +90,80 @@
       background-color: #f3c72b;
     }
   }
+
+  &--yellow {
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    border: 3px solid $blue-darken;
+
+    &:hover,
+    &:focus {
+      color: $color--light;
+
+      background-color: $background-color--darken;
+    }
+
+    &:active {
+      color: rgba($color--light, 0.3);
+      background-color: $background-color--darken;
+    }
+  }
+}
+
+.button--arrow .button__svg {
+  fill: $btn-color--arrow;
+}
+
+.button--arrow:active .button__svg {
+  opacity: 0.3;
+}
+
+.button--yellow:hover .button__svg,
+.button--yellow:focus .button__svg {
+  opacity: 1;
+  fill: $white;
+}
+
+.button--yellow:active .button__svg {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 12px 29px 8px;
+
+    font-size: 20px;
+
+    border-radius: 25px;
+
+    &--arrow {
+      padding-top: 29px;
+      padding-bottom: 28px;
+      padding-left: 34px;
+      padding-right: 36px;
+
+      font-size: 24px;
+      line-height: 24px;
+
+      border-radius: 20px;
+    }
+
+    &--yellow {
+      padding-top: 26px;
+      padding-bottom: 25px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .button {
     &--large {
-      padding: 7px 40px 3px;
+      font-size: 20px;
+
+      padding: 12px 29px 8px;
+
+      border-radius: 25px;
     }
 
     &--arrow {

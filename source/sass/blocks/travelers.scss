@@ -11,16 +11,32 @@
 }
 
 .travelers__container {
+  position: relative;
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
   padding: 25px;
   padding-top: 100px;
 
   background-image: url("../img/smolov-back-desktop@1x.png"),
-    url("../img/rogovaya-back-mobile@1x.png"),
-    url("../img/blue-back.png");
+    url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: top 69px left 152px, top 341px left -10px, top 69px left -19px;
+  background-position: top 69px left 152px, top 341px left -10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 69px;
+    left: -19px;
+    z-index: -1;
+
+    width: 132px;
+    height: 132px;
+
+    border-radius: 20px;
+    background-color: #141b3b;
+  }
 }
 
 .travelers__list {
@@ -44,12 +60,45 @@
 }
 
 @media (min-width: $tablet-width) {
+  .travelers {
+    margin-top: -60px;
+    margin-bottom: 75px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
   .travelers__container {
+    padding-top: 200px;
+    padding-bottom: 88px;
     padding-left: 75px;
     padding-right: 75px;
+
+    background-image: url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
+    background-size: 143px, 285px;
+    background-position: top 456px left 40px, top 110px right 77px;
+
+    &::before {
+      top: 110px;
+      left: 40px;
+
+      width: 213px;
+      height: 213px;
+    }
+  }
+
+  .travelers__title {
+    margin-bottom: 60px;
+  }
+
+  .travelers__discription {
+    margin-bottom: 45px;
   }
 
   .travelers__list {
+    margin-top: 15px;
+    margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -68,12 +117,30 @@
       margin-bottom: 20px;
     }
   }
+
+  .travelers__button {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .travelers {
+    margin-bottom: 105px;
+  }
+
   .travelers__container {
     display: block;
+    padding-top: 160px;
+    padding-bottom: 134px;
     padding-left: 112px;
+    padding-right: 40px;
+
+    background-position: top 163px left 527px, top 415px left 171px;
+
+    &::before {
+      top: 98px;
+      left: 40px;
+    }
   }
 
   .travelers__title {
@@ -84,6 +151,7 @@
     width: 430px;
 
     &--bold {
+      margin-bottom: 87px;
       width: 260px;
     }
   }
@@ -95,14 +163,17 @@
   .travelers__list {
     float: right;
     margin-top: 0;
+    margin-bottom: 0;
     width: 630px;
   }
 
   .travelers__item {
     margin-right: 60px;
+    margin-bottom: 0;
 
     &:nth-child(2n) {
       margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }

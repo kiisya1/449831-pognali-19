@@ -9,6 +9,18 @@
   padding: 0 25px;
 }
 
+.business-prices__title {
+  margin-bottom: 29px;
+}
+
+.business-prices__list {
+  margin-bottom: 33px;
+
+  &::after {
+    left: 0;
+  }
+}
+
 .business-prices__close {
   display: block;
   width: 100%;
@@ -47,16 +59,33 @@
 
   .business-prices__title {
     padding: 0;
+    margin-top: 0;
+    margin-bottom: 47px;
 
     text-align: center;
   }
 
   .business-prices__list {
-    &::after {
-      left: 0;
+    padding-top: 0;
+    margin-bottom: 51px;
 
+    font-size: 22px;
+    line-height: 28px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
       width: 506px;
     }
+  }
+
+  .business-prices__close {
+    padding: 43px 23px 41px;
+
+    font-size: 24px;
+    text-transform: none;
   }
 }
 

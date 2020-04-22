@@ -10,21 +10,15 @@
 }
 
 .prices__container {
-  padding-bottom: 25px;
-}
-
-.prices__title {
   position: relative;
 
-  padding: 14px 25px;
-  padding-right: 143px;
-  box-sizing: border-box;
+  padding-bottom: 25px;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    right: 25px;
 
     width: 99px;
     height: 99px;
@@ -34,34 +28,110 @@
   }
 }
 
+.prices__title {
+  padding: 14px 0;
+  padding-right: 143px;
+  margin-left: 25px;
+  box-sizing: border-box;
+}
+
+.prices__list {
+  margin-left: 25px;
+  margin-bottom: 30px;
+}
+
 .prices__business {
   display: block;
-  padding: 0 25px;
+  padding: 0;
+  margin-left: 25px;
   margin-bottom: 13px;
 
   line-height: 16px;
   color: $link-color--darken;
   font-weight: $font-bold;
+}
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
+.prices__business:hover .prices__business-text,
+.prices__business:focus .prices__business-text {
+  opacity: 0.7;
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.prices__business:active .prices__business-text {
+  opacity: 0.3;
+}
+
+.prices__business-icon {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
+  .prices {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .prices__container {
+    padding-bottom: 48px;
+
+    &::before {
+      top: auto;
+      bottom: 48px;
+      right: 86px;
+    }
+  }
+
   .prices__title {
-    padding-right: 25px;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 30px;
 
     text-align: center;
   }
 
+  .prices__list {
+    margin-left: 0;
+    margin-bottom: 34px;
+  }
+
   .prices__business {
-    padding-left: 90px;
+    display: flex;
+    margin-left: 0;
+    margin-bottom: 17px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: #132576;
+  }
+
+  .prices__business-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 67px;
+    height: 67px;
+
+    background-color: $pale-grey-dark;
+    border-radius: 50%;
+  }
+
+  .prices__business-svg {
+    fill: #132576;
+  }
+
+  .prices__business-text {
+    padding-top: 25px;
+    padding-bottom: 22px;
+    margin-left: 23px;
+  }
+
+  .prices__business:hover .prices__business-svg,
+  .prices__business:focus .prices__business-svg {
+    opacity: 0.7;
+  }
+
+  .prices__business:active .prices__business-svg {
+    opacity: 0.3;
   }
 }
 
@@ -69,5 +139,18 @@
   .prices__container {
     padding-left: 112px;
     padding-right: 114px;
+    padding-bottom: 148px;
+
+    &::before {
+      top: 181px;
+      right: 113px;
+
+      width: 198px;
+      height: 198px;
+    }
+  }
+
+  .prices__title {
+    margin-bottom: 80px;
   }
 }

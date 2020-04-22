@@ -8,7 +8,10 @@
 
   background-color: $background-color--light;
   border-radius: 10px;
-  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 6px 21px 0 $box-shadow-color--dark;
+  }
 
   &--info {
     padding: 15px 18px;
@@ -23,22 +26,39 @@
   }
 }
 
+.traveler:hover .traveler__photo-image {
+  transform: scale(1.1);
+}
+
 .traveler__photo {
   display: block;
+  overflow: hidden;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .traveler__photo-image {
   display: block;
+
+  transition: all 300ms ease;
 }
 
 .traveler__about {
+  display: flex;
+  flex-direction: column;
   padding: 25px;
 }
 
 .traveler__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: 0;
   margin: 0;
   margin-bottom: 16px;
+  margin-right: 16px;
 
   font-size: 21px;
   line-height: 21px;
@@ -60,7 +80,10 @@
 }
 
 .traveler__indicator {
+  order: -1;
+
   display: block;
+  margin-right: 11px;
   width: 5px;
   height: 5px;
 
@@ -72,9 +95,23 @@
   }
 }
 
-.traveler__likes {
-  position: relative;
+.traveler__countries {
+  order: -1;
+  margin-top: -37px;
+  margin-bottom: 15px;
+}
 
+.traveler__hashtags {
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.traveler__likes {
+  position: absolute;
+  top: 54px;
+  left: 67px;
+
+  display: block;
   padding: 5px 0;
   padding-left: 37px;
 
@@ -84,7 +121,10 @@
   font-weight: $font-bold;
   text-transform: uppercase;
 
-  &::after {
+  border: none;
+  background-color: transparent;
+
+  &::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -97,18 +137,83 @@
     border-radius: 50%;
   }
 
-  &--active::after {
-    background-color: #f9eaea;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+
+    width: 13px;
+    height: 11px;
+
+    background-image: url("../img/heart.svg");
+
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: $pale-grey-dark;
+    }
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $pale-grey-dark;
+    }
+
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
+  &--active {
+    &::after {
+      background-image: url("../img/heart-active.svg");
+
+      opacity: 1;
+    }
+
+    &::before {
+      background-color: #f9eaea;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-color: #f9d8d8;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: #f9d8d8;
+      }
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
   }
 }
 
-.traveler__hashtags {
-  margin: 0 auto;
-  margin-bottom: 18px;
-}
-
 .traveler__block-title {
-  margin-left: 8px;
+  position: relative;
+  z-index: 2;
+
+  padding-left: 13px;
+  padding-right: 11px;
+
+  background-color: $background-color--light;
 }
 
 .traveler__call {
@@ -123,17 +228,42 @@
 }
 
 .traveler--info .traveler__photo {
-  margin-bottom: 16px;
-  width: 70px;
-}
+  float: left;
 
-.traveler--info .traveler__photo-image {
+  margin-bottom: 16px;
+  margin-right: 16px;
+  width: 70px;
+
   border-radius: 50%;
 }
 
 .traveler--info .traveler__name {
+  justify-content: space-between;
+  align-items: flex-start;
+
   font-size: 20px;
   line-height: 20px;
+  margin-bottom: 46px;
+  margin-right: 0;
+}
+
+.traveler--info .traveler__link {
+  max-width: 105px;
+
+  &:hover,
+  &:focus {
+    color: $link-color--hover;
+  }
+}
+
+.traveler--info .traveler__indicator {
+  order: 0;
+
+  margin-right: 4px;
+  margin-top: 8px;
+  margin-left: 10px;
+  width: 6px;
+  height: 6px;
 }
 
 .traveler--info .traveler__hashtags {
@@ -144,15 +274,21 @@
 
 .traveler--info .traveler__countries {
   margin-bottom: 24px;
+  margin-top: 0;
+}
+
+.traveler--info .traveler__transport {
+  margin-left: 0;
 }
 
 .traveler--info .traveler__columns {
   display: flex;
-  margin-bottom: 50px;
+  align-items: flex-start;
+  margin-bottom: 54px;
 }
 
 .traveler--info .traveler__level {
-  margin-bottom: 14px;
+  width: 64px;
 }
 
 @media (min-width: $tablet-width) {
@@ -165,17 +301,79 @@
       align-items: flex-start;
       justify-content: flex-start;
 
+      padding-top: 34px;
+      padding-bottom: 26px;
+      padding-left: 35px;
+      padding-right: 25px;
       width: 688px;
       box-sizing: border-box;
     }
   }
 
+  .traveler__photo-image {
+    width: 285px;
+  }
+
+  .traveler__about {
+    padding: 29px;
+    padding-top: 25px;
+  }
+
+  .traveler__countries {
+    margin-bottom: 19px;
+  }
+
+  .traveler__name {
+    margin-bottom: 24px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .traveler__hashtags {
+    margin-bottom: 24px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
   .traveler--info .traveler__photo {
+    margin-right: 30px;
+    margin-bottom: 21px;
     width: 190px;
+
+    border-radius: 15px;
+  }
+
+  .traveler--info .traveler__name {
+    justify-content: flex-start;
+
+    margin-bottom: 20px;
+    margin-left: 3px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .traveler--info .traveler__link {
+    max-width: 300px;
+  }
+
+  .traveler--info .traveler__indicator {
+    margin-top: 11px;
+    margin-left: 23px;
+    width: 7px;
+    height: 7px;
+  }
+
+  .traveler--info .traveler__hashtags {
+    margin-bottom: 47px;
+    margin-left: 6px;
   }
 
   .traveler--info .traveler__countries {
     order: 5;
+    margin-bottom: 0;
     width: 100%;
   }
 
@@ -183,26 +381,70 @@
     order: 4;
     flex-direction: column;
     margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  .traveler--info .traveler__transport {
+    margin-bottom: 13px;
+  }
+
+  .traveler--info .traveler__level {
+    width: 60px;
   }
 
   .traveler--info .traveler__call {
     position: static;
 
     display: inline-block;
-    margin-bottom: 0;
+    margin: 0;
     width: 148px;
 
     vertical-align: middle;
   }
 
   .traveler--info .traveler__likes {
+    position: relative;
+    top: auto;
+    left: auto;
+
     display: inline-block;
+    padding: 10px 0;
+    padding-left: 59px;
+    margin-left: -5px;
+
+    font-size: 20px;
+    line-height: 30px;
 
     vertical-align: middle;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      bottom: 16px;
+      left: 15px;
+
+      width: 20px;
+      height: 17px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .traveler__countries {
+    margin-bottom: 21px;
+  }
+
+  .traveler__name {
+    margin-bottom: 22px;
+  }
+
+  .traveler__hashtags {
+    margin-bottom: 25px;
+  }
+
   .traveler--info {
     padding: 0;
     width: 950px;
@@ -210,23 +452,77 @@
 
   .traveler--info .traveler__photo {
     width: 285px;
+    margin-bottom: 0;
+    margin-right: 34px;
+
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 
   .traveler--info .traveler__desc {
-    width: 342px;
+    position: relative;
+
+    padding-right: 53px;
+    margin-top: 48px;
+    width: 355px;
+    box-sizing: border-box;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 43px;
+
+      width: 1px;
+      height: 187px;
+
+      background-image: url("../img/devider.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .traveler--info .traveler__name {
+    margin-left: 0;
+  }
+
+  .traveler--info .traveler__link {
+    max-width: 300px;
+  }
+
+  .traveler--info .traveler__indicator {
+    order: -1;
+    margin-left: 0;
+    margin-right: 18px;
+  }
+
+  .traveler--info .traveler__hashtags {
+    margin-left: 28px;
+  }
+
+  .traveler--info .traveler__call {
+    margin-left: 22px;
   }
 
   .traveler--info .traveler__countries {
     order: 4;
-    padding-bottom: 100px;
+    padding-bottom: 96px;
+    padding-right: 20px;
+    margin-top: 49px;
     width: 276px;
-    min-height: 100px;
+    min-height: 198px;
+    box-sizing: border-box;
   }
 
   .traveler--info .traveler__columns {
     flex-direction: row;
+    align-items: center;
     order: 5;
-    margin-top: -100px;
+    margin-top: -96px;
     width: 276px;
+  }
+
+  .traveler--info .traveler__transport {
+    margin-bottom: 0;
   }
 }

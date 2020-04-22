@@ -8,16 +8,28 @@
   position: relative;
   z-index: 1;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
   margin-top: -10px;
-  padding: 25px;
+  padding: 25px 24px;
   border-radius: 10px;
   background-color: $background-color--light;
 }
 
+.direction__flag {
+  margin-top: -37px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
 .direction__title {
-  margin: 0;
   padding: 0;
+  margin: 0;
   margin-bottom: 5px;
+  width: 170px;
 
   font-size: 21px;
   line-height: 21px;
@@ -41,6 +53,7 @@
 .direction__subtitle {
   margin: 0;
   padding: 0;
+  width: 100%;
 
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
@@ -48,14 +61,32 @@
 }
 
 .direction__users {
+  position: relative;
+
   margin: 0;
   padding: 0;
-  padding-left: 20px;
+  padding-left: 19px;
+  width: 52px;
+  box-sizing: border-box;
 
   line-height: 30px;
   color: rgba(68, 68, 68, 0.3);
   font-weight: $font-medium;
   text-align: right;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 11px;
+    height: 11px;
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
+
+    opacity: 0.1;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -67,11 +98,91 @@
   .direction__image {
     order: 1;
     width: 186px;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .direction__about {
+    position: relative;
+
+    padding-top: 31px;
+    padding-left: 30px;
+    padding-bottom: 23px;
     margin-top: 0;
-    width: 432px;
+    width: 476px;
     box-sizing: border-box;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .direction__flag {
+    position: absolute;
+    top: 16px;
+    right: -35px;
+
+    width: 70px;
+    height: 47px;
+    margin: 0;
+  }
+
+  .direction__title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .direction__subtitle {
+    margin-bottom: 18px;
+
+    font-size: 20px;
+  }
+
+  .direction__users {
+    order: 1;
+    padding-left: 30px;
+    width: 100%;
+
+    font-size: 20px;
+    text-align: left;
+
+    &::before {
+      top: 4px;
+      left: -1px;
+
+      width: 21px;
+      height: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .direction__about {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 31px;
+    width: 373px;
+  }
+
+  .direction__flag {
+    top: 23px;
+  }
+
+  .direction__subtitle {
+    margin-bottom: 25px;
+  }
+
+  .direction__users {
+    padding-left: 31px;
+
+    &::before {
+      top: 4px;
+      left: 0;
+
+      width: 20px;
+    }
   }
 }

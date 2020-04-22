@@ -1,12 +1,58 @@
+.countries--list {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -18px;
+
+    width: 270px;
+    height: 1px;
+
+    background-color: $background-color;
+  }
+}
+
+.countries__title {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+  padding-left: 13px;
+  padding-right: 11px;
+  margin: 0;
+  margin-bottom: 18px;
+
+  background-color: $background-color--light;
+}
+
 .countries__list {
   @include reset-list;
+}
+
+.countries--line .countries__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .countries--list .countries__list {
   margin-left: 7px;
 }
 
-.countries__item {
+.countries--line .countries__item {
+  margin-right: 19px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.countries--list .countries__item {
+  display: flex;
+  align-items: center;
+
   margin-bottom: 10px;
 
   &:last-child {
@@ -14,25 +60,93 @@
   }
 }
 
-.countries__country {
+.countries--list .countries__flag {
+  margin-right: 14px;
+}
+
+.countries--list .countries__country {
+  padding-top: 3px;
+
   color: $color--dark;
   font-weight: $font-medium;
   text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {
+  .countries--list {
+    &::before {
+      top: 8px;
+      left: -35px;
+
+      width: 688px;
+    }
+  }
+
+  .countries__title {
+    padding: 0 12px;
+    margin-left: 36px;
+  }
+
   .countries--list .countries__list {
     display: flex;
     flex-wrap: wrap;
+
+    margin-left: 1px;
   }
 
   .countries--list .countries__item {
-    padding-left: 47px;
+    margin-right: 28px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .countries--list .countries__flag {
+    margin-right: 11px;
+    padding-bottom: 4px;
+  }
+
+  .countries--list .countries__country {
+    padding-top: 0;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .countries--list {
+    &::before {
+      display: none;
+    }
+  }
+
   .countries--list .countries__list {
     flex-direction: column;
+    margin-left: 0;
+  }
+
+  .countries__title {
+    display: none;
+  }
+
+  .countries--list .countries__item {
+    align-items: flex-start;
+    margin-right: 0;
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .countries--list .countries__flag {
+    margin-right: 19px;
+  }
+
+  .countries--list .countries__country {
+    padding-top: 0;
   }
 }

@@ -20,3 +20,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@media (min-width: $tablet-width) {
+  body {
+    font-size: $font-size-tablet;
+    line-height: $line-height-tablet;
+  }
+}

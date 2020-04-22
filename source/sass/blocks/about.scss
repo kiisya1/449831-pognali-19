@@ -1,21 +1,41 @@
 .about {
+  position: relative;
+
   min-width: 320px;
 
   color: $color--light;
 
   background-color: $background-color--darken;
-  background-image: url("../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: top center;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -19px;
+
+    width: 132px;
+    height: 132px;
+
+    background-color: #141b3b;
+    border-radius: 20px;
+  }
 }
 
 .about__container {
+  position: relative;
+  z-index: 2;
+
   padding: 25px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
   padding-right: 45px;
   margin-bottom: 45px;
+
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 292px;
+  background-position: bottom left 18px;
 }
 
 .about__button {
@@ -23,20 +43,79 @@
 }
 
 @media (min-width: $tablet-width) {
+  .about {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    &::before {
+      top: 0;
+      left: 50%;
+
+      width: 688px;
+      height: 213px;
+
+      transform: translateX(-50%);
+    }
+  }
+
   .about__container {
     padding-left: 75px;
     padding-right: 368px;
+    padding-bottom: 88px;
+
+    background-image: url("../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-size: 376px;
+    background-position: bottom 88px right 8px;
+  }
+
+  .about__title {
+    margin-top: 15px;
   }
 
   .about__button {
-    display: block;
+    display: flex;
     width: 274px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .about {
+    padding-top: 130px;
+    margin-top: -60px;
+    margin-bottom: 88px;
+
+    &::before {
+      display: none;
+    }
+  }
+
   .about__container {
     padding-left: 112px;
     padding-right: 645px;
+    padding-bottom: 163px;
+
+    background-image: url("../img/about-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 630px;
+    background-position: bottom 0 right 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 40px;
+      z-index: -1;
+
+      width: 213px;
+      height: 213px;
+
+      background-color: #141b3b;
+      border-radius: 20px;
+    }
+  }
+
+  .about__title {
+    margin-top: 38px;
   }
 }
