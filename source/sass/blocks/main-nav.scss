@@ -1,12 +1,16 @@
 .main-nav {
-  padding-top: 50px;
+  padding-top: 46px;
   padding-bottom: 40px;
 
   background-color: $background-color--light;
 }
 
 .main-nav__list {
-  margin-bottom: 50px;
+  margin-bottom: 49px;
+
+  &--user {
+    margin-bottom: 52px;
+  }
 }
 
 .main-nav__contacts--icons {
@@ -19,12 +23,12 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    padding-top: 75px;
+    padding-top: 68px;
     padding-bottom: 90px;
   }
 
   .main-nav__list {
-    margin-bottom: 150px;
+    margin-bottom: 135px;
   }
 
   .main-nav__list--user {
@@ -32,7 +36,7 @@
   }
 
   .main-nav__contacts {
-    margin-bottom: 132px;
+    margin-bottom: 130px;
   }
 
   .main-nav__socials-list {
@@ -69,7 +73,7 @@
 @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
   .main-nav__container {
     padding: 0 40px;
-    padding-left: 96px;
+    padding-left: 97px;
     margin: 0 auto;
     width: $tablet-width;
     box-sizing: border-box;
@@ -84,7 +88,7 @@
   .main-nav {
     margin-right: auto;
     padding: 0;
-    padding-top: 47px;
+    padding-top: 49px;
     padding-right: 40px;
     width: 1080px;
 
@@ -100,26 +104,25 @@
 
   .main-nav__container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
   }
 
   .main-nav__list {
     margin-bottom: 0;
+    margin-top: 8px;
   }
 
   .main-nav__list--user {
+    order: 5;
     display: flex;
+    margin-top: 0;
     padding-bottom: 0;
     width: 189px;
   }
 
   .main-nav__contacts {
-    display: none;
-  }
-
-  .main-nav__contacts--icons {
-    display: flex;
+    order: 4;
     margin-bottom: 0;
   }
 

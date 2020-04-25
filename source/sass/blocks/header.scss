@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+.header--inner .header__container {
+  padding-top: 19px;
+}
+
 .header__menu-toggle {
   position: relative;
   display: block;
@@ -43,6 +47,7 @@
   }
 
   &--active {
+    margin-right: 3px;
     width: 19px;
     height: 19px;
     background-image: url("../img/menu-close.svg");
@@ -72,10 +77,18 @@
     padding-top: 40px;
   }
 
+  .header--inner .header__container {
+    padding-top: 40px;
+  }
+
   .header__menu-toggle {
+    margin-left: 23px;
+    margin-top: 2px;
     width: 24px;
 
     &--active {
+      margin-right: 0;
+      margin-top: 0;
       width: 18px;
       height: 18px;
     }
@@ -109,6 +122,10 @@
     padding-top: 47px;
     padding-bottom: 0;
     width: 280px;
+  }
+
+  .header--inner .header__container {
+    padding-top: 47px;
   }
 
   .header__logo {

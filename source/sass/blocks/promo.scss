@@ -1,22 +1,27 @@
 .promo {
-  padding: 25px 0;
   min-width: 320px;
 
   color: $color--light;
 
   background-color: $background-color--dark;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
-    linear-gradient(to bottom, transparent 405px, $background-color--dark 405px, $background-color--dark 700px, $background-color--darken 700px),
+    linear-gradient(to bottom, transparent 408px, $background-color--dark 408px, $background-color--dark 700px, $background-color--darken 700px),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top 150px left 64%, top, top -60px center;
+  background-position: top 152px left 62%, top, top -71px center;
+}
+
+.promo__container {
+  padding: 25px;
+  padding-top: 23px;
+  padding-bottom: 29px;
 }
 
 .promo__title {
   width: 234px;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 240px;
+  margin-bottom: 244px;
 
   font-size: 36px;
   line-height: 40px;
@@ -25,7 +30,8 @@
 
 .promo__wrapper {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+  margin-left: 1px;
 }
 
 .promo__list {
@@ -37,24 +43,24 @@
   margin-left: 25px;
 }
 
-.promo__using-list {
-  margin-bottom: 15px;
-}
-
 @media (min-width: $tablet-width) {
   .promo {
-    padding-top: 55px;
-
     background-color: #182044;
     background-image: url("../img/traveller-illustration-tablet@1x.png"),
       url("../img/globe-back-tablet@1x.jpg"),
       linear-gradient(to bottom, #182044 73.5%, $background-color--darken 73.5%);
     background-size: 372px, 1479px, auto;
-    background-position: top 312px left 68%, top 289px left 50%, top center;
+    background-position: top 288px left 72%, top 267px left 50%, top center;
+  }
+
+  .promo__container {
+    padding: 0 40px;
+    padding-top: 47px;
+    padding-bottom: 96px;
   }
 
   .promo__title {
-    margin-bottom: 96px;
+    margin-bottom: 87px;
     width: 400px;
 
     font-size: 60px;
@@ -66,19 +72,13 @@
   }
 
   .promo__blockquote {
-    margin-bottom: 210px;
-  }
-
-  .promo__using-list {
-    margin-bottom: 71px;
+    margin-bottom: 192px;
+    margin-left: 34px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .promo {
-    position: relative;
-    z-index: 2;
-
     background-color: $background-color--dark;
     background-image: url("../img/traveller-illustration-desktop@1x.png"),
       url("../img/globe-back-desktop@1x.jpg");
@@ -93,25 +93,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 123px;
   }
 
   .promo__title {
     width: 400px;
     margin: 0;
-    margin-top: 63px;
-    margin-left: 70px;
-    margin-bottom: 105px;
+    margin-top: 62px;
+    margin-left: 67px;
+    margin-bottom: 101px;
 
     text-align: left;
   }
 
   .promo__blockquote {
     margin: 0;
-    margin-right: 25px;
-    margin-top: 70px;
-  }
-
-  .promo__using-list {
-    margin-bottom: 98px;
+    margin-right: 21px;
+    margin-top: 74px;
   }
 }

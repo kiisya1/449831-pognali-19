@@ -1,9 +1,10 @@
 .flag {
-  display: flex;
+  width: 35px;
+  height: 24px;
 }
 
 @media (min-width: $tablet-width) {
-  .flag__svg--large {
+  .flag--large {
     width: 70px;
     height: 47px;
   }

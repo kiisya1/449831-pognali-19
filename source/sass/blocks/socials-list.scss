@@ -8,7 +8,7 @@
   &--yellow {
     position: relative;
 
-    padding-bottom: 38px;
+    padding-bottom: 37px;
 
     &::after {
       content: "";
@@ -25,15 +25,15 @@
 }
 
 .socials-list__item {
-  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 22px;
+  width: 23px;
 
   &:last-child {
     margin-right: 0;
   }
-}
-
-.socials-list--yellow .socials-list__item {
-  margin-right: 0;
 }
 
 .socials-list__link {
@@ -43,22 +43,6 @@
 .socials-list__svg {
   display: block;
   fill: $blue-darken;
-}
-
-.socials-list--yellow .socials-list__svg {
-  fill: $blue;
-}
-
-.socials-list__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 45px;
-  height: 45px;
-
-  background-color: $btn-background;
-  border-radius: 50%;
 }
 
 .socials-list__link--fb .socials-list__svg {
@@ -85,18 +69,37 @@
   opacity: 0.3;
 }
 
-.socials-list__link--yellow:hover .socials-list__icon,
-.socials-list__link--yellow:focus .socials-list__icon {
-  background-color: $btn-background--hover;
+
+.socials-list--yellow .socials-list__item {
+  margin-right: 0;
+  width: 45px;
+}
+
+.socials-list--yellow .socials-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  background-color: $btn-background;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $btn-background--hover;
+  }
+}
+
+.socials-list--yellow .socials-list__svg {
+  fill: $blue;
 }
 
 .socials-list__link--yellow:hover .socials-list__svg,
 .socials-list__link--yellow:focus .socials-list__svg {
   opacity: 1;
-}
-
-.socials-list__link--yellow:active .socials-list__icon {
-  background-color: $btn-background--hover;
 }
 
 .socials-list__link--yellow:active .socials-list__svg {
@@ -117,10 +120,15 @@
   }
 
   .socials-list__item {
-    margin-right: 33px;
+    margin-right: 35px;
+    width: auto;
   }
 
-  .socials-list__icon {
+  .socials-list--yellow .socials-list__item {
+    width: 60px;
+  }
+
+  .socials-list--yellow .socials-list__link {
     width: 60px;
     height: 60px;
   }

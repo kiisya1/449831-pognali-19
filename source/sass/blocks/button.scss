@@ -50,7 +50,7 @@
   }
 
   &--large {
-    padding: 13px 70px 7px;
+    padding: 12px 79px 8px;
 
     border-radius: 25px;
   }
@@ -94,6 +94,8 @@
   &--yellow {
     padding-top: 19px;
     padding-bottom: 19px;
+    padding-right: 20px;
+    padding-left: 20px;
 
     border: 3px solid $blue-darken;
 
@@ -140,7 +142,7 @@
     &--arrow {
       padding-top: 29px;
       padding-bottom: 28px;
-      padding-left: 34px;
+      padding-left: 33px;
       padding-right: 36px;
 
       font-size: 24px;
@@ -152,6 +154,8 @@
     &--yellow {
       padding-top: 26px;
       padding-bottom: 25px;
+      padding-right: 33px;
+      padding-left: 33px;
     }
   }
 }

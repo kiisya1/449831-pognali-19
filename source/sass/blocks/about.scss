@@ -27,15 +27,20 @@
   position: relative;
   z-index: 2;
 
-  padding: 25px;
-  padding-bottom: 50px;
+  padding-top: 38px;
+  padding-bottom: 63px;
   padding-right: 45px;
-  margin-bottom: 45px;
+  padding-left: 24px;
 
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: 292px;
   background-position: bottom left 18px;
+}
+
+.about__discription {
+  padding-right: 2px;
+  margin-bottom: 18px;
 }
 
 .about__button {
@@ -62,6 +67,7 @@
     padding-left: 75px;
     padding-right: 368px;
     padding-bottom: 88px;
+    padding-top: 27px;
 
     background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
@@ -73,27 +79,30 @@
     margin-top: 15px;
   }
 
+  .about__discription {
+    padding-right: 2px;
+    margin-bottom: 31px;
+  }
+
   .about__button {
     display: flex;
+    margin-top: 51px;
     width: 274px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .about {
-    padding-top: 130px;
-    margin-top: -60px;
-    margin-bottom: 88px;
-
     &::before {
       display: none;
     }
   }
 
   .about__container {
-    padding-left: 112px;
+    padding-left: 111px;
     padding-right: 645px;
     padding-bottom: 163px;
+    padding-top: 94px;
 
     background-image: url("../img/about-desktop@1x.png");
     background-repeat: no-repeat;
@@ -103,7 +112,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: 72px;
       left: 40px;
       z-index: -1;
 
@@ -117,5 +126,15 @@
 
   .about__title {
     margin-top: 38px;
+    margin-left: -1px;
+    margin-bottom: 58px;
+  }
+
+  .about__discription {
+    margin-bottom: 39px;
+  }
+
+  .about__button {
+    margin-top: 83px;
   }
 }

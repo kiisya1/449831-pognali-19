@@ -14,22 +14,24 @@
   align-items: flex-start;
 
   margin-top: -10px;
-  padding: 25px 24px;
+  padding: 22px 24px;
+  padding-top: 26px;
+
   border-radius: 10px;
   background-color: $background-color--light;
 }
 
 .direction__flag {
-  margin-top: -37px;
-  margin-bottom: 15px;
-  width: 100%;
+  position: absolute;
+  top: -13px;
+  left: 25px;
 }
 
 .direction__title {
   padding: 0;
   margin: 0;
   margin-bottom: 5px;
-  width: 170px;
+  width: 150px;
 
   font-size: 21px;
   line-height: 21px;
@@ -52,7 +54,9 @@
 
 .direction__subtitle {
   margin: 0;
+  margin-top: -4px;
   padding: 0;
+  padding-left: 1px;
   width: 100%;
 
   line-height: 18px;
@@ -64,10 +68,9 @@
   position: relative;
 
   margin: 0;
+  margin-top: -3px;
   padding: 0;
   padding-left: 19px;
-  width: 52px;
-  box-sizing: border-box;
 
   line-height: 30px;
   color: rgba(68, 68, 68, 0.3);
@@ -78,7 +81,7 @@
     content: "";
     position: absolute;
     top: 8px;
-    left: 0;
+    left: 1px;
 
     width: 11px;
     height: 11px;
@@ -105,11 +108,9 @@
   }
 
   .direction__about {
-    position: relative;
-
     padding-top: 31px;
     padding-left: 30px;
-    padding-bottom: 23px;
+    padding-bottom: 17px;
     margin-top: 0;
     width: 476px;
     box-sizing: border-box;
@@ -121,13 +122,9 @@
   }
 
   .direction__flag {
-    position: absolute;
     top: 16px;
-    right: -35px;
-
-    width: 70px;
-    height: 47px;
-    margin: 0;
+    right: -36px;
+    left: auto;
   }
 
   .direction__title {
@@ -137,13 +134,15 @@
 
   .direction__subtitle {
     margin-bottom: 18px;
+    margin-top: 0;
+    margin-left: -1px;
 
     font-size: 20px;
   }
 
   .direction__users {
     order: 1;
-    padding-left: 30px;
+    padding-left: 29px;
     width: 100%;
 
     font-size: 20px;
@@ -162,13 +161,14 @@
 @media (min-width: $desktop-width) {
   .direction__about {
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 17px;
     padding-left: 31px;
     width: 373px;
   }
 
   .direction__flag {
     top: 23px;
+    right: -35px;
   }
 
   .direction__subtitle {
@@ -176,7 +176,7 @@
   }
 
   .direction__users {
-    padding-left: 31px;
+    padding-left: 29px;
 
     &::before {
       top: 4px;

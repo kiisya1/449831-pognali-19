@@ -64,7 +64,7 @@
   .using-list__item {
     width: 344px;
     padding-top: 31px;
-    padding-bottom: 60px;
+    padding-bottom: 61px;
     padding-left: 34px;
     padding-right: 112px;
     box-sizing: border-box;
@@ -77,9 +77,10 @@
 
     &::after {
       top: auto;
-      bottom: 28px;
+      bottom: 24px;
       left: 34px;
 
+      font-size: 30px;
       text-align: left;
     }
 
@@ -96,6 +97,7 @@
     &:nth-child(4n+4) {
       margin-left: -20px;
       border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
       border-top-right-radius: 0;
       border-top-left-radius: 0;
     }
@@ -110,7 +112,7 @@
     }
 
     &:not(:last-child) {
-      padding-bottom: 60px;
+      padding-bottom: 61px;
     }
   }
 }
@@ -134,7 +136,12 @@
       left: auto;
       right: 53px;
 
+      font-size: 24px;
       text-align: left;
+    }
+
+    &:nth-child(4n+1) {
+      padding-left: 34px;
     }
 
     &:nth-child(2n+1) {

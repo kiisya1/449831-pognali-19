@@ -7,8 +7,8 @@
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header class="header header--theme-light header--index">
+  <body class="index">
+    <header class="index__header header header--theme-light header--index">
 
       <div class="header__container container">
 
@@ -47,50 +47,37 @@
             </li>
           </ul>
 
-          <div class="main-nav__contacts main-nav__contacts--icons contacts contacts--icons">
-            <a href="tel:88005558628" class="contacts__link contacts__link--tel contacts__link--mango">
-              <div class="contacts__icon">
-                <svg class="contacts__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                  <path d="M12.6 18h-.8c-3.6-.4-6.2-2.1-8.1-4.3C1.8 11.6.3 8.8 0 5V4c.1-.7.4-1.1.8-1.5C1.2 2 2 1.4 2.6 1.3c.5 0 1.3.3 1.6.8.3.4.4 1.2.6 1.8.1.6.4 1.4.4 2-.2.9-1.3 1.3-1.7 1.9 1.1 2.8 3 4.8 5.4 6.2.6-.3 1.2-1.4 2-1.4.3 0 .7.2 1 .3.3.1.6.2 1 .4.5.2 1.4.5 1.7.9.3.4.5 1.2.4 1.7-.1.8-1.6 1.8-2.4 2.1z"/>
-                  <path d="M9.1 1.1c4.3 0 7.8 3.6 7.8 8H18c0-5-4-9.1-8.9-9.1v1.1zM9.1 6.9V8c.6 0 1 .5 1 1.1h1.1c0-1.2-.9-2.2-2.1-2.2z"/>
-                  <path d="M9.1 4.6c2.4 0 4.4 2 4.4 4.5h1.2c0-3.1-2.5-5.7-5.5-5.7v1.2h-.1z"/>
-                </svg>
-              </div>
-              <span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span>
-            </a>
-            <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email contacts__link--orange">
-              <div class="contacts__icon">
-                <svg class="contacts__svg" width="18" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14">
-                  <path d="M14.9 1.8c1.2-1 .9-1.8-.7-1.8H3.7c-1.5 0-1.8.8-.6 1.8l3.7 3.1c1.2 1 3.2 1 4.4 0l3.7-3.1z"/>
-                  <path d="M11.9 7.1c-1.2 1-2.2 1.8-2.2 1.8-.1.1-.2.1-.3.1h-.1c-.1.1-.2.1-.3.1-.1 0-.2 0-.3-.1h-.1c-.1 0-.2 0-.3-.1 0 0-1-.8-2.2-1.8L2.2 3.8C1 2.8 0 3.3 0 4.8v6.3C0 12.7 1.3 14 2.8 14h12.3c1.6 0 2.8-1.3 2.8-2.8V4.8c0-1.6-1-2-2.2-1l-3.8 3.3z"/>
-                </svg>
-              </div>
-              <span class="visually-hidden">mail@htmlacademy.ru</span>
-            </a>
-          </div>
-
           <ul class="main-nav__list main-nav__list--user user-list">
             <li class="user-list__item">
               <a href="login.html" class="user-list__link button button--large">Авторизация</a>
             </li>
           </ul>
 
-          <div class="main-nav__contacts contacts">
+          <div class="main-nav__contacts contacts contacts--changing">
             <a href="tel:88005558628" class="contacts__link contacts__link--tel">
-              <div class="contacts__icon">
-                <svg class="contacts__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-                  <path d="M18 0C12 0 5 1 3 3s-3 6-3 8l2 2 5-1h1l1-1V8l2-2h14l2 2v3l2 1a494 494 0 007-1c0-2-1-6-3-8s-9-3-15-3zm0 20c-2 0-3 1-3 3s1 3 3 3 3-2 3-3-1-3-3-3zm-2-7v-2l-2-2-2 2v2L2 24l-1 2v3c0 2 1 3 3 3h1v2c0 1 0 2 2 2s1-1 1-2v-2h20v2a2 2 0 104 0v-2c2 0 3-1 3-3v-3l-1-2-10-11v-2l-2-2-2 2v2h-4zm2 4c3 0 6 2 6 6 0 3-3 6-6 6s-6-3-6-6c0-4 3-6 6-6z"/>
-                </svg>
-              </div>
-              <span>8&nbsp;800&nbsp;555-86-28</span>
+              <svg class="contacts__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                <path d="M18 0C12 0 5 1 3 3s-3 6-3 8l2 2 5-1h1l1-1V8l2-2h14l2 2v3l2 1a494 494 0 007-1c0-2-1-6-3-8s-9-3-15-3zm0 20c-2 0-3 1-3 3s1 3 3 3 3-2 3-3-1-3-3-3zm-2-7v-2l-2-2-2 2v2L2 24l-1 2v3c0 2 1 3 3 3h1v2c0 1 0 2 2 2s1-1 1-2v-2h20v2a2 2 0 104 0v-2c2 0 3-1 3-3v-3l-1-2-10-11v-2l-2-2-2 2v2h-4zm2 4c3 0 6 2 6 6 0 3-3 6-6 6s-6-3-6-6c0-4 3-6 6-6z"/>
+              </svg>
+
+              <svg class="contacts__svg contacts__svg--changing" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                <path d="M12.6 18h-.8c-3.6-.4-6.2-2.1-8.1-4.3C1.8 11.6.3 8.8 0 5V4c.1-.7.4-1.1.8-1.5C1.2 2 2 1.4 2.6 1.3c.5 0 1.3.3 1.6.8.3.4.4 1.2.6 1.8.1.6.4 1.4.4 2-.2.9-1.3 1.3-1.7 1.9 1.1 2.8 3 4.8 5.4 6.2.6-.3 1.2-1.4 2-1.4.3 0 .7.2 1 .3.3.1.6.2 1 .4.5.2 1.4.5 1.7.9.3.4.5 1.2.4 1.7-.1.8-1.6 1.8-2.4 2.1z"/>
+                <path d="M9.1 1.1c4.3 0 7.8 3.6 7.8 8H18c0-5-4-9.1-8.9-9.1v1.1zM9.1 6.9V8c.6 0 1 .5 1 1.1h1.1c0-1.2-.9-2.2-2.1-2.2z"/>
+                <path d="M9.1 4.6c2.4 0 4.4 2 4.4 4.5h1.2c0-3.1-2.5-5.7-5.5-5.7v1.2h-.1z"/>
+              </svg>
+
+              <span class="contacts__link-text">8&nbsp;800&nbsp;555-86-28</span>
             </a>
             <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email">
-              <div class="contacts__icon">
-                <svg class="contacts__svg" width="18" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 26">
-                  <path d="M0 23c0 2 1 3 3 3h30c2 0 3-1 3-3V3c0-2-1-3-3-3H3C1 0 0 1 0 3v20zm11-10L4 6V4h2l11 11h2L30 4h2v2l-7 7 7 7v2h-2l-7-7-3 3-2 1-2-1-3-3-7 7H4v-2l7-7z"/>
-                </svg>
-              </div>
-              <span>mail@htmlacademy.ru</span>
+              <svg class="contacts__svg" width="18" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 26">
+                <path d="M0 23c0 2 1 3 3 3h30c2 0 3-1 3-3V3c0-2-1-3-3-3H3C1 0 0 1 0 3v20zm11-10L4 6V4h2l11 11h2L30 4h2v2l-7 7 7 7v2h-2l-7-7-3 3-2 1-2-1-3-3-7 7H4v-2l7-7z"/>
+              </svg>
+
+              <svg class="contacts__svg contacts__svg--changing" width="18" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14">
+                <path d="M14.9 1.8c1.2-1 .9-1.8-.7-1.8H3.7c-1.5 0-1.8.8-.6 1.8l3.7 3.1c1.2 1 3.2 1 4.4 0l3.7-3.1z"/>
+                <path d="M11.9 7.1c-1.2 1-2.2 1.8-2.2 1.8-.1.1-.2.1-.3.1h-.1c-.1.1-.2.1-.3.1-.1 0-.2 0-.3-.1h-.1c-.1 0-.2 0-.3-.1 0 0-1-.8-2.2-1.8L2.2 3.8C1 2.8 0 3.3 0 4.8v6.3C0 12.7 1.3 14 2.8 14h12.3c1.6 0 2.8-1.3 2.8-2.8V4.8c0-1.6-1-2-2.2-1l-3.8 3.3z"/>
+              </svg>
+
+              <span class="contacts__link-text">mail@htmlacademy.ru</span>
             </a>
           </div>
 
@@ -129,7 +116,7 @@
     <main>
       <h1 class="visually-hidden">Сервис по&nbsp;поиску попутчиков &laquo;Погнали&raquo;</h1>
 
-      <section class="promo">
+      <section class="index__promo promo">
         <div class="promo__container container">
           <h2 class="promo__title">В&nbsp;путешествие с&nbsp;крутыми попутчиками!</h2>
 
@@ -137,22 +124,18 @@
 
             <div class="promo__contacts contacts contacts--icons">
               <a href="tel:88005558628" class="contacts__link contacts__link--tel contacts__link--mango">
-                <div class="contacts__icon">
-                  <svg class="contacts__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                    <path d="M12.6 18h-.8c-3.6-.4-6.2-2.1-8.1-4.3C1.8 11.6.3 8.8 0 5V4c.1-.7.4-1.1.8-1.5C1.2 2 2 1.4 2.6 1.3c.5 0 1.3.3 1.6.8.3.4.4 1.2.6 1.8.1.6.4 1.4.4 2-.2.9-1.3 1.3-1.7 1.9 1.1 2.8 3 4.8 5.4 6.2.6-.3 1.2-1.4 2-1.4.3 0 .7.2 1 .3.3.1.6.2 1 .4.5.2 1.4.5 1.7.9.3.4.5 1.2.4 1.7-.1.8-1.6 1.8-2.4 2.1z"/>
-                    <path d="M9.1 1.1c4.3 0 7.8 3.6 7.8 8H18c0-5-4-9.1-8.9-9.1v1.1zM9.1 6.9V8c.6 0 1 .5 1 1.1h1.1c0-1.2-.9-2.2-2.1-2.2z"/>
-                    <path d="M9.1 4.6c2.4 0 4.4 2 4.4 4.5h1.2c0-3.1-2.5-5.7-5.5-5.7v1.2h-.1z"/>
-                  </svg>
-                </div>
+                <svg class="contacts__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                  <path d="M12.6 18h-.8c-3.6-.4-6.2-2.1-8.1-4.3C1.8 11.6.3 8.8 0 5V4c.1-.7.4-1.1.8-1.5C1.2 2 2 1.4 2.6 1.3c.5 0 1.3.3 1.6.8.3.4.4 1.2.6 1.8.1.6.4 1.4.4 2-.2.9-1.3 1.3-1.7 1.9 1.1 2.8 3 4.8 5.4 6.2.6-.3 1.2-1.4 2-1.4.3 0 .7.2 1 .3.3.1.6.2 1 .4.5.2 1.4.5 1.7.9.3.4.5 1.2.4 1.7-.1.8-1.6 1.8-2.4 2.1z"/>
+                  <path d="M9.1 1.1c4.3 0 7.8 3.6 7.8 8H18c0-5-4-9.1-8.9-9.1v1.1zM9.1 6.9V8c.6 0 1 .5 1 1.1h1.1c0-1.2-.9-2.2-2.1-2.2z"/>
+                  <path d="M9.1 4.6c2.4 0 4.4 2 4.4 4.5h1.2c0-3.1-2.5-5.7-5.5-5.7v1.2h-.1z"/>
+                </svg>
                 <span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span>
               </a>
               <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email contacts__link--orange">
-                <div class="contacts__icon">
-                  <svg class="contacts__svg" width="18" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14">
-                    <path d="M14.9 1.8c1.2-1 .9-1.8-.7-1.8H3.7c-1.5 0-1.8.8-.6 1.8l3.7 3.1c1.2 1 3.2 1 4.4 0l3.7-3.1z"/>
-                    <path d="M11.9 7.1c-1.2 1-2.2 1.8-2.2 1.8-.1.1-.2.1-.3.1h-.1c-.1.1-.2.1-.3.1-.1 0-.2 0-.3-.1h-.1c-.1 0-.2 0-.3-.1 0 0-1-.8-2.2-1.8L2.2 3.8C1 2.8 0 3.3 0 4.8v6.3C0 12.7 1.3 14 2.8 14h12.3c1.6 0 2.8-1.3 2.8-2.8V4.8c0-1.6-1-2-2.2-1l-3.8 3.3z"/>
-                  </svg>
-                </div>
+                <svg class="contacts__svg" width="18" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14">
+                  <path d="M14.9 1.8c1.2-1 .9-1.8-.7-1.8H3.7c-1.5 0-1.8.8-.6 1.8l3.7 3.1c1.2 1 3.2 1 4.4 0l3.7-3.1z"/>
+                  <path d="M11.9 7.1c-1.2 1-2.2 1.8-2.2 1.8-.1.1-.2.1-.3.1h-.1c-.1.1-.2.1-.3.1-.1 0-.2 0-.3-.1h-.1c-.1 0-.2 0-.3-.1 0 0-1-.8-2.2-1.8L2.2 3.8C1 2.8 0 3.3 0 4.8v6.3C0 12.7 1.3 14 2.8 14h12.3c1.6 0 2.8-1.3 2.8-2.8V4.8c0-1.6-1-2-2.2-1l-3.8 3.3z"/>
+                </svg>
                 <span class="visually-hidden">mail@htmlacademy.ru</span>
               </a>
             </div>
@@ -179,10 +162,10 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="index__about about">
         <div class="about__container container">
           <h2 class="about__title title">О сервисе</h2>
-          <p class="about__discription text-discription">Любое путешествие веселее с&nbsp;попутчиками, которые на&nbsp;одной волне с&nbsp;тобой! Делитесь своими идеями путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.</p>
+          <p class="about__discription text-discription">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий и черпайте вдохновение в&nbsp;чужих.</p>
           <p class="about__discription text-discription text-discription--bold">А&nbsp;если найдете кого-то близкого по&nbsp;духу&nbsp;&mdash; скорее зовите в&nbsp;совместный трип!</p>
 
           <a href="#" class="about__button button button--arrow">
@@ -192,7 +175,7 @@
         </div>
       </section>
 
-      <section class="directions">
+      <section class="index__directions directions">
         <div class="directions__container container clearfix">
           <ul class="directions__list">
 
@@ -200,9 +183,7 @@
               <article class="directions__direction direction">
                 <img class="direction__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Острова Таиланда">
                 <div class="direction__about">
-                  <span class="direction__flag flag">
-                    <svg class="flag__svg flag__svg--large" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><rect width="70" height="47" rx="6.36" ry="6.36" fill="#ed5565"/><path fill="#fff" d="M0 10h70v28H0z"/><path fill="#4758a9" d="M0 14h70v20H0z"/></svg>
-                  </span>
+                  <svg class="direction__flag flag flag--large" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><rect width="70" height="47" rx="6.36" ry="6.36" fill="#ed5565"/><path fill="#fff" d="M0 10h70v28H0z"/><path fill="#4758a9" d="M0 14h70v20H0z"/></svg>
                   <h3 class="direction__title">
                     <a href="#" class="direction__link">Таиланд</a>
                   </h3>
@@ -216,9 +197,7 @@
               <article class="directions__direction direction">
                 <img class="direction__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Французские улочки">
                 <div class="direction__about">
-                  <span class="direction__flag flag">
-                    <svg class="flag__svg flag__svg--large" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAclBMVEVHWKntVWVHWKlHWKlHWKlHWKntVWXtVWXtVWXtVWVHWKlHWKntVWXtVWVHWKntVWVHWKntVWVHWKntVWVHWKntVWXtVWVHWKntVWVHWKlHWKntVWVHWKlHWKlHWKntVWXtVWXtVWVHWKn19/rtVWUAAABxvBR5AAAAInRSTlMAAEiv5/7+569ICKioCaOjRkatruv97K5HCamqTbDo6LBOjKe1xAAAAAFiS0dEJcMByQ8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkBBMKNhEYFpnUAAAAgklEQVRIx+3XSxaCMBBE0YqCAQX5CQiKSpP9r1GYcjLwmB7WW8AdVwHA4RjFsmvx5/adbJIaY4DzRTz9ymxl+cpcJZRxhUEp4YyrUGswDW4ajIVoMK0O48iQIUOGDBkyZMj4GZXt16HXYBqdXXzXWukYxlDmsX0G4Dm9/mfen3l9MF8+vLydO9jFDgAAAABJRU5ErkJggg=="/></svg>
-                  </span>
+                  <svg class="direction__flag flag flag--large" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAclBMVEVHWKntVWVHWKlHWKlHWKlHWKntVWXtVWXtVWXtVWVHWKlHWKntVWXtVWVHWKntVWVHWKntVWVHWKntVWVHWKntVWXtVWVHWKntVWVHWKlHWKntVWVHWKlHWKlHWKntVWXtVWXtVWVHWKn19/rtVWUAAABxvBR5AAAAInRSTlMAAEiv5/7+569ICKioCaOjRkatruv97K5HCamqTbDo6LBOjKe1xAAAAAFiS0dEJcMByQ8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkBBMKNhEYFpnUAAAAgklEQVRIx+3XSxaCMBBE0YqCAQX5CQiKSpP9r1GYcjLwmB7WW8AdVwHA4RjFsmvx5/adbJIaY4DzRTz9ymxl+cpcJZRxhUEp4YyrUGswDW4ajIVoMK0O48iQIUOGDBkyZMj4GZXt16HXYBqdXXzXWukYxlDmsX0G4Dm9/mfen3l9MF8+vLydO9jFDgAAAABJRU5ErkJggg=="/></svg>
                   <h3 class="direction__title">
                     <a href="#" class="direction__link">Франция</a>
                   </h3>
@@ -232,9 +211,8 @@
               <article class="directions__direction direction">
                 <img class="direction__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Прага">
                 <div class="direction__about">
-                  <span class="direction__flag flag">
-                    <svg class="flag__svg flag__svg--large" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABcVBMVEWapND19/pHWKntVWWTV4rsVWX19/r19/r19/r19/qUns309vr19/r19/pHWKn19/pHWKn19/pHWKn19/pHWKn19/rtVWVHWKntVWXtVWXtVWWGV4/rVWbtVWXtVWXtVWXtVWXtVWXtVWX19/qNmMr09vlHWKmHk8fz9fmCjsTx8/h8iMHw8/h2g7/u8fdxfrzr7vZterrp7PVod7nn6vNjcrbk5/JgbrTg5PBca7Pc4e9YaLHZ3e1WZrDU2etTY67Q1elRYa3L0edOXqzGzORMXKvByOJLXKu7wt9JWqq2vdxIWaqvt9lIWamosdaiq9NIWKmgVoTtVWVJWKitVn9MWKe5VnpQWKXDVnZVWKPMVnNbWKHUVW9jV57bVWxrV5rhVWp1V5bmVWiAV5LpVWeNV4zsVWaaV4dIWKinVoJLWKeyVn1OWKa9VnhTWKTIVnRYWKLQVnFfWJ/YVW5nV5zeVWtxV5jkVWl6V5ToVWcAAACBAZ6KAAAAI3RSTlMAAAAAAABIr+f+CKioCaOjRkatruv97K6uR6MJqaoJTbDoThU+hw0AAAABYktHRHo41YVqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AQTCjcQdgqYAwAAAUFJREFUSMet1tVCw0AURdFJB9oUd5cWObi7u3twd3eHvydIgbbpw8y9+wPW8xbCMNwe01usmdf0uA3DEK6YWF0iUFy8zSSUlFKdREMkAWXlVCdZpACoqCQyqSLNZlBVTWNMga9qaklM+g+DunqSE2DQ0MjCoKmZhUFLKwuDtnYWBh2dLAy6ulkY9PSyMOjrZ2EwMMjCYGiYhcHIKAuDsXEWBhOTLAymplkYzMyyMMAcCzO/YKkUgVlcUlIiMMsraoozs7qmqDgy6xuqihOzuaWsODDbO+pKOLO7p6GEMfsHOkooc3ikpYQwxyd6SjBzqokEMWfn2so/5uJSX/ljrq4Jyi9zc0tRAszdPUmxvt/v4ZGmZIhMW3l6pilW1ucXv7wSFSvbvvS3d6qSI4UrN4+q5BdIERUtC31+fcPvK5JSfgAk9LzirJYDiwAAAABJRU5ErkJggg=="/></svg>
-                  </span>
+                  <svg class="direction__flag flag flag--large" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABcVBMVEWapND19/pHWKntVWWTV4rsVWX19/r19/r19/r19/qUns309vr19/r19/pHWKn19/pHWKn19/pHWKn19/pHWKn19/rtVWVHWKntVWXtVWXtVWWGV4/rVWbtVWXtVWXtVWXtVWXtVWXtVWX19/qNmMr09vlHWKmHk8fz9fmCjsTx8/h8iMHw8/h2g7/u8fdxfrzr7vZterrp7PVod7nn6vNjcrbk5/JgbrTg5PBca7Pc4e9YaLHZ3e1WZrDU2etTY67Q1elRYa3L0edOXqzGzORMXKvByOJLXKu7wt9JWqq2vdxIWaqvt9lIWamosdaiq9NIWKmgVoTtVWVJWKitVn9MWKe5VnpQWKXDVnZVWKPMVnNbWKHUVW9jV57bVWxrV5rhVWp1V5bmVWiAV5LpVWeNV4zsVWaaV4dIWKinVoJLWKeyVn1OWKa9VnhTWKTIVnRYWKLQVnFfWJ/YVW5nV5zeVWtxV5jkVWl6V5ToVWcAAACBAZ6KAAAAI3RSTlMAAAAAAABIr+f+CKioCaOjRkatruv97K6uR6MJqaoJTbDoThU+hw0AAAABYktHRHo41YVqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AQTCjcQdgqYAwAAAUFJREFUSMet1tVCw0AURdFJB9oUd5cWObi7u3twd3eHvydIgbbpw8y9+wPW8xbCMNwe01usmdf0uA3DEK6YWF0iUFy8zSSUlFKdREMkAWXlVCdZpACoqCQyqSLNZlBVTWNMga9qaklM+g+DunqSE2DQ0MjCoKmZhUFLKwuDtnYWBh2dLAy6ulkY9PSyMOjrZ2EwMMjCYGiYhcHIKAuDsXEWBhOTLAymplkYzMyyMMAcCzO/YKkUgVlcUlIiMMsraoozs7qmqDgy6xuqihOzuaWsODDbO+pKOLO7p6GEMfsHOkooc3ikpYQwxyd6SjBzqokEMWfn2so/5uJSX/ljrq4Jyi9zc0tRAszdPUmxvt/v4ZGmZIhMW3l6pilW1ucXv7wSFSvbvvS3d6qSI4UrN4+q5BdIERUtC31+fcPvK5JSfgAk9LzirJYDiwAAAABJRU5ErkJggg=="/>
+                  </svg>
                   <h3 class="direction__title">
                     <a href="#" class="direction__link">Чехия</a>
                   </h3>
@@ -254,7 +232,7 @@
         </div>
       </section>
 
-      <section class="travelers">
+      <section class="index__travelers travelers">
         <div class="travelers__container container clearfix">
           <ul class="travelers__list">
             <li class="travelers__item">
@@ -286,21 +264,18 @@
                   <section class="traveler__countries countries countries--line">
                     <ul class="countries__list">
                       <li class="countries__item tooltip">
-                        <span class="countries__flag flag">
-                          <svg class="flag__svg" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 35 24"><image data-name="sri-lanka new" width="35" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAYCAYAAABwZEQ3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AQTDQIAzMNcVAAABD1JREFUSMe9lsuLXUUQxn/V3edx78ydyWRiopCHTkhATaIEXRhCFoJk48LFILh0m00E/wkXLrNwIQguBN372gQUERfmtdD4QJQkYx6GuZO5r/PqLhd9Z5KZCSq5gwVF96G7ur+ur6pOiV5cBDgGnAUW+P/lB+Ad4IboxcXjKBewClbjsgawKdgMVMEI1A0UVZx3AjggTABBxmNPoJYBhiMOOIeBfmNYGlicKJVYHmtG7Kq6YAz4AHkKnSkIAf9bgtYCZgIwGtXu9kiuU3jedsABksDl1Yy3fu+wOwlcy2Y5c/sSZ65/DdkM9AZw+Ek4/SKsFvQ+6lBfc5jpCVzjIZTC3Nl7uGMVdM0eBwwher9llMwouSjOAM6CNfdHjTSKU0iAdI3WTa7/L9IAQaJNtK/c2tQAiURNRbFGIkVrKg/cZCMgcaCVoDWYab0fQ2vgDGgpaCVIpkiq99cA8frgA3QS1iGApEr+XIUODDoQQtcQuha/YvC3LKYTSA5VEMDfsf8Y9G4iLCuW9isjkoMVzZJDKyE7WuAO1ejAEFYNdqfHPV1h2srw8zbDz6aQqRCp3jYwClpBcrDC33Skz1a0XhsgViEfXzQSmqsp5fk2dn9N/kJJstBQfJNTXsog3+imiTyDA2kpYSBoLUgrwB0b4yBXmp9TAKQTqC5nVL8o6ZM1vmuQXNGtxz2irGVBMx5rofkpxc0FSBQ6gfJqSv/jabLjBWY2EO5abCegpYDTaLsdYLQGM+Mx8wEzG+h+MMNsprjXezA00LW0XhqRPVPGLErAHKhpLmf4221kejtjphHMjCK7PGYu0DpR0H6jB0NZ95bZ4zFP1VALeIG2YuZ9BNJsPfKRwUiuNEuO5kJGemqEe6KBUqIq0FbYEaAQWB1XkFSgGavRLWk+UZ0RqzTLFr1rMUcqaI/jpaVQC8MPO4w+nYLZEDNsh6e8khHuyTantgfJlOx4QfltTv1HAhbaLw+xj3tW3t1B+WOKaSnp4QozG9Beipn1SKIPLX6PDsZG69FXLfxNR/FdjtbQOjkCp/hli9vb4G9ZmuuOxHjqXx3p0QocaNj6I5sotSVThudbSAJuf0Pr1AjmPYNPpgllzP7WyQKzr8GvGMy+JoL2YKyizUZAkxW9AHYuxIA1UHyfMTzfAg92Z4AAzV+W3vszG+i18wHqh9O0Dk83KQ8ubP7evClA6Jt1j6HxZO3LBkpkLYu2XII4IEegCMJSZWkUbohjtQjQH0HmoD+ActxyAmHV4Jct+pDXrXPIv6x5CIWJVMWcTh3QpZa9R9sN7y2skhllZEoW5juwcAIkgaaJLWc/tgLTi33CUOJTHlU0ttput4e+APRELy6eRvkCq5AEUAH14HJwrWhhDFQ1DIronZ3jejJpQy7AsomF0vK8A75EeJUgb1La+bjTQO2B/sYD7NjF3cl6sk3yJ5ZzwJW/AQUk3Xz1NRWZAAAAAElFTkSuQmCC"/></svg>
-                        </span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 35 24"><image data-name="sri-lanka new" width="35" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAYCAYAAABwZEQ3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AQTDQIAzMNcVAAABD1JREFUSMe9lsuLXUUQxn/V3edx78ydyWRiopCHTkhATaIEXRhCFoJk48LFILh0m00E/wkXLrNwIQguBN372gQUERfmtdD4QJQkYx6GuZO5r/PqLhd9Z5KZCSq5gwVF96G7ur+ur6pOiV5cBDgGnAUW+P/lB+Ad4IboxcXjKBewClbjsgawKdgMVMEI1A0UVZx3AjggTABBxmNPoJYBhiMOOIeBfmNYGlicKJVYHmtG7Kq6YAz4AHkKnSkIAf9bgtYCZgIwGtXu9kiuU3jedsABksDl1Yy3fu+wOwlcy2Y5c/sSZ65/DdkM9AZw+Ek4/SKsFvQ+6lBfc5jpCVzjIZTC3Nl7uGMVdM0eBwwher9llMwouSjOAM6CNfdHjTSKU0iAdI3WTa7/L9IAQaJNtK/c2tQAiURNRbFGIkVrKg/cZCMgcaCVoDWYab0fQ2vgDGgpaCVIpkiq99cA8frgA3QS1iGApEr+XIUODDoQQtcQuha/YvC3LKYTSA5VEMDfsf8Y9G4iLCuW9isjkoMVzZJDKyE7WuAO1ejAEFYNdqfHPV1h2srw8zbDz6aQqRCp3jYwClpBcrDC33Skz1a0XhsgViEfXzQSmqsp5fk2dn9N/kJJstBQfJNTXsog3+imiTyDA2kpYSBoLUgrwB0b4yBXmp9TAKQTqC5nVL8o6ZM1vmuQXNGtxz2irGVBMx5rofkpxc0FSBQ6gfJqSv/jabLjBWY2EO5abCegpYDTaLsdYLQGM+Mx8wEzG+h+MMNsprjXezA00LW0XhqRPVPGLErAHKhpLmf4221kejtjphHMjCK7PGYu0DpR0H6jB0NZ95bZ4zFP1VALeIG2YuZ9BNJsPfKRwUiuNEuO5kJGemqEe6KBUqIq0FbYEaAQWB1XkFSgGavRLWk+UZ0RqzTLFr1rMUcqaI/jpaVQC8MPO4w+nYLZEDNsh6e8khHuyTantgfJlOx4QfltTv1HAhbaLw+xj3tW3t1B+WOKaSnp4QozG9Beipn1SKIPLX6PDsZG69FXLfxNR/FdjtbQOjkCp/hli9vb4G9ZmuuOxHjqXx3p0QocaNj6I5sotSVThudbSAJuf0Pr1AjmPYNPpgllzP7WyQKzr8GvGMy+JoL2YKyizUZAkxW9AHYuxIA1UHyfMTzfAg92Z4AAzV+W3vszG+i18wHqh9O0Dk83KQ8ubP7evClA6Jt1j6HxZO3LBkpkLYu2XII4IEegCMJSZWkUbohjtQjQH0HmoD+ActxyAmHV4Jct+pDXrXPIv6x5CIWJVMWcTh3QpZa9R9sN7y2skhllZEoW5juwcAIkgaaJLWc/tgLTi33CUOJTHlU0ttput4e+APRELy6eRvkCq5AEUAH14HJwrWhhDFQ1DIronZ3jejJpQy7AsomF0vK8A75EeJUgb1La+bjTQO2B/sYD7NjF3cl6sk3yJ5ZzwJW/AQUk3Xz1NRWZAAAAAElFTkSuQmCC"/>
+                        </svg>
                         <span class="countries__country tooltip__text">Шри-ланка</span>
                       </li>
                       <li class="countries__item tooltip">
-                        <span class="countries__flag flag">
-                          <svg class="flag__svg" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><rect width="70" height="47" rx="6.36" ry="6.36" fill="#ed5565"/><path fill="#fff" d="M0 10h70v28H0z"/><path fill="#4758a9" d="M0 14h70v20H0z"/></svg>
-                        </span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><rect width="70" height="47" rx="6.36" ry="6.36" fill="#ed5565"/><path fill="#fff" d="M0 10h70v28H0z"/><path fill="#4758a9" d="M0 14h70v20H0z"/>
+                        </svg>
                         <span class="countries__country tooltip__text">Таиланд</span>
                       </li>
                       <li class="countries__item tooltip">
-                        <span class="countries__flag flag">
-                          <svg class="flag__svg" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,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"/></svg>
-                        </span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,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"/>
+                        </svg>
                         <span class="countries__country tooltip__text">Сейшелы</span>
                       </li>
                     </ul>
@@ -363,17 +338,13 @@
                   <section class="traveler__countries countries countries--line">
                     <ul class="countries__list">
                       <li class="countries__item tooltip">
-                        <span class="countries__flag flag">
-                          <svg class="flag__svg" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image data-name="Layer 0" width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAclBMVEVDSlTtVWVDSlRDSlRDSlRDSlTtVWXtVWXtVWXtVWVDSlRDSlTtVWXtVWVDSlTtVWVDSlTtVWVDSlTtVWVDSlTtVWXtVWVDSlTtVWVDSlRDSlTtVWVDSlRDSlRDSlTtVWXtVWXtVWVDSlT21mDtVWUAAAA+0BRLAAAAInRSTlMAAEiv5/7+569ICKioCaOjRkatruv97K5HCamqTbDo6LBOjKe1xAAAAAFiS0dEJcMByQ8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkBBMQNh/uH5J1AAAAgklEQVRIx+3XSxaCMBBE0YqCAQX5CQiKSpP9r1GYcjLwmB7WW8AdVwHA4RjFsmvx5/adbJIaY4DzRTz9ymxl+cpcJZRxhUEp4YyrUGswDW4ajIVoMK0O48iQIUOGDBkyZMj4GZXt16HXYBqdXXzXWukYxlDmsX0G4Dm9/mfen3l9MF8+vLydO9jFDgAAAABJRU5ErkJggg=="/>
-                          </svg>
-                        </span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image data-name="Layer 0" width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAclBMVEVDSlTtVWVDSlRDSlRDSlRDSlTtVWXtVWXtVWXtVWVDSlRDSlTtVWXtVWVDSlTtVWVDSlTtVWVDSlTtVWVDSlTtVWXtVWVDSlTtVWVDSlRDSlTtVWVDSlRDSlRDSlTtVWXtVWXtVWVDSlT21mDtVWUAAAA+0BRLAAAAInRSTlMAAEiv5/7+569ICKioCaOjRkatruv97K5HCamqTbDo6LBOjKe1xAAAAAFiS0dEJcMByQ8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkBBMQNh/uH5J1AAAAgklEQVRIx+3XSxaCMBBE0YqCAQX5CQiKSpP9r1GYcjLwmB7WW8AdVwHA4RjFsmvx5/adbJIaY4DzRTz9ymxl+cpcJZRxhUEp4YyrUGswDW4ajIVoMK0O48iQIUOGDBkyZMj4GZXt16HXYBqdXXzXWukYxlDmsX0G4Dm9/mfen3l9MF8+vLydO9jFDgAAAABJRU5ErkJggg=="/>
+                        </svg>
                         <span class="countries__country tooltip__text">Бельгия</span>
                       </li>
                       <li class="countries__item tooltip">
-                        <span class="countries__flag flag">
-                          <svg class="flag__svg" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABcVBMVEWapND19/pHWKntVWWTV4rsVWX19/r19/r19/r19/qUns309vr19/r19/pHWKn19/pHWKn19/pHWKn19/pHWKn19/rtVWVHWKntVWXtVWXtVWWGV4/rVWbtVWXtVWXtVWXtVWXtVWXtVWX19/qNmMr09vlHWKmHk8fz9fmCjsTx8/h8iMHw8/h2g7/u8fdxfrzr7vZterrp7PVod7nn6vNjcrbk5/JgbrTg5PBca7Pc4e9YaLHZ3e1WZrDU2etTY67Q1elRYa3L0edOXqzGzORMXKvByOJLXKu7wt9JWqq2vdxIWaqvt9lIWamosdaiq9NIWKmgVoTtVWVJWKitVn9MWKe5VnpQWKXDVnZVWKPMVnNbWKHUVW9jV57bVWxrV5rhVWp1V5bmVWiAV5LpVWeNV4zsVWaaV4dIWKinVoJLWKeyVn1OWKa9VnhTWKTIVnRYWKLQVnFfWJ/YVW5nV5zeVWtxV5jkVWl6V5ToVWcAAACBAZ6KAAAAI3RSTlMAAAAAAABIr+f+CKioCaOjRkatruv97K6uR6MJqaoJTbDoThU+hw0AAAABYktHRHo41YVqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AQTCjcQdgqYAwAAAUFJREFUSMet1tVCw0AURdFJB9oUd5cWObi7u3twd3eHvydIgbbpw8y9+wPW8xbCMNwe01usmdf0uA3DEK6YWF0iUFy8zSSUlFKdREMkAWXlVCdZpACoqCQyqSLNZlBVTWNMga9qaklM+g+DunqSE2DQ0MjCoKmZhUFLKwuDtnYWBh2dLAy6ulkY9PSyMOjrZ2EwMMjCYGiYhcHIKAuDsXEWBhOTLAymplkYzMyyMMAcCzO/YKkUgVlcUlIiMMsraoozs7qmqDgy6xuqihOzuaWsODDbO+pKOLO7p6GEMfsHOkooc3ikpYQwxyd6SjBzqokEMWfn2so/5uJSX/ljrq4Jyi9zc0tRAszdPUmxvt/v4ZGmZIhMW3l6pilW1ucXv7wSFSvbvvS3d6qSI4UrN4+q5BdIERUtC31+fcPvK5JSfgAk9LzirJYDiwAAAABJRU5ErkJggg=="/>
-                          </svg>
-                        </span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABcVBMVEWapND19/pHWKntVWWTV4rsVWX19/r19/r19/r19/qUns309vr19/r19/pHWKn19/pHWKn19/pHWKn19/pHWKn19/rtVWVHWKntVWXtVWXtVWWGV4/rVWbtVWXtVWXtVWXtVWXtVWXtVWX19/qNmMr09vlHWKmHk8fz9fmCjsTx8/h8iMHw8/h2g7/u8fdxfrzr7vZterrp7PVod7nn6vNjcrbk5/JgbrTg5PBca7Pc4e9YaLHZ3e1WZrDU2etTY67Q1elRYa3L0edOXqzGzORMXKvByOJLXKu7wt9JWqq2vdxIWaqvt9lIWamosdaiq9NIWKmgVoTtVWVJWKitVn9MWKe5VnpQWKXDVnZVWKPMVnNbWKHUVW9jV57bVWxrV5rhVWp1V5bmVWiAV5LpVWeNV4zsVWaaV4dIWKinVoJLWKeyVn1OWKa9VnhTWKTIVnRYWKLQVnFfWJ/YVW5nV5zeVWtxV5jkVWl6V5ToVWcAAACBAZ6KAAAAI3RSTlMAAAAAAABIr+f+CKioCaOjRkatruv97K6uR6MJqaoJTbDoThU+hw0AAAABYktHRHo41YVqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AQTCjcQdgqYAwAAAUFJREFUSMet1tVCw0AURdFJB9oUd5cWObi7u3twd3eHvydIgbbpw8y9+wPW8xbCMNwe01usmdf0uA3DEK6YWF0iUFy8zSSUlFKdREMkAWXlVCdZpACoqCQyqSLNZlBVTWNMga9qaklM+g+DunqSE2DQ0MjCoKmZhUFLKwuDtnYWBh2dLAy6ulkY9PSyMOjrZ2EwMMjCYGiYhcHIKAuDsXEWBhOTLAymplkYzMyyMMAcCzO/YKkUgVlcUlIiMMsraoozs7qmqDgy6xuqihOzuaWsODDbO+pKOLO7p6GEMfsHOkooc3ikpYQwxyd6SjBzqokEMWfn2so/5uJSX/ljrq4Jyi9zc0tRAszdPUmxvt/v4ZGmZIhMW3l6pilW1ucXv7wSFSvbvvS3d6qSI4UrN4+q5BdIERUtC31+fcPvK5JSfgAk9LzirJYDiwAAAABJRU5ErkJggg=="/>
+                        </svg>
                         <span class="countries__country tooltip__text">Чехия</span>
                       </li>
                     </ul>
@@ -411,7 +382,7 @@
           </ul>
 
           <h2 class="travelers__title title">Попутчики</h2>
-          <p class="travelers__discription text-discription">Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный отдых. Одному нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.</p>
+          <p class="travelers__discription text-discription">Все мы&nbsp;индивидуальны и&nbsp;у каждого свой взгляд на идеальный отдых. Одному нужен пляж и&nbsp;коктейль, а другому маршрут для хайкинга.</p>
           <p class="travelers__discription travelers__discription--bold text-discription text-discription--bold">Теперь можно легко найти единомышленников!</p>
           <a href="catalog.html" class="travelers__button button button--arrow">
             <span>Показать всех</span>
@@ -420,7 +391,7 @@
         </div>
       </section>
 
-      <section class="prices">
+      <section class="index__prices prices">
         <div class="prices__container container">
           <h2 class="prices__title title">Добавьте свой профиль</h2>
           <ol class="prices__list price-list">
@@ -446,7 +417,7 @@
         </div>
       </section>
 
-      <section class="registration">
+      <section class="index__registration registration">
         <div class="registration__container container">
           <h2 class="registration__title title">Заинтересовались?</h2>
           <p class="registration__discription text-discription">Зарегистрируйтесь, это&nbsp;быстро и&nbsp;бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее <a href="login.html" class="registration__login-link">авторизуйтесь</a>.</p>
@@ -456,32 +427,28 @@
             <input class="registration__field" type="email" name="email" id="email-field" placeholder="E-mail" required>
             <button class="registration__button button button--arrow" type="submit">
               <span class="registration__button-text">Регистрация</span>
-            <svg class="button__svg" width="10" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14"><path d="M0 14V.1l10 7z"/></svg>
+            <svg class="registration__button-svg button__svg" width="10" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14"><path d="M0 14V.1l10 7z"/></svg>
           </button>
           </form>
         </div>
       </section>
 
-      <section class="contact-us">
+      <section class="index__contact-us contact-us">
         <h2 class="visually-hidden">Связаться с нами</h2>
         <div class="contact-us__contacts contacts contacts--theme-dark">
           <div class="contacts__links">
             <div class="contacts__container container">
-              <p class="contacts__discription text-discription">Остались вопросы? Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</p>
+              <p class="contacts__discription text-discription">Остались вопросы?<span class="contacts__discription--large"> Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</span></p>
               <a href="tel:88005558628" class="contacts__link contacts__link--tel">
-                <div class="contacts__icon">
-                  <svg class="contacts__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-                    <path d="M18 0C12 0 5 1 3 3s-3 6-3 8l2 2 5-1h1l1-1V8l2-2h14l2 2v3l2 1a494 494 0 007-1c0-2-1-6-3-8s-9-3-15-3zm0 20c-2 0-3 1-3 3s1 3 3 3 3-2 3-3-1-3-3-3zm-2-7v-2l-2-2-2 2v2L2 24l-1 2v3c0 2 1 3 3 3h1v2c0 1 0 2 2 2s1-1 1-2v-2h20v2a2 2 0 104 0v-2c2 0 3-1 3-3v-3l-1-2-10-11v-2l-2-2-2 2v2h-4zm2 4c3 0 6 2 6 6 0 3-3 6-6 6s-6-3-6-6c0-4 3-6 6-6z"/>
-                  </svg>
-                </div>
+                <svg class="contacts__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                  <path d="M18 0C12 0 5 1 3 3s-3 6-3 8l2 2 5-1h1l1-1V8l2-2h14l2 2v3l2 1a494 494 0 007-1c0-2-1-6-3-8s-9-3-15-3zm0 20c-2 0-3 1-3 3s1 3 3 3 3-2 3-3-1-3-3-3zm-2-7v-2l-2-2-2 2v2L2 24l-1 2v3c0 2 1 3 3 3h1v2c0 1 0 2 2 2s1-1 1-2v-2h20v2a2 2 0 104 0v-2c2 0 3-1 3-3v-3l-1-2-10-11v-2l-2-2-2 2v2h-4zm2 4c3 0 6 2 6 6 0 3-3 6-6 6s-6-3-6-6c0-4 3-6 6-6z"/>
+                </svg>
                 <span>8&nbsp;800&nbsp;555-86-28</span>
               </a>
               <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email">
-                <div class="contacts__icon">
-                  <svg class="contacts__svg" width="18" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 26">
-                    <path d="M0 23c0 2 1 3 3 3h30c2 0 3-1 3-3V3c0-2-1-3-3-3H3C1 0 0 1 0 3v20zm11-10L4 6V4h2l11 11h2L30 4h2v2l-7 7 7 7v2h-2l-7-7-3 3-2 1-2-1-3-3-7 7H4v-2l7-7z"/>
-                  </svg>
-                </div>
+                <svg class="contacts__svg" width="18" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 26">
+                  <path d="M0 23c0 2 1 3 3 3h30c2 0 3-1 3-3V3c0-2-1-3-3-3H3C1 0 0 1 0 3v20zm11-10L4 6V4h2l11 11h2L30 4h2v2l-7 7 7 7v2h-2l-7-7-3 3-2 1-2-1-3-3-7 7H4v-2l7-7z"/>
+                </svg>
                 <span>mail@htmlacademy.ru</span>
               </a>
             </div>
@@ -490,9 +457,9 @@
           <div class="contacts__direction">
             <div class="contacts__container container">
               <p class="contacts__address">
-                <span class="contacts__icon">
-                  <svg class="contacts__svg" width="14" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 43"><path d="M11.7 13.9c0-1.2 1-2.2 2.3-2.2s2.3 1 2.3 2.2c0 1.2-1 2.2-2.3 2.2-1.2 0-2.3-1-2.3-2.2zM14 8.1c-3.2 0-5.9 2.6-5.9 5.8s2.6 5.8 5.9 5.8c3.2 0 5.9-2.6 5.9-5.8 0-3.2-2.7-5.8-5.9-5.8zM0 13.6c0 9.1 10.9 16.2 11.7 26.7v.4c0 1.2 1 2.2 2.3 2.2s2.3-1 2.3-2.2v-.4C17.2 29.8 28 22.8 28 13.6 28 6.1 21.7 0 14 0S0 6.1 0 13.6zm14-9.1c5.2 0 9.5 4.2 9.5 9.4s-4.2 9.4-9.5 9.4-9.5-4.2-9.5-9.4S8.8 4.5 14 4.5z"/></svg>
-                </span>
+                <svg class="contacts__svg contacts__svg--address" width="14" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 43">
+                  <path d="M11.7 13.9c0-1.2 1-2.2 2.3-2.2s2.3 1 2.3 2.2c0 1.2-1 2.2-2.3 2.2-1.2 0-2.3-1-2.3-2.2zM14 8.1c-3.2 0-5.9 2.6-5.9 5.8s2.6 5.8 5.9 5.8c3.2 0 5.9-2.6 5.9-5.8 0-3.2-2.7-5.8-5.9-5.8zM0 13.6c0 9.1 10.9 16.2 11.7 26.7v.4c0 1.2 1 2.2 2.3 2.2s2.3-1 2.3-2.2v-.4C17.2 29.8 28 22.8 28 13.6 28 6.1 21.7 0 14 0S0 6.1 0 13.6zm14-9.1c5.2 0 9.5 4.2 9.5 9.4s-4.2 9.4-9.5 9.4-9.5-4.2-9.5-9.4S8.8 4.5 14 4.5z"/>
+                </svg>
                 <span class="contacts__address-text">ул. Большая Конюшенная, 19/8</span>
               </p>
               <a href="https://goo.gl/maps/DmvgEJvwEpgj5vpW8" class="contacts__map-link button button--arrow button--yellow">
@@ -512,7 +479,7 @@
 
     </main>
 
-    <footer class="footer footer--overlay">
+    <footer class="index__footer footer">
       <div class="footer__container container">
         <a class="footer__logo logo">
           <img class="logo__image" src="img/logo-mobile-blue@1x.png" width="96" height="15" alt="Логотип компании «Погнали»">
@@ -521,33 +488,27 @@
         <ul class="footer__socials-list socials-list socials-list--yellow">
           <li class="socials-list__item">
             <a href="#" class="socials-list__link socials-list__link--fb socials-list__link--yellow">
-              <div class="socials-list__icon">
-                <svg class="socials-list__svg" width="11" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 21">
-                  <path d="M7.8 21H2.2v-9.8H0V6.4h2.1c-.1-2.2.3-3.8 1.3-4.9C4.2.6 5.5.1 7.1 0H11v4.7H7.9c-.1.2-.2.8-.2 1.7H11v4.8H7.8V21zm-4.4-1.1h3.1v-9.8h3.2V7.5H6.5v-.6c0-1.5 0-2.9.8-3.4l.2-.1h2.3V1.1H7.1c-1.2.1-2.2.5-2.8 1.2-.8.9-1.1 2.5-.9 4.6l.1.6H1.2v2.6h2.2v9.8z"/>
-                </svg>
-              </div>
+              <svg class="socials-list__svg" width="11" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 21">
+                <path d="M7.8 21H2.2v-9.8H0V6.4h2.1c-.1-2.2.3-3.8 1.3-4.9C4.2.6 5.5.1 7.1 0H11v4.7H7.9c-.1.2-.2.8-.2 1.7H11v4.8H7.8V21zm-4.4-1.1h3.1v-9.8h3.2V7.5H6.5v-.6c0-1.5 0-2.9.8-3.4l.2-.1h2.3V1.1H7.1c-1.2.1-2.2.5-2.8 1.2-.8.9-1.1 2.5-.9 4.6l.1.6H1.2v2.6h2.2v9.8z"/>
+              </svg>
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="socials-list__item">
             <a href="#" class="socials-list__link socials-list__link--vk socials-list__link--yellow">
-              <div class="socials-list__icon">
-                <svg class="socials-list__svg" width="23" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 15.8">
-                  <path d="M23.9 15.8c-.4 0-1.2-.1-2.1-.6-.6-.4-1.2-1-1.8-1.5-.4-.4-1.2-1.2-1.4-1.2-.3.1-.5.9-.5 1.6 0 .1 0 .8-.5 1.2-.4.4-1.1.5-1.2.5h-1.9c-1 0-4.4-.2-7.4-3C3.4 9.4.3 3 .1 2.7 0 2.2-.1 1.5.3 1.1.7.7 1.4.6 1.7.6H5.9c.1 0 .6.1 1 .3.4.2.6.7.6.7S8.1 3 9 4.3c1.3 2 1.9 2.5 2.1 2.6.2-.4.3-1.7.2-2.9 0-.5-.1-1.1-.3-1.3-.1-.1-.4-.3-.8-.3l-.7-.6c-.1-.7.6-1.2 1.1-1.4.7-.3 1.8-.4 3.1-.4h.7c1.2 0 1.6.1 2.1.2 1.7.4 1.6 1.7 1.6 3.3v2.1c0 .4 0 1 .1 1.3.2-.1.9-.7 2.1-2.5.8-1.2 1.4-2.5 1.5-2.8.2-.4.6-.9 1.6-.9h4.7c1 0 1.6.3 1.8.9.3.6.2 1.7-2.4 4.6-.4.4-.7.8-1 1.1-.6.7-1.2 1.4-1.2 1.6.1.1.7.6 1.3 1.1 1.5 1.2 2.5 2.3 3 3.1.5.8.4 1.3.3 1.7-.4.9-1.6 1-1.9 1h-4.1zm-5.3-4.9c.9 0 1.7.8 2.5 1.6.5.5 1 1 1.5 1.3.7.4 1.3.4 1.4.4h3.9c.2 0 .4-.1.5-.1 0 0 0-.1-.1-.2-.4-.7-1.4-1.7-2.7-2.7-1.2-1-1.8-1.5-1.9-2.2-.1-.8.5-1.4 1.6-2.7.3-.3.6-.7 1-1.1 1.6-1.8 2-2.6 2.1-3H23.1c-.2.4-.8 1.8-1.6 3-1.9 2.8-2.8 3.2-3.4 3.2-.2 0-.4 0-.6-.1-1-.6-1-1.8-.9-2.8v-.4-1.7c.1-1.7 0-1.7-.4-1.8-.4-.1-.7-.1-1.9-.2h-.7c-.6 0-1.3 0-1.9.1l.3.3c.6.7.6 2 .6 2.2.1 1.6.1 3.8-1 4.3-.2.1-.4.1-.6.1-.9 0-1.9-.9-3.4-3.3-.8-1.2-1.5-2.7-1.5-2.8L6 2.2c-.1 0-.2-.1-.3-.1h-4-.1c.6 1.2 3.4 6.6 6.5 9.5 2.7 2.5 5.8 2.6 6.4 2.6h1.9s.2-.1.3-.1V14c0-.3 0-2.6 1.6-3 .1-.1.2-.1.3-.1z"/>
-                </svg>
-              </div>
+              <svg class="socials-list__svg" width="23" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 15.8">
+                <path d="M23.9 15.8c-.4 0-1.2-.1-2.1-.6-.6-.4-1.2-1-1.8-1.5-.4-.4-1.2-1.2-1.4-1.2-.3.1-.5.9-.5 1.6 0 .1 0 .8-.5 1.2-.4.4-1.1.5-1.2.5h-1.9c-1 0-4.4-.2-7.4-3C3.4 9.4.3 3 .1 2.7 0 2.2-.1 1.5.3 1.1.7.7 1.4.6 1.7.6H5.9c.1 0 .6.1 1 .3.4.2.6.7.6.7S8.1 3 9 4.3c1.3 2 1.9 2.5 2.1 2.6.2-.4.3-1.7.2-2.9 0-.5-.1-1.1-.3-1.3-.1-.1-.4-.3-.8-.3l-.7-.6c-.1-.7.6-1.2 1.1-1.4.7-.3 1.8-.4 3.1-.4h.7c1.2 0 1.6.1 2.1.2 1.7.4 1.6 1.7 1.6 3.3v2.1c0 .4 0 1 .1 1.3.2-.1.9-.7 2.1-2.5.8-1.2 1.4-2.5 1.5-2.8.2-.4.6-.9 1.6-.9h4.7c1 0 1.6.3 1.8.9.3.6.2 1.7-2.4 4.6-.4.4-.7.8-1 1.1-.6.7-1.2 1.4-1.2 1.6.1.1.7.6 1.3 1.1 1.5 1.2 2.5 2.3 3 3.1.5.8.4 1.3.3 1.7-.4.9-1.6 1-1.9 1h-4.1zm-5.3-4.9c.9 0 1.7.8 2.5 1.6.5.5 1 1 1.5 1.3.7.4 1.3.4 1.4.4h3.9c.2 0 .4-.1.5-.1 0 0 0-.1-.1-.2-.4-.7-1.4-1.7-2.7-2.7-1.2-1-1.8-1.5-1.9-2.2-.1-.8.5-1.4 1.6-2.7.3-.3.6-.7 1-1.1 1.6-1.8 2-2.6 2.1-3H23.1c-.2.4-.8 1.8-1.6 3-1.9 2.8-2.8 3.2-3.4 3.2-.2 0-.4 0-.6-.1-1-.6-1-1.8-.9-2.8v-.4-1.7c.1-1.7 0-1.7-.4-1.8-.4-.1-.7-.1-1.9-.2h-.7c-.6 0-1.3 0-1.9.1l.3.3c.6.7.6 2 .6 2.2.1 1.6.1 3.8-1 4.3-.2.1-.4.1-.6.1-.9 0-1.9-.9-3.4-3.3-.8-1.2-1.5-2.7-1.5-2.8L6 2.2c-.1 0-.2-.1-.3-.1h-4-.1c.6 1.2 3.4 6.6 6.5 9.5 2.7 2.5 5.8 2.6 6.4 2.6h1.9s.2-.1.3-.1V14c0-.3 0-2.6 1.6-3 .1-.1.2-.1.3-.1z"/>
+              </svg>
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="socials-list__item">
             <a href="#" class="socials-list__link socials-list__link--inst socials-list__link--yellow">
-              <div class="socials-list__icon">
-                <svg class="socials-list__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
-                  <path d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11M17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z"/>
-                  <path d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4m0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9z"/>
-                  <circle cx="17.6" cy="5.4" r="1.3"/>
-                </svg>
-              </div>
+              <svg class="socials-list__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
+                <path d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11M17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z"/>
+                <path d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4m0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9z"/>
+                <circle cx="17.6" cy="5.4" r="1.3"/>
+              </svg>
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>

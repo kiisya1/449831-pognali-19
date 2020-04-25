@@ -1,0 +1,74 @@
+.index__about {
+  margin-bottom: 42px;
+}
+
+.index__directions {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: -30px;
+}
+
+.index__travelers {
+  padding-top: 30px;
+  margin-bottom: 38px;
+}
+
+.index__prices {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: -30px;
+}
+
+.index__registration {
+  padding-top: 30px;
+}
+
+.index__footer {
+  position: relative;
+  z-index: 2;
+
+  margin-top: -30px;
+}
+
+@media (min-width: $tablet-width) {
+  .index__directions {
+    margin-bottom: -60px;
+  }
+
+  .index__travelers {
+    padding-top: 60px;
+    margin-bottom: 74px;
+  }
+
+  .index__prices {
+    margin-bottom: -60px;
+  }
+
+  .index__registration {
+    padding-top: 60px;
+  }
+
+  .index__footer {
+    margin-top: -154px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .index__promo {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: -60px;
+  }
+
+  .index__about {
+    padding-top: 60px;
+    margin-bottom: 88px;
+  }
+
+  .index__travelers {
+    margin-bottom: 107px;
+  }
+}

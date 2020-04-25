@@ -20,6 +20,8 @@
   position: relative;
 
   padding: 14px 0;
+  padding-top: 12px;
+  padding-bottom: 10px;
   padding-right: 35px;
 
   counter-increment: tariff;
@@ -61,6 +63,8 @@
   }
 
   &:nth-child(3n+3) {
+    padding-bottom: 11px;
+
     &::before {
       background-color: $gold;
     }
@@ -81,6 +85,7 @@
   .price-list {
     padding: 0;
     padding-top: 44px;
+    padding-bottom: 3px;
 
     &::before {
       content: "";
@@ -98,6 +103,7 @@
 
     &::after {
       left: 92px;
+      bottom: -1px;
 
       width: 562px;
     }
@@ -107,8 +113,8 @@
     display: flex;
     justify-content: space-between;
     padding-top: 19px;
-    padding-bottom: 15px;
-    padding-left: 92px;
+    padding-bottom: 14px;
+    padding-left: 90px;
     padding-right: 34px;
 
     &::after {
@@ -120,7 +126,7 @@
     &::before {
       top: 0;
       right: auto;
-      left: -1px;
+      left: 0;
 
       padding: 22px 4px 17px;
       width: 67px;
@@ -177,6 +183,11 @@
 
   .price-list__item {
     padding-right: 159px;
+    padding-left: 89px;
+
+    &::before {
+      top: 0;
+    }
 
     &::after {
       width: 813px;

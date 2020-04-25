@@ -4,6 +4,8 @@
 }
 
 .hashtags__link {
+  display: inline-block;
+
   color: $color--base;
 
   &:hover,

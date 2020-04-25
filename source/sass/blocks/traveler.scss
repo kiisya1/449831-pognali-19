@@ -26,13 +26,10 @@
   }
 }
 
-.traveler:hover .traveler__photo-image {
-  transform: scale(1.1);
-}
-
 .traveler__photo {
   display: block;
   overflow: hidden;
+  mask-image: radial-gradient(white, black); /* Решает проблему выпадения изображения при наведении из контейнера в Safari */
 
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -44,10 +41,15 @@
   transition: all 300ms ease;
 }
 
+.traveler:hover .traveler__photo-image {
+  transform: scale(1.1);
+}
+
 .traveler__about {
   display: flex;
   flex-direction: column;
   padding: 25px;
+  padding-bottom: 22px;
 }
 
 .traveler__name {
@@ -57,7 +59,7 @@
 
   padding: 0;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 13px;
   margin-right: 16px;
 
   font-size: 21px;
@@ -98,22 +100,22 @@
 .traveler__countries {
   order: -1;
   margin-top: -37px;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 
 .traveler__hashtags {
   margin: 0 auto;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .traveler__likes {
   position: absolute;
-  top: 54px;
-  left: 67px;
+  top: 56px;
+  left: 66px;
 
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 5px 0;
-  padding-left: 37px;
 
   font-size: 14px;
   line-height: 21px;
@@ -127,8 +129,8 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 2px;
+    left: 1px;
 
     width: 31px;
     height: 31px;
@@ -137,28 +139,10 @@
     border-radius: 50%;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 9px;
-    left: 9px;
-
-    width: 13px;
-    height: 11px;
-
-    background-image: url("../img/heart.svg");
-
-    opacity: 0.3;
-  }
-
   &:hover,
   &:focus {
     &::before {
       background-color: $pale-grey-dark;
-    }
-
-    &::after {
-      opacity: 0.5;
     }
   }
 
@@ -166,19 +150,9 @@
     &::before {
       background-color: $pale-grey-dark;
     }
-
-    &::after {
-      opacity: 0.1;
-    }
   }
 
   &--active {
-    &::after {
-      background-image: url("../img/heart-active.svg");
-
-      opacity: 1;
-    }
-
     &::before {
       background-color: #f9eaea;
     }
@@ -188,29 +162,53 @@
       &::before {
         background-color: #f9d8d8;
       }
-
-      &::after {
-        opacity: 1;
-      }
     }
 
     &:active {
       &::before {
         background-color: #f9d8d8;
       }
-
-      &::after {
-        opacity: 0.3;
-      }
     }
   }
+}
+
+.traveler__likes-svg {
+  position: relative;
+  z-index: 1;
+
+  padding: 4px 10px;
+  padding-top: 1px;
+  margin-right: 5px;
+  opacity: 0.3;
+}
+
+.traveler__likes:hover .traveler__likes-svg,
+.traveler__likes:focus .traveler__likes-svg {
+  opacity: 0.5;
+}
+
+.traveler__likes:active .traveler__likes-svg {
+  opacity: 0.1;
+}
+
+.traveler__likes--active .traveler__likes-svg {
+  opacity: 1;
+}
+
+.traveler__likes--active:hover .traveler__likes-svg,
+.traveler__likes--active:focus .traveler__likes-svg {
+  opacity: 1;
+}
+
+.traveler__likes--active:active .traveler__likes-svg {
+  opacity: 0.3;
 }
 
 .traveler__block-title {
   position: relative;
   z-index: 2;
 
-  padding-left: 13px;
+  padding-left: 8px;
   padding-right: 11px;
 
   background-color: $background-color--light;
@@ -218,7 +216,7 @@
 
 .traveler__call {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 0;
 
   margin: 0 20px;
@@ -230,7 +228,7 @@
 .traveler--info .traveler__photo {
   float: left;
 
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   margin-right: 16px;
   width: 70px;
 
@@ -243,7 +241,7 @@
 
   font-size: 20px;
   line-height: 20px;
-  margin-bottom: 46px;
+  margin-bottom: 45px;
   margin-right: 0;
 }
 
@@ -268,13 +266,14 @@
 
 .traveler--info .traveler__hashtags {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   margin-left: 8px;
 }
 
 .traveler--info .traveler__countries {
-  margin-bottom: 24px;
+  margin-bottom: 11px;
   margin-top: 0;
+  min-height: 87px;
 }
 
 .traveler--info .traveler__transport {
@@ -284,16 +283,22 @@
 .traveler--info .traveler__columns {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 54px;
+  margin-bottom: 56px;
 }
 
 .traveler--info .traveler__level {
   width: 64px;
 }
 
+.traveler--long .traveler__countries {
+  margin-bottom: 14px;
+}
+
 @media (min-width: $tablet-width) {
   .traveler {
     width: 285px;
+
+    border-radius: 20px;
 
     &--info {
       display: flex;
@@ -301,13 +306,18 @@
       align-items: flex-start;
       justify-content: flex-start;
 
-      padding-top: 34px;
-      padding-bottom: 26px;
+      padding-top: 33px;
+      padding-bottom: 20px;
       padding-left: 35px;
       padding-right: 25px;
       width: 688px;
       box-sizing: border-box;
     }
+  }
+
+  .traveler__photo {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .traveler__photo-image {
@@ -320,14 +330,23 @@
   }
 
   .traveler__countries {
-    margin-bottom: 19px;
+    margin-bottom: 9px;
   }
 
   .traveler__name {
-    margin-bottom: 24px;
+    margin-bottom: 21px;
+    margin-right: 22px;
 
     font-size: 24px;
     line-height: 24px;
+  }
+
+
+  .traveler__indicator {
+    margin-top: -1px;
+    margin-right: 15px;
+    width: 7px;
+    height: 7px;
   }
 
   .traveler__hashtags {
@@ -339,7 +358,8 @@
 
   .traveler--info .traveler__photo {
     margin-right: 30px;
-    margin-bottom: 21px;
+    margin-bottom: 22px;
+    margin-top: 2px;
     width: 190px;
 
     border-radius: 15px;
@@ -348,7 +368,7 @@
   .traveler--info .traveler__name {
     justify-content: flex-start;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     margin-left: 3px;
 
     font-size: 30px;
@@ -367,14 +387,19 @@
   }
 
   .traveler--info .traveler__hashtags {
-    margin-bottom: 47px;
+    margin-bottom: 45px;
     margin-left: 6px;
+  }
+
+  .traveler__block-title {
+    padding-left: 12px;
   }
 
   .traveler--info .traveler__countries {
     order: 5;
     margin-bottom: 0;
     width: 100%;
+    min-height: auto;
   }
 
   .traveler--info .traveler__columns {
@@ -385,6 +410,7 @@
   }
 
   .traveler--info .traveler__transport {
+    margin-top: 5px;
     margin-bottom: 13px;
   }
 
@@ -392,14 +418,16 @@
     width: 60px;
   }
 
+  .traveler--info .traveler__wrapper {
+    display: flex;
+  }
+
   .traveler--info .traveler__call {
     position: static;
 
-    display: inline-block;
+    display: block;
     margin: 0;
     width: 148px;
-
-    vertical-align: middle;
   }
 
   .traveler--info .traveler__likes {
@@ -407,42 +435,43 @@
     top: auto;
     left: auto;
 
-    display: inline-block;
-    padding: 10px 0;
-    padding-left: 59px;
-    margin-left: -5px;
+    padding: 0;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    width: 132px;
 
     font-size: 20px;
     line-height: 30px;
 
-    vertical-align: middle;
-
     &::before {
+      bottom: 0;
+      left: 0;
+
       width: 50px;
       height: 50px;
     }
+  }
 
-    &::after {
-      bottom: 16px;
-      left: 15px;
-
-      width: 20px;
-      height: 17px;
-    }
+  .traveler__likes-svg {
+    padding: 6px 15px;
+    padding-top: 5px;
+    margin-right: 7px;
+    width: 20px;
+    height: 17px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .traveler__countries {
-    margin-bottom: 21px;
+    margin-bottom: 11px;
   }
 
   .traveler__name {
-    margin-bottom: 22px;
+    margin-bottom: 19px;
   }
 
   .traveler__hashtags {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   .traveler--info {
@@ -453,6 +482,7 @@
   .traveler--info .traveler__photo {
     width: 285px;
     margin-bottom: 0;
+    margin-top: 0;
     margin-right: 34px;
 
     border-radius: 0;
@@ -464,7 +494,7 @@
     position: relative;
 
     padding-right: 53px;
-    margin-top: 48px;
+    margin-top: 47px;
     width: 355px;
     box-sizing: border-box;
 
@@ -518,11 +548,12 @@
     flex-direction: row;
     align-items: center;
     order: 5;
-    margin-top: -96px;
+    margin-top: -102px;
     width: 276px;
   }
 
   .traveler--info .traveler__transport {
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
