@@ -7,16 +7,16 @@
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header class="header">
+  <body class="catalog">
+    <header class="catalog__header header header--theme-light header--inner">
 
       <div class="header__container container">
 
-        <a href="index.html" class="header__logo logo">
+        <a href="index.html" class="header__logo logo logo--blue">
           <img class="logo__image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип компании «Погнали»">
         </a>
 
-        <button class="header__menu-toggle" type="button">
+        <button class="header__menu-toggle header__menu-toggle--no-js" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
@@ -26,55 +26,102 @@
           </li>
         </ul>
 
-        <nav class="header__nav main-nav main-nav--close">
+      </div>
+      <nav class="header__nav main-nav">
+        <div class="main-nav__container">
           <ul class="main-nav__list menu-list">
             <li class="menu-list__item">
-              <a href="#" class="menu-list__link">О сервисе</a>
+              <a href="#" class="menu-list__link">
+                <span class="menu-list__text" data-hover="О сервисе">О сервисе</span>
+              </a>
             </li>
             <li class="menu-list__item">
-              <a href="form.html" class="menu-list__link">Направления</a>
+              <a href="form.html" class="menu-list__link">
+                <span class="menu-list__text" data-hover="Направления">Направления</span>
+              </a>
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link">Попутчики</a>
+              <a class="menu-list__link" >
+                <span class="menu-list__text" data-hover="Попутчики">Попутчики</span>
+              </a>
             </li>
           </ul>
 
           <ul class="main-nav__list main-nav__list--user user-list">
             <li class="user-list__item">
-              <a href="login.html" class="user-list__link button">Авторизация</a>
+              <a href="login.html" class="user-list__link button button--large">Авторизация</a>
             </li>
           </ul>
 
-          <div class="main-nav__contacts contacts">
-            <a href="tel:88005558628" class="contacts__link contacts__link--tel">8&nbsp;800&nbsp;555-86-28</a>
-            <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
+          <div class="main-nav__contacts contacts contacts--changing">
+            <a href="tel:88005558628" class="contacts__link contacts__link--tel">
+              <svg class="contacts__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                <path d="M18 0C12 0 5 1 3 3s-3 6-3 8l2 2 5-1h1l1-1V8l2-2h14l2 2v3l2 1a494 494 0 007-1c0-2-1-6-3-8s-9-3-15-3zm0 20c-2 0-3 1-3 3s1 3 3 3 3-2 3-3-1-3-3-3zm-2-7v-2l-2-2-2 2v2L2 24l-1 2v3c0 2 1 3 3 3h1v2c0 1 0 2 2 2s1-1 1-2v-2h20v2a2 2 0 104 0v-2c2 0 3-1 3-3v-3l-1-2-10-11v-2l-2-2-2 2v2h-4zm2 4c3 0 6 2 6 6 0 3-3 6-6 6s-6-3-6-6c0-4 3-6 6-6z"/>
+              </svg>
+
+              <svg class="contacts__svg contacts__svg--changing" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                <path d="M12.6 18h-.8c-3.6-.4-6.2-2.1-8.1-4.3C1.8 11.6.3 8.8 0 5V4c.1-.7.4-1.1.8-1.5C1.2 2 2 1.4 2.6 1.3c.5 0 1.3.3 1.6.8.3.4.4 1.2.6 1.8.1.6.4 1.4.4 2-.2.9-1.3 1.3-1.7 1.9 1.1 2.8 3 4.8 5.4 6.2.6-.3 1.2-1.4 2-1.4.3 0 .7.2 1 .3.3.1.6.2 1 .4.5.2 1.4.5 1.7.9.3.4.5 1.2.4 1.7-.1.8-1.6 1.8-2.4 2.1z"/>
+                <path d="M9.1 1.1c4.3 0 7.8 3.6 7.8 8H18c0-5-4-9.1-8.9-9.1v1.1zM9.1 6.9V8c.6 0 1 .5 1 1.1h1.1c0-1.2-.9-2.2-2.1-2.2z"/>
+                <path d="M9.1 4.6c2.4 0 4.4 2 4.4 4.5h1.2c0-3.1-2.5-5.7-5.5-5.7v1.2h-.1z"/>
+              </svg>
+
+              <span class="contacts__link-text">8&nbsp;800&nbsp;555-86-28</span>
+            </a>
+            <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__link--email">
+              <svg class="contacts__svg" width="18" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 26">
+                <path d="M0 23c0 2 1 3 3 3h30c2 0 3-1 3-3V3c0-2-1-3-3-3H3C1 0 0 1 0 3v20zm11-10L4 6V4h2l11 11h2L30 4h2v2l-7 7 7 7v2h-2l-7-7-3 3-2 1-2-1-3-3-7 7H4v-2l7-7z"/>
+              </svg>
+
+              <svg class="contacts__svg contacts__svg--changing" width="18" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14">
+                <path d="M14.9 1.8c1.2-1 .9-1.8-.7-1.8H3.7c-1.5 0-1.8.8-.6 1.8l3.7 3.1c1.2 1 3.2 1 4.4 0l3.7-3.1z"/>
+                <path d="M11.9 7.1c-1.2 1-2.2 1.8-2.2 1.8-.1.1-.2.1-.3.1h-.1c-.1.1-.2.1-.3.1-.1 0-.2 0-.3-.1h-.1c-.1 0-.2 0-.3-.1 0 0-1-.8-2.2-1.8L2.2 3.8C1 2.8 0 3.3 0 4.8v6.3C0 12.7 1.3 14 2.8 14h12.3c1.6 0 2.8-1.3 2.8-2.8V4.8c0-1.6-1-2-2.2-1l-3.8 3.3z"/>
+              </svg>
+
+              <span class="contacts__link-text">mail@htmlacademy.ru</span>
+            </a>
           </div>
 
           <ul class="main-nav__socials-list socials-list">
             <li class="socials-list__item">
-              <a href="#" class="socials-list__link socials-list__link--fb">Facebook</a>
+              <a href="#" class="socials-list__link socials-list__link--fb">
+                <svg class="socials-list__svg" width="11" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 21">
+                  <path d="M7.8 21H2.2v-9.8H0V6.4h2.1c-.1-2.2.3-3.8 1.3-4.9C4.2.6 5.5.1 7.1 0H11v4.7H7.9c-.1.2-.2.8-.2 1.7H11v4.8H7.8V21zm-4.4-1.1h3.1v-9.8h3.2V7.5H6.5v-.6c0-1.5 0-2.9.8-3.4l.2-.1h2.3V1.1H7.1c-1.2.1-2.2.5-2.8 1.2-.8.9-1.1 2.5-.9 4.6l.1.6H1.2v2.6h2.2v9.8z"/>
+                </svg>
+                <span class="visually-hidden">Facebook</span>
+              </a>
             </li>
             <li class="socials-list__item">
-              <a href="#" class="socials-list__link socials-list__link--vk">Вконтакте</a>
+              <a href="#" class="socials-list__link socials-list__link--vk">
+                <svg class="socials-list__svg" width="23" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 15.8">
+                  <path d="M23.9 15.8c-.4 0-1.2-.1-2.1-.6-.6-.4-1.2-1-1.8-1.5-.4-.4-1.2-1.2-1.4-1.2-.3.1-.5.9-.5 1.6 0 .1 0 .8-.5 1.2-.4.4-1.1.5-1.2.5h-1.9c-1 0-4.4-.2-7.4-3C3.4 9.4.3 3 .1 2.7 0 2.2-.1 1.5.3 1.1.7.7 1.4.6 1.7.6H5.9c.1 0 .6.1 1 .3.4.2.6.7.6.7S8.1 3 9 4.3c1.3 2 1.9 2.5 2.1 2.6.2-.4.3-1.7.2-2.9 0-.5-.1-1.1-.3-1.3-.1-.1-.4-.3-.8-.3l-.7-.6c-.1-.7.6-1.2 1.1-1.4.7-.3 1.8-.4 3.1-.4h.7c1.2 0 1.6.1 2.1.2 1.7.4 1.6 1.7 1.6 3.3v2.1c0 .4 0 1 .1 1.3.2-.1.9-.7 2.1-2.5.8-1.2 1.4-2.5 1.5-2.8.2-.4.6-.9 1.6-.9h4.7c1 0 1.6.3 1.8.9.3.6.2 1.7-2.4 4.6-.4.4-.7.8-1 1.1-.6.7-1.2 1.4-1.2 1.6.1.1.7.6 1.3 1.1 1.5 1.2 2.5 2.3 3 3.1.5.8.4 1.3.3 1.7-.4.9-1.6 1-1.9 1h-4.1zm-5.3-4.9c.9 0 1.7.8 2.5 1.6.5.5 1 1 1.5 1.3.7.4 1.3.4 1.4.4h3.9c.2 0 .4-.1.5-.1 0 0 0-.1-.1-.2-.4-.7-1.4-1.7-2.7-2.7-1.2-1-1.8-1.5-1.9-2.2-.1-.8.5-1.4 1.6-2.7.3-.3.6-.7 1-1.1 1.6-1.8 2-2.6 2.1-3H23.1c-.2.4-.8 1.8-1.6 3-1.9 2.8-2.8 3.2-3.4 3.2-.2 0-.4 0-.6-.1-1-.6-1-1.8-.9-2.8v-.4-1.7c.1-1.7 0-1.7-.4-1.8-.4-.1-.7-.1-1.9-.2h-.7c-.6 0-1.3 0-1.9.1l.3.3c.6.7.6 2 .6 2.2.1 1.6.1 3.8-1 4.3-.2.1-.4.1-.6.1-.9 0-1.9-.9-3.4-3.3-.8-1.2-1.5-2.7-1.5-2.8L6 2.2c-.1 0-.2-.1-.3-.1h-4-.1c.6 1.2 3.4 6.6 6.5 9.5 2.7 2.5 5.8 2.6 6.4 2.6h1.9s.2-.1.3-.1V14c0-.3 0-2.6 1.6-3 .1-.1.2-.1.3-.1z"/>
+                </svg>
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
             </li>
             <li class="socials-list__item">
-              <a href="#" class="socials-list__link socials-list__link--inst">Instagram</a>
+              <a href="#" class="socials-list__link socials-list__link--inst">
+                <svg class="socials-list__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
+                  <path d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11M17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z"/>
+                  <path d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4m0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9z"/>
+                  <circle cx="17.6" cy="5.4" r="1.3"/>
+                </svg>
+                <span class="visually-hidden">Instagram</span>
+              </a>
             </li>
           </ul>
-
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-      <section class="heading">
+      <section class="catalog__heading heading">
         <div class="heading__container container">
           <h1 class="heading__title">Попутчики</h1>
-          <a href="#" class="heading__link">На главную</a>
+          <a href="index.html" class="heading__link">На главную</a>
         </div>
       </section>
 
-      <section class="regions">
+      <section class="catalog__regions regions">
         <div class="regions__container container">
           <div class="regions__wrapper">
             <h3 class="regions__title">Фильтрация по странам</h3>
@@ -756,7 +803,7 @@
         </div>
       </section>
 
-      <div class="columns">
+      <div class="catalog__columns columns">
         <section class="filter container">
           <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
             <h2 class="filter__title">Подберите идеального попутчика</h2>
@@ -819,21 +866,21 @@
               <p class="filter__legend legend">Транспорт</p>
 
                 <ul class="transport__list">
-                  <li class="transport__item">
+                  <li class="transport__item tooltip">
                     <input class="visually-hidden transport__checkbox" type="checkbox" name="flight" id="flight-field" checked>
-                    <label class="transport__label transport__type transport__type--flight tooltip" for="flight-field">Авиаперелет</label>
+                    <label class="transport__label transport__type transport__type--flight tooltip__text" for="flight-field">Авиаперелет</label>
                   </li>
-                  <li class="transport__item">
+                  <li class="transport__item tooltip">
                     <input class="visually-hidden transport__checkbox" type="checkbox" name="auto" id="auto-field" checked>
-                    <label class="transport__label transport__type transport__type--auto tooltip" for="auto-field">Автотранспорт</label>
+                    <label class="transport__label transport__type transport__type--auto tooltip__text" for="auto-field">Автотранспорт</label>
                   </li>
-                  <li class="transport__item">
+                  <li class="transport__item tooltip">
                     <input class="visually-hidden transport__checkbox" type="checkbox" name="bike" id="bike-field">
-                    <label class="transport__label transport__type transport__type--bike tooltip" for="bike-field">Велосипед</label>
+                    <label class="transport__label transport__type transport__type--bike tooltip__text" for="bike-field">Велосипед</label>
                   </li>
-                  <li class="transport__item">
+                  <li class="transport__item tooltip">
                     <input class="visually-hidden transport__checkbox" type="checkbox" name="foot" id="foot-field" checked>
-                    <label class="transport__label transport__type transport__type--foot tooltip" for="foot-field">Пешком</label>
+                    <label class="transport__label transport__type transport__type--foot tooltip__text" for="foot-field">Пешком</label>
                   </li>
                 </ul>
 
@@ -876,7 +923,7 @@
                 <article class="companions__traveler traveler traveler--info">
 
                   <a href="#" class="traveler__photo">
-                    <img class="traveler__photo-image" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фотография путешественника Тани Фирсовой">
+                    <img class="traveler__photo-image" src="img/firsova-desktop@1x.jpg" width="70" height="70" alt="Фотография путешественника Тани Фирсовой">
                   </a>
 
                   <div class="traveler__desc">
@@ -896,52 +943,66 @@
                       <a href="#" class="hashtags__link"> #смузи</a>
                     </p>
 
-                    <a href="#" class="traveler__call button">Позвать!</a>
+                    <div class="traveler__wrapper">
+                      <a href="#" class="traveler__call button">Позвать!</a>
 
-                    <div class="traveler__likes traveler__likes--active">1,5 M</div>
-
+                      <button class="traveler__likes traveler__likes--active" type="button" aria-label="Поставить лайк">
+                        <svg class="traveler__likes-svg" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11" fill="#f02323"><path d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1a3.2 3.2 0 000 4.6l.8.8L6.5 11l4.7-4.6.8-.8A3.2 3.2 0 0012 1z"/></svg>
+                        1,5 M
+                      </button>
+                    </div>
                   </div>
 
                   <section class="traveler__countries countries countries--list">
                     <p class="traveler__block-title countries__title">хочет посетить:</p>
                     <ul class="countries__list">
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 35 24"><image data-name="sri-lanka new" width="35" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAYCAYAAABwZEQ3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AQTDQIAzMNcVAAABD1JREFUSMe9lsuLXUUQxn/V3edx78ydyWRiopCHTkhATaIEXRhCFoJk48LFILh0m00E/wkXLrNwIQguBN372gQUERfmtdD4QJQkYx6GuZO5r/PqLhd9Z5KZCSq5gwVF96G7ur+ur6pOiV5cBDgGnAUW+P/lB+Ad4IboxcXjKBewClbjsgawKdgMVMEI1A0UVZx3AjggTABBxmNPoJYBhiMOOIeBfmNYGlicKJVYHmtG7Kq6YAz4AHkKnSkIAf9bgtYCZgIwGtXu9kiuU3jedsABksDl1Yy3fu+wOwlcy2Y5c/sSZ65/DdkM9AZw+Ek4/SKsFvQ+6lBfc5jpCVzjIZTC3Nl7uGMVdM0eBwwher9llMwouSjOAM6CNfdHjTSKU0iAdI3WTa7/L9IAQaJNtK/c2tQAiURNRbFGIkVrKg/cZCMgcaCVoDWYab0fQ2vgDGgpaCVIpkiq99cA8frgA3QS1iGApEr+XIUODDoQQtcQuha/YvC3LKYTSA5VEMDfsf8Y9G4iLCuW9isjkoMVzZJDKyE7WuAO1ejAEFYNdqfHPV1h2srw8zbDz6aQqRCp3jYwClpBcrDC33Skz1a0XhsgViEfXzQSmqsp5fk2dn9N/kJJstBQfJNTXsog3+imiTyDA2kpYSBoLUgrwB0b4yBXmp9TAKQTqC5nVL8o6ZM1vmuQXNGtxz2irGVBMx5rofkpxc0FSBQ6gfJqSv/jabLjBWY2EO5abCegpYDTaLsdYLQGM+Mx8wEzG+h+MMNsprjXezA00LW0XhqRPVPGLErAHKhpLmf4221kejtjphHMjCK7PGYu0DpR0H6jB0NZ95bZ4zFP1VALeIG2YuZ9BNJsPfKRwUiuNEuO5kJGemqEe6KBUqIq0FbYEaAQWB1XkFSgGavRLWk+UZ0RqzTLFr1rMUcqaI/jpaVQC8MPO4w+nYLZEDNsh6e8khHuyTantgfJlOx4QfltTv1HAhbaLw+xj3tW3t1B+WOKaSnp4QozG9Beipn1SKIPLX6PDsZG69FXLfxNR/FdjtbQOjkCp/hli9vb4G9ZmuuOxHjqXx3p0QocaNj6I5sotSVThudbSAJuf0Pr1AjmPYNPpgllzP7WyQKzr8GvGMy+JoL2YKyizUZAkxW9AHYuxIA1UHyfMTzfAg92Z4AAzV+W3vszG+i18wHqh9O0Dk83KQ8ubP7evClA6Jt1j6HxZO3LBkpkLYu2XII4IEegCMJSZWkUbohjtQjQH0HmoD+ActxyAmHV4Jct+pDXrXPIv6x5CIWJVMWcTh3QpZa9R9sN7y2skhllZEoW5juwcAIkgaaJLWc/tgLTi33CUOJTHlU0ttput4e+APRELy6eRvkCq5AEUAH14HJwrWhhDFQ1DIronZ3jejJpQy7AsomF0vK8A75EeJUgb1La+bjTQO2B/sYD7NjF3cl6sk3yJ5ZzwJW/AQUk3Xz1NRWZAAAAAElFTkSuQmCC"/>
+                        </svg>
                         <span class="countries__country">Шри-ланка</span>
                       </li>
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47">
+                          <rect width="70" height="47" rx="6.36" ry="6.36" fill="#ed5565"/><path fill="#fff" d="M0 10h70v28H0z"/><path fill="#4758a9" d="M0 14h70v20H0z"/>
+                        </svg>
                         <span class="countries__country">Таиланд</span>
                       </li>
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,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"/>
+                        </svg>
                         <span class="countries__country">Сейшелы</span>
                       </li>
                     </ul>
                   </section>
 
                   <div class="traveler__columns">
-                    <section class="traveler__transport transport">
+                    <section class="traveler__transport transport transport--circles">
                       <p class="traveler__block-title transport__title">транспорт:</p>
                       <ul class="transport__list">
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--flight transport__type--active tooltip">Авиаперелет</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--flight transport__type--active" width="19" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 21"><path d="M18.9 18.9L15.2 8.8c-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1l8.3 2.7c.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Авиаперелет</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--auto tooltip">Автотранспорт</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--auto" width="17" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Автотранспорт</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--bike tooltip">Велосипед</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--bike" width="24" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2a1.76 1.76 0 00.3 2.7l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Велосипед</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--foot tooltip">Пешком</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--foot" width="20" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Пешком</span>
                         </li>
                       </ul>
                     </section>
 
                     <section class="traveler__level level level--theme-light">
-                      <span class="traveler__block-title level__caption">левел:</span>
+                      <span class="traveler__block-title level__title">левел:</span>
+                      <svg class="level__ring" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 63 63"><circle class="level__ring-circle" cx="31.5" cy="31.5" r="30" stroke-linejoin="round" stroke-dasharray="186 188" stroke-width="3" fill="none"/></svg>
                       <span class="level__number">99</span>
+                      <span class="level__caption">level</span>
                     </section>
                   </div>
 
@@ -952,7 +1013,7 @@
                 <article class="companions__traveler traveler traveler--info">
 
                   <a href="#" class="traveler__photo">
-                    <img class="traveler__photo-image" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фотография путешественника Пети Демина">
+                    <img class="traveler__photo-image" src="img/demin-desktop@1x.jpg" width="70" height="70" alt="Фотография путешественника Пети Демина">
                   </a>
 
                   <div class="traveler__desc">
@@ -971,48 +1032,60 @@
                       <a href="#" class="hashtags__link">#крафт</a>
                     </p>
 
-                    <a href="#" class="traveler__call button">Позвать!</a>
+                    <div class="traveler__wrapper">
+                      <a href="#" class="traveler__call button">Позвать!</a>
 
-                    <div class="traveler__likes">1500</div>
-
+                      <button class="traveler__likes" type="button" aria-label="Поставить лайк">
+                        <svg class="traveler__likes-svg" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17" fill="#192144"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5a3.44 3.44 0 010-4.8c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
+                        1500
+                      </button>
+                    </div>
                   </div>
 
                   <section class="traveler__countries countries countries--list">
                     <p class="traveler__block-title countries__title">хочет посетить:</p>
                     <ul class="countries__list">
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image data-name="Layer 0" width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAclBMVEVDSlTtVWVDSlRDSlRDSlRDSlTtVWXtVWXtVWXtVWVDSlRDSlTtVWXtVWVDSlTtVWVDSlTtVWVDSlTtVWVDSlTtVWXtVWVDSlTtVWVDSlRDSlTtVWVDSlRDSlRDSlTtVWXtVWXtVWVDSlT21mDtVWUAAAA+0BRLAAAAInRSTlMAAEiv5/7+569ICKioCaOjRkatruv97K5HCamqTbDo6LBOjKe1xAAAAAFiS0dEJcMByQ8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkBBMQNh/uH5J1AAAAgklEQVRIx+3XSxaCMBBE0YqCAQX5CQiKSpP9r1GYcjLwmB7WW8AdVwHA4RjFsmvx5/adbJIaY4DzRTz9ymxl+cpcJZRxhUEp4YyrUGswDW4ajIVoMK0O48iQIUOGDBkyZMj4GZXt16HXYBqdXXzXWukYxlDmsX0G4Dm9/mfen3l9MF8+vLydO9jFDgAAAABJRU5ErkJggg=="/>
+                        </svg>
                         <span class="countries__country">Бельгия</span>
                       </li>
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABcVBMVEWapND19/pHWKntVWWTV4rsVWX19/r19/r19/r19/qUns309vr19/r19/pHWKn19/pHWKn19/pHWKn19/pHWKn19/rtVWVHWKntVWXtVWXtVWWGV4/rVWbtVWXtVWXtVWXtVWXtVWXtVWX19/qNmMr09vlHWKmHk8fz9fmCjsTx8/h8iMHw8/h2g7/u8fdxfrzr7vZterrp7PVod7nn6vNjcrbk5/JgbrTg5PBca7Pc4e9YaLHZ3e1WZrDU2etTY67Q1elRYa3L0edOXqzGzORMXKvByOJLXKu7wt9JWqq2vdxIWaqvt9lIWamosdaiq9NIWKmgVoTtVWVJWKitVn9MWKe5VnpQWKXDVnZVWKPMVnNbWKHUVW9jV57bVWxrV5rhVWp1V5bmVWiAV5LpVWeNV4zsVWaaV4dIWKinVoJLWKeyVn1OWKa9VnhTWKTIVnRYWKLQVnFfWJ/YVW5nV5zeVWtxV5jkVWl6V5ToVWcAAACBAZ6KAAAAI3RSTlMAAAAAAABIr+f+CKioCaOjRkatruv97K6uR6MJqaoJTbDoThU+hw0AAAABYktHRHo41YVqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AQTCjcQdgqYAwAAAUFJREFUSMet1tVCw0AURdFJB9oUd5cWObi7u3twd3eHvydIgbbpw8y9+wPW8xbCMNwe01usmdf0uA3DEK6YWF0iUFy8zSSUlFKdREMkAWXlVCdZpACoqCQyqSLNZlBVTWNMga9qaklM+g+DunqSE2DQ0MjCoKmZhUFLKwuDtnYWBh2dLAy6ulkY9PSyMOjrZ2EwMMjCYGiYhcHIKAuDsXEWBhOTLAymplkYzMyyMMAcCzO/YKkUgVlcUlIiMMsraoozs7qmqDgy6xuqihOzuaWsODDbO+pKOLO7p6GEMfsHOkooc3ikpYQwxyd6SjBzqokEMWfn2so/5uJSX/ljrq4Jyi9zc0tRAszdPUmxvt/v4ZGmZIhMW3l6pilW1ucXv7wSFSvbvvS3d6qSI4UrN4+q5BdIERUtC31+fcPvK5JSfgAk9LzirJYDiwAAAABJRU5ErkJggg=="/>
+                        </svg>
                         <span class="countries__country">Чехия</span>
                       </li>
                     </ul>
                   </section>
 
                   <div class="traveler__columns">
-                    <section class="traveler__transport transport">
+                    <section class="traveler__transport transport transport--circles">
                       <p class="traveler__block-title transport__title">транспорт:</p>
                       <ul class="transport__list">
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--flight transport__type--active tooltip">Авиаперелет</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--flight transport__type--active" width="19" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 21"><path d="M18.9 18.9L15.2 8.8c-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1l8.3 2.7c.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Авиаперелет</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--auto transport__type--active tooltip">Автотранспорт</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--auto transport__type--active" width="17" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Автотранспорт</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--bike tooltip">Велосипед</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--bike" width="24" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2a1.76 1.76 0 00.3 2.7l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Велосипед</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--foot transport__type--active tooltip">Пешком</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--foot transport__type--active" width="20" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Пешком</span>
                         </li>
                       </ul>
                     </section>
 
                     <section class="traveler__level level level--theme-light">
-                      <span class="traveler__block-title level__caption">левел:</span>
+                      <span class="traveler__block-title level__title">левел:</span>
+                      <svg class="level__ring" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 63 63"><circle class="level__ring-circle" cx="31.5" cy="31.5" r="30" stroke-linejoin="round" stroke-dasharray="155 188" stroke-width="3" fill="none"/></svg>
                       <span class="level__number">80</span>
+                      <span class="level__caption">level</span>
                     </section>
                   </div>
 
@@ -1020,10 +1093,10 @@
               </li>
 
               <li class="companions__item">
-                <article class="companions__traveler traveler traveler--info">
+                <article class="companions__traveler traveler traveler--info traveler--long">
 
                   <a href="#" class="traveler__photo">
-                    <img class="traveler__photo-image" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фотография путешественника Марка Смолова">
+                    <img class="traveler__photo-image" src="img/smolov-desktop@1x.jpg" width="70" height="70" alt="Фотография путешественника Марка Смолова">
                   </a>
 
                   <div class="traveler__desc">
@@ -1042,52 +1115,65 @@
                       <a href="#" class="hashtags__link">#суприм</a>
                     </p>
 
-                    <a href="#" class="traveler__call button">Позвать!</a>
+                    <div class="traveler__wrapper">
+                      <a href="#" class="traveler__call button">Позвать!</a>
 
-                    <div class="traveler__likes">170</div>
-
+                      <button class="traveler__likes" type="button" aria-label="Поставить лайк">
+                        <svg class="traveler__likes-svg" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17" fill="#192144"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5a3.44 3.44 0 010-4.8c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
+                        170
+                      </button>
+                    </div>
                   </div>
 
                   <section class="traveler__countries countries countries--list">
                     <p class="traveler__block-title countries__title">хочет посетить:</p>
                     <ul class="countries__list">
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image height="47" width="70" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABEVBMVEVKidztVWVKidxKidxKidxKidztVWXtVWXtVWXtVWVKidxKidztVWXtVWVKidztVWVKidztVWVKidztVWVKidztVWXtVWXtVWXtVWXtVWXtVWXtVWXtVWXtVWXtVWVKidztVWVkmuHL3fWfwez////U4/ejw+1Xkd79/v/l7vqPtul3puX19/pmnOHs8/vo8PtxouSyzfDF2fTP4Pbc6Pj8/f72+f3z9/3q8vvn7/rS4fasye/6/P6Fr+eYvOvy9/12puWCruf7/P7r8vucv+xfluBfl+D5+/5Oi92Hseh4p+WzzfDu9PyUuepwouPm7/qtyu/f6vnI2/RZk99Qjd2nxu7e6vmVuupLidydv+wAAAB76ytSAAAAH3RSTlMAAEiv5/7+569ICKioCaOjRkatruv96+xHqapNsOhOVJTDOgAAAAFiS0dEWgO7paIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkBBURFAt33jXDAAABK0lEQVRIx+3XaU/CQBAG4FkFQRQ5iqACtsiogCIoyqGACCqH9wHq//8jLkQa2kja7OwHorxfmjTZJ9nZmaYLALCw6HCqv0ezypLLvcwYA/CsqNNjyQyz6uXMmkplNB8Dv0pntAAEZTAKhGQwLjAuS+wIMesmJokJEUYzMbu4J4HZT2FaApNBxIPJF4c2Y2CyR5zJ5QnM8UmhcHqGoxRL5cq5GHOBhlRrgpuqpyaUy4Zwba6autLKEkp8rTMN4RLz3IyVEunAb8dMu0NhuvqmepQuvkO8f3jMPCE+U5gXfH3jj/d+c0BhWh+fPzPxRf1QmDNnZoex2+4WwzBn/hljt8Es2u9PMmEZSgQUGYwCARnMBjAfXeF/6cy7SVW2+J2BXz+isbi4EY9tc+IbslbHYd+WdpQAAAAASUVORK5CYII="/>
+                        </svg>
                         <span class="countries__country">США</span>
                       </li>
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image data-name="Layer 0" width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEXtVWXtWmlHWKn84uTp6/W/xOBHWKlHWKlHWKlHWKnkVWnqWmpHWKlHWKlHWKnq7PVHWKm/xeFHWKlHWKlHWKlHWKlHWKlHWKlHWKlHWKlHWKlHWKlHWKlIWapHWKn////tVWVodrnzj5r84uTEyePzjpntWmlpd7mstNhhcLX9/f5aarL98PGJlMiTnc3T1+rZ3e2ep9KWoM7wcX74uL+Hksf6+v33+Pt9icLtVmb3uL6gqdOUns2bpNDs7fa1vNyBjMRzgL6iq9NJWqrtWWlfbrR/i8P7+/2BjcRqeLqqstebpdDj5fJQYa3FyuR0gb65v95MXau4v95vfLz+/v5aabKvttqrstiyudvCx+LS1ur+/v/h4/G6wN9yf73y8/no6vRlc7dterv5+fxca7P29/vm6PNicLWrs9hdbLO2vd1PX61LW6ucpdEAAAB2VejuAAAAHXRSTlMAAAAwxfr+569IXP2oCaPERvqu/evsR6mqTbDoTpiWX74AAAABYktHRG4iD1EXAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AQVERQ3WLFJRAAAAfRJREFUSMe112dX2zAUBmBhCrTshrISrCtIIBTCTBhh71UoLW3ZUGZoGf//K9e2pDAsxUHmfslJTvIc31dXckxISemHMptiAWPgvNJ2gA7GaKAqr/j4ybIsUlJZFYeE/YTxlM5gjFPVNRYprWJdnsMZrkBwhtZapC7exR2PEUoxDK0nn0E4LiOVZDFMhNgJ4TjM2xRaQah0HEardCuZBkLzjsNolK89vUoHGeGkkFErff0DMDg0rGG4k2Yso76WkVHseGxcxQCvFCosm50Q718t+CR+NqXKiTBVvWSmYQamVTkFZ2bn6PyCKifZFGSy+Nt0StmUNic3Ym92kUmL/VWgnuckGG92JxhLefO8WIh5lpNgknzqcG7iwZwnOUlGKO4Uo7P02ukuwCKDSqerOEzC19FtA85IJekwto+j3wackYp3bOUd+RX9NhCMUPjpJx3N8vowUhFnsXA0y+vD5Pe0uDNwR7O8fitVfPmQxTPLK6tr6+bMBgb+LYSmZmAzhKa2vm//+BnC1fjVezD2TijMr99/wmB2Yc+Y2T84PAI4HjwxY07/ujeEs3PDpi4c5fLKOJtrZHKm2dAbyP07hv+mTN/tHb1/2DZuyqDIlzCURhIJg4mQ+jCYJmLVmiv4L92qaTZVWvCZAR8/WqOxtxuxaBsSjzvxlsH7VH3EAAAAAElFTkSuQmCC"/>
+                        </svg>
                         <span class="countries__country">Австралия</span>
                       </li>
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image data-name="Layer 0" width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAt1BMVEVSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWJSwWL2u0JDSlT////1q0fyjFLwdFrVU2PjVGTtVWXyiJT3sbj85OdTwWLzm03va13xeob5ys9psWLHcGRqsGKGnWPmWmWPlmPsVmWFnWPrVmXlW2XvbF3kVGTziZT3sLjxe4fHb2SHnGPva17xeYb5yc4AAACsPtKXAAAAFnRSTlMASK/n/gioCaNGra7r/exHqapNsOhOqDQNKAAAAAFiS0dEPKdqYc8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkBBURFSzLz7HpAAABV0lEQVRIx73Xa1OCQBSA4aOYaHTXVrm5BiQQaCoSXf7//wqaaSo7e1qWnd7P7jPOOrPnCADQ6xsDhjVrmjfZTdhHBka/B00nQyZKgmkamjUzYl0ZNgIYs+4MG8OpDsaCMx2MAUwHc66HYX8wjuv5C77wl3eBMhNG9/yrVRwqMUnKf5Y+KDBZzo/Ls9bMesN/t1m3ZB63HGubtWKSHcfbJS2YMOWiUvT3ghlWxMVF2AGc2RPMXppxOJUjy7gk48oyHsl4GDNH8knGR06gTEEyhSzD6f752yjcjY10IJkDcgJlSpIpZZmAZAJZxl4RypMtzcQEE6MM/t5UQqXC3xvB65cLlByfDqK3OBO8xc/tnnRNk0HXnKrv5/ieK5Wp2czwl2/I65vaDP/cKApe+MtSfaPQt99IM1p2vwuwdDCWnr34UteWDuZVV+ba/PjzcTOZqjPTyW1NvAPZsz4B7nXLQAAAAABJRU5ErkJggg=="/>
+                        </svg>
                         <span class="countries__country">Доминикана</span>
                       </li>
                     </ul>
                   </section>
 
                   <div class="traveler__columns">
-                    <section class="traveler__transport transport">
+                    <section class="traveler__transport transport transport--circles">
                       <p class="traveler__block-title transport__title">транспорт:</p>
                       <ul class="transport__list">
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--flight transport__type--active tooltip">Авиаперелет</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--flight transport__type--active" width="19" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 21"><path d="M18.9 18.9L15.2 8.8c-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1l8.3 2.7c.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Авиаперелет</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--auto tooltip">Автотранспорт</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--auto" width="17" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Автотранспорт</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--bike tooltip">Велосипед</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--bike" width="24" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2a1.76 1.76 0 00.3 2.7l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Велосипед</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--foot transport__type--active tooltip">Пешком</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--foot transport__type--active" width="20" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Пешком</span>
                         </li>
                       </ul>
                     </section>
 
                     <section class="traveler__level level level--theme-light">
-                      <span class="traveler__block-title level__caption">левел:</span>
+                      <span class="traveler__block-title level__title">левел:</span>
+                      <svg class="level__ring" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 63 63"><circle class="level__ring-circle" cx="31.5" cy="31.5" r="30" stroke-linejoin="round" stroke-dasharray="47 188" stroke-width="3" fill="none"/></svg>
                       <span class="level__number">25</span>
+                      <span class="level__caption">level</span>
                     </section>
                   </div>
 
@@ -1098,7 +1184,7 @@
                 <article class="companions__traveler traveler traveler--info">
 
                   <a href="#" class="traveler__photo">
-                    <img class="traveler__photo-image" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фотография путешественника Ларисы Роговой">
+                    <img class="traveler__photo-image" src="img/rogovaya-desktop@1x.jpg" width="70" height="70" alt="Фотография путешественника Ларисы Роговой">
                   </a>
 
                   <div class="traveler__desc">
@@ -1116,48 +1202,60 @@
                       <a href="#" class="hashtags__link">#линкедин</a>
                     </p>
 
-                    <a href="#" class="traveler__call button">Позвать!</a>
+                    <div class="traveler__wrapper">
+                      <a href="#" class="traveler__call button">Позвать!</a>
 
-                    <div class="traveler__likes">23</div>
-
+                      <button class="traveler__likes" type="button" aria-label="Поставить лайк">
+                        <svg class="traveler__likes-svg" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17" fill="#192144"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5a3.44 3.44 0 010-4.8c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
+                        23
+                      </button>
+                    </div>
                   </div>
 
                   <section class="traveler__countries countries countries--list">
                     <p class="traveler__block-title countries__title">хочет посетить:</p>
                     <ul class="countries__list">
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image data-name="Layer 0" width="70" height="47" xlink:href="data:img/png;base64,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"/>
+                        </svg>
                         <span class="countries__country">Великобритания</span>
                       </li>
                       <li class="countries__item">
-                        <span class="countries__flag flag"></span>
+                        <svg class="countries__flag flag" xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 70 47"><image data-name="Layer 0" width="70" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAMAAABpC0wkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAYFBMVEVDSlT2u0JDSlRDSlRDSlRDSlRDSlRDSlRDSlRDSlRDSlRDSlRDSlRDSlRDSlT2u0L2u0L2u0L2u0L2u0L2u0L2u0L2u0L2u0L2u0L2u0L2u0L2u0JDSlTtVWX2u0IAAABODqBtAAAAHHRSTlMAAEiv5/4IqAmjRq2u6/3r7K5GR6MJqapNsOhOCw5BCAAAAAFiS0dEHwUNEL0AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkBBURFy9g8ILRAAAAfUlEQVRIx+3MSxKCQAwFwBcYvioCggoG7n9MhwVrqjJvmT5AA0CWh0KNipBnOJSVtThVdWya1EW1Adr0RbXFjdHc8WA0AYxFO06j3nhjajYKb7zxxpvrZqfwxhtT82QsPQZGM2BkNC/IlL5MApnfqctnjo3Id1ntx7r8YvEHq1tv7NL83k0AAAAASUVORK5CYII="/>
+                        </svg>
                         <span class="countries__country">Германия</span>
                       </li>
                     </ul>
                   </section>
 
                   <div class="traveler__columns">
-                    <section class="traveler__transport transport">
+                    <section class="traveler__transport transport transport--circles">
                       <p class="traveler__block-title transport__title">транспорт:</p>
                       <ul class="transport__list">
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--flight transport__type--active tooltip">Авиаперелет</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--flight transport__type--active" width="19" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 21"><path d="M18.9 18.9L15.2 8.8c-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1l8.3 2.7c.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Авиаперелет</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--auto transport__type--active tooltip">Автотранспорт</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--auto transport__type--active" width="17" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Автотранспорт</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--bike tooltip">Велосипед</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--bike" width="24" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2a1.76 1.76 0 00.3 2.7l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Велосипед</span>
                         </li>
-                        <li class="transport__item">
-                          <span class="transport__type transport__type--foot tooltip">Пешком</span>
+                        <li class="transport__item tooltip">
+                          <svg class="transport__type transport__type--foot" width="20" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
+                          <span class="transport__tooltip tooltip__text">Пешком</span>
                         </li>
                       </ul>
                     </section>
 
                     <section class="traveler__level level level--theme-light">
-                      <span class="traveler__block-title level__caption">левел:</span>
+                      <span class="traveler__block-title level__title">левел:</span>
+                      <svg class="level__ring" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 63 63"><circle class="level__ring-circle" cx="31.5" cy="31.5" r="30" stroke-linejoin="round" stroke-dasharray="94 188" stroke-width="3" fill="none"/></svg>
                       <span class="level__number">50</span>
+                      <span class="level__caption">level</span>
                     </section>
                   </div>
 
@@ -1199,32 +1297,50 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="catalog__footer footer">
       <div class="footer__container container">
         <a class="footer__logo logo">
           <img class="logo__image" src="img/logo-mobile-blue@1x.png" width="96" height="15" alt="Логотип компании «Погнали»">
         </a>
 
-        <ul class="footer__socials-list socials-list">
+        <ul class="footer__socials-list socials-list socials-list--yellow">
           <li class="socials-list__item">
-            <a href="#" class="socials-list__link socials-list__link--fb socials-list__link--yellow">Facebook</a>
+            <a href="#" class="socials-list__link socials-list__link--fb socials-list__link--yellow">
+              <svg class="socials-list__svg" width="11" height="21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 21">
+                <path d="M7.8 21H2.2v-9.8H0V6.4h2.1c-.1-2.2.3-3.8 1.3-4.9C4.2.6 5.5.1 7.1 0H11v4.7H7.9c-.1.2-.2.8-.2 1.7H11v4.8H7.8V21zm-4.4-1.1h3.1v-9.8h3.2V7.5H6.5v-.6c0-1.5 0-2.9.8-3.4l.2-.1h2.3V1.1H7.1c-1.2.1-2.2.5-2.8 1.2-.8.9-1.1 2.5-.9 4.6l.1.6H1.2v2.6h2.2v9.8z"/>
+              </svg>
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li class="socials-list__item">
-            <a href="#" class="socials-list__link socials-list__link--vk socials-list__link--yellow">Вконтакте</a>
+            <a href="#" class="socials-list__link socials-list__link--vk socials-list__link--yellow">
+              <svg class="socials-list__svg" width="23" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 15.8">
+                <path d="M23.9 15.8c-.4 0-1.2-.1-2.1-.6-.6-.4-1.2-1-1.8-1.5-.4-.4-1.2-1.2-1.4-1.2-.3.1-.5.9-.5 1.6 0 .1 0 .8-.5 1.2-.4.4-1.1.5-1.2.5h-1.9c-1 0-4.4-.2-7.4-3C3.4 9.4.3 3 .1 2.7 0 2.2-.1 1.5.3 1.1.7.7 1.4.6 1.7.6H5.9c.1 0 .6.1 1 .3.4.2.6.7.6.7S8.1 3 9 4.3c1.3 2 1.9 2.5 2.1 2.6.2-.4.3-1.7.2-2.9 0-.5-.1-1.1-.3-1.3-.1-.1-.4-.3-.8-.3l-.7-.6c-.1-.7.6-1.2 1.1-1.4.7-.3 1.8-.4 3.1-.4h.7c1.2 0 1.6.1 2.1.2 1.7.4 1.6 1.7 1.6 3.3v2.1c0 .4 0 1 .1 1.3.2-.1.9-.7 2.1-2.5.8-1.2 1.4-2.5 1.5-2.8.2-.4.6-.9 1.6-.9h4.7c1 0 1.6.3 1.8.9.3.6.2 1.7-2.4 4.6-.4.4-.7.8-1 1.1-.6.7-1.2 1.4-1.2 1.6.1.1.7.6 1.3 1.1 1.5 1.2 2.5 2.3 3 3.1.5.8.4 1.3.3 1.7-.4.9-1.6 1-1.9 1h-4.1zm-5.3-4.9c.9 0 1.7.8 2.5 1.6.5.5 1 1 1.5 1.3.7.4 1.3.4 1.4.4h3.9c.2 0 .4-.1.5-.1 0 0 0-.1-.1-.2-.4-.7-1.4-1.7-2.7-2.7-1.2-1-1.8-1.5-1.9-2.2-.1-.8.5-1.4 1.6-2.7.3-.3.6-.7 1-1.1 1.6-1.8 2-2.6 2.1-3H23.1c-.2.4-.8 1.8-1.6 3-1.9 2.8-2.8 3.2-3.4 3.2-.2 0-.4 0-.6-.1-1-.6-1-1.8-.9-2.8v-.4-1.7c.1-1.7 0-1.7-.4-1.8-.4-.1-.7-.1-1.9-.2h-.7c-.6 0-1.3 0-1.9.1l.3.3c.6.7.6 2 .6 2.2.1 1.6.1 3.8-1 4.3-.2.1-.4.1-.6.1-.9 0-1.9-.9-3.4-3.3-.8-1.2-1.5-2.7-1.5-2.8L6 2.2c-.1 0-.2-.1-.3-.1h-4-.1c.6 1.2 3.4 6.6 6.5 9.5 2.7 2.5 5.8 2.6 6.4 2.6h1.9s.2-.1.3-.1V14c0-.3 0-2.6 1.6-3 .1-.1.2-.1.3-.1z"/>
+              </svg>
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
           <li class="socials-list__item">
-            <a href="#" class="socials-list__link socials-list__link--inst socials-list__link--yellow">Instagram</a>
+            <a href="#" class="socials-list__link socials-list__link--inst socials-list__link--yellow">
+              <svg class="socials-list__svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
+                <path d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11M17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z"/>
+                <path d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4m0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9z"/>
+                <circle cx="17.6" cy="5.4" r="1.3"/>
+              </svg>
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
         </ul>
 
         <div class="footer__copyright copyright">
-          <span class="copyright__text">Разработано</span>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
-            <img class="copyright__logo" src="img/htmlacademy.svg" width="40" height="40" alt="Логотип HTML-академии">
+            <span class="copyright__text">Разработано</span>
+            <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML-академии">
           </a>
         </div>
       </div>
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

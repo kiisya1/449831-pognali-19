@@ -1,16 +1,20 @@
 .main-nav {
-  padding-top: 25px;
-  padding-bottom: 15px;
+  padding-top: 46px;
+  padding-bottom: 40px;
 
   background-color: $background-color--light;
-
-  &--close {
-    display: none;
-  }
 }
 
 .main-nav__list {
-  margin-bottom: 50px;
+  margin-bottom: 49px;
+
+  &--user {
+    margin-bottom: 52px;
+  }
+}
+
+.main-nav__contacts--icons {
+  display: none;
 }
 
 .main-nav__contacts {
@@ -19,45 +23,106 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    padding-left: 56px;
+    padding-top: 68px;
+    padding-bottom: 90px;
+  }
 
-    &--close {
-      display: none;
-    }
+  .main-nav__list {
+    margin-bottom: 135px;
   }
 
   .main-nav__list--user {
     display: none;
   }
 
+  .main-nav__contacts {
+    margin-bottom: 130px;
+  }
+
   .main-nav__socials-list {
-    display: flex;
+    margin-left: 26px;
+  }
+}
+
+@media (max-width: $mobile-only-width) {
+  .main-nav__container {
+    padding: 0 25px;
+    margin: 0 auto;
+    width: 320px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: $tablet-only-width) {
+  .main-nav {
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      position: absolute;
+      top: 71px;
+      left: 0;
+      z-index: 10;
+
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+  .main-nav__container {
+    padding: 0 40px;
+    padding-left: 97px;
+    margin: 0 auto;
+    width: $tablet-width;
+    box-sizing: border-box;
+  }
+
+  .main-nav--opened {
+    top: 115px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    display: flex;
+    margin-right: auto;
     padding: 0;
+    padding-top: 49px;
+    padding-right: 40px;
+    width: 1080px;
 
-    &--close {
+    color: $color--light;
+
+    background-color: $background-color--dark;
+
+    &--closed {
       background-color: $background-color--dark;
       color: $color--light;
     }
   }
 
+  .main-nav__container {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+  }
+
   .main-nav__list {
     margin-bottom: 0;
+    margin-top: 8px;
   }
 
   .main-nav__list--user {
+    order: 5;
     display: flex;
-    order: 1;
-    width: 190px;
+    margin-top: 0;
+    padding-bottom: 0;
+    width: 189px;
   }
 
   .main-nav__contacts {
-    width: 156px;
+    order: 4;
     margin-bottom: 0;
   }
 

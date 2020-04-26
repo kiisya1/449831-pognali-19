@@ -1,0 +1,11 @@
+.flag {
+  width: 35px;
+  height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .flag--large {
+    width: 70px;
+    height: 47px;
+  }
+}

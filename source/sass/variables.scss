@@ -4,6 +4,9 @@ $standart-font: "Blogger Sans", "Verdana", sans-serif;
 $font-size: 16px;
 $line-height: 22px;
 
+$font-size-tablet: 28px;
+$line-height-tablet: 33px;
+
 $font-light: 300;
 $font-normal: 400;
 $font-medium: 500;
@@ -73,8 +76,8 @@ $link-color--dark: $color--darken;
 $link-color--darken: $color--darkest;
 
 $link-color--light: $gold;
-$link-color--light-hover: $mango;
-$link-color--light-active: rgba($mango, 0.3);
+$link-color--light-hover: $mango-lighten;
+$link-color--light-active: rgba($mango-lighten, 0.3);
 
 /* Основные цвета кнопок */
 

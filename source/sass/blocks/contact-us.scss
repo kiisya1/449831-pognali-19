@@ -7,8 +7,16 @@
 .contact-us__contacts {
   position: relative;
   z-index: 2;
+
+  margin-bottom: -30px;
 }
 
 .contact-us__map {
-  margin-top: -30px;
+  background-color: #e8e1d0;
+}
+
+@media (min-width: $tablet-width) {
+  .contact-us__contacts {
+    margin-bottom: -60px;
+  }
 }

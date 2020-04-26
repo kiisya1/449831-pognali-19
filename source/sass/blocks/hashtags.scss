@@ -4,6 +4,8 @@
 }
 
 .hashtags__link {
+  display: inline-block;
+
   color: $color--base;
 
   &:hover,
@@ -13,5 +15,11 @@
 
   &:active {
     color: rgba($color--base, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .hashtags {
+    width: 224px;
   }
 }

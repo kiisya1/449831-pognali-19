@@ -1,38 +1,160 @@
+.countries--list {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -18px;
+
+    width: 270px;
+    height: 1px;
+
+    background-color: $background-color;
+  }
+}
+
+.countries__title {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+  padding-left: 13px;
+  padding-right: 11px;
+  margin: 0;
+  margin-bottom: 14px;
+
+  background-color: $background-color--light;
+}
+
 .countries__list {
   @include reset-list;
+}
+
+.countries--line .countries__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .countries--list .countries__list {
   margin-left: 7px;
 }
 
-.countries__item {
-  margin-bottom: 10px;
+.countries--line .countries__item {
+  margin-right: 18px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.countries--list .countries__item {
+  display: flex;
+  align-items: flex-end;
+
+  margin-bottom: 7px;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-.countries__country {
+.countries--list .countries__flag {
+  width: 26px;
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 14px;
+}
+
+.countries--list .countries__country {
   color: $color--dark;
   font-weight: $font-medium;
   text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {
+  .countries--list {
+    &::before {
+      top: 8px;
+      left: -35px;
+
+      width: 688px;
+    }
+  }
+
+  .countries__title {
+    padding: 0 12px;
+    margin-left: 36px;
+    margin-bottom: 17px;
+  }
+
+  .countries--line .countries__item {
+    margin-right: 19px;
+  }
+
   .countries--list .countries__list {
     display: flex;
     flex-wrap: wrap;
+
+    margin-left: 0;
   }
 
   .countries--list .countries__item {
-    padding-left: 47px;
+    margin-right: 28px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .countries--list .countries__flag {
+    padding-bottom: 6px;
+    margin-right: 11px;
+    width: 35px;
+    height: 24px;
+  }
+
+  .countries--list .countries__country {
+    padding-top: 0;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .countries--list {
+    &::before {
+      display: none;
+    }
+  }
+
   .countries--list .countries__list {
     flex-direction: column;
+    margin-left: 0;
+  }
+
+  .countries__title {
+    display: none;
+  }
+
+  .countries--list .countries__item {
+    align-items: flex-start;
+    margin-right: 0;
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .countries--list .countries__flag {
+    margin-right: 19px;
+  }
+
+  .countries--list .countries__country {
+    padding-top: 0;
   }
 }

@@ -1,0 +1,13 @@
+.form__footer {
+  position: relative;
+  z-index: 2;
+
+  margin-top: -30px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .form__footer {
+    margin-bottom: -60px;
+  }
+}

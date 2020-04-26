@@ -1,12 +1,154 @@
 .socials-list {
   @include reset-list;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-  text-align: center;
+  &--yellow {
+    position: relative;
+
+    padding-bottom: 37px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 270px;
+      height: 1px;
+
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.socials-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 22px;
+  width: 23px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials-list__link {
+  display: block;
+}
+
+.socials-list__svg {
+  display: block;
+  fill: $blue-darken;
+}
+
+.socials-list__link--fb .socials-list__svg {
+  width: 11px;
+  height: 21px;
+}
+
+.socials-list__link--vk .socials-list__svg {
+  width: 23px;
+  height: 12px;
+}
+
+.socials-list__link--inst .socials-list__svg {
+  width: 18px;
+  height: 18px;
+}
+
+.socials-list__link:hover .socials-list__svg,
+.socials-list__link:focus .socials-list__svg {
+  opacity: 0.6;
+}
+
+.socials-list__link:active .socials-list__svg {
+  opacity: 0.3;
+}
+
+
+.socials-list--yellow .socials-list__item {
+  margin-right: 0;
+  width: 45px;
+}
+
+.socials-list--yellow .socials-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  background-color: $btn-background;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $btn-background--hover;
+  }
+}
+
+.socials-list--yellow .socials-list__svg {
+  fill: $blue;
+}
+
+.socials-list__link--yellow:hover .socials-list__svg,
+.socials-list__link--yellow:focus .socials-list__svg {
+  opacity: 1;
+}
+
+.socials-list__link--yellow:active .socials-list__svg {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
   .socials-list {
-    text-align: left;
+    justify-content: flex-start;
+
+    &--yellow {
+      padding-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .socials-list__item {
+    margin-right: 35px;
+    width: auto;
+  }
+
+  .socials-list--yellow .socials-list__item {
+    width: 60px;
+  }
+
+  .socials-list--yellow .socials-list__link {
+    width: 60px;
+    height: 60px;
+  }
+
+  .socials-list__svg {
+    fill: $gray-light;
+  }
+
+  .socials-list__link--fb .socials-list__svg {
+    width: 14px;
+    height: 28px;
+  }
+
+  .socials-list__link--vk .socials-list__svg {
+    width: 31px;
+    height: 16px;
+  }
+
+  .socials-list__link--inst .socials-list__svg {
+    width: 24px;
+    height: 24px;
   }
 }

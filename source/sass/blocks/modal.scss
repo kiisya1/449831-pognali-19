@@ -1,4 +1,9 @@
 .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
   padding: 0;
   margin: 0 auto;
   width: 270px;
@@ -7,11 +12,23 @@
   background-color: $background-color--light;
   border-radius: 20px;
   box-shadow: 0 20px 50px 0 $box-shadow-color;
+
+  transform: translate(-50%, -50%);
+
+  &--close {
+    display: none;
+  }
+
+  &--open {
+    display: block;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .modal {
     width: 688px;
+
+    border-radius: 30px;
   }
 }
 

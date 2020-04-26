@@ -4,7 +4,7 @@
 
 .companions__list {
   @include reset-list;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .companions__item {
@@ -19,11 +19,37 @@
   margin-bottom: 46px;
 }
 
+@media (min-width: $tablet-width) {
+  .companions__list {
+    margin-bottom: 46px;
+  }
+
+  .companions__item {
+    margin-bottom: 40px;
+  }
+
+  .companions__pagination {
+    margin-bottom: 62px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .companions__container {
     padding-left: 0;
     padding-right: 0;
     margin-right: 85px;
     width: 950px;
+  }
+
+  .companions__list {
+    margin-bottom: 66px;
+  }
+
+  .companions__item {
+    margin-bottom: 30px;
+  }
+
+  .companions__pagination {
+    margin-bottom: 77px;
   }
 }

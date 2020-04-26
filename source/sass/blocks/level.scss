@@ -1,13 +1,15 @@
 .level {
+  position: relative;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
   &--inside {
     width: 100px;
     height: 100px;
     padding: 17px;
-    box-sizing: border-box;
 
-    text-align: center;
-
-    border: 3px solid $mango;
     border-radius: 50%;
   }
 
@@ -19,13 +21,11 @@
     width: 60px;
     height: 60px;
     padding: 9px;
-    box-sizing: border-box;
+    padding-top: 14px;
 
     color: $color--light;
-    text-align: center;
 
     background-color: rgba(0, 0, 0, 0.6);
-    border: 3px solid $mango;
     border-radius: 50%;
   }
 }
@@ -34,6 +34,8 @@
   position: relative;
 
   display: block;
+  padding-bottom: 1px;
+
   font-size: 24px;
   line-height: 24px;
   font-weight: $font-bold;
@@ -52,6 +54,24 @@
   }
 }
 
+.level__ring {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%) rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.level__ring-circle {
+  stroke: $mango;
+}
+
+.level--theme-light .level__ring {
+  top: 25px;
+  left: 40px;
+}
+
 .level--theme-dark .level__caption {
   display: block;
   font-size: 14px;
@@ -59,10 +79,17 @@
   font-weight: $font-normal;
 }
 
+.level--theme-light .level__title {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
 .level--theme-light .level__number {
   display: block;
-  padding: 13px 0;
-  margin: 0 auto;
+  padding: 11px 0;
+  padding-right: 4px;
+  margin-left: auto;
   width: 45px;
   height: 45px;
   box-sizing: border-box;
@@ -72,11 +99,11 @@
   color: $color--dark;
   font-weight: $font-bold;
   text-align: center;
-
-  border: 3px solid $mango;
-  border-radius: 50%;
 }
 
+.level--theme-light .level__caption {
+  display: none;
+}
 
 .level--inside .level__number {
   position: relative;
@@ -113,4 +140,117 @@
   display: block;
   font-size: 18px;
   font-weight: $font-normal;
+}
+
+@media (min-width: $tablet-width) {
+  .level {
+    &--theme-light {
+      height: 60px;
+    }
+
+    &--theme-dark {
+      top: 20px;
+      left: 20px;
+    }
+  }
+
+  .level--theme-light .level__title {
+    display: none;
+  }
+
+  .level--theme-light .level__caption {
+    display: block;
+    margin: 0 auto;
+    width: 26px;
+
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba($color--base, 0.4);
+  }
+
+  .level--theme-light .level__ring {
+    top: 0;
+    left: 50%;
+
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+
+  .level--theme-light .level__number {
+    position: relative;
+
+    display: block;
+    padding: 0;
+    padding-top: 14px;
+    padding-bottom: 1px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+
+      width: 31px;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+
+      transform: translateX(-50%);
+    }
+  }
+
+  .level--inside {
+    padding: 0;
+  }
+
+  .level--inside .level__ring {
+    width: 94px;
+    height: 94px;
+  }
+
+  .level--inside .level__number {
+    padding-top: 20px;
+
+    font-size: 38px;
+    line-height: 38px;
+    color: $color--light;
+
+    &::after {
+      width: 49px;
+      height: 2px;
+      background-color: rgba($white, 0.3);
+    }
+  }
+
+  .level--inside .level__caption {
+    width: auto;
+
+    font-size: 18px;
+    line-height: 22px;
+    color: $color--light;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level {
+    &--theme-dark {
+      top: 23px;
+      left: 23px;
+    }
+  }
+
+  .level--inside .level__number {
+    padding-top: 21px;
+    padding-bottom: 1px;
+
+    &::after {
+      bottom: 2px;
+    }
+  }
 }
