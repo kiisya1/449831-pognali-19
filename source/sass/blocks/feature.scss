@@ -7,7 +7,9 @@
 
 .feature__list {
   @include reset-list;
-  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 19px;
+  margin-top: 8px;
 
   font-size: 15px;
   line-height: 1;
@@ -15,7 +17,7 @@
 }
 
 .feature__item {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 
   &:last-child {
     margin-bottom: 0;
@@ -23,20 +25,136 @@
 }
 
 .feature__label {
-  padding-top: 2px;
+  position: relative;
+
+  padding-top: 4px;
   padding-left: 27px;
-  padding-bottom: 1px;
+  padding-bottom: 0;
+
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: $background-color--light;
+    border-radius: 4px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    display: none;
+
+    width: 9px;
+    height: 9px;
+
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &:hover {
+    color: rgba($color--base, 0.6);
+
+    &::before {
+      opacity: 0.6;
+    }
+  }
+}
+
+.feature__checkbox:checked ~ .feature__label {
+  &::after {
+    display: block;
+  }
+}
+
+.feature__checkbox:focus ~ .feature__label {
+  color: rgba($color--base, 0.3);
+  outline: 5px auto -webkit-focus-ring-color;
+
+  &::before {
+    opacity: 0.3;
+  }
+
+  &::after {
+    opacity: 0.2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .feature__label {
+    padding-top: 4px;
+    padding-left: 36px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      top: 6px;
+      left: 6px;
+
+      width: 12px;
+      height: 12px;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
   .feature {
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
+  }
+
+  .feature__legend {
+    margin-top: -6px;
+    margin-left: -1px;
   }
 
   .feature__list {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    width: 492px;
+  }
+
+  .feature__item {
+    margin-bottom: 0;
+    margin-right: 19px;
+    width: 150px;
+
+    &:nth-child(3n+2) {
+      margin-right: 23px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feature__list {
+    margin-top: 23px;
+    margin-bottom: 28px;
+  }
+
+  .feature__item {
+    margin-bottom: 20px;
   }
 }

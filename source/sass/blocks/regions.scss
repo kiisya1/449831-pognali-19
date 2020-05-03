@@ -1,11 +1,23 @@
 .regions {
-  padding-top: 40px;
-  padding-bottom: 27px;
   min-width: 320px;
 
   background-color: $pale-grey-dark;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  &--opened {
+    position: absolute;
+    top: auto;
+    left: auto;
+    z-index: 4;
+
+    width: 100%;
+  }
+}
+
+.regions__container {
+  padding-top: 18px;
+  padding-bottom: 27px;
 }
 
 .regions__wrapper {
@@ -16,28 +28,47 @@
 }
 
 .regions__title {
+  position: relative;
+
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
+  margin-right: 10px;
   padding: 0;
   padding-left: 27px;
   width: 225px;
+  box-sizing: border-box;
 
   font-size: 16px;
   line-height: 22px;
   color: $color--darkest;
   font-weight: $font-bold;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 15px;
+    height: 10px;
+
+    background-image: url("../img/filter.svg");
+    background-repeat: no-repeat;
+
+    transform: translateY(-60%);
+  }
 }
 
 .regions__continents-list {
   margin-left: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   width: 100%;
 }
 
 .regions__letters-list {
   margin-left: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 14px;
 }
 
 .regions__regions-list {
@@ -45,39 +76,172 @@
   margin-bottom: 40px;
 }
 
-.regions__close-desc {
-  display: none;
+.regions__button {
+  position: relative;
 
-  &--text-right {
-    display: inline-block;
-    padding-left: 24px;
+  padding: 0;
+  margin-right: 4px;
+  width: 17px;
+  height: 12px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 17px;
+    height: 3px;
+
+    background-image: url("../img/dots.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--close {
+    &::after {
+      top: 3px;
+      left: 2px;
+
+      width: 12px;
+      height: 12px;
+
+      background-image: url("../img/filter-close.svg");
+    }
+  }
+
+  &--no-js {
+    display: none;
   }
 }
 
+.regions__button-desc {
+  display: none;
+}
+
+.regions__close {
+  &--no-js {
+    display: none;
+  }
+}
+
+.regions__close-desc {
+  position: relative;
+
+  display: inline-block;
+  padding-left: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+
+    width: 12px;
+    height: 12px;
+
+    background-image: url("../img/filter-close.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.regions__close:active .regions__close-desc::before {
+  opacity: 0.3;
+}
+
+.regions--closed .regions__container {
+  padding-bottom: 13px;
+  padding-top: 17px;
+}
+
+.regions--closed .regions__title {
+  margin-bottom: 0;
+}
+
+.regions--closed .regions__continents-list,
+.regions--closed .regions__letters-list,
+.regions--closed .regions__close {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
+  .regions {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
   .regions__container {
-    padding-left: 72px;
+    padding-top: 59px;
+    padding-left: 75px;
     padding-right: 75px;
+    padding-bottom: 74px;
   }
 
-  .regions__close {
-    &--small {
-      order: 3;
+  .regions__button {
+    order: 3;
+    margin-right: 0;
+    width: 176px;
+    height: auto;
+
+    font-size: 20px;
+    line-height: 24px;
+    color: $color--darkest;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    text-align: left;
+
+    &::after {
+      left: auto;
+      right: 0;
+
+      width: 27px;
+      height: 5px;
+    }
+
+    &--close {
+      width: 175px;
+
+      &::after {
+        top: 0;
+        right: 2px;
+
+        width: 19px;
+        height: 19px;
+      }
     }
   }
 
-  .regions__close-desc {
+  .regions__button-desc {
     display: inline-block;
-    padding-right: 83px;
+    padding-right: 45px;
 
-    &--text-right {
-      display: inline-block;
-      padding-left: 40px;
-      padding-right: 0;
+    &--close {
+      display: none;
     }
+  }
 
+  .regions__button--close .regions__button-desc {
     &--show {
       display: none;
+    }
+
+    &--close {
+      display: inline;
     }
   }
 
@@ -86,30 +250,115 @@
   }
 
   .regions__continents-list {
+    margin-left: -1px;
+    margin-bottom: 60px;
+    margin-right: 41px;
     width: 400px;
   }
 
   .regions__letters-list {
-    margin-bottom: 76px;
+    margin-left: -1px;
+    margin-right: 0;
+    margin-bottom: 63px;
+  }
+
+  .regions__close {
+    padding-top: 37px;
+    padding-bottom: 33px;
+    padding-right: 34px;
+
+    border-radius: 20px;
+  }
+
+  .regions__close-desc {
+    padding-left: 38px;
+
+    &::before {
+      top: 3px;
+
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  .regions--closed .regions__container {
+    padding-bottom: 53px;
+    padding-top: 59px;
+  }
+
+  .regions--closed .regions__continents-list {
+    display: flex;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .regions {
+    &--opened {
+      position: static;
+    }
+  }
+
   .regions__container {
     padding: 0 40px;
+    padding-top: 59px;
+    padding-bottom: 74px;
   }
 
   .regions__wrapper {
     justify-content: flex-start;
+    margin-left: 20px;
+    margin-right: 63px;
+    margin-bottom: 72px;
   }
 
   .regions__title {
     display: block;
+    padding-left: 43px;
+    margin-right: 30px;
+    margin-bottom: 0;
+    width: 295px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &::before {
+      width: 23px;
+      height: 16px;
+    }
+
+    &::after {
+      content: ":";
+    }
   }
 
-  .regions__close {
-    &--small {
-      margin-left: auto;
+  .regions__button {
+    margin-left: auto;
+
+    &--close {
+      width: 176px;
+
+      &::after {
+        right: 5px;
+      }
     }
+  }
+
+  .regions__continents-list {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .regions__letters-list {
+    margin-bottom: 23px;
+    margin-left: 35px;
+  }
+
+  .regions__close-desc {
+    padding-left: 40px;
+  }
+
+  .regions--closed .regions__wrapper {
+    margin-bottom: 0;
   }
 }

@@ -1,15 +1,25 @@
 .legend {
   position: relative;
 
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0;
+  padding-top: 13px;
+  padding-bottom: 9px;
   margin: 0;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  margin-left: 1px;
+  width: 100%;
+  box-sizing: border-box;
 
   line-height: 18px;
   color: $color--dark;
   font-weight: $font-bold;
   text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
 
   &::before {
     content: "";
@@ -21,14 +31,80 @@
     height: 1px;
     background-color: #f3c72b;
   }
+
+  &:hover,
+  &:focus {
+    color: rgba($color--dark, 0.6);
+  }
+
+  &:active {
+    color: rgba($color--dark, 0.3);
+  }
+}
+
+.legend__svg {
+  margin-top: -2px;
+  margin-right: 1px;
+  fill: $blue-darken;
+
+  transform: rotate(180deg);
+  transform-origin: center;
+
+  transition: transform 0.2s ease;
+}
+
+.legend:hover .legend__svg,
+.legend:focus .legend__svg {
+  opacity: 0.6;
+}
+
+.legend:active .legend__svg {
+  opacity: 0.3;
+}
+
+.legend--closed .legend__svg {
+  transform: rotate(0deg);
+}
+
+@media (min-width: $tablet-width) {
+  .legend {
+    padding: 0;
+
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: $font-medium;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
   .legend {
-    width: 105px;
+    justify-content: flex-start;
+    margin-right: 27px;
+    width: 100px;
 
-    &::before {
-      width: 618px;
+    &::after {
+      content: ":";
     }
+  }
+
+  .legend__svg {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .legend {
+    margin-left: -1px;
+  }
+
+  .legend__svg {
+    margin-top: -5px;
+    margin-right: 0;
+    width: 10px;
+    height: 5px;
   }
 }

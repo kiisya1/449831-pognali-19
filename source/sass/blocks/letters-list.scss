@@ -4,7 +4,7 @@
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 280px;
+  padding-bottom: 270px;
   width: 220px;
 
   font-size: 14px;
@@ -16,7 +16,7 @@
   text-transform: uppercase;
 
   &--modal {
-    padding-bottom: 278px;
+    padding-bottom: 271px;
   }
 }
 
@@ -39,6 +39,14 @@
   box-sizing: border-box;
 
   border: 1px solid $blue-cloudy;
+
+  cursor: pointer;
+
+  &:hover {
+    z-index: 5;
+
+    border-color: #959bb2;
+  }
 }
 
 .letters-list__item:nth-child(5n) .letters-list__letter {
@@ -60,8 +68,8 @@
 
 .letters-list__regions-list {
   position: absolute;
-  top: 230px;
-  left: 0;
+  top: 219px;
+  left: 1px;
 
   display: none;
   width: 220px;
@@ -76,10 +84,11 @@
 
 .letters-list--modal .letters-list__regions-list {
   top: 205px;
+  left: 0;
 
-  padding: 17px 20px;
+  padding: 13px 19px;
   width: 100%;
-  height: 278px;
+  height: 271px;
   box-sizing: border-box;
 
   border: 1px solid $border-color;
@@ -87,88 +96,190 @@
   border-bottom-right-radius: 10px;
 }
 
+.letters-list--modal .letters-list__field:checked + .letters-list__letter {
+  color: $color--dark;
+
+  background-color: $background-color;
+  border-color: $blue-cloudy;
+}
+
 @media (min-width: $tablet-width) {
   .letters-list {
     padding-bottom: 0;
     padding-right: 256px;
 
+    &--list {
+      padding-right: 272px;
+      width: 346px;
+
+      font-size: 60px;
+      line-height: 60px;
+    }
+
     &--modal {
-      padding-bottom: 96px;
-      padding-right: 286px;
+      padding-right: 260px;
       box-sizing: border-box;
+
+      font-size: 20px;
+      line-height: 18px;
     }
   }
 
+  .letters-list--list .letters-list__item {
+    justify-content: flex-start;
+    margin-bottom: 23px;
+    width: 77px;
+
+    text-align: left;
+
+    background-color: transparent;
+  }
+
+  .letters-list--list .letters-list__letter {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: auto;
+    height: auto;
+
+    color: rgba($color--darkest, 0.2);
+    font-weight: $font-bold;
+
+    border: none;
+
+    &:hover {
+      color: rgba($color--darkest, 0.7);
+
+      border: none;
+    }
+  }
+
+  .letters-list--list .letters-list__item:nth-child(5n) {
+    width: 38px;
+    text-align: right;
+  }
+
+  .letters-list--list .letters-list__item:nth-child(n+20) {
+    margin-bottom: 0;
+  }
+
+  .letters-list--list .letters-list__field:checked + .letters-list__letter {
+    color: $color--darkest;
+
+    background-color: transparent;
+    border: none;
+  }
+
   .letters-list__regions-list {
-    top: 0;
-    left: 446px;
+    top: -4px;
+    left: 444px;
+
+    height: 100%;
+  }
+
+  .letters-list--modal .letters-list__letter {
+    padding-top: 27px;
+    padding-bottom: 23px;
+    width: 53px;
+    height: 70px;
+  }
+
+  .letters-list__item:nth-child(5n) .letters-list__letter {
+    width: 53px;
   }
 
   .letters-list--modal .letters-list__regions-list {
-    top: -17px;
-    left: 367px;
+    top: -19px;
+    left: 341px;
 
     width: 155px;
+    height: 420px;
     box-sizing: content-box;
     padding: 17px 26px;
 
     border: none;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: -10px;
-      right: 206px;
+  .letters-list--modal .letters-list__field:checked + .letters-list__letter {
+    color: $color--light;
 
-      width: 1px;
-      height: 100%;
-      background-color: rgba(#d6d9e6, 0.5);
-    }
+    background-color: $blue;
+    border-color: $blue;
   }
 }
 
 @media (min-width: $desktop-width) {
   .letters-list {
-    padding-right: 0;
-    width: 100%;
+    &--list {
+      padding-right: 0;
+      width: 100%;
+    }
 
     &--modal {
-      padding-bottom: 34px;
-      padding-right: 340px;
-      width: 730px;
+      padding-right: 235px;
     }
   }
 
-  .letters-list__item {
+  .letters-list__item:nth-child(5n) .letters-list__letter {
+    width: 60px;
+  }
+
+  .letters-list--list .letters-list__item {
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
+    margin-bottom: 50px;
     width: 254px;
 
     background-color: inherit;
 
     &:nth-child(2n) {
-      width: 252px;
+      width: 253px;
     }
 
-    &:nth-child(3n),
+    &:nth-child(3n) {
+      width: 251px;
+    }
+
     &:nth-child(4n) {
-      width: 250px;
+      width: 247px;
     }
 
     &:nth-child(5n) {
       width: 205px;
+      text-align: left;
+    }
+
+    &:nth-child(n+10) {
+      margin-bottom: 87px;
+    }
+
+    &:nth-child(n+15) {
+      margin-bottom: 47px;
     }
   }
 
-  .letters-list__letter {
-    margin-bottom: 50px;
+  .letters-list--list .letters-list__letter {
+    margin-bottom: 30px;
+
+    cursor: default;
+
+    color: $color--darkest;
+
+    &:hover {
+      color: $color--darkest;
+    }
   }
 
-  .letters-list__regions-list {
+  .letters-list--list .letters-list__field:focus + .letters-list__letter {
+    outline: none;
+  }
+
+  .letters-list--list .letters-list__regions-list {
     position: static;
 
-    margin-bottom: 56px;
     display: block;
     width: auto;
     height: auto;
@@ -178,15 +289,23 @@
     justify-content: center;
     width: 60px;
     margin-bottom: 15px;
+    margin-right: 15px;
+
+    &:nth-child(n+10) {
+      margin-bottom: 14px;
+    }
   }
 
   .letters-list--modal .letters-list__letter {
     margin-bottom: 0;
+    width: 60px;
+
+    border-radius: 4px;
   }
 
   .letters-list--modal .letters-list__regions-list {
     position: absolute;
-    top: -17px;
+    top: -19px;
     left: 462px;
 
     padding: 17px 26px;

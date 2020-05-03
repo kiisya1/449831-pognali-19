@@ -3,12 +3,13 @@
 }
 
 .regions-list__item {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
   text-align: left;
 }
 
 .regions-list__link {
-  font-size: 16px;
-  line-height: 22px;
   color: $color--base;
   font-weight: $font-normal;
   text-transform: none;
@@ -20,5 +21,12 @@
 
   &:active {
     color: $link-color--active;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .regions-list__item {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

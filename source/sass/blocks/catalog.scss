@@ -1,4 +1,28 @@
+.catalog__heading {
+  position: relative;
+  z-index: 5;
+
+  margin-bottom: -20px;
+}
+
 .catalog__regions {
-  margin-top: -20px;
-  margin-bottom: 27px;
+  padding-top: 20px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__heading {
+    margin-bottom: -60px;
+  }
+
+  .catalog__regions {
+    padding-top: 60px;
+    margin-bottom: 46px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__regions {
+    margin-bottom: 77px;
+  }
 }
