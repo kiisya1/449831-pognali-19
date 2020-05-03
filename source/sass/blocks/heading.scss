@@ -61,6 +61,8 @@
   }
 
   .heading__title {
+    margin-right: 20px;
+
     font-size: 60px;
     line-height: 70px;
 
@@ -78,9 +80,12 @@
   .heading__link {
     position: relative;
 
+    flex-shrink: 0;
     display: block;
     padding-right: 61px;
     padding-top: 6px;
+    width: 177px;
+    box-sizing: border-box;
 
     font-size: 20px;
     line-height: 24px;
@@ -115,7 +120,7 @@
 
 @media (min-width: $desktop-width) {
   .heading__container {
-    padding-left: 105px;
+    padding-left: 106px;
     padding-right: 103px;
     padding-top: 111px;
   }

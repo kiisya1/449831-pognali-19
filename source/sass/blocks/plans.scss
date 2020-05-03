@@ -11,15 +11,21 @@
 .plans__list {
   @include reset-list;
   margin-bottom: 10px;
+
+  counter-reset: plans;
 }
 
 .plans__item {
   padding: 25px;
+  padding-left: 24px;
+  padding-bottom: 19px;
   padding-top: 24px;
   margin-bottom: 10px;
 
   background-color: $background-color--light;
   border-radius: 10px;
+
+  counter-increment: plans;
 
   &:last-child {
     margin-bottom: 0;
@@ -27,15 +33,27 @@
 }
 
 .plans__direction {
+  position: relative;
+
   padding: 0;
-  padding-left: 18px;
+  padding-left: 17px;
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 16px;
   color: $color--dark;
   font-weight: $font-bold;
+
+  &::before {
+    content: counter(plans) ".";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-weight: $font-medium;
+    letter-spacing: 1.6px;
+  }
 }
 
 .plans__companions,
@@ -60,6 +78,8 @@
 }
 
 .plans__change-link {
+  margin-left: 2px;
+
   font-size: 14px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
@@ -78,40 +98,123 @@
 }
 
 @media (min-width: $tablet-width) {
+  .plans {
+    padding-top: 46px;
+    padding-bottom: 94px;
+  }
+
   .plans__item {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding-top: 40px;
+    justify-content: flex-start;
+    padding-top: 27px;
     padding-left: 33px;
-    padding-right: 36px;
-    padding-bottom: 18px;
+    padding-right: 33px;
+    padding-bottom: 16px;
   }
 
   .plans__direction {
+    position: relative;
+
     width: 100%;
     padding-left: 0;
+    padding-bottom: 21px;
     margin-left: 3px;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 50px;
+
+    &::before {
+      left: auto;
+      right: -5px;
+      top: 17px;
+
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -36px;
+
+      width: 618px;
+      height: 1px;
+
+      background-color: rgba($blue-cloudy, 0.3);
+    }
   }
 
   .plans__dates,
-  .plans__companions {
+  .plans__companions,
+  .plans__change-link {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+
     margin-bottom: 0;
+  }
+
+  .plans__companions {
+    margin-right: 34px;
+    width: 150px;
+  }
+
+  .plans__dates {
+    margin-right: 64px;
+    width: 182px;
+    text-align: center;
+  }
+
+  .plans__change-link {
+    margin-left: auto;
+
+    text-align: right;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .plans {
+    padding-top: 45px;
+    padding-bottom: 113px;
+  }
+
   .plans__item {
-    padding-left: 44px;
-    padding-right: 42px;
-    padding-top: 37px;
-    padding-bottom: 37px;
+    align-items: baseline;
+    padding-left: 43px;
+    padding-right: 38px;
+    padding-top: 24px;
+    padding-bottom: 23px;
     margin-bottom: 15px;
   }
 
   .plans__direction {
-    width: 566px;
-    margin-right: 60px;
+    padding-bottom: 0;
+    padding-left: 52px;
+    margin-right: 24px;
+    margin-left: 0;
     margin-bottom: 0;
+    width: 560px;
+    box-sizing: border-box;
+
+    &::before {
+      right: auto;
+      left: 0;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .plans__companions {
+    margin-right: 27px;
+  }
+
+  .plans__dates {
+    text-align: left;
   }
 }

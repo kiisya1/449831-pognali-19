@@ -9,6 +9,8 @@
     width: 100px;
     height: 100px;
     padding: 17px;
+    padding-top: 22px;
+    padding-bottom: 14px;
 
     border-radius: 50%;
   }
@@ -72,6 +74,15 @@
   left: 40px;
 }
 
+.level--inside .level__ring {
+  top: -2px;
+  left: 51px;
+}
+
+.level--inside .level__ring-circle {
+  stroke-width: 2px;
+}
+
 .level--theme-dark .level__caption {
   display: block;
   font-size: 14px;
@@ -109,7 +120,7 @@
   position: relative;
 
   padding: 0;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   margin: 0 auto;
   width: auto;
   height: auto;
@@ -215,16 +226,15 @@
   }
 
   .level--inside .level__number {
-    padding-top: 20px;
+    padding-top: 21px;
 
     font-size: 38px;
     line-height: 38px;
-    color: $color--light;
 
     &::after {
       width: 49px;
       height: 2px;
-      background-color: rgba($white, 0.3);
+      background-color: rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -233,7 +243,7 @@
 
     font-size: 18px;
     line-height: 22px;
-    color: $color--light;
+    color: $color--base;
   }
 }
 
@@ -245,12 +255,19 @@
     }
   }
 
+  .level--inside .level__caption {
+    color: $color--light;
+  }
+
   .level--inside .level__number {
     padding-top: 21px;
     padding-bottom: 1px;
 
+    color: $color--light;
+
     &::after {
       bottom: 2px;
+      background-color: rgba($white, 0.3);
     }
   }
 }
