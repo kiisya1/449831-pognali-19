@@ -36,6 +36,10 @@
   background-repeat: no-repeat;
   background-size: 292px;
   background-position: bottom left 18px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
 }
 
 .about__discription {
@@ -70,9 +74,12 @@
     padding-top: 27px;
 
     background-image: url("../img/about-tablet@1x.png");
-    background-repeat: no-repeat;
     background-size: 376px;
     background-position: bottom 88px right 8px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
   }
 
   .about__title {
@@ -105,9 +112,12 @@
     padding-top: 94px;
 
     background-image: url("../img/about-desktop@1x.png");
-    background-repeat: no-repeat;
     background-size: 630px;
     background-position: bottom 0 right 40px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+    }
 
     &::before {
       content: "";

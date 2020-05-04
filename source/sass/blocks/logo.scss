@@ -9,7 +9,11 @@
     background-image: url("../img/logo-mobile-blue@1x.png");
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 96px;
+    background-size: 96px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/logo-mobile-blue@2x.png");
+    }
   }
 }
 
@@ -29,7 +33,13 @@
     &--blue {
       width: 164px;
       height: 42px;
+      background-image: url("../img/logo-tablet-blue@1x.png");
       background-position: center left;
+      background-size: 164px auto;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/logo-tablet-blue@2x.png");
+      }
     }
   }
 }

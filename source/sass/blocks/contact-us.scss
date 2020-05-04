@@ -8,15 +8,25 @@
   position: relative;
   z-index: 2;
 
-  margin-bottom: -30px;
+  margin-bottom: -35px;
 }
 
 .contact-us__map {
   background-color: #e8e1d0;
 }
 
+.contact-us__map-image {
+  margin: 0 auto;
+}
+
 @media (min-width: $tablet-width) {
   .contact-us__contacts {
-    margin-bottom: -60px;
+    margin-bottom: -85px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contact-us__contacts {
+    margin-bottom: -201px;
   }
 }

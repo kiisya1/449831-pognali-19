@@ -22,6 +22,10 @@
     background-image: url("../img/rates@1x.png");
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rates@2x.png");
+    }
   }
 }
 

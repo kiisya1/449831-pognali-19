@@ -21,6 +21,7 @@
     url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: top 69px left 152px, top 341px left -10px;
+  background-size: 143px auto, 71px auto;
 
   &::before {
     content: "";
@@ -34,6 +35,11 @@
 
     border-radius: 20px;
     background-color: #141b3b;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
   }
 }
 
@@ -80,6 +86,11 @@
 
       width: 213px;
       height: 213px;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
     }
   }
 
