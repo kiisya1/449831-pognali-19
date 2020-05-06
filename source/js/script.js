@@ -99,3 +99,40 @@ if (filterButtons.length > 0) {
     });
   });
 }
+
+/* Карта */
+
+var mapContainer = document.querySelector(".contact-us__map");
+
+if (mapContainer) {
+  mapContainer.classList.remove("contact-us__map--no-js");
+
+  ymaps.ready(init);
+    function init(){
+      // Создание карты.
+      var myMap = new ymaps.Map("map", {
+        // Координаты центра карты. Порядок по умолчанию: «широта, долгота».
+        center: [59.938635, 30.323118],
+        // Уровень масштабирования. Допустимые значения: от 0 (весь мир) до 19.
+        zoom: 15
+      }, {
+        searchControlProvider: "yandex#search"
+      }),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: "г. Санкт-Петербург, ул. Большая Конюшенная, 19/8"
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: "default#image",
+        // Своё изображение иконки метки.
+        iconImageHref: "../img/map-marker.svg",
+        // Размеры метки.
+        iconImageSize: [54, 54],
+        // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
+        iconImageOffset: [-27, -27]
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+  };
+}
