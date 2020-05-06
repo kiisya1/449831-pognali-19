@@ -1,5 +1,10 @@
 .direction__image {
   display: block;
+
+  overflow: hidden;
+}
+
+.direction__img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -100,6 +105,11 @@
 
   .direction__image {
     order: 1;
+    flex-shrink: 0;
+    width: 186px;
+  }
+
+  .direction__img {
     width: 186px;
 
     border-top-left-radius: 0;
