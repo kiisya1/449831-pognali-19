@@ -126,7 +126,7 @@ if (mapContainer) {
         // Необходимо указать данный тип макета.
         iconLayout: "default#image",
         // Своё изображение иконки метки.
-        iconImageHref: "../img/map-marker.svg",
+        iconImageHref: "../../img/map-marker.svg",
         // Размеры метки.
         iconImageSize: [54, 54],
         // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
