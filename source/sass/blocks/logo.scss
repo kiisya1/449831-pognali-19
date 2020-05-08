@@ -3,13 +3,13 @@
   width: 100px;
 
   &--blue {
-    width: 97px;
-    height: 15px;
+    width: 100px;
+    height: 19px;
 
     background-image: url("../img/logo-mobile-blue@1x.png");
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 96px auto;
+    background-size: 100px auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/logo-mobile-blue@2x.png");
@@ -31,11 +31,11 @@
     width: 166px;
 
     &--blue {
-      width: 164px;
+      width: 166px;
       height: 42px;
       background-image: url("../img/logo-tablet-blue@1x.png");
       background-position: center left;
-      background-size: 164px auto;
+      background-size: 166px auto;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/logo-tablet-blue@2x.png");

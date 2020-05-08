@@ -63,9 +63,7 @@
 
   transform: translateX(-50%) rotate(-90deg);
   transform-origin: 50% 50%;
-}
 
-.level__ring-circle {
   stroke: $mango;
 }
 
@@ -77,10 +75,6 @@
 .level--inside .level__ring {
   top: -2px;
   left: 51px;
-}
-
-.level--inside .level__ring-circle {
-  stroke-width: 2px;
 }
 
 .level--theme-dark .level__caption {
