@@ -28,7 +28,7 @@
   z-index: 2;
 
   padding-top: 38px;
-  padding-bottom: 63px;
+  padding-bottom: 62px;
   padding-right: 45px;
   padding-left: 24px;
 
@@ -42,9 +42,14 @@
   }
 }
 
+.about__title {
+  padding-left: 25px;
+}
+
 .about__discription {
   padding-right: 2px;
-  margin-bottom: 18px;
+  padding-left: 26px;
+  margin-bottom: 19px;
 }
 
 .about__button {
@@ -83,10 +88,12 @@
   }
 
   .about__title {
+    padding-left: 0;
     margin-top: 15px;
   }
 
   .about__discription {
+    padding-left: 0;
     padding-right: 2px;
     margin-bottom: 31px;
   }

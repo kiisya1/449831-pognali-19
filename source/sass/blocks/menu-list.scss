@@ -44,7 +44,7 @@
 
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     margin-right: 95px;
     padding: 0;
     padding-left: 71px;
@@ -66,6 +66,7 @@
   }
 
   .menu-list__item {
+    margin-top: 5px;
     margin-left: 34px;
 
     font-size: 20px;
