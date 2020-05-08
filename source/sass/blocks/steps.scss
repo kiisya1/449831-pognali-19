@@ -353,7 +353,7 @@
     width: 49px;
     height: 36px;
 
-    background-image: linear-gradient(to left, $white 62%, transparent);
+    background-image: linear-gradient(to left, $white 62%, rgba(255, 255, 255, 0));
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -657,7 +657,7 @@
     width: 49px;
     height: 36px;
 
-    background-image: linear-gradient(to left, $white 56%, transparent);
+    background-image: linear-gradient(to left, $white 56%, rgba(255, 255, 255, 0));
     background-repeat: no-repeat;
     background-size: contain;
 
