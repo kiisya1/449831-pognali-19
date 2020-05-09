@@ -52,6 +52,7 @@
   text-align: center;
 
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .calendar__day-of-week {
@@ -176,7 +177,7 @@
     }
 
     &--next {
-      margin-right: 15px;
+      margin-right: 14px;
     }
   }
 

@@ -7,7 +7,7 @@
   &::after {
     content: "";
     position: absolute;
-    left: 25px;
+    left: 0;
     bottom: 0;
 
     width: 200px;
@@ -111,7 +111,7 @@
 
   .price-list__item {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-top: 19px;
     padding-bottom: 14px;
     padding-left: 90px;
@@ -152,6 +152,7 @@
   .price-list__price {
     flex-shrink: 0;
     padding-left: 15px;
+    margin-left: auto;
     width: 164px;
     box-sizing: border-box;
 

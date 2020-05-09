@@ -86,9 +86,10 @@
     color: $color--base;
     font-weight: $font-normal;
 
-    background-color: inherit;
+    background-color: $background-color;
 
     resize: none; /* Убирает уголок ресайза */
+    overflow: hidden; /* Убирает полосу прокрутки в IE */
 
     &:hover {
       border-color: #aeb4cb;

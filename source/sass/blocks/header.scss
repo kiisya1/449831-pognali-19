@@ -33,7 +33,7 @@
   width: 25px;
   height: 11px;
 
-  background-color: inherit;
+  background-color: transparent;
   background-image: url("../img/menu.svg");
   background-repeat: no-repeat;
   background-position: top center;
@@ -133,6 +133,10 @@
   }
 
   .header--inner .header__container {
+    padding-top: 47px;
+  }
+
+  .header--theme-light .header__container {
     padding-top: 47px;
   }
 

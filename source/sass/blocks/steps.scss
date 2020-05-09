@@ -40,7 +40,7 @@
 
 .steps__fieldset {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: baseline;
 
@@ -51,6 +51,7 @@
   border: 0;
 
   &--checkbox {
+    justify-content: flex-start;
     margin-bottom: 13px;
   }
 }
@@ -139,6 +140,7 @@
 
 .steps__units {
   display: block;
+  margin-left: auto;
   margin-right: -2px;
 
   line-height: 16px;
@@ -410,6 +412,10 @@
   }
 }
 
+.steps__select::-ms-expand {
+  display: none;
+}
+
 .steps__destination--clean .steps__destination-label {
   width: 100%;
 }
@@ -508,7 +514,7 @@
 
 .steps__button-add {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   padding-top: 13px;
   padding-bottom: 11px;
@@ -559,6 +565,7 @@
 
 .steps__add-svg {
   display: none;
+  margin-left: auto;
   fill: rgba(0, 0, 0, 0.2);
 
   &--mobile {
@@ -1075,7 +1082,7 @@
   }
 
   .steps__select {
-    padding-top: 26px;
+    padding-top: 23px;
     padding-bottom: 22px;
     padding-left: 25px;
     padding-right: 44px;
@@ -1373,6 +1380,12 @@
   .steps__field {
     margin-right: 36px;
     width: 181px;
+  }
+
+  .steps__control {
+    &--minus {
+      left: 20px;
+    }
   }
 
   .steps__units {
