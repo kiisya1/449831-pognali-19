@@ -27,7 +27,7 @@
 .feature__label {
   position: relative;
 
-  padding-top: 4px;
+  padding-top: 2px;
   padding-left: 27px;
   padding-bottom: 0;
 
@@ -37,7 +37,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
 
     width: 18px;
@@ -50,7 +50,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 5px;
+    top: 3px;
     left: 5px;
 
     display: none;
@@ -100,6 +100,8 @@
     line-height: 20px;
 
     &::before {
+      top: 0;
+
       width: 24px;
       height: 24px;
     }
@@ -130,7 +132,7 @@
     flex-wrap: wrap;
     margin-top: 0;
     margin-bottom: 30px;
-    width: 492px;
+    width: 493px;
   }
 
   .feature__item {
@@ -144,6 +146,7 @@
 
     &:last-child {
       margin-right: 0;
+      width: 151px;
     }
   }
 }

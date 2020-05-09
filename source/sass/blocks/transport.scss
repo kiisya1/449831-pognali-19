@@ -231,6 +231,10 @@
     height: 43px;
   }
 
+  .transport--interactive .transport__type {
+    width: auto;
+  }
+
   .transport__checkbox {
     width: 43px;
     height: 43px;
@@ -242,7 +246,6 @@
   }
 
   .transport__type {
-    width: auto;
     height: 21px;
   }
 }
@@ -281,11 +284,20 @@
   }
 
   .transport--circles .transport__type {
-    width: auto;
+    width: 19px;
     height: 21px;
-  }
 
-  .transport--circles .transport__type--flight {
-    padding-right: 0;
+    &--flight {
+      width: 20px;
+      padding-right: 0;
+    }
+
+    &--auto {
+      width: 17px;
+    }
+
+    &--bike {
+      width: 24px;
+    }
   }
 }
