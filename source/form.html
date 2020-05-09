@@ -124,6 +124,30 @@
       <symbol viewBox="0 0 20 17" fill="#192144" id="icon-heart">
         <path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5a3.44 3.44 0 010-4.8c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/>
       </symbol>
+      <symbol viewBox="0 0 10 5" id="icon-dropdown">
+        <path d="M5 5L0 0h10z"/>
+      </symbol>
+      <symbol viewBox="0 0 14 2" id="icon-qty-minus-mobile">
+        <path d="M0 0h14v2H0z"/>
+      </symbol>
+      <symbol viewBox="0 0 20 2" id="icon-qty-minus">
+        <path d="M0 0h20v2H0z"/>
+      </symbol>
+      <symbol viewBox="0 0 14 14" id="icon-qty-plus-mobile">
+        <path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/>
+      </symbol>
+      <symbol viewBox="0 0 20 20" id="icon-qty-plus">
+        <path d="M20 9h-9V0H9v9H0v2h9v9h2v-9h9z"/>
+      </symbol>
+      <symbol viewBox="0 0 18 34" id="icon-month-arrow-left">
+        <path d="M3.6 17l14-14.4c.6-.6.6-1.6 0-2.1-.6-.6-1.5-.6-2.1 0L.4 15.9c-.6.6-.6 1.6 0 2.1l15.1 15.5c.3.3.7.4 1 .4s.8-.1 1-.4c.6-.6.6-1.6 0-2.1L3.6 17z"/>
+      </symbol>
+      <symbol viewBox="0 0 18 34" id="icon-month-arrow-right">
+        <path d="M14.4 17L.4 2.6C-.1 2-.1 1 .4.4 1-.2 1.9-.2 2.5.4l15.1 15.5c.6.6.6 1.6 0 2.1L2.5 33.6c-.3.3-.7.4-1 .4s-.8-.1-1-.4c-.6-.6-.6-1.6 0-2.1L14.4 17z"/>
+      </symbol>
+      <symbol viewBox="0 0 9 9" id="icon-small-cross">
+        <path d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z"/>
+      </symbol>
 
     </svg>
 
@@ -250,7 +274,7 @@
 
             <div class="profile__level level level--theme-light level--inside">
               <svg class="level__ring" xmlns="http://www.w3.org/2000/svg" width="100" height="100" stroke-dasharray="157 188">
-                <use xlink:href="#icon-ellipse--big" class="level__ring-circle"></use>
+                <use xlink:href="#icon-ellipse--big"></use>
               </svg>
               <span class="level__number">80</span>
               <span class="level__caption">level</span>
@@ -387,12 +411,20 @@
                     <div class="steps__field">
                       <input class="steps__input" type="number" name="people" min="1" id="people-number" value="2" required>
                       <button class="steps__control steps__control--minus" type="button" aria-label="Убавить 1 человека">
-                        <svg class="steps__control-svg steps__control-svg--mobile" width="14" height="2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 2"><path d="M0 0h14v2H0z"/></svg>
-                        <svg class="steps__control-svg" width="20" height="2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 2" xml:space="preserve"><path d="M0 0h20v2H0z"/></svg>
+                        <svg class="steps__control-svg steps__control-svg--mobile" width="14" height="2">
+                          <use xlink:href="#icon-qty-minus-mobile"></use>
+                        </svg>
+                        <svg class="steps__control-svg" width="20" height="2">
+                          <use xlink:href="#icon-qty-minus"></use>
+                        </svg>
                       </button>
                       <button class="steps__control steps__control--plus" type="button" aria-label="Добавить 1 человека">
-                        <svg class="steps__control-svg steps__control-svg--mobile" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/></svg>
-                        <svg class="steps__control-svg" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M20 9h-9V0H9v9H0v2h9v9h2v-9h9z"/></svg>
+                        <svg class="steps__control-svg steps__control-svg--mobile" width="14" height="14">
+                          <use xlink:href="#icon-qty-plus-mobile"></use>
+                        </svg>
+                        <svg class="steps__control-svg" width="20" height="20">
+                          <use xlink:href="#icon-qty-plus"></use>
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -405,12 +437,20 @@
                     <div class="steps__field">
                       <input class="steps__input" type="number" name="days" min="1" id="days-number" value="2" required>
                       <button class="steps__control steps__control--minus" type="button" aria-label="Убавить 1 день">
-                        <svg class="steps__control-svg steps__control-svg--mobile" width="14" height="2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 2"><path d="M0 0h14v2H0z"/></svg>
-                        <svg class="steps__control-svg" width="20" height="2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 2" xml:space="preserve"><path d="M0 0h20v2H0z"/></svg>
+                        <svg class="steps__control-svg steps__control-svg--mobile" width="14" height="2">
+                          <use xlink:href="#icon-qty-minus-mobile"></use>
+                        </svg>
+                        <svg class="steps__control-svg" width="20" height="2">
+                          <use xlink:href="#icon-qty-minus"></use>
+                        </svg>
                       </button>
                       <button class="steps__control steps__control--plus" type="button" aria-label="Добавить 1 день">
-                        <svg class="steps__control-svg steps__control-svg--mobile" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/></svg>
-                        <svg class="steps__control-svg" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M20 9h-9V0H9v9H0v2h9v9h2v-9h9z"/></svg>
+                        <svg class="steps__control-svg steps__control-svg--mobile" width="14" height="14">
+                          <use xlink:href="#icon-qty-plus-mobile"></use>
+                        </svg>
+                        <svg class="steps__control-svg" width="20" height="20">
+                          <use xlink:href="#icon-qty-plus"></use>
+                        </svg>
                       </button>
                     </div>
                   </div>
@@ -424,11 +464,15 @@
                 <div class="steps__calendar calendar">
                   <div class="calendar__months">
                     <button class="calendar__month-control calendar__month-control--prev" type="button" aria-label="Открыть предыдущий месяц">
-                      <svg class="calendar__svg" width="9" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 34"><path d="M3.6 17l14-14.4c.6-.6.6-1.6 0-2.1-.6-.6-1.5-.6-2.1 0L.4 15.9c-.6.6-.6 1.6 0 2.1l15.1 15.5c.3.3.7.4 1 .4s.8-.1 1-.4c.6-.6.6-1.6 0-2.1L3.6 17z"/></svg>
+                      <svg class="calendar__svg" width="9" height="18">
+                        <use xlink:href="#icon-month-arrow-left"></use>
+                      </svg>
                     </button>
                     <p class="calendar__month">Март 2019</p>
                     <button class="calendar__month-control calendar__month-control--next" type="button" aria-label="Открыть следующий месяц">
-                      <svg class="calendar__svg" width="9" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 34"><path d="M14.4 17L.4 2.6C-.1 2-.1 1 .4.4 1-.2 1.9-.2 2.5.4l15.1 15.5c.6.6.6 1.6 0 2.1L2.5 33.6c-.3.3-.7.4-1 .4s-.8-.1-1-.4c-.6-.6-.6-1.6 0-2.1L14.4 17z"/></svg>
+                      <svg class="calendar__svg" width="9" height="18">
+                        <use xlink:href="#icon-month-arrow-right"></use>
+                      </svg>
                     </button>
                   </div>
 
@@ -556,8 +600,8 @@
                         <use xlink:href="#flag-bosnia"></use>
                       </svg>
                       <button class="steps__delete-destination" type="button">
-                        <svg class="steps__delete-svg" width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
-                          <path d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z"/>
+                        <svg class="steps__delete-svg" width="9" height="9">
+                          <use xlink:href="#icon-small-cross"></use>
                         </svg>
                         <span class="visually-hidden">Удалить из списка</span>
                       </button>
@@ -579,8 +623,8 @@
                       </svg>
 
                       <button class="steps__delete-destination" type="button">
-                        <svg class="steps__delete-svg" width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
-                          <path d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z"/>
+                        <svg class="steps__delete-svg" width="9" height="9">
+                          <use xlink:href="#icon-small-cross"></use>
                         </svg>
                         <span class="visually-hidden">Удалить из списка</span>
                       </button>
@@ -599,15 +643,15 @@
                       </label>
 
                       <button class="steps__delete-destination" type="button">
-                        <svg class="steps__delete-svg" width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
-                          <path d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z"/>
+                        <svg class="steps__delete-svg" width="9" height="9">
+                          <use xlink:href="#icon-small-cross"></use>
                         </svg>
                         <span class="visually-hidden">Удалить из списка</span>
                       </button>
 
                       <button class="steps__close" type="button">
-                        <svg class="steps__close-svg" width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
-                          <path d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z"/>
+                        <svg class="steps__close-svg" width="9" height="9">
+                          <use xlink:href="#icon-small-cross"></use>
                         </svg>
                         <span class="visually-hidden">Cвернуть</span>
                       </button>
@@ -763,8 +807,12 @@
                   <li class="steps__route-item">
                     <button class="steps__button-add" type="button">
                       <span>Добавить страну</span>
-                      <svg class="steps__add-svg steps__add-svg--mobile" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/></svg>
-                      <svg class="steps__add-svg" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M20 9h-9V0H9v9H0v2h9v9h2v-9h9z"/></svg>
+                      <svg class="steps__add-svg steps__add-svg--mobile" width="14" height="14">
+                        <use xlink:href="#icon-qty-plus-mobile"></use>
+                      </svg>
+                      <svg class="steps__add-svg" width="20" height="20">
+                        <use xlink:href="#icon-qty-plus"></use>
+                      </svg>
                     </button>
                   </li>
                 </ul>

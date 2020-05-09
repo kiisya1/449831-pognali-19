@@ -1375,6 +1375,12 @@
     width: 181px;
   }
 
+  .steps__control {
+    &--minus {
+      left: 20px;
+    }
+  }
+
   .steps__units {
     order: 2;
     width: 42px;
