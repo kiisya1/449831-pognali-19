@@ -105,8 +105,8 @@ gulp.task("refresh", function (done) {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
-  "images",
   "webp",
+  "images",
   "css",
   "sprite",
   "html"
