@@ -179,6 +179,8 @@
   padding: 4px 10px;
   padding-top: 1px;
   margin-right: 5px;
+
+  fill: #192144;
   opacity: 0.3;
 }
 
@@ -193,6 +195,7 @@
 
 .traveler__likes--active .traveler__likes-svg {
   opacity: 1;
+  fill: #f02323;
 }
 
 .traveler__likes--active:hover .traveler__likes-svg,
