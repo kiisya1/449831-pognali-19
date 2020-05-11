@@ -33,7 +33,7 @@ gulp.task("css", function () {
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src(["source/img/**/*.{png,jpg,svg}", "!source/img/{icon,flag}-*.svg"])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({quality: 85, progressive: true}),
@@ -45,13 +45,13 @@ gulp.task("images", function () {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src(["source/img/**/*.{png,jpg}", "!source/img/{rogovaya-back-,smolov-back-,rates,globe-back-,flags-back,devider,about-,traveller-illustration-}*.{png,jpg}"])
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("build/img/{icon,flag}-*.svg")
+  return gulp.src("source/img/{icon,flag}-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
