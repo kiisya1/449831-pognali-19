@@ -123,8 +123,11 @@
   font-weight: $font-bold;
   text-transform: uppercase;
 
-  border: none;
   background-color: transparent;
+  border: none;
+  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
+
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -205,6 +208,15 @@
 
 .traveler__likes--active:active .traveler__likes-svg {
   opacity: 0.3;
+}
+
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+.traveler__likes:active span,
+.traveler__likes:active svg {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .traveler__block-title {

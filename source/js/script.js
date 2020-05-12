@@ -86,18 +86,26 @@ if (regionsClose) {
 /* Свернуть/развернуть фильтры на странице каталога */
 
 var filterButtons = document.querySelectorAll(".legend");
+var filterContent = document.querySelectorAll(".filter__content");
+
+var addClickHandler = function (button, filter) {
+  button.addEventListener ('click', function() {
+    if (button.classList.contains("legend--closed")) {
+      button.classList.remove("legend--closed");
+      filter.classList.remove("filter__content--closed");
+    } else {
+      button.classList.add("legend--closed");
+      filter.classList.add("filter__content--closed");
+    }
+  });
+};
 
 if (filterButtons.length > 0) {
-  [].forEach.call(filterButtons, function(item) {
-    item.classList.add("legend--closed", "filter--closed");
-    item.addEventListener('click', function() {
-      if (item.classList.contains("legend--closed", "filter--closed")) {
-        item.classList.remove("legend--closed", "filter--closed");
-      } else {
-        item.classList.add("legend--closed", "filter--closed");
-      }
-    });
-  });
+  for (var i = 0; i < filterButtons.length; i++) {
+    filterButtons[i].classList.add("legend--closed");
+    filterContent[i].classList.add("filter__content--closed");
+    addClickHandler(filterButtons[i], filterContent[i]);
+  }
 }
 
 /* Карта */

@@ -86,6 +86,7 @@
 
   background-color: transparent;
   border: none;
+  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
 
   cursor: pointer;
 
@@ -131,6 +132,14 @@
 
 .regions__button-desc {
   display: none;
+}
+
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+.regions__button:active .regions__button-desc {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .regions__close {

@@ -17,6 +17,7 @@
 
   background-color: transparent;
   border: none;
+  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
 }
 
 .calendar__svg {
@@ -30,6 +31,12 @@
 
 .calendar__month-control:active .calendar__svg {
   fill: rgba(#231f20, 0.1);
+
+  /* Стили для корректного отображения кнопок в состоянии active в IE */
+
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .calendar__month {
@@ -90,6 +97,20 @@
   background-color: $background-color;
   border: 1px solid $border-color;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    box-sizing: border-box;
+
+    background-color: transparent;
+    border: 1px solid $border-color;
+  }
+
   &--selected {
     color: $color--light;
 
@@ -100,16 +121,8 @@
     background-color: $blue;
 
     &::after {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: -1px;
+      z-index: 2;
 
-      width: calc(100% + 2px);
-      height: calc(100% + 2px);
-      box-sizing: border-box;
-
-      background-color: transparent;
       border: 2px solid $red-orange;
     }
   }
@@ -130,16 +143,8 @@
   background-color: $blue;
 
   &::after {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: -1px;
+    z-index: 3;
 
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    box-sizing: border-box;
-
-    background-color: transparent;
     border: 2px solid $red-orange;
   }
 }
@@ -289,6 +294,10 @@
 
     color: $color--base;
 
+    &::after {
+      height: 72px;
+    }
+
     &--selected {
       color: $color--light;
     }
@@ -301,9 +310,9 @@
       &::after {
         top: -3px;
         left: -2px;
-        z-index: 2;
+
         width: calc(100% + 6px);
-        height: calc(100% + 6px);
+        height: 76px;
 
         border-radius: 2px;
       }
@@ -314,9 +323,9 @@
     &::after {
       top: -3px;
       left: -2px;
-      z-index: 2;
+
       width: calc(100% + 6px);
-      height: calc(100% + 6px);
+      height: 76px;
 
       border-radius: 2px;
     }

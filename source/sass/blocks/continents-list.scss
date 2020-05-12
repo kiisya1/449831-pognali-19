@@ -15,6 +15,8 @@
   font-weight: $font-bold;
   text-transform: uppercase;
 
+  cursor: pointer;
+
   &:hover {
     color: rgba($color--darkest, 0.6);
   }
@@ -22,6 +24,8 @@
 
 .continents-list__field:checked + .continents-list__continent {
   color: $color--darkest;
+
+  cursor: default;
 }
 
 .continents-list__field:focus + .continents-list__continent {

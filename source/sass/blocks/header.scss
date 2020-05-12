@@ -37,9 +37,11 @@
   background-image: url("../img/menu.svg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
-  cursor: pointer;
+  background-size: contain;
   border: none;
+  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
+
+  cursor: pointer;
 
   &:hover,
   &:focus {

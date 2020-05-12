@@ -139,6 +139,16 @@
   display: none;
 }
 
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+button.button:active span,
+button.button:active svg {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+
 @media (min-width: $tablet-width) {
   .button {
     padding: 12px 29px 8px;

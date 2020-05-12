@@ -247,9 +247,9 @@
             <h2 class="profile__title">Добавить план:</h2>
 
             <div class="profile__steps-indication profile__steps-indication--global">
-              <button class="profile__indicator profile__indicator--active" type="button" aria-label="Первый шаг"></button>
-              <button class="profile__indicator" type="button" aria-label="Второй шаг"></button>
-              <button class="profile__indicator" type="button" aria-label="Третий шаг"></button>
+              <button class="profile__indicator profile__indicator--active" type="button" aria-label="Первый шаг" tabindex="-1"></button>
+              <button class="profile__indicator" type="button" aria-label="Второй шаг" tabindex="-1"></button>
+              <button class="profile__indicator" type="button" aria-label="Третий шаг" tabindex="-1"></button>
             </div>
 
             <ol class="profile__steps steps">
@@ -506,7 +506,7 @@
 
                   </li>
 
-                  <li class="steps__route-item">
+                  <li class="steps__route-item steps__route-item--open-modal">
 
                     <div class="steps__destination steps__destination--clean">
                       <label class="steps__destination-label" for="destination-3">

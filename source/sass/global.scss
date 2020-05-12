@@ -22,10 +22,6 @@ img {
   height: auto;
 }
 
-button {
-  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
-}
-
 @media (min-width: $tablet-width) {
   body {
     font-size: $font-size-tablet;

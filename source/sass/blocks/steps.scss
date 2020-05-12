@@ -201,6 +201,7 @@
 
   background-color: transparent;
   border: none;
+  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
 
   &--minus {
     left: 14px;
@@ -236,6 +237,12 @@
 
 .steps__control:active .steps__control-svg {
   fill: rgba(0, 0, 0, 0.1);
+
+  /* Стили для корректного отображения кнопок в состоянии active в IE */
+
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .steps__calendar {
@@ -350,7 +357,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    right: 1px;
+    right: 2px;
 
     width: 49px;
     height: 36px;
@@ -461,6 +468,12 @@
 
 .steps__delete-destination:active .steps__delete-svg {
   fill: rgba(0, 0, 0, 0.1);
+
+  /* Стили для корректного отображения кнопок в состоянии active в IE */
+
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .steps__close {
@@ -477,6 +490,7 @@
 
   background: none;
   border: none;
+  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
 }
 
 .steps__close-svg {
@@ -491,6 +505,12 @@
 
 .steps__close:active .steps__close-svg {
   opacity: 0.1;
+
+  /* Стили для корректного отображения кнопок в состоянии active в IE */
+
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .steps__select-modal {
@@ -509,7 +529,7 @@
 }
 
 .steps__letters-list {
-  width: 100%;
+  width: 220px;
 }
 
 .steps__button-add {
@@ -581,6 +601,15 @@
 
 .steps__button-add:active .steps__add-svg {
   fill: rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+.steps__button-add:active span,
+.steps__button-add:active svg {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .steps__travel-plan {
@@ -1143,6 +1172,10 @@
       height: 100%;
       background-color: rgba(#d6d9e6, 0.5);
     }
+  }
+
+  .steps__letters-list {
+    width: 100%;
   }
 
   .steps__travel-plan {

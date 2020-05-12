@@ -33,7 +33,10 @@
   text-align: center;
 
   background-color: #f3f4f8;
+  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
   border: none;
+
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -45,6 +48,14 @@
 
     background-color: $background-color;
   }
+}
+
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+.business-prices__close span {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: $tablet-width) {
