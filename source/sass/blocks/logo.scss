@@ -2,7 +2,8 @@
   display: block;
   width: 100px;
 
-  &--blue {
+  &--blue,
+  &--fixed {
     width: 100px;
     height: 19px;
 
@@ -21,7 +22,8 @@
   display: block;
 }
 
-.logo--blue .logo__image {
+.logo--blue .logo__image,
+.logo--fixed .logo__image {
   position: relative;
   z-index: -1;
 }
@@ -30,7 +32,8 @@
   .logo {
     width: 166px;
 
-    &--blue {
+    &--blue,
+    &--fixed {
       width: 166px;
       height: 42px;
       background-image: url("../img/logo-tablet-blue@1x.png");
@@ -52,6 +55,17 @@
       width: 200px;
       height: 52px;
       background: none;
+    }
+
+    &--fixed {
+      width: 200px;
+      height: 52px;
+      background-image: url("../img/logo-desktop-blue@1x.png");
+      background-size: 200px auto;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/logo-desktop-blue@2x.png");
+      }
     }
   }
 

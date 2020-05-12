@@ -28,6 +28,19 @@ button.addEventListener("click", function (evt) {
   }
 });
 
+/* Фиксирование меню при прокрутке страницы */
+
+window.addEventListener('scroll', function() {
+  if (pageYOffset > 0) {
+    header.classList.add("header--fixed");
+    nav.classList.add("main-nav--fixed");
+    logo.classList.add("logo--fixed");
+  } else {
+    header.classList.remove("header--fixed");
+    nav.classList.remove("main-nav--fixed");
+    logo.classList.remove("logo--fixed");
+  }
+});
 
 /* Модальное окно Бизнес-тарифы */
 
