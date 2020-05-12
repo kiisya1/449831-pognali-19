@@ -172,6 +172,8 @@
 
   transform: translateY(-50%);
 
+  cursor: pointer;
+
   &--min {
     left: 30.5%;
   }
@@ -192,7 +194,7 @@
   }
 }
 
-.filter--closed ~ .filter__content {
+.filter__content--closed {
   display: none;
 }
 
@@ -362,7 +364,7 @@
     left: 24.5%;
   }
 
-  .filter--closed ~ .filter__content {
+  .filter__content--closed {
     display: flex;
   }
 

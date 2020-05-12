@@ -8,11 +8,21 @@
   &--theme-light {
     background-color: $background-color--light;
   }
+
+  &--fixed {
+    position: fixed;
+    z-index: 100;
+
+    width: 100%;
+    min-width: 320px;
+
+    background-color: $background-color--light;
+  }
 }
 
 .header__container {
   padding-top: 27px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -23,6 +33,10 @@
   padding-top: 19px;
 }
 
+.header--fixed .header__container {
+  padding-top: 27px;
+}
+
 .header--theme-light .header__container {
   padding-top: 27px;
 }
@@ -30,16 +44,16 @@
 .header__menu-toggle {
   position: relative;
   display: block;
+  padding: 0;
+  padding-top: 2px;
   width: 25px;
-  height: 11px;
+  height: 19px;
 
   background-color: transparent;
-  background-image: url("../img/menu.svg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  cursor: pointer;
   border: none;
+  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
+
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -51,15 +65,36 @@
   }
 
   &--active {
+    padding-top: 0;
     margin-right: 3px;
     width: 19px;
-    height: 19px;
-    background-image: url("../img/menu-close.svg");
   }
 
   &--no-js {
     display: none;
   }
+}
+
+.header__menu-toggle-svg {
+  fill: $white;
+
+  &--close {
+    display: none;
+
+    fill: #cccccc;
+  }
+}
+
+.header__menu-toggle--active .header__menu-toggle-svg {
+  display: none;
+
+  &--close {
+    display: block;
+  }
+}
+
+.header--fixed .header__menu-toggle-svg {
+  fill: #cccccc;
 }
 
 .header__user-list {
@@ -75,10 +110,15 @@
     &--theme-light {
       background-color: $background-color--light;
     }
+
+    &--fixed {
+      background-color: $background-color--light;
+    }
   }
 
   .header__container {
     padding-top: 40px;
+    padding-bottom: 42px;
   }
 
   .header--inner .header__container {
@@ -90,16 +130,26 @@
   }
 
   .header__menu-toggle {
+    display: flex;
     margin-left: 23px;
-    margin-top: 2px;
-    width: 24px;
 
     &--active {
-      margin-right: 0;
+      margin-right: 1px;
       margin-top: 0;
       width: 18px;
       height: 18px;
     }
+  }
+
+  .header__menu-toggle--active .header__menu-toggle-svg {
+    &--close {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .header__logo {
+    margin-top: 1px;
   }
 
   .header__user-list {
@@ -122,6 +172,10 @@
     &--theme-light {
       background-color: $background-color--dark;
     }
+
+    &--fixed {
+      background-color: $background-color--light;
+    }
   }
 
   .header__container {
@@ -140,7 +194,13 @@
     padding-top: 47px;
   }
 
+  .header--fixed .header__container {
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
   .header__logo {
+    margin-top: 0;
     margin-right: 36px;
   }
 

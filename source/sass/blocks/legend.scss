@@ -2,7 +2,7 @@
   position: relative;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 
   padding: 0;
@@ -20,6 +20,9 @@
 
   background-color: transparent;
   border: none;
+  border-radius: 0; /* Убирает скругление углов кнопок по умолчанию в Edge */
+
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -45,6 +48,7 @@
 .legend__svg {
   margin-top: -2px;
   margin-right: 1px;
+  margin-left: auto;
   fill: $blue-darken;
 
   transform: rotate(180deg);
@@ -64,6 +68,15 @@
 
 .legend--closed .legend__svg {
   transform: rotate(0deg);
+}
+
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+.legend:active span,
+.legend:active svg {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: $tablet-width) {

@@ -2,6 +2,8 @@
   padding-top: 46px;
   padding-bottom: 40px;
 
+  color: $color--darkest;
+
   background-color: $background-color--light;
 }
 
@@ -86,6 +88,8 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
+    position: relative;
+
     margin-right: auto;
     padding: 0;
     padding-top: 49px;
@@ -96,9 +100,37 @@
 
     background-color: $background-color--dark;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 74px;
+      left: 0;
+
+      width: 60px;
+      height: 2px;
+
+      background-color: $background-color--light;
+    }
+
     &--closed {
-      background-color: $background-color--dark;
       color: $color--light;
+
+      background-color: $background-color--dark;
+    }
+
+    &--fixed {
+      padding-top: 20px;
+      padding-bottom: 12px;
+
+      color: $color--darkest;
+
+      background-color: $background-color--light;
+
+      &::before {
+        top: 44px;
+
+        background-color: $background-color--darken;
+      }
     }
   }
 

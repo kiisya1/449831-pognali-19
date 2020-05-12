@@ -132,6 +132,8 @@
   height: 33px;
 
   opacity: 0;
+
+  cursor: pointer;
 }
 
 .transport__label {
@@ -144,6 +146,8 @@
 
   background-color: $background-color--light;
   border-radius: 50%;
+
+  cursor: pointer;
 }
 
 .transport__checkbox:checked ~ .transport__type {
