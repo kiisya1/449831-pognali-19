@@ -407,6 +407,7 @@
   font-weight: $font-medium;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  text-align: left;
 
   background-color: inherit;
   border: 1px solid $input-border-color;
@@ -421,6 +422,14 @@
 
 .steps__select::-ms-expand {
   display: none;
+}
+
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+.steps__select:active span {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .steps__destination--clean .steps__destination-label {

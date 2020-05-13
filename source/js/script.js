@@ -193,3 +193,25 @@ if (mapContainer) {
       myMap.geoObjects.add(myPlacemark);
   };
 }
+
+/* Модальное окно выбора страны на странице формы */
+
+var routeItem = document.querySelector(".steps__route-item--clean");
+var routeClose = document.querySelector(".steps__close");
+var routeLabel = document.querySelector(".steps__destination--clean .steps__destination-label");
+
+if (routeLabel) {
+  routeLabel.innerHTML = '<button class="steps__select" type="button"><span>Выберите страну</span></button>';
+  var routeSelect = document.querySelector(".steps__destination--clean .steps__select");
+  routeSelect.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    routeItem.classList.toggle("steps__route-item--open-modal");
+  });
+}
+
+if (routeClose) {
+  routeClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    routeItem.classList.remove("steps__route-item--open-modal");
+  });
+}
