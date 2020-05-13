@@ -96,6 +96,42 @@ if (regionsClose) {
   });
 }
 
+/* Фильтрация по континенту на странице каталога */
+
+var companions = document.querySelectorAll(".companions__item");
+var europe = document.querySelector("#europe");
+var asia = document.querySelector("#asia");
+var america = document.querySelector("#america");
+var islands = document.querySelector("#islands");
+var continents = [europe, asia, america, islands];
+var continentsName = ["europe", "asia", "america", "islands"];
+
+var showCompanions = function (continent, name, travelers) {
+  var continentClass = "companions__item--" + name;
+  var hideClass = "companions__item--hide";
+
+  continent.addEventListener ('click', function() {
+    for (var i = 0; i < companions.length; i++) {
+      if (travelers[i].classList.contains(continentClass)) {
+        if (travelers[i].classList.contains(hideClass)) {
+          travelers[i].classList.remove(hideClass)
+        }
+      } else {
+        if (!(travelers[i].classList.contains(hideClass))) {
+          travelers[i].classList.add(hideClass)
+        }
+      }
+    }
+  });
+};
+
+if (continents.length > 0) {
+  for (var i = 0; i < continents.length; i++) {
+    showCompanions(continents[i], continentsName[i], companions);
+  }
+}
+
+
 /* Свернуть/развернуть фильтры на странице каталога */
 
 var filterButtons = document.querySelectorAll(".legend");
