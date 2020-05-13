@@ -107,11 +107,11 @@ var continents = [europe, asia, america, islands];
 var continentsName = ["europe", "asia", "america", "islands"];
 
 var showCompanions = function (continent, name, travelers) {
-  var continentClass = "companions__item--" + name;
-  var hideClass = "companions__item--hide";
-
   continent.addEventListener ('click', function() {
-    for (var i = 0; i < companions.length; i++) {
+    var continentClass = "companions__item--" + name;
+    var hideClass = "companions__item--hide";
+
+    for (var i = 0; i < travelers.length; i++) {
       if (travelers[i].classList.contains(continentClass)) {
         if (travelers[i].classList.contains(hideClass)) {
           travelers[i].classList.remove(hideClass)
@@ -125,7 +125,7 @@ var showCompanions = function (continent, name, travelers) {
   });
 };
 
-if (continents.length > 0) {
+if (companions.length > 0) {
   for (var i = 0; i < continents.length; i++) {
     showCompanions(continents[i], continentsName[i], companions);
   }
