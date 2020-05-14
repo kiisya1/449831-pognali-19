@@ -453,11 +453,11 @@
     max-width: 100%;
     width: 100%;
     margin-bottom: 40px;
+  }
 
-    &--large {
-      font-size: 29.5px;
-      line-height: 40.5px;
-    }
+  .contacts__text-large {
+    font-size: 29.5px;
+    line-height: 40.5px;
   }
 
   .contacts--theme-dark .contacts__link {
