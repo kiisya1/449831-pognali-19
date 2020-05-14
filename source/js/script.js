@@ -96,6 +96,42 @@ if (regionsClose) {
   });
 }
 
+/* Фильтрация по континенту на странице каталога */
+
+var companions = document.querySelectorAll(".companions__item");
+var europe = document.querySelector("#europe");
+var asia = document.querySelector("#asia");
+var america = document.querySelector("#america");
+var islands = document.querySelector("#islands");
+var continents = [europe, asia, america, islands];
+var continentsName = ["europe", "asia", "america", "islands"];
+
+var showCompanions = function (continent, name, travelers) {
+  continent.addEventListener ('click', function() {
+    var continentClass = "companions__item--" + name;
+    var hideClass = "companions__item--hide";
+
+    for (var i = 0; i < travelers.length; i++) {
+      if (travelers[i].classList.contains(continentClass)) {
+        if (travelers[i].classList.contains(hideClass)) {
+          travelers[i].classList.remove(hideClass)
+        }
+      } else {
+        if (!(travelers[i].classList.contains(hideClass))) {
+          travelers[i].classList.add(hideClass)
+        }
+      }
+    }
+  });
+};
+
+if (companions.length > 0) {
+  for (var i = 0; i < continents.length; i++) {
+    showCompanions(continents[i], continentsName[i], companions);
+  }
+}
+
+
 /* Свернуть/развернуть фильтры на странице каталога */
 
 var filterButtons = document.querySelectorAll(".legend");
@@ -156,4 +192,26 @@ if (mapContainer) {
 
       myMap.geoObjects.add(myPlacemark);
   };
+}
+
+/* Модальное окно выбора страны на странице формы */
+
+var routeItem = document.querySelector(".steps__route-item--clean");
+var routeClose = document.querySelector(".steps__close");
+var routeLabel = document.querySelector(".steps__destination--clean .steps__destination-label");
+
+if (routeLabel) {
+  routeLabel.innerHTML = '<button class="steps__select" type="button"><span>Выберите страну</span></button>';
+  var routeSelect = document.querySelector(".steps__destination--clean .steps__select");
+  routeSelect.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    routeItem.classList.toggle("steps__route-item--open-modal");
+  });
+}
+
+if (routeClose) {
+  routeClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    routeItem.classList.remove("steps__route-item--open-modal");
+  });
 }

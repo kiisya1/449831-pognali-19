@@ -12,6 +12,7 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="/fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
       // Picture element HTML5 shiv
@@ -45,7 +46,7 @@
           <svg class="header__menu-toggle-svg" width="25" height="11">
             <use xlink:href="#icon-menu"></use>
           </svg>
-          <svg class="header__menu-toggle-svg--close" width="19" height="19">
+          <svg class="header__menu-toggle-svg header__menu-toggle-svg--close" width="19" height="19">
             <use xlink:href="#icon-menu-close"></use>
           </svg>
           <span class="visually-hidden">Открыть меню</span>
@@ -495,7 +496,7 @@
               <span class="price-list__price">59 руб./мес</span>
             </li>
           </ol>
-          <a href="#" class="prices__business">
+          <a href="business-prices.html" class="prices__business">
             <span class="prices__business-icon">
               <svg class="prices__business-svg" width="17" height="21">
                 <use xlink:href="#icon-business"></use>
@@ -514,7 +515,7 @@
           <form class="registration__form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden"  for="email-field">E-mail</label>
             <input class="registration__field" type="email" name="email" id="email-field" placeholder="E-mail" required>
-            <button class="registration__button button button--arrow" type="submit">
+            <button class="registration__button button button--arrow" type="submit" aria-label="Зарегистрироваться">
               <span class="registration__button-text">Регистрация</span>
               <svg class="registration__button-svg button__svg" width="10" height="14">
                 <use xlink:href="#icon-triangle-arrow-right"></use>
@@ -529,7 +530,7 @@
         <div class="contact-us__contacts contacts contacts--theme-dark">
           <div class="contacts__links">
             <div class="contacts__container container">
-              <p class="contacts__discription text-discription">Остались вопросы?<span class="contacts__discription--large"> Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</span></p>
+              <p class="contacts__discription text-discription">Остались вопросы?<span class="contacts__text-large"> Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</span></p>
               <a href="tel:88005558628" class="contacts__link contacts__link--tel">
                 <svg class="contacts__svg" width="18" height="18">
                   <use xlink:href="#icon-contacts-phone"></use>
@@ -553,7 +554,7 @@
                 </svg>
                 <span class="contacts__address-text">ул. Большая Конюшенная, 19/8</span>
               </p>
-              <a href="https://goo.gl/maps/DmvgEJvwEpgj5vpW8" class="contacts__map-link button button--arrow button--yellow">
+              <a href="https://goo.gl/maps/DmvgEJvwEpgj5vpW8" target="_blank" class="contacts__map-link button button--arrow button--yellow">
                 <span>Проложить маршрут</span>
                 <svg class="button__svg" width="10" height="14">
                   <use xlink:href="#icon-triangle-arrow-right"></use>
@@ -622,7 +623,7 @@
         </ul>
 
         <div class="footer__copyright copyright">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="copyright__link">
             <span class="copyright__text">Разработано</span>
             <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML-академии">
           </a>
@@ -658,6 +659,6 @@
     </section>
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=140ed8ca-ce13-4555-9c6b-7dbf1992eb00&lang=ru_RU" type="text/javascript"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

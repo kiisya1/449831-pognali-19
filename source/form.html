@@ -12,6 +12,7 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="/fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
       // Picture element HTML5 shiv
@@ -45,7 +46,7 @@
           <svg class="header__menu-toggle-svg" width="25" height="11">
             <use xlink:href="#icon-menu"></use>
           </svg>
-          <svg class="header__menu-toggle-svg--close" width="19" height="19">
+          <svg class="header__menu-toggle-svg header__menu-toggle-svg--close" width="19" height="19">
             <use xlink:href="#icon-menu-close"></use>
           </svg>
           <span class="visually-hidden">Открыть меню</span>
@@ -236,13 +237,13 @@
                 <h3 class="plans__direction">Франция, Италия</h3>
                 <p class="plans__companions">3 попутчика</p>
                 <p class="plans__dates">26 мар — 29 мар</p>
-                <a href="#" class="plans__change-link">Изменить</a>
+                <a href="change-plan.html" class="plans__change-link">Изменить</a>
               </li>
               <li class="plans__item">
                 <h3 class="plans__direction">Таиланд, Индонезия</h3>
                 <p class="plans__companions">1 попутчик</p>
                 <p class="plans__dates">1 июл — 15 июл</p>
-                <a href="#" class="plans__change-link">Изменить</a>
+                <a href="change-plan.html" class="plans__change-link">Изменить</a>
               </li>
             </ol>
           </div>
@@ -512,7 +513,7 @@
 
                   </li>
 
-                  <li class="steps__route-item steps__route-item--open-modal">
+                  <li class="steps__route-item steps__route-item--clean">
 
                     <div class="steps__destination steps__destination--clean">
                       <label class="steps__destination-label" for="destination-3">
@@ -823,7 +824,7 @@
         </ul>
 
         <div class="footer__copyright copyright">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="copyright__link">
             <span class="copyright__text">Разработано</span>
             <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML-академии">
           </a>
@@ -831,6 +832,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

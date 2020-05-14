@@ -12,6 +12,7 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="/fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
       // Picture element HTML5 shiv
@@ -45,7 +46,7 @@
           <svg class="header__menu-toggle-svg" width="25" height="11">
             <use xlink:href="#icon-menu"></use>
           </svg>
-          <svg class="header__menu-toggle-svg--close" width="19" height="19">
+          <svg class="header__menu-toggle-svg header__menu-toggle-svg--close" width="19" height="19">
             <use xlink:href="#icon-menu-close"></use>
           </svg>
           <span class="visually-hidden">Открыть меню</span>
@@ -152,7 +153,7 @@
           <div class="regions__wrapper">
             <h3 class="regions__title">Фильтрация по странам</h3>
 
-            <button class="regions__button regions__button--no-js" type="button">
+            <button class="regions__button regions__button--no-js" type="button" aria-label="Показать/Скрыть список стран">
               <span class="regions__button-desc regions__button-desc--show">Показать все</span>
               <span class="regions__button-desc regions__button-desc--close">Cвернуть</span>
             </button>
@@ -163,8 +164,8 @@
                 <label class="continents-list__continent" for="europe">Европа</label>
               </li>
               <li class="continents-list__item">
-                <input class="visually-hidden continents-list__field" type="radio" name="continents" id="sia" value="asia">
-                <label class="continents-list__continent" for="sia">Азия</label>
+                <input class="visually-hidden continents-list__field" type="radio" name="continents" id="asia" value="asia">
+                <label class="continents-list__continent" for="asia">Азия</label>
               </li>
               <li class="continents-list__item">
                 <input class="visually-hidden continents-list__field" type="radio" name="continents" id="america" value="america">
@@ -998,7 +999,7 @@
           <div class="companions__container container">
             <h2 class="visually-hidden">Список попутчиков</h2>
             <ul class="companions__list">
-              <li class="companions__item">
+              <li class="companions__item companions__item--asia companions__item--islands companions__item--europe">
                 <article class="companions__traveler traveler traveler--info">
 
                   <a href="#" class="traveler__photo">
@@ -1031,7 +1032,7 @@
                     </p>
 
                     <div class="traveler__wrapper">
-                      <a href="#" class="traveler__call button">Позвать!</a>
+                      <a href="call.html" class="traveler__call button">Позвать!</a>
 
                       <button class="traveler__likes traveler__likes--active" type="button" aria-label="Поставить лайк">
                         <svg class="traveler__likes-svg" width="13" height="11">
@@ -1110,7 +1111,7 @@
                 </article>
               </li>
 
-              <li class="companions__item">
+              <li class="companions__item companions__item--europe">
                 <article class="companions__traveler traveler traveler--info">
 
                   <a href="#" class="traveler__photo">
@@ -1142,7 +1143,7 @@
                     </p>
 
                     <div class="traveler__wrapper">
-                      <a href="#" class="traveler__call button">Позвать!</a>
+                      <a href="call.html" class="traveler__call button">Позвать!</a>
 
                       <button class="traveler__likes" type="button" aria-label="Поставить лайк">
                         <svg class="traveler__likes-svg" width="13" height="11">
@@ -1215,7 +1216,7 @@
                 </article>
               </li>
 
-              <li class="companions__item">
+              <li class="companions__item companions__item--islands companions__item--america companions__item--europe">
                 <article class="companions__traveler traveler traveler--info traveler--long">
 
                   <a href="#" class="traveler__photo">
@@ -1247,7 +1248,7 @@
                     </p>
 
                     <div class="traveler__wrapper">
-                      <a href="#" class="traveler__call button">Позвать!</a>
+                      <a href="call.html" class="traveler__call button">Позвать!</a>
 
                       <button class="traveler__likes" type="button" aria-label="Поставить лайк">
                         <svg class="traveler__likes-svg" width="13" height="11">
@@ -1326,7 +1327,7 @@
                 </article>
               </li>
 
-              <li class="companions__item">
+              <li class="companions__item companions__item--europe">
                 <article class="companions__traveler traveler traveler--info">
 
                   <a href="#" class="traveler__photo">
@@ -1357,7 +1358,7 @@
                     </p>
 
                     <div class="traveler__wrapper">
-                      <a href="#" class="traveler__call button">Позвать!</a>
+                      <a href="call.html" class="traveler__call button">Позвать!</a>
 
                       <button class="traveler__likes" type="button" aria-label="Поставить лайк">
                         <svg class="traveler__likes-svg" width="13" height="11">
@@ -1507,7 +1508,7 @@
         </ul>
 
         <div class="footer__copyright copyright">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="copyright__link">
             <span class="copyright__text">Разработано</span>
             <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML-академии">
           </a>
@@ -1515,6 +1516,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
