@@ -7,9 +7,12 @@
 }
 
 .directions__container {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   padding: 25px;
+  padding-bottom: 92px;
 }
 
 .directions__title {
@@ -23,7 +26,6 @@
 
 .directions__list {
   @include reset-list;
-  order: 4;
   margin-bottom: 26px;
 }
 
@@ -49,10 +51,16 @@
 }
 
 .directions__button {
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+
   display: flex;
-  order: 5;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0;
+  width: 270px;
+
+  transform: translateX(50%);
 }
 
 @media (min-width: $tablet-width) {
@@ -66,7 +74,7 @@
 
     padding-left: 75px;
     padding-right: 75px;
-    padding-bottom: 75px;
+    padding-bottom: 161px;
     padding-top: 27px;
 
     background-image: url("../img/flags-back@1x.png");
@@ -113,13 +121,21 @@
     width: 340px;
     margin-bottom: 104px;
   }
+
+  .directions__button {
+    bottom: 80px;
+
+    width: 618px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .directions__container {
-    display: block;
+    flex-direction: row;
+    justify-content: flex-start;
+
     padding-top: 73px;
-    padding-bottom: 134px;
+    padding-bottom: 139px;
     padding-left: 111px;
     padding-right: 112px;
 
@@ -130,29 +146,40 @@
     }
   }
 
+  .directions__wrapper {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
   .directions__title {
     margin-bottom: 58px;
-    width: 100%;
+    margin-left: 2px;
+    width: 448px;
   }
 
   .directions__description {
     padding-right: 100px;
     margin-bottom: 96px;
-    width: 100%;
-    max-width: 100%;
+    width: 448px;
+    max-width: 448px;
     box-sizing: border-box;
   }
 
   .directions__list {
-    float: left;
     width: 560px;
     margin-right: 170px;
     margin-bottom: 0;
   }
 
   .directions__button {
-    margin-left: auto;
-    margin-right: 170px;
+    position: static;
+
     padding-left: 33px;
+    margin: 0;
+    margin-left: 4px;
+    width: 274px;
+
+    transform: translateX(0);
   }
 }

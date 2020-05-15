@@ -16,17 +16,18 @@
   flex-direction: column;
   padding: 25px;
   padding-top: 67px;
+  padding-bottom: 92px;
 
   background-image: url("../img/smolov-back-desktop@1x.png"),
     url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: top 69px left 152px, top 341px left -10px;
+  background-position: top 39px left 152px, top 311px left -10px;
   background-size: 143px auto, 71px auto;
 
   &::before {
     content: "";
     position: absolute;
-    top: 69px;
+    top: 39px;
     left: -19px;
     z-index: -1;
 
@@ -51,7 +52,6 @@
   @include reset-list;
   margin-top: 35px;
   margin-bottom: 20px;
-  order: 4;
 }
 
 .travelers__item {
@@ -63,8 +63,16 @@
 }
 
 .travelers__button {
-  margin-bottom: 5px;
-  order: 5;
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+
+  display: flex;
+  margin: 0;
+  margin-bottom: 0;
+  width: 270px;
+
+  transform: translateX(50%);
 }
 
 @media (min-width: $tablet-width) {
@@ -75,7 +83,7 @@
 
   .travelers__container {
     padding-top: 136px;
-    padding-bottom: 88px;
+    padding-bottom: 169px;
     padding-left: 75px;
     padding-right: 75px;
 
@@ -134,13 +142,16 @@
   }
 
   .travelers__button {
-    margin-bottom: 0;
+    bottom: 88px;
+
+    width: 618px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .travelers__container {
-    display: block;
+    flex-direction: row;
+
     padding-top: 124px;
     padding-bottom: 134px;
     padding-left: 111px;
@@ -168,13 +179,18 @@
   }
 
   .travelers__button {
+    position: static;
+
     padding-left: 33px;
+    margin: 0;
     width: 280px;
+
+    transform: translateX(0);
   }
 
   .travelers__list {
-    float: right;
     margin-top: 9px;
+    margin-left: auto;
     margin-bottom: 0;
     width: 630px;
   }
