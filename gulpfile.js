@@ -47,7 +47,7 @@ gulp.task("images", function () {
 });
 
 gulp.task("webp", function () {
-  return gulp.src(["source/img/**/*.{png,jpg}", "!source/img/{rogovaya-back-,smolov-back-,rates,globe-back-,flags-back,devider,about-,traveller-illustration-}*.{png,jpg}"])
+  return gulp.src(["source/img/**/*.{png,jpg}", "!source/img/{rogovaya-back-,smolov-back-,rates,globe-back-,flags-back,divider,about-,traveller-illustration-}*.{png,jpg}"])
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
