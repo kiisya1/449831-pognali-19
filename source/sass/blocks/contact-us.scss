@@ -47,9 +47,9 @@
 .contact-us__map-img {
   position: absolute;
   top: 0;
-  left: 50%;
+  right: 50%;
 
-  transform: translateX(-50%);
+  transform: translateX(50%);
 }
 
 .contact-us__map--no-js .contact-us__map-img {

@@ -63,12 +63,13 @@
 
     &::before {
       top: 0;
-      left: 50%;
+      left: auto;
+      right: 50%;
 
       width: 688px;
       height: 213px;
 
-      transform: translateX(-50%);
+      transform: translateX(50%);
     }
   }
 
